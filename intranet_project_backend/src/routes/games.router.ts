@@ -1,96 +1,31 @@
-// External Dependencies
-import express, { Request, Response } from "express";
-import { ObjectId } from "mongodb";
-import { collections } from "../services/database.service";
-import Game from "../models/game";
-// Global Config
+import express, { Router, Request, Response, NextFunction } from 'express';
+import gamesController from '../controllers/games.controller';
 
-export const gamesRouter = express.Router();
+const router: Router = express.Router();
 
-gamesRouter.use(express.json());
-// GET
-
-gamesRouter.get("/", async (_req: Request, res: Response) => {
-    try {
-       const games = (await collections.listingsAndReviews.find({}).toArray());
-
-        res.status(200).send(games);
-    } catch (error) {
-        res.status(500).send(error.message);
-    }
+router.get('/', (req: Request, res: Response, next: NextFunction) => {
+  res.send('List of games');
 });
 
-gamesRouter.get("/:id", async (req: Request, res: Response) => {
-    const id = req?.params?.id;
+router.post('/', gamesController.create);
 
-    try {
-        
-        const query = { _id: new ObjectId(id) };
-        const game = (await collections.listingsAndReviews.findOne(query));
-
-        if (game) {
-            res.status(200).send(game);
-        }
-    } catch (error) {
-        res.status(404).send(`Unable to find matching document with id: ${req.params.id}`);
-    }
+router.get('/:id', (req: Request, res: Response, next: NextFunction) => {
+  const id = req.params.id;
+  res.send(`Game with id ${id}`);
 });
 
-// POST
-
-gamesRouter.post("/", async (req: Request, res: Response) => {
-    try {
-        const newGame = req.body as Game;
-        const result = await collections.listingsAndReviews.insertOne(newGame);
-
-        result
-            ? res.status(201).send(`Successfully created a new game with id ${result.insertedId}`)
-            : res.status(500).send("Failed to create a new game.");
-    } catch (error) {
-        console.error(error);
-        res.status(400).send(error.message);
-    }
+router.put('/:id', (req: Request, res: Response, next: NextFunction) => {
+  const id = req.params.id;
+  const updatedGame = req.body;
+  console.log(`Update game with id ${id}`);
+  console.log(updatedGame);
+  res.send(`Game with id ${id} updated`);
 });
 
-
-// PUT
-
-gamesRouter.put("/:id", async (req: Request, res: Response) => {
-    const id = req?.params?.id;
-
-    try {
-        const updatedGame: Game = req.body as Game;
-        const query = { _id: new ObjectId(id) };
-      
-        const result = await collections.listingsAndReviews.updateOne(query, { $set: updatedGame });
-
-        result
-            ? res.status(200).send(`Successfully updated game with id ${id}`)
-            : res.status(304).send(`Game with id: ${id} not updated`);
-    } catch (error) {
-        console.error(error.message);
-        res.status(400).send(error.message);
-    }
+router.delete('/:id', (req: Request, res: Response, next: NextFunction) => {
+  const id = req.params.id;
+  console.log(`Delete game with id ${id}`);
+  res.send(`Game with id ${id} deleted`);
 });
 
-// DELETE
-
-gamesRouter.delete("/:id", async (req: Request, res: Response) => {
-    const id = req?.params?.id;
-
-    try {
-        const query = { _id: new ObjectId(id) };
-        const result = await collections.listingsAndReviews.deleteOne(query);
-
-        if (result && result.deletedCount) {
-            res.status(202).send(`Successfully removed game with id ${id}`);
-        } else if (!result) {
-            res.status(400).send(`Failed to remove game with id ${id}`);
-        } else if (!result.deletedCount) {
-            res.status(404).send(`Game with id ${id} does not exist`);
-        }
-    } catch (error) {
-        console.error(error.message);
-        res.status(400).send(error.message);
-    }
-});
+export { router as gamesRouter };

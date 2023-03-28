@@ -1,26 +1,23 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-const express = require("express");
-const database_service_1 = require("./services/database.service");
+const express_1 = __importDefault(require("express"));
+const cors_1 = __importDefault(require("cors"));
 const games_router_1 = require("./routes/games.router");
-const app = express();
+const app = (0, express_1.default)();
 const port = 3000;
-(0, database_service_1.connectToDatabase)()
-    .then(() => {
-    app.use("/games", games_router_1.gamesRouter);
-    console.log(`Server started at http://localhost:${port}`);
-})
-    .catch((error) => {
-    console.error("Database connection failed", error);
-    process.exit();
+// Middleware
+app.use((0, cors_1.default)());
+app.use(express_1.default.json());
+// Routes
+app.use('/api', games_router_1.gamesRouter);
+// Error handling middleware
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).send('Something broke!');
 });
-app.get('/', (req, res) => {
-    res.send('The sedulous hyena ate the antelope!');
-});
-app.listen(port, (err) => {
-    if (err) {
-        return console.error(err);
-    }
-    return console.log(`server is listening on ${port}`);
-});
+// Start server
+app.listen(port, () => console.log(`Server listening on port ${port}`));
 //# sourceMappingURL=app.js.map

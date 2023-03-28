@@ -1,5 +1,11 @@
-import { ObjectId } from "mongodb";
+import { Schema, model, Document } from 'mongoose';
 
-export default class Game {
-    constructor(public name: string, public price: number, public category: string, public id?: ObjectId) {}
+export interface Game extends Document {
+  title: string;
 }
+
+const gameSchema = new Schema({
+  title: { type: String, required: true }
+});
+
+export default model<Game>('Game', gameSchema);
