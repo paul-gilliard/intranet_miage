@@ -8,23 +8,31 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
+const game_model_1 = __importDefault(require("../models/game.model"));
 class GamesController {
     create(req, res, next) {
         return __awaiter(this, void 0, void 0, function* () {
             console.log(req.body.title);
-            // try {
-            //   const game = new Game({
-            //     title: req.body.title
-            //   });
-            //   await game.save();
-            //   res.status(201).json({
-            //     message: 'Game created',
-            //     game
-            //   });
-            // } catch (err) {
-            //   next(err);
-            // }
+            // var doc1 = new gameModel({ title: "John"});
+            // doc1.save()
+            try {
+                console.log("dans le try");
+                const game = new game_model_1.default({
+                    title: req.body.title
+                });
+                yield game.save();
+                res.status(201).json({
+                    message: 'Game created',
+                    game
+                });
+            }
+            catch (err) {
+                next(err);
+            }
         });
     }
 }

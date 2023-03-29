@@ -1,6 +1,7 @@
 import express, { Application, Request, Response, NextFunction } from 'express';
 import cors from 'cors';
 import { gamesRouter } from './routes/games.router';
+import { connectToDatabase } from './services/database.service';
 
 const app: Application = express();
 const port = 3000;
@@ -9,6 +10,7 @@ const port = 3000;
 app.use(cors());
 app.use(express.json());
 
+connectToDatabase()
 // Routes
 app.use('/api', gamesRouter);
 

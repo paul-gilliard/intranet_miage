@@ -8,4 +8,4 @@ const gameSchema = new Schema({
   title: { type: String, required: true }
 });
 
-export default model<Game>('Game', gameSchema);
+export default model<Game>('Game', gameSchema,"users");
