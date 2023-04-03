@@ -14,7 +14,7 @@ const userSchema = new Schema<User>(
   {
     name: {
       type: String,
-      required: true,
+      // required: true,
       trim: true,
     },
     email: {

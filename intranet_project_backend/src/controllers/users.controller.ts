@@ -1,15 +1,29 @@
 import { Request, Response } from 'express';
 import User from '../models/users.model'; //import du modèle User
 
+// export const createUser = async (req: Request, res: Response) => {
+//   try {
+//     const user = new User(req.body);
+//     await user.save();
+//     res.status(201).send(user);
+//   } catch (error) {
+//     res.status(400).send(error);
+//   }
+// };
+
 export const createUser = async (req: Request, res: Response) => {
   try {
+    console.log(req.body)
     const user = new User(req.body);
-    await user.save();
-    res.status(201).send(user);
+    const savedUser = await user.save();
+    res.status(201).send(savedUser);
   } catch (error) {
     res.status(400).send(error);
   }
 };
+
+
+
 
 export const getUserById = async (req: Request, res: Response) => {
   try {
