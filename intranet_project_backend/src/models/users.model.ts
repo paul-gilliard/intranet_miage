@@ -18,6 +18,7 @@ const userSchema = new Schema<User>(
       trim: true,
     },
     email: {
+      // TO DO rajouter une contrainte REGEX pour accepter que les adresses universitaires
       type: String,
       //required: true,
       unique: true,
