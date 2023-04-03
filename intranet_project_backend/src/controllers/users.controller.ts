@@ -82,7 +82,6 @@ export const getAllUsers = async (req: Request, res: Response) => {
 };
 
 export const findUserByEmail = async function findUserByEmail(req: Request, res: Response) {
-  console.log("ici mec");
   
   const email = req.params.email;
 
