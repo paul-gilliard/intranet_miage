@@ -5,6 +5,7 @@ import {
   updateUserById,
   deleteUserById,
   getAllUsers,
+  findUserByEmail,
 } from '../controllers/users.controller';
 
 const userRouter = Router();
@@ -18,7 +19,11 @@ userRouter.get('/users', getAllUsers);
 userRouter.post('/createUser', createUser);
 
 // Lire un utilisateur par son ID
-userRouter.get('/users/:id', getUserById);
+userRouter.get('/:id', getUserById);
+
+
+// Lire un utilisateur par son ID
+userRouter.get('/findByEmail/:email', findUserByEmail);
 
 // Mettre à jour un utilisateur par son ID
 userRouter.patch('/users/:id', updateUserById);

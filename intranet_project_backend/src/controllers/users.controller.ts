@@ -80,3 +80,19 @@ export const getAllUsers = async (req: Request, res: Response) => {
     res.status(500).send(error); // renvoie une erreur 500 en cas d'erreur serveur
   }
 };
+
+export const findUserByEmail = async function findUserByEmail(req: Request, res: Response) {
+  console.log("ici mec");
+  
+  const email = req.params.email;
+
+  try {
+    const user = await User.findOne({ email: email });
+    if (!user) {
+      return res.status(404).json({ message: 'Utilisateur introuvable' });
+    }
+    res.json(user);
+  } catch (error) {
+    res.status(500).json({ message: 'Une erreur est survenue' });
+  }
+}
