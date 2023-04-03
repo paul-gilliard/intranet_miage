@@ -4,9 +4,15 @@ import {
   getUserById,
   updateUserById,
   deleteUserById,
+  getAllUsers,
 } from '../controllers/users.controller';
 
 const userRouter = Router();
+
+
+// getAll des utilisateurs en BDD
+userRouter.get('/users', getAllUsers);
+
 
 // Créer un nouvel utilisateur
 userRouter.post('/users', createUser);

@@ -15,7 +15,7 @@ app.use(express.json());
 
 connectToDatabase()
 // Routes
-app.use('/api', userRouter);
+app.use('/api/user', userRouter);
 //app.use('/users', userRouter);
 
 // Error handling middleware

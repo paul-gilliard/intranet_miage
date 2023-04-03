@@ -2,13 +2,15 @@
 import mongoose from 'mongoose';
 import { Schema, model, Document } from 'mongoose';
 
-interface UserDocument extends Document {
+interface User extends Document {
   name: string;
   email: string;
   password: string;
+  promo: string;
+  statut: string; //FI ou FA (pour stage)
 }
 
-const userSchema = new Schema<UserDocument>(
+const userSchema = new Schema<User>(
   {
     name: {
       type: String,
@@ -17,15 +19,26 @@ const userSchema = new Schema<UserDocument>(
     },
     email: {
       type: String,
-      required: true,
+      //required: true,
       unique: true,
       trim: true,
       lowercase: true,
     },
     password: {
       type: String,
-      required: true,
-      minlength: 6,
+      //required: true,
+      minlength: 8,
+      trim: true
+    },
+    promo: {
+      type: String,
+      //required: true,
+      trim: true,
+    },
+    statut: {
+      type: String,
+      //required: true,
+      trim: true,
     },
   },
   {
@@ -33,6 +46,9 @@ const userSchema = new Schema<UserDocument>(
   }
 );
 
-const User = model<UserDocument>('User', userSchema);
+// const User = model<UserDocument>('User', userSchema);
 
-export default User;
+export default model<User>('User', userSchema);
+
+
+// export default User;

@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import User from '../models/users.model';
+import User from '../models/users.model'; //import du modèle User
 
 export const createUser = async (req: Request, res: Response) => {
   try {
@@ -55,5 +55,14 @@ export const deleteUserById = async (req: Request, res: Response) => {
     res.send(user);
   } catch (error) {
     res.status(500).send(error);
+  }
+};
+
+export const getAllUsers = async (req: Request, res: Response) => {
+  try {
+    const users: typeof User[] = await User.find(); // récupère tous les utilisateurs
+    res.status(200).send(users); // renvoie les utilisateurs au client
+  } catch (error) {
+    res.status(500).send(error); // renvoie une erreur 500 en cas d'erreur serveur
   }
 };
