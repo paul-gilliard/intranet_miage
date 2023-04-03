@@ -48,6 +48,15 @@ const userSchema = new Schema<User>(
 );
 
 // const User = model<UserDocument>('User', userSchema);
+userSchema.pre<User>('save', async function (next) {
+  const user = this;
+  const emailExists = await mongoose.models.User.findOne({ email: user.email });
+  if (emailExists) {
+    const error = new Error('Email already exists');
+    next(error);
+  }
+  next();
+});
 
 export default model<User>('User', userSchema);
 
