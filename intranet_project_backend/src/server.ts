@@ -2,6 +2,7 @@ import express, { Application, Request, Response, NextFunction } from 'express';
 import cors from 'cors';
 import { connectToDatabase } from './services/database.service';
 import userRouter from './routes/users.router';
+import bodyParser from 'body-parser';
 
 //const app: Application = express();
 const port = 3000;
@@ -13,9 +14,13 @@ app.use(cors());
 app.use(cors());
 app.use(express.json());
 
+app.use(bodyParser.json()); // pour parser les données envoyées en json
+app.use(bodyParser.urlencoded({ extended: true })); // pour parser les données envoyées via urlencoded
+
+
 connectToDatabase()
 // Routes
-app.use('/api', userRouter);
+app.use('/api/user', userRouter);
 //app.use('/users', userRouter);
 
 // Error handling middleware
