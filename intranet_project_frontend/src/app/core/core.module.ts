@@ -16,6 +16,9 @@ import { BodyOfHomeComponent } from './components/body-of-home/body-of-home.comp
     CommonModule,
     CoreRoutingModule
   ],
+  exports: [
+    BodyOfHomeComponent
+   ]
   
 })
 export class CoreModule { }
