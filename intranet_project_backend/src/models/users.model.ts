@@ -18,12 +18,12 @@ const userSchema = new Schema<User>(
       trim: true,
     },
     email: {
-      // TO DO rajouter une contrainte REGEX pour accepter que les adresses universitaires
       type: String,
-      //required: true,
+      required: true,
       unique: true,
       trim: true,
       lowercase: true,
+      match: [/^([\w-\.]+@etu\.u-bordeaux\.fr)$/, 'Please use a valid @etu.u-bordeaux.fr email address']
     },
     password: {
       type: String,
