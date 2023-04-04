@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { faYoutube } from '@fortawesome/free-brands-svg-icons';
+import {} from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-header',
@@ -7,5 +7,5 @@ import { faYoutube } from '@fortawesome/free-brands-svg-icons';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  faYoutube = faYoutube;
+  
 }
