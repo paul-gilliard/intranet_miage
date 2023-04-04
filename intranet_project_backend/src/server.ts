@@ -1,10 +1,11 @@
 import express, { Application, Request, Response, NextFunction } from 'express';
 import cors from 'cors';
 import { connectToDatabase } from './services/database.service';
-import userRouter from './routes/users.router';
 import bodyParser from 'body-parser';
+import userRouter from './routers/users.router';
+import loginRouter from './routers/login.router';
 
-//const app: Application = express();
+
 const port = 3000;
 var cors = require('cors');
 
@@ -21,6 +22,7 @@ app.use(bodyParser.urlencoded({ extended: true })); // pour parser les données 
 connectToDatabase()
 // Routes
 app.use('/api/user', userRouter);
+app.use('/login', loginRouter);
 //app.use('/users', userRouter);
 
 // Error handling middleware

@@ -1,6 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -8,12 +9,13 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit, OnDestroy {
+  email: string = "";
 
   loginForm = this.formBuilder.group({
     email: [, [Validators.required, ]],
   });
 
-  constructor(private formBuilder: FormBuilder, private http: HttpClient) {
+  constructor(private formBuilder: FormBuilder, private http: HttpClient, private authService: AuthService) {
     
   }
 
@@ -30,15 +32,17 @@ export class LoginComponent implements OnInit, OnDestroy {
   }
 
   login() {
-    let email = this.loginForm.getRawValue();
-    this.http.get('http://localhost:3000/api/user/findByEmail/' + email)
-      .subscribe(response => {
-        console.log('Données envoyées avec succès au backend Node.js', response);
-        let retour = response;
-        
-      }, error => {
-        console.error('Erreur lors de l\'envoi des données au backend Node.js', error);
-      });
+    this.email = this.loginForm.get('email')?.value!;
+    this.authService.authenticateUser(this.email).subscribe(
+      (response) => {
+        console.log('Authentification réussie', response);
+        // Rediriger vers la page d'accueil ou la page souhaitée après la connexion réussie.
+      },
+      (error) => {
+        console.error('Erreur d\'authentification', error);
+        // Afficher un message d'erreur à l'utilisateur
+      }
+    );
 
     this.close();
   }
