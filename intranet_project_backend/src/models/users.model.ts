@@ -18,12 +18,12 @@ const userSchema = new Schema<User>(
       trim: true,
     },
     email: {
-      // TO DO rajouter une contrainte REGEX pour accepter que les adresses universitaires
       type: String,
-      //required: true,
+      required: true,
       unique: true,
       trim: true,
       lowercase: true,
+      match: [/^([\w-\.]+@etu\.u-bordeaux\.fr)$/, 'Please use a valid @etu.u-bordeaux.fr email address']
     },
     password: {
       type: String,
@@ -48,6 +48,15 @@ const userSchema = new Schema<User>(
 );
 
 // const User = model<UserDocument>('User', userSchema);
+userSchema.pre<User>('save', async function (next) {
+  const user = this;
+  const emailExists = await mongoose.models.User.findOne({ email: user.email });
+  if (emailExists) {
+    const error = new Error('Email already exists');
+    next(error);
+  }
+  next();
+});
 
 export default model<User>('User', userSchema);
 
