@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {} from '@fortawesome/free-brands-svg-icons';
+//import {} from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-header',

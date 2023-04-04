@@ -8,12 +8,13 @@ import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
-  declarations: [HeaderComponent
+  declarations: [
   ],
   imports: [
     CommonModule,
     CoreRoutingModule,
-    SharedModule
+   
+    
   ],
   exports: [
   ]
