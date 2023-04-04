@@ -13,6 +13,7 @@ import { HomeComponent } from './components/home/home.component';
     CoreRoutingModule
   ],
   exports: [
+
   ]
 })
 export class CoreModule { }
