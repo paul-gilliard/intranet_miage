@@ -1,0 +1,9 @@
+.panel-title{
+    border-radius: 0.375rem;
+    background-color: #FFFFFF;
+}
+
+.panel-body{
+    border-radius: 0.375rem;
+    background-color: #F5F5F5;
+}
