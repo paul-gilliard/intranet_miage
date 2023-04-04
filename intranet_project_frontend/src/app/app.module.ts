@@ -9,6 +9,7 @@ import { EmploiDuTempsModule } from './emploi-du-temps/emploi-du-temps.module';
 import { MessagerieModule } from './messagerie/messagerie.module';
 import { SharedModule } from './shared/shared.module';
 import { SondagesModule } from './sondages/sondages.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { SondagesModule } from './sondages/sondages.module';
     MessagerieModule,
     EmploiDuTempsModule,
     DepotDocumentsModule,
-    SondagesModule
+    SondagesModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [HomeComponent]

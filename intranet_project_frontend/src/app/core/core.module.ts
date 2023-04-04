@@ -2,19 +2,16 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { CoreRoutingModule } from './core-routing.module';
-import { BodyOfHomeComponent } from './components/body-of-home/body-of-home.component';
-
+import { HomeComponent } from './components/home/home.component';
 
 
 @NgModule({
   declarations: [
-  
-  
-    BodyOfHomeComponent
   ],
   imports: [
     CommonModule,
-    CoreRoutingModule
+    CoreRoutingModule,
+    SharedModule
   ],
   exports: [
     BodyOfHomeComponent
