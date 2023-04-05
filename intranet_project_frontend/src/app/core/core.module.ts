@@ -18,20 +18,24 @@ import { HttpClientModule } from '@angular/common/http';
     BodyOfHomeComponent,
     HomeConnectComponent,
     CreateUserComponent,
-    LoginComponent
+    LoginComponent,
+    
   ],
   imports: [
     CommonModule,
     CoreRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    SharedModule
+
   ],
   exports: [
     BodyOfHomeComponent,
     HomeConnectComponent,
     CreateUserComponent,
-    LoginComponent
+    LoginComponent,
+
   ]
   
 })

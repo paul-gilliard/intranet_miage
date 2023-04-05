@@ -1,3 +1,7 @@
 button-footer1{
     background-color: #4CB3ED;
 }
+footer{
+    bottom: 0;
+    position: fixed;
+}
