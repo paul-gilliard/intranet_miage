@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
-import { User } from '../user.model';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
-import { UserService } from '../user.service';
+import { UsereService } from 'src/app/services/user.service';
+import { User } from 'src/app/models/user.model';
 
 @Component({
   selector: 'app-create-user',
@@ -9,19 +10,8 @@ import { UserService } from '../user.service';
   styleUrls: ['./create-user.component.css']
 })
 export class CreateUserComponent {
-  user: User = new User('', '', '');
 
-  constructor(private userService: UserService) {}
-
-  onSubmit() {
-    // Code pour envoyer les données du formulaire à votre API pour créer ou mettre à jour un utilisateur
-    this.userService.createUser(this.user)
-      .subscribe((user) => {
-        console.log('Utilisateur créé', user);
-      });
-      
-      
-  }
+}
 
 }
 

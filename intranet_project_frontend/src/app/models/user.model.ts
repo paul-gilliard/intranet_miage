@@ -1,13 +1,7 @@
-export class User {
+export interface User {
     name: string;
     email: string;
     password: string;
-  
-    constructor( name: string, email: string, password: string) {
-      
-      this.name = name;
-      this.email = email;
-      this.password = password;
-    }
-  }
-  
+    promo: string;
+    statut: string; //FI ou FA (pour stage)
+}
