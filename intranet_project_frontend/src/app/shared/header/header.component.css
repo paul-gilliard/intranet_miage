@@ -12,7 +12,9 @@ header {
   .navbar-toggler-icon {
     background-color: black;
   }
-  
+  .logo{
+    display: inline-block;
+  }
   .navbar-nav .nav-link {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
