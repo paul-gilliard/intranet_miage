@@ -16,22 +16,21 @@ import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     BodyOfHomeComponent,
-    HomeConnectComponent
+    HomeConnectComponent,
     CreateUserComponent,
     LoginComponent
   ],
   imports: [
     CommonModule,
-    CoreRoutingModule,,
+    CoreRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule
   ],
   exports: [
     BodyOfHomeComponent,
-    HomeConnectComponent
-  
-     CreateUserComponent,
+    HomeConnectComponent,
+    CreateUserComponent,
     LoginComponent
   ]
   
