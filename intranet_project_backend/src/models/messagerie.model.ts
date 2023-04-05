@@ -6,6 +6,7 @@ export interface Message {
 }
 
 export interface Messagerie {
+  nomConversation: String;
   messages: Message[];
 }
 
@@ -29,6 +30,12 @@ const messageSchema = new Schema<Message>(
 
 const messagerieSchema = new Schema<Messagerie>(
   {
+    nomConversation:{
+      type: String,
+      required: true,
+      trim: true
+    },
+
     messages: {
       type: [messageSchema],
       required: true,

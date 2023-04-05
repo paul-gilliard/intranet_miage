@@ -23,7 +23,10 @@ export const sendMessage = async (req: Request, res: Response) => {
     let messagerie = await Messagerie.findOne();
 
     if (!messagerie) {
-      messagerie = new Messagerie({ messages: [{ emeteur, text }] });
+      messagerie = new Messagerie({
+        nomConversation: "MIAGE",
+        messages: [{ emeteur, text }]
+      });
       await messagerie.save();
     } else {
       const message: Message = { emeteur, text };
