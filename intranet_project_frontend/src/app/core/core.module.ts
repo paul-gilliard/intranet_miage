@@ -15,11 +15,6 @@ import { SharedModule } from '../shared/shared.module';
   imports: [
     CommonModule,
     CoreRoutingModule,
-    
-    
-    
-    
-    
   ],
   exports: [
     BodyOfHomeComponent
