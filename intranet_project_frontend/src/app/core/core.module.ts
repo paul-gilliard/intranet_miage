@@ -6,18 +6,21 @@ import { HomeComponent } from './components/home/home.component';
 import { BodyOfHomeComponent } from './components/body-of-home/body-of-home.component';
 import { HeaderComponent } from '../shared/header/header.component';
 import { SharedModule } from '../shared/shared.module';
+import { HomeConnectComponent } from './components/home-connect/home-connect.component';
 
 
 @NgModule({
   declarations: [
-    BodyOfHomeComponent
+    BodyOfHomeComponent,
+    HomeConnectComponent
   ],
   imports: [
     CommonModule,
     CoreRoutingModule,
   ],
   exports: [
-    BodyOfHomeComponent
+    BodyOfHomeComponent,
+    HomeConnectComponent
   
    ]
   
