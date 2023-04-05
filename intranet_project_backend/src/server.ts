@@ -4,6 +4,7 @@ import { connectToDatabase } from './services/database.service';
 import bodyParser from 'body-parser';
 import userRouter from './routers/users.router';
 import loginRouter from './routers/login.router';
+import messagerieRouter from './routers/messagerie.router';
 
 
 const port = 3000;
@@ -22,8 +23,8 @@ app.use(bodyParser.urlencoded({ extended: true })); // pour parser les données 
 connectToDatabase()
 // Routes
 app.use('/api/user', userRouter);
+app.use('/api/messagerie', messagerieRouter);
 app.use('/login', loginRouter);
-//app.use('/users', userRouter);
 
 // Error handling middleware
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
