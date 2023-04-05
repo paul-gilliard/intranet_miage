@@ -4,7 +4,7 @@ import MessageriePrive, { MessagePrive } from '../models/messagerie_prive.model'
 
 export const getAllMessages = async (req: Request, res: Response) => {
     try {
-      const messagerie = await Messagerie.findById("642c342f4d758e4658271e7a");
+      const messagerie = await Messagerie.findById("642d50b33d99a32d414182a2");
       if (!messagerie) {
         return res.status(404).json({ message: 'Messagerie not found' });
       }
