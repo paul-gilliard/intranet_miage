@@ -7,22 +7,33 @@ import { BodyOfHomeComponent } from './components/body-of-home/body-of-home.comp
 import { HeaderComponent } from '../shared/header/header.component';
 import { SharedModule } from '../shared/shared.module';
 import { HomeConnectComponent } from './components/home-connect/home-connect.component';
+import { CreateUserComponent } from './components/create-user/create-user.component';
+import { LoginComponent } from './components/login/login.component';
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
   declarations: [
     BodyOfHomeComponent,
     HomeConnectComponent
+    CreateUserComponent,
+    LoginComponent
   ],
   imports: [
     CommonModule,
-    CoreRoutingModule,
+    CoreRoutingModule,,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   exports: [
     BodyOfHomeComponent,
     HomeConnectComponent
   
-   ]
+     CreateUserComponent,
+    LoginComponent
+  ]
   
 })
 export class CoreModule { }
