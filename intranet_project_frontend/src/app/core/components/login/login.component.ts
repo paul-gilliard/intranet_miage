@@ -34,6 +34,8 @@ export class LoginComponent implements OnInit, OnDestroy {
 
   login() {
     this.email = this.loginForm.get('email')?.value!;
+    if (this.email != null){
+  
     this.authService.authenticateUser(this.email).subscribe(
       (response:any) => {
         const token:string = response?.accessToken;
@@ -57,7 +59,7 @@ export class LoginComponent implements OnInit, OnDestroy {
         console.error('Erreur d\'authentification', error);
         // Afficher un message d'erreur à l'utilisateur
       }
-    );
+    )};
 
     this.close();
   }

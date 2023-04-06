@@ -1,1 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
+/* Import de la police Nunito */
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+/* Application de la police Nunito */
+body {
+  font-family: 'Nunito', sans-serif;
+}
