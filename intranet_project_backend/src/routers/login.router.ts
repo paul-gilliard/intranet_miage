@@ -18,7 +18,7 @@ loginRouter.post('/', async (req, res) => {
     // Générer un token JWT pour l'utilisateur
     const token = jwt.sign({ id: user._id, email: user.email }, JWT_SECRET, { expiresIn: '1h' });
 
-    res.send({ token });
+    res.send({ userData : user, accessToken: token });
   } catch (error) {
     console.error(error);
     res.status(500).send('Erreur de serveur');
