@@ -1,26 +1,11 @@
 import express, { Application, Request, Response, NextFunction } from 'express';
 import http from 'http';
-import { Server, Socket } from "socket.io";
+import { Socket } from "socket.io";
 import { connectToDatabase } from './services/database.service';
 import bodyParser from 'body-parser';
 import userRouter from './routers/users.router';
 import loginRouter from './routers/login.router';
 import messagerieRouter from './routers/messagerie.router';
-
-interface ServerToClientEvents {
-  noArg: () => void;
-  basicEmit: (a: number, b: string, c: Buffer) => void;
-  withAck: (d: string, callback: (e: number) => void) => void;
-  'new-message': (message: SocketData) => void;
-}
-
-interface ClientToServerEvents {
-  hello: () => void;
-}
-
-interface InterServerEvents {
-  ping: () => void;
-}
 
 interface SocketData {
   emeteur: string;
