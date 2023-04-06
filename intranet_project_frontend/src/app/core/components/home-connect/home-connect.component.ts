@@ -6,6 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./home-connect.component.css']
 })
 export class HomeConnectComponent {
+
+
+  
   listOfFunctionnality= ["Message", "offres", ""]
 
 }
