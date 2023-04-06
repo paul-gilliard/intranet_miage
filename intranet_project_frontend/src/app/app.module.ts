@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './core/components/home/home.component';
@@ -9,6 +10,8 @@ import { EmploiDuTempsModule } from './emploi-du-temps/emploi-du-temps.module';
 import { MessagerieModule } from './messagerie/messagerie.module';
 import { SharedModule } from './shared/shared.module';
 import { SondagesModule } from './sondages/sondages.module';
+
+import { AuthInterceptor } from './interceptors/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -22,9 +25,16 @@ import { SondagesModule } from './sondages/sondages.module';
     MessagerieModule,
     EmploiDuTempsModule,
     DepotDocumentsModule,
-    SondagesModule
+    SondagesModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [HomeComponent]
 })
 export class AppModule { }
