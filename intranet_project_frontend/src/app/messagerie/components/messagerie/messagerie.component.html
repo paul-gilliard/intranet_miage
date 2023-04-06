@@ -3,9 +3,9 @@
         <app-messagerie-panel-gauche></app-messagerie-panel-gauche>
     </div>
     <div class="col-md-6">
-        <app-messagerie-discussion></app-messagerie-discussion>
+        <app-messagerie-discussion [nomConversation]="messagerie.nomConversation" [messagerie]="messagerie"></app-messagerie-discussion>
     </div>
     <div class="col-md-2">
-        <app-messagerie-info></app-messagerie-info>
+        <app-messagerie-info [nomConversation]="messagerie.nomConversation"></app-messagerie-info>
     </div>
 </div>

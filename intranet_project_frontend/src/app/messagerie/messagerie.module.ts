@@ -6,6 +6,7 @@ import { MessagerieComponent } from './components/messagerie/messagerie.componen
 import { MessageriePanelGaucheComponent } from './components/messagerie-panel-gauche/messagerie-panel-gauche.component';
 import { MessagerieDiscussionComponent } from './components/messagerie-discussion/messagerie-discussion.component';
 import { MessagerieInfoComponent } from './components/messagerie-info/messagerie-info.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { MessagerieInfoComponent } from './components/messagerie-info/messagerie
   ],
   imports: [
     CommonModule,
-    MessagerieRoutingModule
+    MessagerieRoutingModule, 
+    FormsModule
   ],
   exports: [
     MessagerieComponent, 
