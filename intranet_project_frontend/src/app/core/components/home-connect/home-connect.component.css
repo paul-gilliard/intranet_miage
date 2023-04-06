@@ -10,6 +10,11 @@
     text-align: center;
 
 }
+.img-slide{
+    width: 100%; 
+    height: 300px; 
+    object-fit: cover; border-radius: 20px;
+}
 .lastelement{
     margin-right: 0px !important;
 }
@@ -21,7 +26,9 @@
     position: relative;
     padding: 5px;
     width: 18%;
-    box-shadow: 2px;
+   /* box-shadow: 2px 2px 0px 0px grey;*/
+    border-color: #4CB3ED;
+    
 
    /*margin-right: 2%;
    */
@@ -46,3 +53,61 @@
     margin-left: 10px;
 
 }
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+  }
+  
+  .slides {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .slide {
+    flex: 1 0 100%;
+    margin-right: 20px;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .prev-btn {
+    left: 0;
+  }
+  
+  .next-btn {
+    right: 0;
+  }
+  
+  /* Le slide actif est centré */
+  .slide.active {
+    transform: translateX(-50%);
+  }
+  
+  /* Les slides avant et après le slide actif sont déplacés de la largeur d'un slide */
+  .slide.prev {
+    transform: translateX(-150%);
+  }
+  
+  .slide.next {
+    transform: translateX(50%);
+  }
