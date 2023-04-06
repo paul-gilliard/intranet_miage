@@ -68,7 +68,7 @@ export const sendPrivateMessage = async (req: Request, res: Response) => {
 
     await messagerie.save();
 
-    res.status(200).json({ message: 'Message envoyé' });
+    res.status(200).json(messagerie);
   } catch (err) {
     console.error(err);
     res.status(500).json({ message: 'Erreur serveur' });
