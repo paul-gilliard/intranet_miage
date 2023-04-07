@@ -9,6 +9,8 @@ import { EmploiDuTempsModule } from './emploi-du-temps/emploi-du-temps.module';
 import { MessagerieModule } from './messagerie/messagerie.module';
 import { SharedModule } from './shared/shared.module';
 import { SondagesModule } from './sondages/sondages.module';
+import { FullCalendarModule } from '@fullcalendar/angular';
+
 
 
 @NgModule({
@@ -24,7 +26,7 @@ import { SondagesModule } from './sondages/sondages.module';
     EmploiDuTempsModule,
     DepotDocumentsModule,
     SondagesModule,
-    
+    FullCalendarModule,
   ],
   providers: [],
   bootstrap: [HomeComponent]
