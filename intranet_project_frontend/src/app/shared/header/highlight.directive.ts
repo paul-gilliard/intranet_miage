@@ -11,10 +11,13 @@ export class HighlightDirective {
     const linkUrl = this.el.nativeElement.firstChild.href;
 
     if (currentUrl === linkUrl) {
+    
       this.el.nativeElement.classList.add('active');
       this.el.nativeElement.firstChild.style.backgroundColor = 'white';
       this.el.nativeElement.firstChild.style.borderRadius = '20px 20px 20px 20px';
-      this.el.nativeElement.firstChild.style.textDecoration = 'underline';
+      this.el.nativeElement.firstChild.style.borderBottom='2px solid black';
+      this.el.nativeElement.firstChild.style.height= '30px'
+      
     }
   }
 }

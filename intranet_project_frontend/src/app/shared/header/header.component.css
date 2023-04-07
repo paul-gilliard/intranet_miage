@@ -1,6 +1,6 @@
 header {
     /* padding: 30px 10%; */
-    background-color: cornflowerblue;
+    background-color: #4CB3ED;
     height:25px;
     padding-bottom: 3%;
   }
@@ -12,7 +12,9 @@ header {
   .navbar-toggler-icon {
     background-color: black;
   }
-  
+  .logo{
+    display: inline-block;
+  }
   .navbar-nav .nav-link {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
@@ -22,6 +24,7 @@ header {
     padding: 0 20px;
     transition: all 0.3s ease 0s;
   }
+
   
   .navbar-nav .nav-link:hover {
     color: rgb(191, 212, 217);
@@ -35,3 +38,4 @@ header {
     transform: translateY(-3px);
   }
   
+

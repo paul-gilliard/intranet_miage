@@ -1,0 +1,28 @@
+input{
+    margin-top: 7%;
+    width: 300px;
+    margin-left: 7%;
+    border-radius: 20px 20px 20px 20px;
+    height: 50px;
+}
+#btnSeconnecter{
+    background-color: #4CB3ED;
+    margin-left: 0%;
+    border-radius: 20px 20px 20px 20px ;
+    border-color: #4CB3ED;
+    height: 50px;
+    
+}
+.formFooter{
+    margin-top: 7%;
+    
+}
+#lienInscription{
+    margin-left: 5%;
+}
+/*
+.form-container{
+    background-image: url('../../../../assets/images/back-formulaire.svg');
+    height: 70%;
+}
+*/
