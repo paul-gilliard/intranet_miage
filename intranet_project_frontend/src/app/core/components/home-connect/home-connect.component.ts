@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { Swiper} from 'swiper';
 @Component({
   selector: 'app-home-connect',
   templateUrl: './home-connect.component.html',
@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
 })
 export class HomeConnectComponent {
   listOfFunctionnality= ["Message", "offres", ""]
+  
 
 }

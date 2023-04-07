@@ -20,12 +20,14 @@ import { HttpClientModule } from '@angular/common/http';
     
   ],
   imports: [
+    
     CommonModule,
     CoreRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    SharedModule
+    SharedModule,
+
 
   ],
   exports: [
