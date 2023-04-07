@@ -4,12 +4,13 @@ import { MessagerieComponent } from './messagerie/components/messagerie/messager
 import { BodyOfHomeComponent } from './core/components/body-of-home/body-of-home.component';
 import { HomeConnectComponent } from './core/components/home-connect/home-connect.component';
 import { AuthGuard } from './guards/auth.guard';
+import { HomeComponent } from './core/components/home/home.component';
 
 
 const isLoggedIn= localStorage.getItem('token');
 
 const routes: Routes = [
-  { path: 'home', component: BodyOfHomeComponent },
+  { path: 'home',  component: HomeComponent },
   { path: 'homeConnected', component: HomeConnectComponent, canActivate: [AuthGuard] },
   { path: 'messagerie', component: MessagerieComponent, canActivate: [AuthGuard] }
   // { path: 'offres', component: OffresComponent },

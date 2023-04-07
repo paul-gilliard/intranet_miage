@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Modal } from "bootstrap";
+import { AuthService } from 'src/app/services/auth.service';
 
 
 @Component({
@@ -7,18 +8,16 @@ import { Modal } from "bootstrap";
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
+authenticated: boolean = false;
 
-  createUser() {
-    let element = document.getElementById("createUserModal") as HTMLElement;
-    let myModal = new Modal(element);
-    myModal.show();
-  }
+constructor(private authService: AuthService) {
+  
+}
 
-  login() {
-    let element = document.getElementById("loginModal") as HTMLElement;
-    let myModal = new Modal(element);
-    myModal.show();
-  }
+ngOnInit(): void {
+    this.authenticated = this.authService.isAuthenticated();
+}
+
 
 }

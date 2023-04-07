@@ -38,6 +38,10 @@
               <li class= "nav-item" highlight>
                 <a class="nav-link" href=""><i class="bi bi-file-earmark"></i> Documents</a>
               </li>
+              <div *ngIf="isAuthenticated">
+                <button type="button" class="btn btn-primary" (click)="logout()">Déconnexion</button>
+              </div>
+              
             </ul>
           </div>
 

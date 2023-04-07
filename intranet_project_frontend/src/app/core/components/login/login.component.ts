@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { AuthService } from 'src/app/services/auth.service';
 import { User } from 'src/app/models/user.model';
 import { Router } from '@angular/router';
+import { HeaderComponent } from 'src/app/shared/header/header.component';
 
 @Component({
   selector: 'app-login',
@@ -58,7 +59,7 @@ export class LoginComponent implements OnInit, OnDestroy {
         
         
     // Rediriger vers la page d'accueil ou la page souhaitée après la connexion réussie.
-     this.router.navigate(['homeConnected']); // Changez 'home-connect' avec le nom de votre route
+     this.router.navigate(['home']); // Changez 'home-connect' avec le nom de votre route
     // this.authService.isLoggedIn = true;
       },
       (error) => {
