@@ -16,7 +16,7 @@ import { EmploiDuTempsModule } from '../emploi-du-temps/emploi-du-temps.module';
     EmploiDuTempsModule,
     CommonModule,
     CoreRoutingModule,
-   
+    SharedModule
     
   ],
   exports: [
