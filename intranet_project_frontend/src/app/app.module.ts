@@ -12,11 +12,13 @@ import { SharedModule } from './shared/shared.module';
 import { SondagesModule } from './sondages/sondages.module';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
 
+
 @NgModule({
   declarations: [
     HomeComponent
   ],
   imports: [
+    
     BrowserModule,
     AppRoutingModule,
     CoreModule,
@@ -25,7 +27,8 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
     EmploiDuTempsModule,
     DepotDocumentsModule,
     SondagesModule,
-    HttpClientModule
+    HttpClientModule,
+    
   ],
   providers: [
     {
