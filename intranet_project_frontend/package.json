@@ -28,19 +28,19 @@
     "@fullcalendar/interaction": "^6.1.5",
     "bootstrap": "^5.2.3",
     "bootstrap-icons": "^1.10.4",
-    "fullcalendar": "^6.1.5",
-    "ical": "^0.8.0",
-    "ical.js": "^1.5.0",
+    "ngx-owl-carousel-o": "^15.0.0",
     "rxjs": "~7.8.0",
-    "tslib": "^2.3.0",
+    "socket.io-client": "^4.6.1",
+    "swiper": "^9.2.0",
     "zone.js": "~0.12.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^15.2.4",
     "@angular/cli": "~15.2.4",
     "@angular/compiler-cli": "^15.2.0",
-    "@types/ical": "^0.8.0",
+    "@types/bootstrap": "^5.2.6",
     "@types/jasmine": "~4.3.0",
+    "@types/socket.io": "^3.0.2",
     "@types/ws": "^8.5.4",
     "jasmine-core": "~4.5.0",
     "karma": "~6.4.0",
@@ -48,6 +48,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
+    "tslib": "^2.5.0",
     "typescript": "~4.9.4"
   }
 }

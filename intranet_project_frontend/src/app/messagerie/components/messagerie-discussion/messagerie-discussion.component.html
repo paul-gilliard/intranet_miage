@@ -1,0 +1,17 @@
+<div class="panel panel-default">
+    <div class="panel-heading"><h3 class="panel-title">{{nomConversation}}</h3></div>
+    <div class="panel-body">
+        <div>
+            <div class="message" *ngFor="let message of messagerie.messages">
+                <p>{{message.emeteur}}</p>
+                <p>{{message.text}}</p>
+            </div>
+        </div>
+        <div>
+            <input type="text" [(ngModel)]="messageString"/>
+            <button type="button" class="btn btn-default btn-sm" (click)="sendMessage(messageString, 'moi')">   
+                <span class="bi bi-send-fill"></span>
+            </button>
+        </div>
+    </div>
+</div>
