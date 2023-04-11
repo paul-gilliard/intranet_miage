@@ -12,7 +12,7 @@ import { SharedModule } from './shared/shared.module';
 import { SondagesModule } from './sondages/sondages.module';
 import { FullCalendarModule } from '@fullcalendar/angular';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
-
+import { NgImageSliderModule } from 'ng-image-slider';
 
 @NgModule({
   declarations: [
@@ -29,8 +29,10 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
     SondagesModule,
     FullCalendarModule,
     HttpClientModule,
+    NgImageSliderModule
     
   ],
+  exports:[NgImageSliderModule],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,

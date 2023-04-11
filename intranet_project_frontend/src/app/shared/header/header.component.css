@@ -3,12 +3,13 @@ header {
     background-color: #4CB3ED;
     height:25px;
     padding-bottom: 3%;
+    
   }
   
   .navbar-toggler {
     border: none;
   }
-  
+
   .navbar-toggler-icon {
     background-color: black;
   }
@@ -16,7 +17,7 @@ header {
     display: inline-block;
   }
   .navbar-nav .nav-link {
-    font-family: "Montserrat", sans-serif;
+    
     font-weight: 500;
     font-size: 16px;
     color: black;
