@@ -8,39 +8,45 @@
     position: relative;
    
     text-align: center;
+    box-shadow: 1px 0px 0px 0px grey;
+    
 
 }
+
+/*
 .img-slide{
     width: 100%; 
     height: 300px; 
     object-fit: cover; border-radius: 20px;
 }
+*/
 .lastelement{
     margin-right: 0px !important;
 }
 .element-fonctionnalite{
-    margin-top: 2%;
+   margin-top: 2%;
     display: inline-block;
     height: 150px;
     border-radius: 20px 20px ;
     position: relative;
     padding: 5px;
     width: 18%;
-   /* box-shadow: 2px 2px 0px 0px grey;*/
-    border-color: #4CB3ED;
     
-
+    /*box-shadow: 2px 2px 0px 0px grey;*/
+    border-color: #4CB3ED;
    /*margin-right: 2%;
    */
 }
+
 .actu-fonction{
     background-color: #4CB3ED;
    
     height: 80%;
     border-radius: 0px 0px  20px 20px;
-    padding: 5px;
+   /* padding: 5px;*/
     background-color: rgba(76, 179, 237, 0.15);
     padding-top: 10px;
+    box-shadow: 1px 1px 0px 0px grey;
 
 
 }
@@ -55,11 +61,41 @@
 }
 
 .carousel {
-    position: relative;
-    width: 100%;
-    height: 300px;
-    overflow: hidden;
-  }
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  color: white;
+  border-radius: 20px;
+ 
+}
+.inte-carousel{
+  display: inline-block;
+  width: 50%;
+  background-color: black;
+  height: 300px;
+  text-align: center;
+ 
+  
+}
+
+p{
+  text-align: left;
+  padding-top: 2%;
+  margin-left: 2%;
+
+}
+
+.carousel-item img {
+  max-height: 400px;
+  /* ou toute autre hauteur que vous souhaitez appliquer */
+  
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+/*
+
   
   .slides {
     display: flex;
@@ -73,12 +109,7 @@
     transition: transform 0.5s ease-in-out;
   }
   
-  .slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
+ 
   .prev-btn, .next-btn {
     position: absolute;
     top: 50%;
@@ -99,9 +130,10 @@
   }
   
   /* Le slide actif est centré */
-  .slide.active {
+  /*.slide.active {
     transform: translateX(-50%);
   }
+  */
   
   /* Les slides avant et après le slide actif sont déplacés de la largeur d'un slide */
   .slide.prev {
@@ -111,3 +143,13 @@
   .slide.next {
     transform: translateX(50%);
   }
+  .car-ele{
+
+    display: inline-block;
+  }
+    .eleme{
+      display: inline-block;
+
+
+    }
+    

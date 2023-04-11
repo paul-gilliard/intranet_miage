@@ -36,6 +36,7 @@ export class LoginComponent implements OnInit, OnDestroy {
   }
 
   login() {
+    
     this.email = this.loginForm.get('email')?.value!;
     if (this.email != null){
   
@@ -68,6 +69,6 @@ export class LoginComponent implements OnInit, OnDestroy {
     )};
 
     this.close();
-  }
+    }
 
 }
