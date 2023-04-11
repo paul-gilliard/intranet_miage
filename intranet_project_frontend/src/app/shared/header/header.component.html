@@ -27,22 +27,31 @@
                 <a class="nav-link" routerLink="/home"><i class="bi bi-house"></i> Accueil</a>
               </li>
               <li class= "nav-item" highlight>
-                <a class="nav-link" routerLink="/messagerie"><i class="bi bi-chat-left-text"></i> Messages</a>
+                <a class="nav-link" routerLink="/messagerie"><i class="bi bi-chat-fill"></i> Messages</a>
               </li>
               <li class= "nav-item" highlight>
-                <a class="nav-link" routerLink="/home"><i class="bi bi-briefcase-fill"></i> Offres</a>
+                <a class="nav-link" routerLink="/offre"><i class="bi bi-briefcase-fill"></i> Offres</a>
               </li>
               <li class= "nav-item" highlight>
-                <a class="nav-link" routerLink="/home"><i class="bi bi-pie-chart-fill"></i> Sondages</a>
+                <a class="nav-link" routerLink="/sondage"><i class="bi bi-pie-chart-fill"></i> Sondages</a>
               </li>
               <li class= "nav-item" highlight>
-                <a class="nav-link" routerLink="/home"><i class="bi bi-file-earmark"></i> Documents</a>
+                <a class="nav-link" href=""><i class="bi bi-file-earmark-text-fill"></i> Documents</a>
               </li>
-              <li>
-                <button type="button" class="btn btn-primary" (click)="logout()">Déconnexion</button>
+              <li class="nav-item" highlight>
+                <a class="nav-link" href=""><i class="bi bi-calendar-week-fill"></i> Emploi du temps</a>
               </li>
             </ul>
 
+          </div>
+          <div *ngIf="isAuthenticated" class="col-1" style="float: right; margin-left: 5%;" >
+            <div class="dropdown"> 
+              <button class="btn " type="button" id="actionDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-person-circle"></i> (click)="logout()" </button>
+              <ul class="dropdown-menu" aria-labelledby="actionDropdown">
+                <li><a class="dropdown-item" href="#">Deconnexion</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </nav>

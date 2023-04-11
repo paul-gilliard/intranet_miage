@@ -6,6 +6,7 @@ import bodyParser from 'body-parser';
 import userRouter from './routers/users.router';
 import loginRouter from './routers/login.router';
 import messagerieRouter from './routers/messagerie.router';
+import calendarRouter from './routers/calendar.router';
 
 interface SocketData {
   emeteur: string;
@@ -34,6 +35,7 @@ connectToDatabase();
 app.use('/api/user', userRouter);
 app.use('/api/messagerie', messagerieRouter);
 app.use('/login', loginRouter);
+app.use('/api/calendar', calendarRouter)
 
 io.on('connection', (socket: Socket) => {
   console.log('Client connected');

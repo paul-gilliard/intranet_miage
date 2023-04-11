@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/services/auth.service';
+import { Modal } from 'bootstrap';
 
 @Component({
   selector: 'app-login',
@@ -20,6 +21,7 @@ export class LoginComponent {
               private authService: AuthService) {}
 
   login() {
+    
     this.email = this.loginForm.get('email')?.value!;
     if (this.email != null){
   
@@ -47,5 +49,11 @@ export class LoginComponent {
     )};
     
     this.loginForm.reset();
+  }
+
+  createUser ()  {
+    let element = document.getElementById("createUserModal") as HTMLElement;
+    let myModal = new Modal (element);
+    myModal.show();
   }
 }

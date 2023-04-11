@@ -9,7 +9,8 @@ import { CreateUserComponent } from './components/create-user/create-user.compon
 import { LoginComponent } from './components/login/login.component';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from '@angular/common/http';
-
+import { AppModule } from '../app.module';
+import { NgImageSliderModule } from 'ng-image-slider';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,8 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     HttpClientModule,
     SharedModule,
+    NgImageSliderModule
+    
 
 
   ],

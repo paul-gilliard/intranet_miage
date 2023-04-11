@@ -11,7 +11,7 @@ import { MessagerieModule } from './messagerie/messagerie.module';
 import { SharedModule } from './shared/shared.module';
 import { SondagesModule } from './sondages/sondages.module';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
-
+import { NgImageSliderModule } from 'ng-image-slider';
 
 @NgModule({
   declarations: [
@@ -27,7 +27,9 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
     DepotDocumentsModule,
     SondagesModule,
     HttpClientModule,
+    NgImageSliderModule
   ],
+  exports:[NgImageSliderModule],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
