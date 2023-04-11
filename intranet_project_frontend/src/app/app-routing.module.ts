@@ -10,7 +10,7 @@ const isLoggedIn= localStorage.getItem('token');
 
 const routes: Routes = [
   { path: 'home',  component: HomeComponent },
-  { path: 'homeConnected', component: HomeConnectComponent, canActivate: [AuthGuard] },
+  //{ path: 'homeConnected', component: HomeConnectComponent, canActivate: [AuthGuard] },
   { path: 'messagerie', component: MessagerieComponent, canActivate: [AuthGuard] }
   // { path: 'offres', component: OffresComponent },
   // { path: 'sondages', component: SondagesComponent },
