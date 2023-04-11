@@ -12,9 +12,9 @@
       </div>
       <div class="col-10">
         <nav class="navbar navbar-expand-md justify-content-end">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
-          </button>
+          </button> 
           <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
             
 
@@ -41,10 +41,20 @@
               </li>
             </ul>
           </div>
-          <div class="col-1" style="float: right; margin-left: 13%;" >
-            <div ><i class="bi bi-person-circle"></i></div>
+          <div *ngIf="isAuthenticated" class="col-1" style="float: right; margin-left: 5%;" >
+           
+            <div class="dropdown"> <button class="btn " type="button" id="actionDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-person-circle"></i> (click)="logout()" </button>
+            <ul class="dropdown-menu" aria-labelledby="actionDropdown">
+              
+              <li><a class="dropdown-item" href="#">Deconnexion</a></li>
+        
+            </ul>
           </div>
-          
+          </div>
+
+
+         
 
           </div>
         </nav>

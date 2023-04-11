@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { AuthService } from 'src/app/services/auth.service';
 import { User } from 'src/app/models/user.model';
 import { Router } from '@angular/router';
+import { Modal } from 'bootstrap';
 
 @Component({
   selector: 'app-login',
@@ -69,6 +70,11 @@ export class LoginComponent implements OnInit, OnDestroy {
     )};
 
     this.close();
-    }
+    };
+  createUser ()  {
+    let element = document.getElementById("createUserModal") as HTMLElement;
+    let myModal = new Modal (element);
+    myModal.show();
 
+  }
 }
