@@ -35,7 +35,7 @@ export class MessagerieDiscussionComponent implements OnInit {
       console.log('New message received', message);
       this.messagerie.messages.push(message);
     });
-    this.adjustInputHeight();
+  
   }
 
 sendMessage(messageString: String, sender: string) {
@@ -50,7 +50,8 @@ sendMessage(messageString: String, sender: string) {
     }
   });
   this.messageString = '';
-}  isCurrentUser(emetteur: String): boolean {
+  }
+  isCurrentUser(emetteur: String): boolean {
   return emetteur === localStorage.getItem('currentUserName');
 }
   getDisplayEmitter(emitter: String): String {
@@ -65,10 +66,5 @@ onInput() {
   input.style.height = 'auto'; /* réinitialiser la hauteur à "auto" pour obtenir la hauteur naturelle */
   input.style.height = (input.scrollHeight + 2) + 'px'; /* ajuster la hauteur de l'input en fonction de son contenu */
 }
- adjustInputHeight() {
-    const input = document.getElementById('messageInput') as HTMLInputElement;
-    input.style.height = 'auto'; /* réinitialiser la hauteur à "auto" pour obtenir la hauteur naturelle */
-    input.style.height = (input.scrollHeight + 14) + 'px'; /* ajuster la hauteur de l'input en fonction de son contenu */
-  }
-
+ 
 }
