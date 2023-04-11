@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { CoreRoutingModule } from './core-routing.module';
-import { BodyOfHomeComponent } from './components/body-of-home/body-of-home.component';
+import { HomeLoginComponent } from './components/home-login/home-login.component';
 import { SharedModule } from '../shared/shared.module';
 import { HomeConnectComponent } from './components/home-connect/home-connect.component';
 import { CreateUserComponent } from './components/create-user/create-user.component';
@@ -13,7 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    BodyOfHomeComponent,
+    HomeLoginComponent,
     HomeConnectComponent,
     CreateUserComponent,
     LoginComponent,
@@ -31,7 +31,7 @@ import { HttpClientModule } from '@angular/common/http';
 
   ],
   exports: [
-    BodyOfHomeComponent,
+    HomeLoginComponent,
     HomeConnectComponent,
     CreateUserComponent,
     LoginComponent,

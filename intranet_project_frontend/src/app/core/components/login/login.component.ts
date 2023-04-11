@@ -1,17 +1,15 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
 import { AuthService } from 'src/app/services/auth.service';
-import { User } from 'src/app/models/user.model';
 import { Router } from '@angular/router';
-import { HeaderComponent } from 'src/app/shared/header/header.component';
+import { HomeComponent } from '../home/home.component';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit, OnDestroy {
+export class LoginComponent {
 
   email: string = "";
 
@@ -20,21 +18,10 @@ export class LoginComponent implements OnInit, OnDestroy {
     motdePasse: ["", [, ]]
   });
 
-  constructor(private formBuilder: FormBuilder, private http: HttpClient, private authService: AuthService, private router: Router) {
-    
-  }
-
-  ngOnInit(): void {
-    
-  }
-
-  ngOnDestroy(): void {
-      
-  }
-
-  close() {
-    this.loginForm.reset();
-  }
+  constructor(private formBuilder: FormBuilder,
+              private authService: AuthService, 
+              private router: Router,
+              private homeComponent: HomeComponent) {}
 
   login() {
     this.email = this.loginForm.get('email')?.value!;
@@ -67,8 +54,8 @@ export class LoginComponent implements OnInit, OnDestroy {
         // Afficher un message d'erreur à l'utilisateur
       }
     )};
-
-    this.close();
+    
+    this.loginForm.reset();
   }
 
 }
