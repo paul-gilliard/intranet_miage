@@ -8,6 +8,7 @@ import { OffresModule } from './offres/offres.module';
 import { OffreComponent } from './offres/components/offre/offre.component';
 import { SondagesModule } from './sondages/sondages.module';
 import { SondageComponent } from './sondages/components/sondage/sondage.component';
+import { DocumentComponent } from './depot-documents/document/document.component';
 
 const isLoggedIn= localStorage.getItem('token');
 
@@ -16,7 +17,11 @@ const routes: Routes = [
   { path: 'homeConnected', component: HomeConnectComponent, canActivate: [AuthGuard] },
   { path: 'messagerie', component: MessagerieComponent, canActivate: [AuthGuard] },
   { path: 'offre', component: OffreComponent, canActivate: [AuthGuard] },
-  {path: 'sondage', component: SondageComponent,canActivate: [AuthGuard] }
+  { path: 'sondage', component: SondageComponent, canActivate: [AuthGuard] },
+  { path: 'documents', component: DocumentComponent, canActivate: [AuthGuard] },
+  { path: 'emploiDuTemps', component: DocumentComponent, canActivate: [AuthGuard] },
+
+  
   // { path: 'offres', component: OffresComponent },
   // { path: 'sondages', component: SondagesComponent },
   // { path: 'documents', component: DocumentsComponent }

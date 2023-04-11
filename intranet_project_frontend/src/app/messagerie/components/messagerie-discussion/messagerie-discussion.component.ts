@@ -35,17 +35,40 @@ export class MessagerieDiscussionComponent implements OnInit {
       console.log('New message received', message);
       this.messagerie.messages.push(message);
     });
+    this.adjustInputHeight();
   }
 
-  sendMessage(messageString: String, emeteur: String){
-    this.message.text = messageString;
-    this.message.emeteur = emeteur;
+sendMessage(messageString: String, sender: string) {
+  const currentUserName = localStorage.getItem('currentUserName')!;
+  this.message.text = messageString;
+  this.message.emeteur = currentUserName
 
-    this.socket.emit('new-message', this.message);
-    this.sub = this.service.sendMessage(this.message).subscribe({
-      next: messagerie => {
-        this.messagerie = messagerie;
-      }
-    });
+  this.socket.emit('new-message', this.message);
+  this.sub = this.service.sendMessage(this.message).subscribe({
+    next: messagerie => {
+      this.messagerie = messagerie;
+    }
+  });
+  this.messageString = '';
+}  isCurrentUser(emetteur: String): boolean {
+  return emetteur === localStorage.getItem('currentUserName');
+}
+  getDisplayEmitter(emitter: String): String {
+    let displayEmitter = emitter;
+    if (emitter === localStorage.getItem('currentUserName')) {
+      displayEmitter = 'moi';
+    }
+    return displayEmitter;
   }
+onInput() {
+  const input = document.getElementById('messageInput') as HTMLInputElement;
+  input.style.height = 'auto'; /* réinitialiser la hauteur à "auto" pour obtenir la hauteur naturelle */
+  input.style.height = (input.scrollHeight + 2) + 'px'; /* ajuster la hauteur de l'input en fonction de son contenu */
+}
+ adjustInputHeight() {
+    const input = document.getElementById('messageInput') as HTMLInputElement;
+    input.style.height = 'auto'; /* réinitialiser la hauteur à "auto" pour obtenir la hauteur naturelle */
+    input.style.height = (input.scrollHeight + 14) + 'px'; /* ajuster la hauteur de l'input en fonction de son contenu */
+  }
+
 }
