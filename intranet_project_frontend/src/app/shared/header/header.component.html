@@ -46,11 +46,11 @@
           </div>
           <div *ngIf="isAuthenticated" class="col-1" style="float: right; margin-left: 5%;" >
             <div class="dropdown"> 
-              <button class="btn " type="button" id="actionDropdown" data-bs-toggle="dropdown" aria-expanded="false" (click)="logout()">
-                <i class="bi bi-person-circle"></i>  
+              <button class="btn " type="button" id="actionDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-person-circle"> {{currentUserName}}</i>  
               </button>
               <ul class="dropdown-menu" aria-labelledby="actionDropdown">
-                <li><a class="dropdown-item" href="#">Deconnexion</a></li>
+                <li><a class="dropdown-item" href="#" (click)="logout()">Deconnexion</a></li>
               </ul>
             </div>
           </div>

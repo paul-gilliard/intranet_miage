@@ -37,3 +37,15 @@
     margin-top: 30%; 
     margin-left: 15%;
 }
+
+header {
+    /* padding: 30px 10%; */
+    background-color: #4CB3ED;
+    height:25px;
+    padding-bottom: 3%; 
+}
+  
+.logo{
+    display: inline-block;
+}
+

@@ -9,6 +9,7 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class HeaderComponent implements OnInit {
   isAuthenticated: boolean = false;
+  currentUserName: string = "";
 
   constructor(private authService: AuthService, private router: Router) {
 
@@ -16,6 +17,10 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this.isAuthenticated = this.authService.isAuthenticated();
+    if (localStorage.getItem('currentUserName') != undefined){
+      this.currentUserName = localStorage.getItem('currentUserName')!;
+    }
+    
   }
 
   logout() {
