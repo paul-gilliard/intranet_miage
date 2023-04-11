@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 
-//import {} from '@fortawesome/free-brands-svg-icons';
-
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -27,9 +25,7 @@ export class HeaderComponent implements OnInit {
       localStorage.removeItem('currentUserEmail');
       localStorage.removeItem('currentUserPromo');
       localStorage.removeItem('currentUserStatut');
-      this.router.navigate(['/home']);
       this.isAuthenticated = false;
     }
   }
-  
 }

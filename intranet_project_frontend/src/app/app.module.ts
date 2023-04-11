@@ -18,7 +18,6 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
     HomeComponent
   ],
   imports: [
-    
     BrowserModule,
     AppRoutingModule,
     CoreModule,
@@ -28,7 +27,6 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
     DepotDocumentsModule,
     SondagesModule,
     HttpClientModule,
-    
   ],
   providers: [
     {
