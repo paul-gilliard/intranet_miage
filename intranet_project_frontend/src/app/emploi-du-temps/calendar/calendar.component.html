@@ -1,1 +1,13 @@
+<div *ngFor="let calendarEvent of calendarEvents.content | keyvalue">
+    <div *ngFor="let event of calendarEvent.value | keyvalue">
+      <p>{{ event.key }}: {{ event.value }}</p>
+    </div>
+  </div>
+  
+  
+  
+
 <div #calendar></div>
+
+
+
