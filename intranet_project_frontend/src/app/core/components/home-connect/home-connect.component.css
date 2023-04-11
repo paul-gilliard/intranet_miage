@@ -1,25 +1,16 @@
 .titreFonctionnalite{
-    background-color: #4CB3ED;
-    border-radius: 20px 20px 0 0;
-    height: 30%;
-    text-align: center;
-    padding-top: 10px;
-    
-    position: relative;
-   
-    text-align: center;
-    box-shadow: 1px 0px 0px 0px grey;
-    
-
+  background-color: #4CB3ED;
+  border-radius: 20px 20px 0 0;
+  height: 30%;
+  text-align: center;
+  padding-top: 10px;
+  
+  position: relative;
+  
+  text-align: center;
+  box-shadow: 1px 0px 0px 0px grey;
 }
 
-/*
-.img-slide{
-  width: 100%; 
-  height: 300px; 
-  object-fit: cover; border-radius: 20px;
-}
-*/
 .lastelement{
   margin-right: 0px !important;
 }
@@ -64,87 +55,43 @@
   border-radius: 20px;
  
 }
+
 .inte-carousel{
   display: inline-block;
   width: 50%;
   background-color: black;
   height: 300px;
   text-align: center;
- 
-  
 }
 
 p{
   text-align: left;
   padding-top: 2%;
   margin-left: 2%;
-
 }
 
 .carousel-item img {
   max-height: 400px;
   /* ou toute autre hauteur que vous souhaitez appliquer */
-  
   width: 100%;
   height: 100%;
   border-radius: 20px;
 }
-/*
 
-  
-  .slides {
-    display: flex;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .slide {
-    flex: 1 0 100%;
-    margin-right: 20px;
-    transition: transform 0.5s ease-in-out;
-  }
-  
- 
-  .prev-btn, .next-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: transparent;
-    border: none;
-    font-size: 24px;
-    color: white;
-    cursor: pointer;
-  }
-  
-  .prev-btn {
-    left: 0;
-  }
-  
-  .next-btn {
-    right: 0;
-  }
-  
-  /* Le slide actif est centré */
-  /*.slide.active {
-    transform: translateX(-50%);
-  }
-  */
-  
-  /* Les slides avant et après le slide actif sont déplacés de la largeur d'un slide */
-  .slide.prev {
-    transform: translateX(-150%);
-  }
-  
-  .slide.next {
-    transform: translateX(50%);
-  }
-  .car-ele{
+/* Les slides avant et après le slide actif sont déplacés de la largeur d'un slide */
+.slide.prev {
+  transform: translateX(-150%);
+}
 
-    display: inline-block;
-  }
-    .eleme{
-      display: inline-block;
+.slide.next {
+  transform: translateX(50%);
+}
 
+.car-ele{
+  display: inline-block;
+}
 
-    }
+.eleme{
+  display: inline-block;
+}
     
