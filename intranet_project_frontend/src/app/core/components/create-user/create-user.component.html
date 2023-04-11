@@ -3,6 +3,7 @@
       <h5 class="modal-title" id="exampleModalLabel">Inscription</h5>
       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="close()"></button>
     </div>
+
     <div class="modal-body">
       <form class="row g-3" [formGroup]="createUserForm">
         <div class="position-relative col-12">
@@ -12,6 +13,7 @@
               {{createUserForm.get('name')?.errors?.['required'] ? "Il faut renseigner un nom": ""}}
             </div>
         </div>
+
         <div class="position-relative col-12">
           <label for="email" class="form-label">Email</label>
           <input type="text" id="email" class="form-control" formControlName="email" [ngClass]="createUserForm.get('email')!.errors ? 'is-invalid' : 'is-valid'"/>
@@ -19,6 +21,7 @@
             {{createUserForm.get('email')?.errors?.['required'] ? "Il faut renseigner une adresse email": ""}}
           </div>
         </div>
+
         <div class="position-relative col-12">
             <label for="promo" class="form-label">Promo</label>
             <select id="promo" class="form-select" formControlName="promo" [ngClass]="createUserForm.get('promo')!.errors ? 'is-invalid' : 'is-valid'">
@@ -31,6 +34,7 @@
                 {{createUserForm.get('promo')?.errors?.['required'] ? "Il faut sélectionner une promo": ""}}
             </div>
         </div>
+
         <div class="position-relative col-12">
             <label for="statut" class="form-label">Statut</label>
             <select id="statut" class="form-select" formControlName="statut" [ngClass]="createUserForm.get('statut')!.errors ? 'is-invalid' : 'is-valid'">
@@ -44,8 +48,8 @@
         </div>
       </form>
     </div>
+
     <div class="modal-footer">
-      
       <button type="button" class="btn btn-dark" data-bs-dismiss="modal" [disabled]="!createUserForm.valid" (click)="createUser()">Valider</button>
     </div>
   </div>

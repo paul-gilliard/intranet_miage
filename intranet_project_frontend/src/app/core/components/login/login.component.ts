@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/services/auth.service';
-import { Router } from '@angular/router';
-import { HomeComponent } from '../home/home.component';
 
 @Component({
   selector: 'app-login',
@@ -19,9 +17,7 @@ export class LoginComponent {
   });
 
   constructor(private formBuilder: FormBuilder,
-              private authService: AuthService, 
-              private router: Router,
-              private homeComponent: HomeComponent) {}
+              private authService: AuthService) {}
 
   login() {
     this.email = this.loginForm.get('email')?.value!;
@@ -43,11 +39,6 @@ export class LoginComponent {
         localStorage.setItem('currentUserStatut', currentUserStatut);
 
         console.log('Authentification réussie');
-        
-        
-    // Rediriger vers la page d'accueil ou la page souhaitée après la connexion réussie.
-     this.router.navigate(['home']); // Changez 'home-connect' avec le nom de votre route
-    // this.authService.isLoggedIn = true;
       },
       (error) => {
         console.error('Erreur d\'authentification', error); 
@@ -57,5 +48,4 @@ export class LoginComponent {
     
     this.loginForm.reset();
   }
-
 }
