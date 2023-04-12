@@ -5,7 +5,7 @@ import { HomeConnectComponent } from './core/components/home-connect/home-connec
 import { AuthGuard } from './guards/auth.guard';
 import { OffreComponent } from './offres/components/offre/offre.component';
 import { SondageComponent } from './sondages/components/sondage/sondage.component';
-import { DocumentComponent } from './depot-documents/document/document.component';
+import { DriveDocumentComponent } from './depot-documents/drive-document/drive-document.component';
 
 const routes: Routes = [
   { path: '', component: HomeConnectComponent },
@@ -13,8 +13,8 @@ const routes: Routes = [
   { path: 'messagerie', component: MessagerieComponent, canActivate: [AuthGuard] },
   { path: 'offre', component: OffreComponent, canActivate: [AuthGuard] },
   { path: 'sondage', component: SondageComponent, canActivate: [AuthGuard] },
-  { path: 'documents', component: DocumentComponent, canActivate: [AuthGuard] },
-  { path: 'emploiDuTemps', component: DocumentComponent, canActivate: [AuthGuard] }
+  { path: 'documents', component: DriveDocumentComponent, canActivate: [AuthGuard] },
+  { path: 'emploiDuTemps', component: DriveDocumentComponent, canActivate: [AuthGuard] }
 ];
 
 @NgModule({
