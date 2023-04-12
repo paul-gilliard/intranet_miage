@@ -6,6 +6,7 @@ import { AuthGuard } from './guards/auth.guard';
 import { OffreComponent } from './offres/components/offre/offre.component';
 import { SondageComponent } from './sondages/components/sondage/sondage.component';
 import { DocumentComponent } from './depot-documents/document/document.component';
+import { CalendarComponent } from './emploi-du-temps/calendar/calendar.component';
 
 const isLoggedIn= localStorage.getItem('token');
 
@@ -16,7 +17,7 @@ const routes: Routes = [
   { path: 'offre', component: OffreComponent, canActivate: [AuthGuard] },
   { path: 'sondage', component: SondageComponent, canActivate: [AuthGuard] },
   { path: 'documents', component: DocumentComponent, canActivate: [AuthGuard] },
-  { path: 'emploiDuTemps', component: DocumentComponent, canActivate: [AuthGuard] }
+  { path: 'emploiDuTemps', component: CalendarComponent, canActivate: [AuthGuard] }
 ];
 
 @NgModule({

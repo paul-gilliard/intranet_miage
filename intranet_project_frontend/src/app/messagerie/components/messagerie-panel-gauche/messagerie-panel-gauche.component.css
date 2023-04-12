@@ -11,3 +11,9 @@
     background-color: #FFFFFF;
     height: 100%;
 }
+ul {
+    list-style-type: none;
+}
+.userList{
+    margin-top: 15%;
+}

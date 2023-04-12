@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { UsereService } from 'src/app/services/user.service';
 import { User } from 'src/app/models/user.model';
 import { Messagerie } from 'src/app/models/messagerie.model';
@@ -10,6 +10,14 @@ import { MessagerieService } from 'src/app/services/messagerie.service';
   styleUrls: ['./messagerie-panel-gauche.component.css']
 })
 export class MessageriePanelGaucheComponent implements OnInit {
+  static getMessagerieDiscussion() {
+    
+     return this.getMessagerieDiscussion;
+  }
+  @Input() messagerie: Messagerie = {
+    nomConversation: '',
+    messages: []
+  };
   usersList: User[] = [];
   currentUserEmail = localStorage.getItem('currentUserEmail')!;
   messagerieDiscussion: any;
@@ -34,10 +42,13 @@ export class MessageriePanelGaucheComponent implements OnInit {
         console.log('requête réussie', response);
         this.messagerieDiscussion.messagerie = response;
         this.messagerieDiscussion.nomConversation = user.name;
+        //this.messagerie.messages.push(response)
+        
       },
       (error) => {
         console.error('Erreur de requête', error);
       }
     );
   }
+  
 }

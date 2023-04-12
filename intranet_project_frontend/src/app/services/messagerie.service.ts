@@ -27,7 +27,6 @@ export class MessagerieService {
    
 
     getPrivateMessages(emetteur: string, recepteur: string): Observable<any> {
-
         const url = `${this.apiUrl}/messagerie-prive/${emetteur}/${recepteur}`;
         return this.http.get(url);
       }
