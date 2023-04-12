@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnChanges, SimpleChanges } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { DriveDocument } from 'src/app/models/driveDocument.model';
 import { DocumentService } from 'src/app/services/document.service';
@@ -9,14 +9,21 @@ import { Buffer } from 'buffer';
   templateUrl: './drive-document.component.html',
   styleUrls: ['./drive-document.component.css']
 })
-export class DriveDocumentComponent {
+export class DriveDocumentComponent implements OnChanges{
 
   documents!: DriveDocument[];
   document!: DriveDocument;
-  cours!: String[];
   sub!: Subscription;
+  promo!: String;
+  semestre!: String;
+  cours!: String;
+  link!: String;
 
   constructor(private service: DocumentService){ }
+  
+  ngOnChanges(): void {
+    this.link = this.getLink();
+  }
 
   getAllDocuments(){
     this.sub = this.service.getAllDocuments().subscribe({
@@ -34,5 +41,30 @@ export class DriveDocumentComponent {
     this.document.document = buffer;
     
     this.service.insertDocument(this.document);
+  }
+
+  getPromo(promo: String){
+    this.promo = promo;
+  } 
+  
+  getSemestre(semestre: String){
+    this.semestre = semestre;
+  }
+  
+  getCours(cours: String){
+    this.cours = cours;
+  }
+
+  getLink(): String{
+    if(this.promo != undefined){
+      if(this.semestre != undefined){
+        if(this.cours != undefined){
+          return this.promo+ " > "+ this.semestre+ " > "+ this.cours;
+        }
+        return this.promo+ " > "+ this.semestre;
+      }
+      return this.promo;
+    }
+    return '';
   }
 }

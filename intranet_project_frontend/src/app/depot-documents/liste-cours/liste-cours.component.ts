@@ -60,6 +60,7 @@ export class ListeCoursComponent {
   ];
 
   onClickPromo(promo: String) {
+    console.log("COUCOU");
     this.promo.emit(promo);
   }
 
@@ -68,6 +69,7 @@ export class ListeCoursComponent {
   }
 
   onClickCours(cours: String) {
+    console.log("COUCOU");    
     this.cours.emit(cours);
   }
 }
