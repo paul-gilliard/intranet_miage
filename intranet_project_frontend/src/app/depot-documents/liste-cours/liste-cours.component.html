@@ -1,11 +1,11 @@
 <ngb-accordion #acc="ngbAccordion" [closeOthers]="true">
-    <ngb-panel *ngFor="let promo of listeCours" [title]="promo.title" id="{{promo.title}}">
+    <ngb-panel *ngFor="let promo of listeCours" [title]="promo.title" id="{{promo.title}}" (click)="onClickPromo(promo.title)">
         <ng-template ngbPanelContent>
             <ngb-accordion #nestedAcc="ngbAccordion" [closeOthers]="true">
-                <ngb-panel *ngFor="let semestre of promo.semestres" [title]="semestre.title" id="{{semestre.title}}">
+                <ngb-panel *ngFor="let semestre of promo.semestres" [title]="semestre.title" id="{{semestre.title}}" (click)="onClickSemestre(semestre.title)">
                     <ng-template ngbPanelContent>
                         <ul>
-                            <li *ngFor="let cours of semestre.cours">{{cours}}</li>
+                            <li *ngFor="let cours of semestre.cours"><button type="button" class="btn btn-light" data-mdb-ripple-color="dark" (click)="onClickCours(cours)">{{cours}}</button></li>
                         </ul>
                     </ng-template>
                 </ngb-panel>

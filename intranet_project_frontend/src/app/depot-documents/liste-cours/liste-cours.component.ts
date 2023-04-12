@@ -1,15 +1,17 @@
-import { Component } from '@angular/core';
-import { NgbAccordionConfig } from '@ng-bootstrap/ng-bootstrap';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-liste-cours',
   templateUrl: './liste-cours.component.html',
-  styleUrls: ['./liste-cours.component.css'],
-  providers: [NgbAccordionConfig]
+  styleUrls: ['./liste-cours.component.css']
 })
 export class ListeCoursComponent {
 
-  listeCours: any = [
+  @Output() promo = new EventEmitter<String>();
+  @Output() semestre = new EventEmitter<String>();
+  @Output() cours = new EventEmitter<String>();
+
+  listeCours = [
     {
       title: 'License 3', 
         semestres:[
@@ -57,8 +59,15 @@ export class ListeCoursComponent {
     }
   ];
 
-  constructor(config: NgbAccordionConfig) {
-    config.closeOthers = true;
-    config.type = 'info';
+  onClickPromo(promo: String) {
+    this.promo.emit(promo);
+  }
+
+  onClickSemestre(semestre: String) {
+    this.semestre.emit(semestre);
+  }
+
+  onClickCours(cours: String) {
+    this.cours.emit(cours);
   }
 }
