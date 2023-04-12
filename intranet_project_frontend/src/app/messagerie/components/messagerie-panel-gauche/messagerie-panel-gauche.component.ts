@@ -23,4 +23,7 @@ export class MessageriePanelGaucheComponent implements OnInit {
       }
     );
   }
+  onUserClick(user: User) {
+    
+  }
 }

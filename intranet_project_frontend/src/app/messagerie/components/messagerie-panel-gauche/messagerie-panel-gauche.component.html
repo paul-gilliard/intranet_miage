@@ -22,16 +22,17 @@
                 <i class="bi bi-person-circle"></i>
                 Nom de la première personne
             </a>
+            <!--Lister tout les utilisateurs d'abord-->
             <div *ngFor="let user of usersList">
                 <ul class="listePersonne">
-                    <li>
+                    <li *ngIf="user!=null " (click)="onUserClick(user)">
                         {{user.name}}
                     </li>
                 
                 </ul>
 
             </div>
-            <!--Lister tout les utilisateurs d'abord-->
+            
         </div>    
     </div>
 </div>
