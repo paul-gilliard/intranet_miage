@@ -1,7 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { UsereService } from 'src/app/services/user.service';
+import { UserService } from 'src/app/services/user.service';
 import { User } from 'src/app/models/user.model';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-create-user',
@@ -19,7 +20,8 @@ export class CreateUserComponent {
   });
 
   constructor(private formBuilder: FormBuilder,
-              private userService: UsereService) {
+              private userService: UserService,
+              private toastr: ToastrService) {
     
   }
 
@@ -38,7 +40,7 @@ export class CreateUserComponent {
     this.userService.createUser(userToCreate).subscribe(
       (response) => {
         console.log('creation reussie', response);
-        
+        this.toastr.success('Votre compte a été créé avec succès, vous pouvez désormais vous connecter avec l\'email renseigné !', 'Création réussie');
       },
       (error) => {
         console.error('Erreur de creation', error);

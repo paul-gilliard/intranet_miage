@@ -9,13 +9,7 @@
       </div>
       <div class="formFooter">
         <button type="submit" class="btn btn-dark" id= "btnSeconnecter" [disabled]="!loginForm.valid" (click)="login()">Se connecter</button>
-        <button type="button" class="btn btn-dark" id= "btnInscription" (click)="createUser()">S'inscrire</button>
+        <button type="button" class="btn btn-dark" id= "btnInscription" (click)="openCreateUserModal()">S'inscrire</button>
       </div>
     </form>
-</div>
-
-<div class="modal fade" id="createUserModal">
-  <div class="modal-dialog">
-    <app-create-user></app-create-user>
-  </div>
 </div>
