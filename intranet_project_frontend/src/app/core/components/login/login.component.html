@@ -3,9 +3,6 @@
       <div class="position-relative col-12">
         <input type="text" id="email" placeholder="email ENT" class="form-control" formControlName="email" [ngClass]="loginForm.get('email')!.errors ? 'is-invalid' : 'is-valid'"/>
         <input type="password" id="motdePasse"placeholder="mot de passe" class="form-control" formControlName="motdePasse" [ngClass]="loginForm.get('motdePasse')!.errors ? 'is-invalid' : 'is-valid'"/>
-        <!-- <div class="invalid-tooltip top-0 end-0">
-          {{loginForm.get('email')?.errors?.['required'] ? "Il faut renseigner une adresse email": ""}}
-        </div> -->
       </div>
     </form>
 </div>

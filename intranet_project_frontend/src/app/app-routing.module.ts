@@ -7,8 +7,6 @@ import { OffreComponent } from './offres/components/offre/offre.component';
 import { SondageComponent } from './sondages/components/sondage/sondage.component';
 import { DocumentComponent } from './depot-documents/document/document.component';
 
-const isLoggedIn= localStorage.getItem('token');
-
 const routes: Routes = [
   { path: '', component: HomeConnectComponent },
   { path: 'home',  component: HomeConnectComponent, canActivate: [AuthGuard] },
