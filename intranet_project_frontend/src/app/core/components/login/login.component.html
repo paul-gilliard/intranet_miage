@@ -7,12 +7,11 @@
           {{loginForm.get('email')?.errors?.['required'] ? "Il faut renseigner une adresse email": ""}}
         </div> -->
       </div>
+      <div class="formFooter">
+        <button type="submit" class="btn btn-dark" id= "btnSeconnecter" [disabled]="!loginForm.valid" (click)="login()">Se connecter</button>
+        <button type="button" class="btn btn-dark" id= "btnInscription" (click)="createUser()">S'inscrire</button>
+      </div>
     </form>
-</div>
-       
-<div class="formFooter">
-  <button type="button" class="btn btn-dark" id= "btnSeconnecter" [disabled]="!loginForm.valid" (click)="login()">Se connecter</button>
-  <button type="button" class="btn btn-dark" id= "btnInscription" (click)="createUser()">S'inscrire</button>
 </div>
 
 <div class="modal fade" id="createUserModal">
