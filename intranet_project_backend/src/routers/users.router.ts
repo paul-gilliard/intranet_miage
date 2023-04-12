@@ -17,7 +17,7 @@ userRouter.get('/users', authenticateToken, getAllUsers);
 
 
 // Créer un nouvel utilisateur
-userRouter.post('/createUser', authenticateToken, createUser);
+userRouter.post('/createUser', createUser);
 
 // Lire un utilisateur par son ID
 userRouter.get('/:id', authenticateToken, getUserById);

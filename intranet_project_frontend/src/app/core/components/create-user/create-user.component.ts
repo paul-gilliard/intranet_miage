@@ -37,15 +37,15 @@ export class CreateUserComponent {
     };
     this.userService.createUser(userToCreate).subscribe(
       (response) => {
-        console.log('creation reussie', response);
-        
+        if (response) {
+          confirm('Utilisateur créé ! Vous pouvez maintenant vous connecter en utilisant l\'adresse mail renseignée !')
+        }
       },
       (error) => {
         console.error('Erreur de creation', error);
         
       }
     );
-
     this.close();
   }
 
