@@ -3,5 +3,5 @@ button-footer1{
 }
 footer{
     bottom: 0;
-    position: relative;
+    position: fixed;
 }
