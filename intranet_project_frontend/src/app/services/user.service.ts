@@ -6,6 +6,7 @@ import { User } from '../models/user.model';
   providedIn: 'root'
 })
 export class UsereService {
+  private baseUrl = 'http://localhost:3000/api/user/';
 
   constructor(private http: HttpClient) { }
 
@@ -13,6 +14,6 @@ export class UsereService {
     return this.http.post('http://localhost:3000/api/user/createUser', user);
   }
   getAllUsers() {
-    
+    return this.http.get<User>(`http://localhost:3000/api/user/users`);
   }
 }
