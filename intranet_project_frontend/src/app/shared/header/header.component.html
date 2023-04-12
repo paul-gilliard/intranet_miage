@@ -36,13 +36,15 @@
                 <a class="nav-link" routerLink="/sondage"><i class="bi bi-pie-chart-fill"></i> Sondages</a>
               </li>
               <li class= "nav-item" highlight>
-                <a class="nav-link" href=""><i class="bi bi-file-earmark-text-fill"></i> Documents</a>
+                <a class="nav-link" routerLink="/documents"><i class="bi bi-file-earmark-text-fill"></i> Documents</a>
               </li>
               <li class="nav-item" highlight>
-                <a class="nav-link" href=""><i class="bi bi-calendar-week-fill"></i> Emploi du temps</a>
+                <a class="nav-link" routerLink="/emploiDuTemps"><i class="bi bi-calendar-week-fill"></i> Emploi du temps</a>
               </li>
             </ul>
-
+          </div>
+          <div class="col-1" style="float: right; margin-left: 13%;" >
+            <div> <i class="bi bi-person-circle"></i></div>
           </div>
           <div *ngIf="isAuthenticated" class="col-1" style="float: right; margin-left: 5%;" >
             <div class="dropdown"> 
