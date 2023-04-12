@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { UsereService } from 'src/app/services/user.service';
+import { UserService } from 'src/app/services/user.service';
 import { User } from 'src/app/models/user.model';
 
 @Component({
@@ -19,7 +19,7 @@ export class CreateUserComponent {
   });
 
   constructor(private formBuilder: FormBuilder,
-              private userService: UsereService) {
+              private userService: UserService) {
     
   }
 
@@ -37,15 +37,15 @@ export class CreateUserComponent {
     };
     this.userService.createUser(userToCreate).subscribe(
       (response) => {
-        console.log('creation reussie', response);
-        
+        if (response) {
+          confirm('Utilisateur créé ! Vous pouvez maintenant vous connecter en utilisant l\'adresse mail renseignée !')
+        }
       },
       (error) => {
         console.error('Erreur de creation', error);
         
       }
     );
-
     this.close();
   }
 
