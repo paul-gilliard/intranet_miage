@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { OffresRoutingModule } from './offres-routing.module';
 import { OffreComponent } from './components/offre/offre.component';
 
 
@@ -10,8 +9,7 @@ import { OffreComponent } from './components/offre/offre.component';
     OffreComponent
   ],
   imports: [
-    CommonModule, 
-    OffresRoutingModule
+    CommonModule
   ],
   exports: [
     OffreComponent
