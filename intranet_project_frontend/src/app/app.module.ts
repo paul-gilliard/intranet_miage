@@ -13,6 +13,7 @@ import { SondagesModule } from './sondages/sondages.module';
 import { FullCalendarModule } from '@fullcalendar/angular';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { NgImageSliderModule } from 'ng-image-slider';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { NgImageSliderModule } from 'ng-image-slider';
     SondagesModule,
     FullCalendarModule,
     HttpClientModule,
-    NgImageSliderModule
+    NgImageSliderModule,
+    ToastrModule.forRoot()
   ],
   exports:[NgImageSliderModule],
   providers: [
