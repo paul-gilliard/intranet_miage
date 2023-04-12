@@ -1,10 +1,11 @@
 .panel-gauche {
     background-color: #F5F5F5;
     padding: 1%;
+    height: 100vh;
 }
 
 .panel-droit {
-
+    height: 100vh;
 }
 
 .badge {

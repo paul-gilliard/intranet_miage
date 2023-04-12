@@ -1,14 +1,15 @@
-<ul>
-    <li *ngFor="let promo of listeCours">
-        <h4><i class="bi bi-chevron-right"></i> {{promo.title}} </h4>
-        <ul>
-            <li *ngFor="let semestre of promo.semestres">
-                <h5><i class="bi bi-chevron-right"></i> {{semestre.title}} </h5>
-                <ul>
-                    <li *ngFor="let cours of semestre.cours"><h6> {{cours}} </h6></li>
-                </ul>
-            </li>
-        </ul>
-        <hr/>
-    </li>
-</ul>
+<ngb-accordion #acc="ngbAccordion" [closeOthers]="true">
+    <ngb-panel *ngFor="let promo of listeCours" [title]="promo.title" id="{{promo.title}}">
+        <ng-template ngbPanelContent>
+            <ngb-accordion #nestedAcc="ngbAccordion" [closeOthers]="true">
+                <ngb-panel *ngFor="let semestre of promo.semestres" [title]="semestre.title" id="{{semestre.title}}">
+                    <ng-template ngbPanelContent>
+                        <ul>
+                            <li *ngFor="let cours of semestre.cours">{{cours}}</li>
+                        </ul>
+                    </ng-template>
+                </ngb-panel>
+            </ngb-accordion>
+        </ng-template>
+    </ngb-panel>
+</ngb-accordion>

@@ -1,9 +1,11 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
+import { NgbAccordionConfig } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-liste-cours',
   templateUrl: './liste-cours.component.html',
-  styleUrls: ['./liste-cours.component.css']
+  styleUrls: ['./liste-cours.component.css'],
+  providers: [NgbAccordionConfig]
 })
 export class ListeCoursComponent {
 
@@ -54,4 +56,9 @@ export class ListeCoursComponent {
         ]
     }
   ];
+
+  constructor(config: NgbAccordionConfig) {
+    config.closeOthers = true;
+    config.type = 'info';
+  }
 }
