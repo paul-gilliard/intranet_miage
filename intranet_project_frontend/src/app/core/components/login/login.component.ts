@@ -21,7 +21,6 @@ export class LoginComponent {
               private authService: AuthService) {}
 
   login() {
-    
     this.email = this.loginForm.get('email')?.value!;
     if (this.email != null){
   

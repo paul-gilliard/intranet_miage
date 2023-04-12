@@ -10,6 +10,7 @@ import { EmploiDuTempsModule } from './emploi-du-temps/emploi-du-temps.module';
 import { MessagerieModule } from './messagerie/messagerie.module';
 import { SharedModule } from './shared/shared.module';
 import { SondagesModule } from './sondages/sondages.module';
+import { FullCalendarModule } from '@fullcalendar/angular';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { NgImageSliderModule } from 'ng-image-slider';
 
@@ -26,6 +27,7 @@ import { NgImageSliderModule } from 'ng-image-slider';
     EmploiDuTempsModule,
     DepotDocumentsModule,
     SondagesModule,
+    FullCalendarModule,
     HttpClientModule,
     NgImageSliderModule
   ],
