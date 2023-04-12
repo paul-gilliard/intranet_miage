@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { UsereService } from 'src/app/services/user.service';
 import { User } from 'src/app/models/user.model';
+import { Messagerie } from 'src/app/models/messagerie.model';
+import { MessagerieService } from 'src/app/services/messagerie.service';
 
 @Component({
   selector: 'app-messagerie-panel-gauche',
@@ -9,8 +11,11 @@ import { User } from 'src/app/models/user.model';
 })
 export class MessageriePanelGaucheComponent implements OnInit {
   usersList: User[] = [];
+  currentUserEmail = localStorage.getItem('currentUserEmail')!;
+  messagerieDiscussion: any;
  
-  constructor(private userService: UsereService) {}
+  constructor(  private userService: UsereService,
+                private messagerieService: MessagerieService) {}
 
   ngOnInit() {
     this.userService.getAllUsers().subscribe(
@@ -24,6 +29,15 @@ export class MessageriePanelGaucheComponent implements OnInit {
     );
   }
   onUserClick(user: User) {
-    
+    this.messagerieService.getPrivateMessages(user.email, this.currentUserEmail).subscribe(
+      (response: Messagerie) => {
+        console.log('requête réussie', response);
+        this.messagerieDiscussion.messagerie = response;
+        this.messagerieDiscussion.nomConversation = user.name;
+      },
+      (error) => {
+        console.error('Erreur de requête', error);
+      }
+    );
   }
 }

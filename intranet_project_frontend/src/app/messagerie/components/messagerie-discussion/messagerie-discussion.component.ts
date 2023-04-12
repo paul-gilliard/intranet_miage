@@ -4,13 +4,14 @@ import { Message, Messagerie } from 'src/app/models/messagerie.model';
 import { MessagerieService } from 'src/app/services/messagerie.service';
 import { io, Socket } from 'socket.io-client';
 
+
 @Component({
   selector: 'app-messagerie-discussion',
   templateUrl: './messagerie-discussion.component.html',
   styleUrls: ['./messagerie-discussion.component.css']
 })
 export class MessagerieDiscussionComponent implements OnInit {
-
+  currentUserEmail = localStorage.getItem('currentUserEmail')!;
   @Input() nomConversation: String = '';
   @Input() messagerie: Messagerie = {
     nomConversation: '',
@@ -51,6 +52,22 @@ sendMessage(messageString: String, sender: string) {
   });
   this.messageString = '';
   }
+
+  sendMessagePrivate(sender: String, messageString: String) {
+    const currentUserName = localStorage.getItem('currentUserName')!;
+    this.message.text = messageString;
+    this.message.emeteur = currentUserName;
+    
+    this.socket.emit('new-message', {text: this.message.text, emeteur: currentUserName});
+  
+    this.sub = this.service.sendMessagePrivate(sender, this.message).subscribe({
+      next: messagerie => {
+        this.messagerie = messagerie;
+      }
+    });
+    this.messageString = '';
+  }
+  
   isCurrentUser(emetteur: String): boolean {
   return emetteur === localStorage.getItem('currentUserName');
 }
