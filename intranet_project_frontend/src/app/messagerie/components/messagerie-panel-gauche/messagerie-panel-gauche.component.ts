@@ -18,7 +18,7 @@ export class MessageriePanelGaucheComponent implements OnInit {
     nomConversation: '',
     messages: []
   };
-  usersList: User[] = [];
+  @Input() usersList: User[] = [];
   currentUserEmail = localStorage.getItem('currentUserEmail')!;
   messagerieDiscussion: any;
  

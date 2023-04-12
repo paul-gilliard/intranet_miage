@@ -25,7 +25,7 @@
        
 
         
-            <input type="text" style="width: 80%; ; border-radius: 10px;"id="messageInput"[(ngModel)]="messageString" (keydown.enter)="sendMessage(messageString,'moi')" (input)="onInput()"/>
+            <input type="text" style="width: 80%; ; border-radius: 20px;"id="messageInput"[(ngModel)]="messageString" (keydown.enter)="sendMessage(messageString,'moi')" (input)="onInput()"/>
             <button type="button" class="btn btn-default btn-sm" (click)="sendMessagePrivate(messageString, currentUserEmail)">   
                 <span class="bi bi-send-fill"></span>
             </button>
