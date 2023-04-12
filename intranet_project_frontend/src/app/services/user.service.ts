@@ -12,4 +12,7 @@ export class UsereService {
   createUser(user: User) {
     return this.http.post('http://localhost:3000/api/user/createUser', user);
   }
+  getAllUsers() {
+    
+  }
 }

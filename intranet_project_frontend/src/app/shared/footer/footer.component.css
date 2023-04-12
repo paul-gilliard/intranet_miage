@@ -3,5 +3,6 @@ button-footer1{
 }
 footer{
     bottom: 0;
-    position: fixed;
+    position: absolute;
+    width: 100%;
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-messagerie-panel-gauche',
@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./messagerie-panel-gauche.component.css']
 })
 export class MessageriePanelGaucheComponent {
+  OnInit() {
+    
+  }
 
 }

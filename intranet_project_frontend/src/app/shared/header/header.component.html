@@ -1,6 +1,6 @@
 <header class="container-fluid">
   <div class="row">
-    <div class="col-4 col-md-3" style="margin-top: 0; height: 20px;">
+    <div class="col-md-3" style="margin-top: 0; height: 20px;">
       <div class="logo">
         <img  style="margin-bottom: 10px;" src="../../../assets/images/pointMiage.svg">
       </div>
@@ -11,7 +11,7 @@
       </div>
     </div>
 
-    <div class="col-12 col-md-9">
+    <div class="col-md-9">
       <nav class="navbar navbar-expand-md justify-content-end">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
           <span class="navbar-toggler-icon"></span>
@@ -41,12 +41,10 @@
               <li class="nav-item" highlight>
                 <a class="nav-link" routerLink="/emploiDuTemps"><i class="bi bi-calendar-week-fill"></i> Emploi du temps</a>
               </li>
-              <li class= "nav-item" highlight>
-                <a class="nav-link" href="#"><i class="bi bi-file-earmark"></i> Emploi du temps</a>
-              </li>
+              
             </ul>
           </div>
-          <div *ngIf="isAuthenticated" class="col-1" style="float: right; margin-left: 5%;" >
+          <div *ngIf="isAuthenticated" style="float: right; margin-left: 1%;" >
             <div class="dropdown"> 
               <button class="btn " type="button" id="actionDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="bi bi-person-circle"> {{currentUserName}}</i>  
