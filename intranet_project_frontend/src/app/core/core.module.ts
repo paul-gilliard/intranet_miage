@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
+import { CoreRoutingModule } from './core-routing.module';
 import { HomeLoginComponent } from './components/home-login/home-login.component';
 import { SharedModule } from '../shared/shared.module';
 import { EmploiDuTempsModule } from '../emploi-du-temps/emploi-du-temps.module';
@@ -19,6 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     EmploiDuTempsModule,
     CommonModule,
+    CoreRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,

@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
+import { SondagesRoutingModule } from './sondages-routing.module';
 import { SondageComponent } from './components/sondage/sondage.component';
 
 
@@ -8,7 +10,8 @@ import { SondageComponent } from './components/sondage/sondage.component';
     SondageComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    SondagesRoutingModule
   ],
   exports: [
     SondageComponent
