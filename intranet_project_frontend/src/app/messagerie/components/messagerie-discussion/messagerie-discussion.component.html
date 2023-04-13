@@ -2,22 +2,35 @@
     <div class="panel-heading"><h3 class="panel-title"><i class="bi bi-people-fill"></i>  {{nomConversation}}</h3></div>
     <div class="panel-body">
         <div class="message">
-            <div class="row">
-            <div *ngFor="let message of messagerie.messages">
-                
-                <span [ngClass]="{'moi': isCurrentUser(message.emeteur), 'autre': !isCurrentUser(message.emeteur)}">{{getDisplayEmitter(message.emeteur)}}</span><br>
-                <div [ngClass]="{'message-moi': isCurrentUser(message.emeteur), 'message-autre': !isCurrentUser(message.emeteur)}">
-                   
-                    <span>{{message.text}}</span>
-                </div>
-            </div>
+           
+            <div class="bodyMessages" (scroll)="onScroll()"> 
+                <div class="row">
+                        <div *ngFor="let message of messagerie.messages">
+                            
+                            <span [ngClass]="{'moi': isCurrentUser(message.emeteur), 'autre': !isCurrentUser(message.emeteur)}">{{getDisplayEmitter(message.emeteur)}}</span><br>
+                            <div [ngClass]="{'message-moi': isCurrentUser(message.emeteur), 'message-autre': !isCurrentUser(message.emeteur)}">
+                            
+                                <span>{{message.text}}</span>
+                            </div>
+                        </div>
+                 </div>
+            
         </div>
+        <div class="scroll-arrow">
+            <i class="bi bi-arrow-down-circle"></i>
         </div>
+       
         
-            <input type="text" style="width: 80%; ; border-radius: 10px;height: 60px;"id="messageInput"[(ngModel)]="messageString" (keydown.enter)="sendMessage(messageString,'moi')" (input)="onInput()"/>
-            <button type="button" class="btn btn-default btn-sm" (click)="sendMessage(messageString,'moi')">   
+        </div>
+       
+
+        
+            <input type="text" style="width: 80%; ; border-radius: 20px;"id="messageInput"[(ngModel)]="messageString" (keydown.enter)="sendMessage(messageString,'moi')" (input)="onInput()"/>
+            <button type="button" class="btn btn-default btn-sm" (click)="sendMessagePrivate(messageString, currentUserEmail)">   
                 <span class="bi bi-send-fill"></span>
             </button>
         
     </div>
 </div>
+
+

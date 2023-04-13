@@ -1,6 +1,6 @@
 .panel{
-    height: 100vh;
-    overflow: auto;
+    height: 75vh;
+    /*overflow: auto; */
     background-color: #F5F5F5;
     border-radius: 20px 20px 20px 20px;
    
@@ -10,6 +10,8 @@
     height: 7%;
     border-radius: 20px 20px 20px 20px;
     text-align: center;
+    border-color: #F5F5F5;
+    box-shadow: 1px black;
    
     
 }
@@ -24,7 +26,9 @@
 .panel-body{
     border-radius: 0.375rem;
     background-color: #F5F5F5;
-    height: 93%;
+    height: 83vh;
+    border-radius: 20px 20px 20px 20px;
+        
 }
 
 .message{
@@ -79,15 +83,18 @@
     height: auto;
     margin-top: 2%;
     margin-bottom: 5%;
+    background-color: white;
 
 }
 #messageInput {
    
     /* hauteur initiale de l'input */
-    transition: height 0.2s ease-out;
-    margin-top: 2%;
+    
+    
     margin-left: 4%;
         margin-bottom: 5%;
+        height: 50px;
+
     /* transition en douceur lors du redimensionnement */
 }
 #messageInput:focus {
@@ -100,4 +107,44 @@ input {
     max-height: 120px;
     overflow-y: auto;
     max-width: 90%;
+    caret-color: #41D3F3;
+    
+}
+.bodyMessages{
+   overflow:auto; 
+   max-height: 75vh;
+   position: relative;;
+   overflow-x: hidden;
+  
+
+}
+::-webkit-scrollbar {
+    background-color: #f5f5f5;
+    width: 5px;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background-color: #4CB3ED;
+    border-radius: 10px;
+    width: 5px;
+    
+}
+.scroll-arrow{
+    position: relative;
+    animation: moveUpDown 2s ease-in-out infinite;
+    margin-left: 40%;
+}
+@keyframes moveUpDown {
+    0% {
+        top: -50px;
+    }
+
+    50% {
+        top: 0px;
+    }
+
+    100% {
+        top: 0;
+    }
 }
