@@ -1,6 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
+import { DriveDocument } from 'src/app/models/driveDocument.model';
+import { DocumentService } from 'src/app/services/document.service';
 
 @Component({
   selector: 'app-modal-import',
@@ -26,7 +28,8 @@ export class ModalImportComponent implements OnInit{
     cours: [, [Validators.required, ]]
   });
 
-  constructor(private formBuilder: FormBuilder){ }
+  constructor(private formBuilder: FormBuilder,
+              private service: DocumentService){ }
 
   ngOnInit(): void {
     this.isPromoChoose = false;
@@ -34,7 +37,25 @@ export class ModalImportComponent implements OnInit{
   }
 
   importDocument() {
-
+    let importDocument: DriveDocument = {
+      nom: this.importDocumentForm.get('name')?.value!,
+      etiquettePromo: this.importDocumentForm.get('promo')?.value!,
+      etiquetteCours: this.importDocumentForm.get('cours')?.value!,
+      semestre: this.importDocumentForm.get('semestre')?.value!,
+      mail: localStorage.getItem('email')?.valueOf.toString()!,
+      document: this.importDocumentForm.get('file')?.value!,
+      dateCreation: new Date()
+    }
+    this.service.insertDocument(importDocument).subscribe(
+      (response) => {
+        if (response) {
+          confirm('Fichier importé !')
+        }
+      },
+      (error) => {
+        console.error('Erreur d\'importation', error); 
+      });
+      this.close();
   }
 
   onPromoSelected(selectedValue: any) {
