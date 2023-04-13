@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { UsereService } from 'src/app/services/user.service';
+import { UserService } from 'src/app/services/user.service';
 import { User } from 'src/app/models/user.model';
 import { Messagerie } from 'src/app/models/messagerie.model';
 import { MessagerieService } from 'src/app/services/messagerie.service';
@@ -22,7 +22,7 @@ export class MessageriePanelGaucheComponent implements OnInit {
   currentUserEmail = localStorage.getItem('currentUserEmail')!;
   messagerieDiscussion: any;
  
-  constructor(  private userService: UsereService,
+  constructor(  private userService: UserService,
                 private messagerieService: MessagerieService) {}
 
   ngOnInit() {
