@@ -7,8 +7,9 @@ export const insertDocument = async (req: Request, res: Response, next: NextFunc
       etiquetteCours: req.body.etiquetteCours,
       etiquettePromo: req.body.etiquettePromo,
       semestre: req.body.semestre,
-      mail: req.body.mail,
-      document: req.file.buffer
+      mailOwner: req.body.mailOwner,
+      driveDocument: req.file.buffer,
+      nom_fichier: req.body.nom_fichier
     });
 
     const savedDoc = await newDoc.save();
