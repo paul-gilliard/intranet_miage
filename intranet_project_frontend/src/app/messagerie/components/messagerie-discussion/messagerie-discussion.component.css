@@ -107,6 +107,8 @@ input {
     max-height: 120px;
     overflow-y: auto;
     max-width: 90%;
+    caret-color: #41D3F3;
+    
 }
 .bodyMessages{
    overflow:auto; 
