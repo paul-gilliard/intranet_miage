@@ -23,7 +23,7 @@ export class HighlightDirective {
           this.el.nativeElement.firstChild.style.backgroundColor = 'white';
           this.el.nativeElement.firstChild.style.borderRadius = '20px 20px 20px 20px';
           this.el.nativeElement.firstChild.style.borderBottom='2px solid black';
-          this.el.nativeElement.firstChild.style.height = '30px';
+          this.el.nativeElement.firstChild.style.height = '50px;';
         } else {
           this.el.nativeElement.classList.remove('active');
           this.el.nativeElement.firstChild.style.backgroundColor = '';

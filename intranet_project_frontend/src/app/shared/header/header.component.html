@@ -17,18 +17,19 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <div class="collapse navbar-collapse " id="navbarNav">
           <div class="col-9">
 
             <ul class="navbar-nav">
-              <li class="nav-item">
-              </li>
               <li class="nav-item" highlight>
-                <a class="nav-link" routerLink="/home"><i class="bi bi-house"></i> Accueil</a>
+                <a class="nav-link" routerLink="/home"><i class="bi bi-house-door-fill"></i> Accueil</a>
               </li>
               <li class= "nav-item" highlight>
                 <a class="nav-link" routerLink="/messagerie"><i class="bi bi-chat-fill"></i> Messages</a>
               </li>
+                <li class="nav-item" highlight>
+                  <a class="nav-link" routerLink="/emploiDuTemps"><i class="bi bi-calendar-week-fill"></i> EDT</a>
+                </li>
               <li class= "nav-item" highlight>
                 <a class="nav-link" routerLink="/offre"><i class="bi bi-briefcase-fill"></i> Offres</a>
               </li>
@@ -38,13 +39,10 @@
               <li class= "nav-item" highlight>
                 <a class="nav-link" routerLink="/documents"><i class="bi bi-file-earmark-text-fill"></i> Documents</a>
               </li>
-              <li class="nav-item" highlight>
-                <a class="nav-link" routerLink="/emploiDuTemps"><i class="bi bi-calendar-week-fill"></i> Emploi du temps</a>
-              </li>
-              
+            
             </ul>
           </div>
-          <div *ngIf="isAuthenticated" style="float: right; margin-left: 1%;" >
+          <div *ngIf="isAuthenticated" style="float: right; margin-left: 5%;" >
             <div class="dropdown"> 
               <button class="btn " type="button" id="actionDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="bi bi-person-circle"> {{currentUserName}}</i>  
