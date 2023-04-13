@@ -15,7 +15,6 @@ export class MessagerieService {
     }
 
     sendMessage(message: Message){
-        console.log("message envoyé");
         return this.http.post<Messagerie>('http://localhost:3000/api/messagerie/sendMessage', message);
     }
 

@@ -1,17 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { LoginComponent } from './login.component';
 
-describe('LoginComponent', () => {
-  let component: LoginComponent;
-  let fixture: ComponentFixture<LoginComponent>;
+import { DriveDocumentComponent } from './drive-document.component';
+
+describe('DocumentComponent', () => {
+  let component: DriveDocumentComponent;
+  let fixture: ComponentFixture<DriveDocumentComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LoginComponent ]
+      declarations: [ DriveDocumentComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(LoginComponent);
+    fixture = TestBed.createComponent(DriveDocumentComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

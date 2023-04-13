@@ -1,23 +1,24 @@
 <header class="container-fluid">
-    <div class="row">
-      <div class="col-4 col-md-3" style="margin-top: 0; height: 20px;">
-        <div class="logo">
-          <img  style="margin-bottom: 10px;" src="../../../assets/images/pointMiage.svg">
-        </div>
-        <div class="logo">
-          <a class="nav-link" href="https://miage.emi.u-bordeaux.fr/">
-            <h3 style="font-weight:30px;margin-top: 7px;"> MIAGE</h3>
-          </a>
-        </div>
+  <div class="row">
+    <div class="col-4 col-md-3" style="margin-top: 0; height: 20px;">
+      <div class="logo">
+        <img  style="margin-bottom: 10px;" src="../../../../assets/images/pointMiage.svg">
+      </div>
+      <div class="logo">
+        <a class="nav-link" href="https://miage.emi.u-bordeaux.fr/">
+          <h3 style="font-weight:30px;margin-top: 7px;"> MIAGE</h3>
+        </a>
       </div>
     </div>
-  </header>
+  </div>
+</header>
 
 <div class="container">
     <div class="row">
         <div class="col-4">            
             <div class="div-login">
                 <app-login class="login"></app-login>
+                
                 <img class="img-login" width= "600px" height=" 400px" src="../../../../assets/images/back-formulaire.svg">
             </div>
         </div>
@@ -43,4 +44,10 @@
             </div>    
         </div>
     </div>
+</div>
+
+<div class="modal fade" id="createUserModal">
+  <div class="modal-dialog">
+    <app-create-user></app-create-user>
+  </div>
 </div>

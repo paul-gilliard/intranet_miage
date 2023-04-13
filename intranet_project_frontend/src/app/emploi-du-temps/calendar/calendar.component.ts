@@ -14,6 +14,9 @@ import { IIcsCalendar } from 'src/app/models/icsCalendar.model';
   templateUrl: './calendar.component.html',
   styleUrls: ['./calendar.component.css']
 })
+
+
+
 export class CalendarComponent implements OnInit {
   @ViewChild('calendar',{ static: true }) calendarComponent!: ElementRef;
   calendarApi!: Calendar;
@@ -33,6 +36,10 @@ export class CalendarComponent implements OnInit {
       selectable: true,
       dateClick: this.handleDateClick.bind(this),
       events: [], // initialisez le tableau d'événements avec une chaîne vide
+      hiddenDays: [0, 6], // Masquer les weekends
+    slotMinTime: '08:00:00', // Heure de début de la plage horaire visible
+    slotMaxTime: '20:00:00' // Heure de fin de la plage horaire visible
+
     });
     this.calendarApi.render();
     // this.getEventsFrom('M2_calendar_events.ics');
@@ -66,3 +73,4 @@ export class CalendarComponent implements OnInit {
     console.log('date click! ' + arg.dateStr);
   }
 }
+

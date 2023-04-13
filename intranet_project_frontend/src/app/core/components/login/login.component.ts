@@ -50,7 +50,7 @@ export class LoginComponent {
     this.loginForm.reset();
   }
 
-  createUser ()  {
+  openCreateUserModal ()  {
     let element = document.getElementById("createUserModal") as HTMLElement;
     let myModal = new Modal (element);
     myModal.show();
