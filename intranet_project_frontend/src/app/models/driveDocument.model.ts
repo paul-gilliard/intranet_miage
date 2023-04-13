@@ -7,6 +7,5 @@ export interface DriveDocument {
     mail: String;
     document: Buffer;
     nom: String;
-    dateCreation: Date;
-    dateModification: Date;   
+    dateCreation: Date;  
 }

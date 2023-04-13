@@ -1,11 +1,11 @@
 .panel-gauche {
     background-color: #F5F5F5;
     padding: 1%;
-    height: 100vh;
+    height: 83vh;
 }
 
 .panel-droit {
-    height: 100vh;
+    height: 83vh;
 }
 
 .badge {
@@ -30,7 +30,19 @@
     margin: 1%;
 }
 
+.link {
+    margin-left: 2%;
+}
+
+.import {
+    position: absolute;
+    left: 85%;
+}
+
+.panel-haut {
+    margin-top: 2%;
+}
+
 button {
     background-color: #4CB3ED;
-    margin-top: 1%;
 }
