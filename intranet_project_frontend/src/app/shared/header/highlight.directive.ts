@@ -14,9 +14,8 @@ export class HighlightDirective {
         const currentUrl = event.urlAfterRedirects;
         const linkUrl = this.el.nativeElement.firstChild.href;
         console.log("Current "+currentUrl);
-        console.log("Link "+linkUrl);
-
-
+        console.log("Link " + linkUrl);
+        if (currentUrl!='/') {
         if ( linkUrl.includes(currentUrl)) {
           console.log("parfait égale");
           this.el.nativeElement.classList.add('active');
@@ -31,8 +30,13 @@ export class HighlightDirective {
           this.el.nativeElement.firstChild.style.borderBottom='';
           this.el.nativeElement.firstChild.style.height = '';
           
+          }
+        }
+        if (currentUrl == '') {
+          
         }
       }
+      
     });
   }
   ngOnDestroy() {
