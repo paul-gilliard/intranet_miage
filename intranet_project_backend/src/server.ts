@@ -8,6 +8,7 @@ import loginRouter from './routers/login.router';
 import messagerieRouter from './routers/messagerie.router';
 import calendarRouter from './routers/calendar.router';
 import driveDocumentRouter from './routers/driveDocument.router';
+import cursusStructureRouter from './routers/cursus-structure.router';
 
 interface SocketData {
   emeteur: string;
@@ -38,6 +39,7 @@ app.use('/api/messagerie', messagerieRouter);
 app.use('/login', loginRouter);
 app.use('/api/calendar', calendarRouter);
 app.use('/api/driveDocument', driveDocumentRouter);
+app.use('/api/cursusStructure', cursusStructureRouter);
 
 io.on('connection', (socket: Socket) => {
   console.log('Client connected');

@@ -71,10 +71,5 @@ export const getDocumentsByCours = async (req: Request, res: Response, next: Nex
 
 }
 
-export const getdriveDocumentsStructure = async (req: Request, res: Response, next: NextFunction) => {
-  // return caca;
-}
-
-
 
 
