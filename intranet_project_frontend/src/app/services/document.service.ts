@@ -28,4 +28,6 @@ export class DocumentService {
     insertDocument(document: DriveDocument){
         return this.http.post<DriveDocument>('http://localhost:3000/api/document/insertDocument', document);
     }
+
+    //structure cours
 }

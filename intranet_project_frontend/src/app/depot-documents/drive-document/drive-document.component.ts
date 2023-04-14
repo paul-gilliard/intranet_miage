@@ -3,6 +3,7 @@ import { Subscription } from 'rxjs';
 import { DriveDocument } from 'src/app/models/driveDocument.model';
 import { DocumentService } from 'src/app/services/document.service';
 import { Buffer } from 'buffer';
+import { Modal } from 'bootstrap';
 
 @Component({
   selector: 'app-document',
@@ -18,6 +19,54 @@ export class DriveDocumentComponent implements OnChanges{
   semestre!: String;
   cours!: String;
   link!: String;
+
+  listeCours = [
+    {
+      title: 'License 3', 
+        semestres:[
+          {
+            title: 'Semestre 5',
+            cours: [
+              'Cours 1', 
+              'Cours 2'
+            ]
+          },
+          {
+            title: 'Semestre 6'
+          }
+        ]
+    },
+    {
+      title: 'Master 1', 
+        semestres:[
+          {
+            title: 'Semestre 7',
+            cours: [
+              'Cours 1', 
+              'Cours 2'
+            ]
+          },
+          {
+            title: 'Semestre 8'
+          }
+        ]
+    },
+    {
+      title: 'Master 2', 
+        semestres:[
+          {
+            title: 'Semestre 9',
+            cours: [
+              'Cours 1', 
+              'Cours 2'
+            ]
+          },
+          {
+            title: 'Semestre 10'
+          }
+        ]
+    }
+  ];
 
   constructor(private service: DocumentService){ }
   
@@ -66,5 +115,11 @@ export class DriveDocumentComponent implements OnChanges{
       return this.promo;
     }
     return '';
+  }
+
+  openImportDocumentModal(){
+    let element = document.getElementById("importDocumentModal") as HTMLElement;
+    let myModal = new Modal (element);
+    myModal.show();
   }
 }

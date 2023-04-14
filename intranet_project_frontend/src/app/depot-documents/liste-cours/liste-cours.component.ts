@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-liste-cours',
@@ -7,57 +7,59 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class ListeCoursComponent {
 
+  @Input() listeCours: any;
+
   @Output() promo = new EventEmitter<String>();
   @Output() semestre = new EventEmitter<String>();
   @Output() cours = new EventEmitter<String>();
 
-  listeCours = [
-    {
-      title: 'License 3', 
-        semestres:[
-          {
-            title: 'Semestre 5',
-            cours: [
-              'Cours 1', 
-              'Cours 2'
-            ]
-          },
-          {
-            title: 'Semestre 6'
-          }
-        ]
-    },
-    {
-      title: 'Master 1', 
-        semestres:[
-          {
-            title: 'Semestre 7',
-            cours: [
-              'Cours 1', 
-              'Cours 2'
-            ]
-          },
-          {
-            title: 'Semestre 8'
-          }
-        ]
-    },
-    {
-      title: 'Master 2', 
-        semestres:[
-          {
-            title: 'Semestre 9',
-            cours: [
-              'Cours 1', 
-              'Cours 2'
-            ]
-          },
-          {
-            title: 'Semestre 10'
-          }
-        ]
-    }
-  ];
+  // listeCours = [
+  //   {
+  //     title: 'License 3', 
+  //       semestres:[
+  //         {
+  //           title: 'Semestre 5',
+  //           cours: [
+  //             'Cours 1', 
+  //             'Cours 2'
+  //           ]
+  //         },
+  //         {
+  //           title: 'Semestre 6'
+  //         }
+  //       ]
+  //   },
+  //   {
+  //     title: 'Master 1', 
+  //       semestres:[
+  //         {
+  //           title: 'Semestre 7',
+  //           cours: [
+  //             'Cours 1', 
+  //             'Cours 2'
+  //           ]
+  //         },
+  //         {
+  //           title: 'Semestre 8'
+  //         }
+  //       ]
+  //   },
+  //   {
+  //     title: 'Master 2', 
+  //       semestres:[
+  //         {
+  //           title: 'Semestre 9',
+  //           cours: [
+  //             'Cours 1', 
+  //             'Cours 2'
+  //           ]
+  //         },
+  //         {
+  //           title: 'Semestre 10'
+  //         }
+  //       ]
+  //   }
+  // ];
 
   onClickPromo(promo: String) {
     console.log("COUCOU");

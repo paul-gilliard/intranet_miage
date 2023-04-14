@@ -6,6 +6,7 @@ import { DriveDocumentComponent } from './drive-document/drive-document.componen
 import { ListeCoursComponent } from './liste-cours/liste-cours.component';
 import { ModalImportComponent } from './modal-import/modal-import.component';
 import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -17,7 +18,9 @@ import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
   imports: [
     CommonModule,
     DepotDocumentsRoutingModule,
-    NgbAccordionModule 
+    NgbAccordionModule, 
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [DriveDocumentComponent]
 
