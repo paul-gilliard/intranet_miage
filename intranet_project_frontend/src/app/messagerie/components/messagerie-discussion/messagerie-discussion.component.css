@@ -92,8 +92,9 @@
     
     
     margin-left: 4%;
-        margin-bottom: 5%;
+        margin-bottom: 0;
         height: 50px;
+        position: relative;
 
     /* transition en douceur lors du redimensionnement */
 }

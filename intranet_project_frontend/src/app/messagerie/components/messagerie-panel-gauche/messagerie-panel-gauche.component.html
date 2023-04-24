@@ -20,17 +20,21 @@
         <div class="nav flex-column nav-pills liste-personne" id="v-pills-tab" role="tablist" aria-orientation="vertical" style="border-radius: 20px; height: 90vh;">
             <!--Lister tout les utilisateurs d'abord-->
             <div class="userList"> 
+
             
-                <ul class="listePersonne"*ngFor="let user of usersList" >
-                    <li *ngIf="user!=null " (click)="onUserClick(user)"  style="
+                <ul class="listePersonne"*ngFor="let user of usersList" (click)="onUserClick(user)" >
+                    <li *ngIf="user!=null "  style="
                         border: 1px solid white; border-radius: 2px; 
                         margin-right: 2%; width: 90%; box-shadow: 
                         1px 1px 1px 1px wheat; 
                         border-radius: 10px; 
                         padding-left: 5px;">
-                        {{user.name}}
+                        <span style="cursor: pointer; pointer-events: auto;">{{user.name}}</span>
                     </li>
                 
+                </ul>
+                <ul (click)="onUserClick">
+                    <li>MIAGE</li>
                 </ul>
 
             
@@ -38,3 +42,5 @@
         </div>    
     </div>
 </div>
+
+<!--<messagerie-discussion [conversation]="conversation"></messagerie-discussion>-->

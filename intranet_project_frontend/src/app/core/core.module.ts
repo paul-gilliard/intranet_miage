@@ -11,6 +11,7 @@ import { LoginComponent } from './components/login/login.component';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from '@angular/common/http';
 
+
 @NgModule({
   declarations: [
     HomeLoginComponent,
@@ -26,6 +27,9 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     HttpClientModule,
     SharedModule,
+    
+
+    
   ],
   exports: [
     HomeLoginComponent,
