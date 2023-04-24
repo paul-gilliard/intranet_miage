@@ -1,6 +1,5 @@
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
-import { AbstractControl, FormBuilder, Validators } from '@angular/forms';
-import { DriveDocument } from 'src/app/models/driveDocument.model';
+import { FormBuilder, Validators } from '@angular/forms';
 import { DocumentService } from 'src/app/services/document.service';
 
 @Component({
@@ -41,7 +40,6 @@ export class ModalImportComponent implements OnInit{
     const fileInput = event.target as HTMLInputElement;
     if (fileInput.files) {
       this.selectedFile = fileInput.files[0];
-      
     }
   }
 
