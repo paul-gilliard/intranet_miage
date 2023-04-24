@@ -35,13 +35,13 @@
 
             <div class="col-md-12">
                 <div class="form-floating">
-                  <input type="text" id="name" class="form-control" placeholder=" " formControlName="name" [ngClass]="importDocumentForm.get('name')!.errors ? 'is-invalid' : ''"/>
+                  <input type="text" id="name" class="form-control" formControlName="name" [ngClass]="importDocumentForm.get('name')!.errors ? 'is-invalid' : ''"/>
                   <label for="name">Nom du fichier</label>
                 </div>
             </div>
             <div class="col-md-12">
                 <div class="form-floating">
-                  <input type="file" id="file" class="form-control" formControlName="file" [ngClass]="importDocumentForm.get('file')!.errors ? 'is-invalid' : ''" (change)="onFileSelected"/>
+                  <input type="file" id="file" class="form-control" formControlName="file" [ngClass]="importDocumentForm.get('file')!.errors ? 'is-invalid' : ''"/>
                 </div>
             </div>
         </div> 

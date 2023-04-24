@@ -36,16 +36,9 @@ export class ModalImportComponent implements OnInit{
     this.isSemestreChoose = false;
   }
 
-  onFileSelected(event: Event) {
-    const fileInput = event.target as HTMLInputElement;
-    if (fileInput.files) {
-      this.selectedFile = fileInput.files[0];
-    }
-  }
-
   importDocument() {
-    const formData = new FormData();
-    formData.append('file', this.selectedFile, this.selectedFile.name);
+    const formData = new FormData();    
+    formData.append('file', this.importDocumentForm.get('file')?.value!);
     formData.append('nom_fichier', this.importDocumentForm.get('name')?.value!);
     formData.append('etiquettePromo', this.importDocumentForm.get('promo')?.value!);
     formData.append('etiquetteCours', this.importDocumentForm.get('cours')?.value!);
