@@ -26,6 +26,13 @@ export class CalendarComponent implements OnInit {
     content: []
   };
 
+  selectedValue: string = ''; // Propriété pour stocker la valeur sélectionnée
+
+  onSelectChange() {
+    // Appel à la fonction du backend en utilisant la valeur sélectionnée
+    this.getEventsFromByName(this.selectedValue);
+  }
+
   constructor(private service: CalendarService) { }
 
   ngOnInit(): void {
@@ -51,6 +58,29 @@ export class CalendarComponent implements OnInit {
     this.sub = this.service.getEventsFrom(name).subscribe({
       next: calendar => {
         // mise à jour de notre modèle ICalendar pour stocker les événements sous forme de tableau
+        const events = Object.values(calendar.content).map(event => ({
+          title: event['summary'],
+          start: event.start ? new Date(event.start.toString()) : null,
+          end: event.end ? new Date(event.end.toString()) : null,
+          description: event['description'],
+          summary: event['summary']
+        })) as EventInput[];
+        this.calendarEvents = {
+          name: calendar.name,
+          content: events
+        };
+        // ajouter les événements à notre calendrier
+        this.calendarApi.addEventSource(this.calendarEvents.content);
+      }
+    });
+  }
+
+  getEventsFromByName(name: String) {
+
+    this.sub = this.service.getEventsFrom(name).subscribe({
+      next: calendar => {
+        // mise à jour de notre modèle ICalendar pour stocker les événements sous forme de tableau
+        this.calendarApi.removeAllEventSources();
         const events = Object.values(calendar.content).map(event => ({
           title: event['summary'],
           start: event.start ? new Date(event.start.toString()) : null,
