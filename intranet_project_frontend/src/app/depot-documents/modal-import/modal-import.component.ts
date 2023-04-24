@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import { AbstractControl, FormBuilder, Validators } from '@angular/forms';
 import { DriveDocument } from 'src/app/models/driveDocument.model';
 import { DocumentService } from 'src/app/services/document.service';
 
@@ -11,13 +11,15 @@ import { DocumentService } from 'src/app/services/document.service';
 export class ModalImportComponent implements OnInit{
 
   @Input() listeCours: any;
-  selectedFile!: File;
   isPromoChoose!: Boolean;
   isSemestreChoose!: Boolean;
   selectedPromo: any;
   selectedSemestre: any;
   listeSemestres: any;
   listeNomCours: any;
+  driveDocument!: File;
+  selectedFile!: File;
+  @ViewChild('fileInput', {static: false}) fileInput!: ElementRef;
 
   importDocumentForm = this.formBuilder.group({
     name: [, [Validators.required, ]],
@@ -35,17 +37,24 @@ export class ModalImportComponent implements OnInit{
     this.isSemestreChoose = false;
   }
 
-  importDocument() {
-    let importDocument: DriveDocument = {
-      nom_fichier: this.importDocumentForm.get('name')?.value!,
-      etiquettePromo: this.importDocumentForm.get('promo')?.value!,
-      etiquetteCours: this.importDocumentForm.get('cours')?.value!,
-      semestre: this.importDocumentForm.get('semestre')?.value!,
-      mail: localStorage.getItem('email')?.valueOf.toString()!,
-      document: this.importDocumentForm.get('file')?.value!,
-      //dateCreation: new Date()
+  onFileSelected(event: Event) {
+    const fileInput = event.target as HTMLInputElement;
+    if (fileInput.files) {
+      this.selectedFile = fileInput.files[0];
+      
     }
-    this.service.insertDocument(importDocument).subscribe(
+  }
+
+  importDocument() {
+    const formData = new FormData();
+    formData.append('file', this.selectedFile, this.selectedFile.name);
+    formData.append('nom_fichier', this.importDocumentForm.get('name')?.value!);
+    formData.append('etiquettePromo', this.importDocumentForm.get('promo')?.value!);
+    formData.append('etiquetteCours', this.importDocumentForm.get('cours')?.value!);
+    formData.append('semestre', this.importDocumentForm.get('semestre')?.value!);
+    formData.append('mailOwner', this.importDocumentForm.get('email')?.value!);
+    
+    this.service.insertDocument(formData).subscribe(
       (response) => {
         if (response) {
           confirm('Fichier importé !')

@@ -1,19 +1,26 @@
-<ngb-accordion #acc="ngbAccordion" [closeOthers]="true">
-    <ngb-panel *ngFor="let promo of listeCours" [title]="promo.title" (opened)="onClickPromo(promo.title)">
-        <ng-template ngbPanelContent>
-            <ngb-accordion #nestedAcc="ngbAccordion" [closeOthers]="true">
-                <ngb-panel *ngFor="let semestre of promo.semestres" [title]="semestre.title" (click)="onClickSemestre(semestre.title)">
-                    <ng-template ngbPanelContent>
-                        <ul>
-                            <li *ngFor="let cours of semestre.cours">
-                                <button type="button" class="btn" (click)="onClickCours(cours)">
-                                    {{cours}}
-                                </button>
-                            </li>
-                        </ul>
-                    </ng-template>
+<div ngbAccordion>
+    <div ngbAccordionItem *ngFor="let promo of listeCours" (click)="onClickPromo(promo.title)">
+      <h2 ngbAccordionHeader>
+        <button ngbAccordionButton>{{promo.title}}</button>
+      </h2>
+      <ng-template ngbPanelContent>
+        <ngb-accordion>
+          <ngb-panel *ngFor="let semestre of promo.semestres" (click)="onClickSemestre(semestre.title)">
+            <ng-template ngbPanelHeader>
+              <button>{{ semestre.title }}</button>
+            </ng-template>
+            <ng-template ngbPanelContent>
+              <ngb-accordion>
+                <ngb-panel *ngFor="let cours of semestre.cours" (click)="onClickCours(cours)">
+                  <ng-template ngbPanelHeader>
+                    <button>{{ cours }}</button>
+                  </ng-template>
                 </ngb-panel>
-            </ngb-accordion>
-        </ng-template>
-    </ngb-panel>
-</ngb-accordion>
+              </ngb-accordion>
+            </ng-template>
+          </ngb-panel>
+        </ngb-accordion>
+      </ng-template>
+    </div>
+  </div>
+  

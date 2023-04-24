@@ -25,8 +25,8 @@ export class DocumentService {
         return this.http.get<DriveDocument>('http://localhost:3000/api/driveDocument/getDocumentsByPromo/' + promo);
     }
 
-    insertDocument(document: DriveDocument){
-        return this.http.post<DriveDocument>('http://localhost:3000/api/driveDocument/insertDocument', document);
+    insertDocument(formData: FormData){
+        return this.http.post<DriveDocument>('http://localhost:3000/api/driveDocument/insertDocument', formData);
     }
 
     //structure cours

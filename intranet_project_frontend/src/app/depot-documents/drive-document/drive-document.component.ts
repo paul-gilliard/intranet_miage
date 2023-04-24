@@ -2,7 +2,6 @@ import { Component, OnChanges, SimpleChanges } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { DriveDocument } from 'src/app/models/driveDocument.model';
 import { DocumentService } from 'src/app/services/document.service';
-import { Buffer } from 'buffer';
 import { Modal } from 'bootstrap';
 
 @Component({
@@ -82,14 +81,12 @@ export class DriveDocumentComponent implements OnChanges{
     });
   }
 
-  insertDocument(buffer : Buffer, etiquetteCours: String, etiquettePromo: String, semestre: String, mail: String){
+  insertDocument(file : File, etiquetteCours: String, etiquettePromo: String, semestre: String, mail: String){
     this.document.etiquetteCours = etiquetteCours;
     this.document.etiquettePromo = etiquettePromo;
     this.document.semestre = semestre;
-    this.document.mail = mail;
-    this.document.document = buffer;
-    
-    this.service.insertDocument(this.document);
+    this.document.mailOwner = mail;
+    this.document.driveDocument = file;
   }
 
   getPromo(promo: String){

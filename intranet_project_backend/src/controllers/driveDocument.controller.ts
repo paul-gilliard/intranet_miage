@@ -3,6 +3,11 @@ import DriveDocument from '../models/driveDocument.model';
 
 export const insertDocument = async (req: Request, res: Response, next: NextFunction) => {
   try {
+    console.log(req.file);
+    if(!req.file){
+      return res.status(400).send('No file uploaded');
+    }
+
     const newDoc = new DriveDocument({
       etiquetteCours: req.body.etiquetteCours,
       etiquettePromo: req.body.etiquettePromo,

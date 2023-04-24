@@ -1,11 +1,9 @@
-import { Buffer } from 'buffer';
-
 export interface DriveDocument {
     etiquetteCours: String;
     etiquettePromo: String;
     semestre: String;
-    mail: String;
-    document: Buffer;
+    mailOwner: String;
+    driveDocument: File;
     nom_fichier: String;
     //dateCreation: Date;  
 }
