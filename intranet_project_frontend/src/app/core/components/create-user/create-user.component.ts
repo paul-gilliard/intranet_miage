@@ -1,7 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
-import { UsereService } from 'src/app/services/user.service';
+import { UserService } from 'src/app/services/user.service';
 import { User } from 'src/app/models/user.model';
 
 @Component({
@@ -9,7 +8,7 @@ import { User } from 'src/app/models/user.model';
   templateUrl: './create-user.component.html',
   styleUrls: ['./create-user.component.css']
 })
-export class CreateUserComponent implements OnInit, OnDestroy {
+export class CreateUserComponent {
 
   createUserForm = this.formBuilder.group({
     name: [, [Validators.required, ]],
@@ -19,16 +18,9 @@ export class CreateUserComponent implements OnInit, OnDestroy {
     statut: [, [Validators.required, ]]
   });
 
-  constructor(private formBuilder: FormBuilder, private http: HttpClient, private userService: UsereService) {
+  constructor(private formBuilder: FormBuilder,
+              private userService: UserService) {
     
-  }
-
-  ngOnInit(): void {
-    
-  }
-
-  ngOnDestroy(): void {
-      
   }
 
   close() {
@@ -45,15 +37,15 @@ export class CreateUserComponent implements OnInit, OnDestroy {
     };
     this.userService.createUser(userToCreate).subscribe(
       (response) => {
-        console.log('creation reussie', response);
-        
+        if (response) {
+          confirm('Utilisateur créé ! Vous pouvez maintenant vous connecter en utilisant l\'adresse mail renseignée !')
+        }
       },
       (error) => {
         console.error('Erreur de creation', error);
         
       }
     );
-
     this.close();
   }
 

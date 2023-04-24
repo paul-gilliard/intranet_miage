@@ -1,52 +1,59 @@
 <div class="modal-content">
-    <div class="modal-header">
-      <h5 class="modal-title" id="exampleModalLabel">Inscription</h5>
-      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="close()"></button>
-    </div>
-    <div class="modal-body">
-      <form class="row g-3" [formGroup]="createUserForm">
-        <div class="position-relative col-12">
-            <label for="name" class="form-label">Nom</label>
-            <input type="text" id="name" class="form-control" formControlName="name" [ngClass]="createUserForm.get('name')!.errors ? 'is-invalid' : 'is-valid'"/>
-            <div class="invalid-tooltip top-0 end-0">
-              {{createUserForm.get('name')?.errors?.['required'] ? "Il faut renseigner un nom": ""}}
-            </div>
-        </div>
-        <div class="position-relative col-12">
-          <label for="email" class="form-label">Email</label>
-          <input type="text" id="email" class="form-control" formControlName="email" [ngClass]="createUserForm.get('email')!.errors ? 'is-invalid' : 'is-valid'"/>
-          <div class="invalid-tooltip top-0 end-0">
-            {{createUserForm.get('email')?.errors?.['required'] ? "Il faut renseigner une adresse email": ""}}
-          </div>
-        </div>
-        <div class="position-relative col-12">
-            <label for="promo" class="form-label">Promo</label>
-            <select id="promo" class="form-select" formControlName="promo" [ngClass]="createUserForm.get('promo')!.errors ? 'is-invalid' : 'is-valid'">
-                <option value="" disabled selected>Choisissez une option</option>
-                <option value="L3">L3</option>
-                <option value="M1">M1</option>
-                <option value="M2">M2</option>
-            </select>
-            <div class="invalid-tooltip top-0 end-0">
-                {{createUserForm.get('promo')?.errors?.['required'] ? "Il faut sélectionner une promo": ""}}
-            </div>
-        </div>
-        <div class="position-relative col-12">
-            <label for="statut" class="form-label">Statut</label>
-            <select id="statut" class="form-select" formControlName="statut" [ngClass]="createUserForm.get('statut')!.errors ? 'is-invalid' : 'is-valid'">
-                <option value="" disabled selected>Choisissez une option</option>
-                <option value="FI">FI</option>
-                <option value="FA">FA</option>
-            </select>
-            <div class="invalid-tooltip top-0 end-0">
-                {{createUserForm.get('statut')?.errors?.['required'] ? "Il faut sélectionner un statut": ""}}
-            </div>
-        </div>
-      </form>
-    </div>
-    <div class="modal-footer">
-      
-      <button type="button" class="btn btn-dark" data-bs-dismiss="modal" [disabled]="!createUserForm.valid" (click)="createUser()">Valider</button>
-    </div>
+  <div class="modal-header">
+    <h5 class="modal-title text-center w-100" id="exampleModalLabel">Inscription</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="close()"></button>
   </div>
+  <form class="row g-3" [formGroup]="createUserForm">
+  <div class="modal-body">
+    
+<div class="row">
+
+
+      <div class="col-md-8">
+        <div class="form-floating">
+          <input type="text" id="name" class="form-control" placeholder=" " formControlName="name" [ngClass]="createUserForm.get('name')!.errors ? 'is-invalid' : ''"/>
+          <label for="name">Nom</label>
+        </div>
+      </div>
+
+      
+
+      <div class="col-md-4">
+        <div class="form-floating">
+          <select id="promo" class="form-select" formControlName="promo" [ngClass]="createUserForm.get('promo')!.errors ? 'is-invalid' : ''">
+            <option value="" disabled selected>Choisissez une option</option>
+            <option value="L3">L3</option>
+            <option value="M1">M1</option>
+            <option value="M2">M2</option>
+          </select>
+          <label for="promo">Promo</label>
+        </div>
+      </div>
+</div>
+<div class="row">
+      <div class="col-md-8">
+        <div class="form-floating">
+          <input type="text" id="email" class="form-control" placeholder=" " formControlName="email" [ngClass]="createUserForm.get('email')!.errors ? 'is-invalid' : ''"/>
+          <label for="email">Email universitaire</label>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="form-floating">
+          <select id="statut" class="form-select" formControlName="statut" [ngClass]="createUserForm.get('statut')!.errors ? 'is-invalid' : ''">
+            <option value="" disabled selected>Choisissez une option</option>
+            <option value="FI">FI</option>
+            <option value="FA">FA</option>
+          </select>
+          <label for="statut">Statut</label>
+        </div>
+      </div>
+    </div>
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button type="submit" id="btnValider" class="btn btn-dark w-100" data-bs-dismiss="modal" [disabled]="!createUserForm.valid" (click)="createUser()">Valider</button>
+      </div>
+    </form>
   
+</div>
+ 

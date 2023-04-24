@@ -1,0 +1,2052 @@
+BEGIN:VCALENDAR
+PRODID:-//CELCAT//CalendarFeed//EN
+VERSION:2.0
+METHOD:PUBLISH
+X-WR-CALNAME:CELCAT Timetabler
+X-PUBLISHED-TTL:PT10M
+BEGIN:VEVENT
+DTSTART:20221031T070000Z
+DTEND:20221031T193000Z
+LOCATION:
+UID:0746d392-e4d3-437e-8f4c-d90c3410fd52
+DTSTAMP:20220718T072037Z
+SUMMARY:Vacances
+DESCRIPTION:Event category: Vacances\n\nEvent id: 777904\, Reg
+ ister id: 77790411
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221101T070000Z
+DTEND:20221101T193000Z
+LOCATION:
+UID:2d9901a2-2182-4119-863c-f52c67d07141
+DTSTAMP:20220718T072037Z
+SUMMARY:Vacances
+DESCRIPTION:Event category: Vacances\n\nEvent id: 777905\, Reg
+ ister id: 77790511
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221102T070000Z
+DTEND:20221102T193000Z
+LOCATION:
+UID:cc633913-6c37-463a-aea9-c386a14dcd3a
+DTSTAMP:20220718T072037Z
+SUMMARY:Vacances
+DESCRIPTION:Event category: Vacances\n\nEvent id: 777906\, Reg
+ ister id: 77790611
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221103T070000Z
+DTEND:20221103T193000Z
+LOCATION:
+UID:7380b0b2-e4e5-4a00-8cf9-2f22a79f1304
+DTSTAMP:20220718T072037Z
+SUMMARY:Vacances
+DESCRIPTION:Event category: Vacances\n\nEvent id: 777907\, Reg
+ ister id: 77790711
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221104T070000Z
+DTEND:20221104T193000Z
+LOCATION:
+UID:5ddf365a-e739-43f2-8110-e06d844517a5
+DTSTAMP:20220718T072037Z
+SUMMARY:Vacances
+DESCRIPTION:Event category: Vacances\n\nEvent id: 777908\, Reg
+ ister id: 77790811
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221219T070000Z
+DTEND:20221219T193000Z
+LOCATION:
+UID:dbf3e779-7c06-4898-b23b-e0c5647795a4
+DTSTAMP:20220718T072037Z
+SUMMARY:Vacances
+DESCRIPTION:Event category: Vacances\n\nEvent id: 777910\, Reg
+ ister id: 77791018
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221226T070000Z
+DTEND:20221226T193000Z
+LOCATION:
+UID:5cadcb58-bd54-40ab-934b-94ab3592ddcc
+DTSTAMP:20220718T072037Z
+SUMMARY:Vacances
+DESCRIPTION:Event category: Vacances\n\nEvent id: 777910\, Reg
+ ister id: 77791019
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221220T070000Z
+DTEND:20221220T193000Z
+LOCATION:
+UID:e27d3cfc-1958-4657-9dea-dd7a3efad0ea
+DTSTAMP:20220718T072037Z
+SUMMARY:Vacances
+DESCRIPTION:Event category: Vacances\n\nEvent id: 777911\, Reg
+ ister id: 77791118
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221227T070000Z
+DTEND:20221227T193000Z
+LOCATION:
+UID:a3a8ffc8-cd5a-4aa1-883d-5ea8ab63f0f3
+DTSTAMP:20220718T072037Z
+SUMMARY:Vacances
+DESCRIPTION:Event category: Vacances\n\nEvent id: 777911\, Reg
+ ister id: 77791119
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221221T070000Z
+DTEND:20221221T193000Z
+LOCATION:
+UID:95e7ef20-76f8-46ec-be7b-5b1f46cb1b6b
+DTSTAMP:20220718T072037Z
+SUMMARY:Vacances
+DESCRIPTION:Event category: Vacances\n\nEvent id: 777912\, Reg
+ ister id: 77791218
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221228T070000Z
+DTEND:20221228T193000Z
+LOCATION:
+UID:8f4923ed-61a2-489c-a005-887c8cb71a7c
+DTSTAMP:20220718T072037Z
+SUMMARY:Vacances
+DESCRIPTION:Event category: Vacances\n\nEvent id: 777912\, Reg
+ ister id: 77791219
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221222T070000Z
+DTEND:20221222T193000Z
+LOCATION:
+UID:2eec4f3b-55d7-4375-9191-b04805d2f7a5
+DTSTAMP:20220718T072037Z
+SUMMARY:Vacances
+DESCRIPTION:Event category: Vacances\n\nEvent id: 777913\, Reg
+ ister id: 77791318
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221229T070000Z
+DTEND:20221229T193000Z
+LOCATION:
+UID:63369acb-a7f2-454a-86e7-dd2fdea3a30f
+DTSTAMP:20220718T072037Z
+SUMMARY:Vacances
+DESCRIPTION:Event category: Vacances\n\nEvent id: 777913\, Reg
+ ister id: 77791319
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221223T070000Z
+DTEND:20221223T193000Z
+LOCATION:
+UID:57937477-bcdd-46b7-926e-7b1386cca1c2
+DTSTAMP:20220718T072037Z
+SUMMARY:Vacances
+DESCRIPTION:Event category: Vacances\n\nEvent id: 777914\, Reg
+ ister id: 77791418
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221230T070000Z
+DTEND:20221230T193000Z
+LOCATION:
+UID:1cea6752-146e-4e4a-8640-6234d443cff2
+DTSTAMP:20220718T072037Z
+SUMMARY:Vacances
+DESCRIPTION:Event category: Vacances\n\nEvent id: 777914\, Reg
+ ister id: 77791419
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221224T070000Z
+DTEND:20221224T193000Z
+LOCATION:
+UID:3dc193bc-7e02-4144-8919-e44783130cae
+DTSTAMP:20220718T072037Z
+SUMMARY:Vacances
+DESCRIPTION:Event category: Vacances\n\nEvent id: 777915\, Reg
+ ister id: 77791518
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221231T070000Z
+DTEND:20221231T193000Z
+LOCATION:
+UID:6de98588-ebf4-4029-a5b1-17fc7099bf8c
+DTSTAMP:20220718T072037Z
+SUMMARY:Vacances
+DESCRIPTION:Event category: Vacances\n\nEvent id: 777915\, Reg
+ ister id: 77791519
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221225T070000Z
+DTEND:20221225T193000Z
+LOCATION:
+UID:ac0d9c4d-5f3f-47e2-9de3-c188d3d115a9
+DTSTAMP:20220718T072037Z
+SUMMARY:Vacances
+DESCRIPTION:Event category: Vacances\n\nEvent id: 777916\, Reg
+ ister id: 77791618
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20230101T070000Z
+DTEND:20230101T193000Z
+LOCATION:
+UID:d789ed45-7eb4-4a4a-b537-8b4a53a5c56e
+DTSTAMP:20220718T072037Z
+SUMMARY:Vacances
+DESCRIPTION:Event category: Vacances\n\nEvent id: 777916\, Reg
+ ister id: 77791619
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221105T070000Z
+DTEND:20221105T193000Z
+LOCATION:
+UID:605be176-0411-4890-8bf5-e09bc6a7fd44
+DTSTAMP:20220718T072037Z
+SUMMARY:Vacances
+DESCRIPTION:Event category: Vacances\n\nEvent id: 777917\, Reg
+ ister id: 77791711
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221106T070000Z
+DTEND:20221106T193000Z
+LOCATION:
+UID:d2f19162-1574-4e5a-ba3e-eaa76bba7996
+DTSTAMP:20220718T072037Z
+SUMMARY:Vacances
+DESCRIPTION:Event category: Vacances\n\nEvent id: 777918\, Reg
+ ister id: 77791811
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20230213T070000Z
+DTEND:20230213T193000Z
+LOCATION:
+UID:733f89c7-b390-4398-8e9c-b99e5c81ab8e
+DTSTAMP:20220718T072037Z
+SUMMARY:Vacances
+DESCRIPTION:Event category: Vacances\n\nEvent id: 777919\, Reg
+ ister id: 77791926
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20230214T070000Z
+DTEND:20230214T193000Z
+LOCATION:
+UID:e634a153-194c-4308-b5f5-cfab15000488
+DTSTAMP:20220718T072037Z
+SUMMARY:Vacances
+DESCRIPTION:Event category: Vacances\n\nEvent id: 777920\, Reg
+ ister id: 77792026
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20230215T070000Z
+DTEND:20230215T193000Z
+LOCATION:
+UID:f7518da3-ec5f-4733-bd6d-e8abb407d4e2
+DTSTAMP:20220718T072037Z
+SUMMARY:Vacances
+DESCRIPTION:Event category: Vacances\n\nEvent id: 777921\, Reg
+ ister id: 77792126
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20230216T070000Z
+DTEND:20230216T193000Z
+LOCATION:
+UID:1b11cdaf-c5a9-4caf-a484-8888c5c76a97
+DTSTAMP:20220718T072037Z
+SUMMARY:Vacances
+DESCRIPTION:Event category: Vacances\n\nEvent id: 777922\, Reg
+ ister id: 77792226
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20230217T070000Z
+DTEND:20230217T193000Z
+LOCATION:
+UID:91343bae-2da8-488c-8436-4c3a5eef1482
+DTSTAMP:20220718T072037Z
+SUMMARY:Vacances
+DESCRIPTION:Event category: Vacances\n\nEvent id: 777923\, Reg
+ ister id: 77792326
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20230218T070000Z
+DTEND:20230218T193000Z
+LOCATION:
+UID:66626ab2-97a6-4098-854c-1c7a5dc6dfe8
+DTSTAMP:20220718T072037Z
+SUMMARY:Vacances
+DESCRIPTION:Event category: Vacances\n\nEvent id: 777924\, Reg
+ ister id: 77792426
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20230219T070000Z
+DTEND:20230219T193000Z
+LOCATION:
+UID:bad90312-5345-4eee-8b87-1cbe25084259
+DTSTAMP:20220718T072037Z
+SUMMARY:Vacances
+DESCRIPTION:Event category: Vacances\n\nEvent id: 777925\, Reg
+ ister id: 77792526
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20230410T060000Z
+DTEND:20230410T183000Z
+LOCATION:
+UID:95314846-23ad-4228-b20e-bfba8ba28516
+DTSTAMP:20220718T072037Z
+SUMMARY:Vacances
+DESCRIPTION:Event category: Vacances\n\nEvent id: 777926\, Reg
+ ister id: 77792634
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20230417T060000Z
+DTEND:20230417T183000Z
+LOCATION:
+UID:387e0b57-e3ea-4f4c-beb8-3ead5be76a0e
+DTSTAMP:20220718T072037Z
+SUMMARY:Vacances
+DESCRIPTION:Event category: Vacances\n\nEvent id: 777927\, Reg
+ ister id: 77792735
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20230418T060000Z
+DTEND:20230418T183000Z
+LOCATION:
+UID:dcdda2e1-026f-4c25-a3d5-7cf70e1e5472
+DTSTAMP:20220718T072037Z
+SUMMARY:Vacances
+DESCRIPTION:Event category: Vacances\n\nEvent id: 777930\, Reg
+ ister id: 77793035
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20230419T060000Z
+DTEND:20230419T183000Z
+LOCATION:
+UID:0416c7e1-c45a-4a08-ad98-1bb9d94d4846
+DTSTAMP:20220718T072037Z
+SUMMARY:Vacances
+DESCRIPTION:Event category: Vacances\n\nEvent id: 777931\, Reg
+ ister id: 77793135
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20230420T060000Z
+DTEND:20230420T183000Z
+LOCATION:
+UID:4dde1070-117d-4b99-8199-6d9683862241
+DTSTAMP:20220718T072037Z
+SUMMARY:Vacances
+DESCRIPTION:Event category: Vacances\n\nEvent id: 777932\, Reg
+ ister id: 77793235
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20230421T060000Z
+DTEND:20230421T183000Z
+LOCATION:
+UID:b926cfc4-7c3b-474a-962f-5037bee502df
+DTSTAMP:20220718T072037Z
+SUMMARY:Vacances
+DESCRIPTION:Event category: Vacances\n\nEvent id: 777933\, Reg
+ ister id: 77793335
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20230422T060000Z
+DTEND:20230422T183000Z
+LOCATION:
+UID:30de0f5c-b945-44b6-8397-6e10d9dc4b2b
+DTSTAMP:20220718T072037Z
+SUMMARY:Vacances
+DESCRIPTION:Event category: Vacances\n\nEvent id: 777934\, Reg
+ ister id: 77793435
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20230423T060000Z
+DTEND:20230423T183000Z
+LOCATION:
+UID:3b600886-0673-4f7e-8b3f-45f4c90e484d
+DTSTAMP:20220718T072037Z
+SUMMARY:Vacances
+DESCRIPTION:Event category: Vacances\n\nEvent id: 777935\, Reg
+ ister id: 77793535
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20230501T060000Z
+DTEND:20230501T183000Z
+LOCATION:
+UID:90be0b41-30ba-4e4a-9bd3-c94b6a33b461
+DTSTAMP:20220718T072037Z
+SUMMARY:Vacances
+DESCRIPTION:Event category: Vacances\n\nEvent id: 777936\, Reg
+ ister id: 77793637
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20230508T060000Z
+DTEND:20230508T183000Z
+LOCATION:
+UID:54dc5ce4-46ae-4fa5-a65e-760dfc154f5a
+DTSTAMP:20220718T072037Z
+SUMMARY:Vacances
+DESCRIPTION:Event category: Vacances\n\nEvent id: 777937\, Reg
+ ister id: 77793738
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20230518T060000Z
+DTEND:20230518T183000Z
+LOCATION:
+UID:9d713f5c-a8df-4efd-af32-411574bfc45e
+DTSTAMP:20220718T072037Z
+SUMMARY:Vacances
+DESCRIPTION:Event category: Vacances\n\nEvent id: 777938\, Reg
+ ister id: 77793839
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20230529T060000Z
+DTEND:20230529T183000Z
+LOCATION:
+UID:beb85f84-e13e-45e2-805f-dde51e94cbcb
+DTSTAMP:20220718T072037Z
+SUMMARY:Vacances
+DESCRIPTION:Event category: Vacances\n\nEvent id: 777939\, Reg
+ ister id: 77793941
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20230714T060000Z
+DTEND:20230714T183000Z
+LOCATION:
+UID:f6ef5c22-f6ee-45cc-8d9c-85521ab74f44
+DTSTAMP:20220718T072037Z
+SUMMARY:Vacances
+DESCRIPTION:Event category: Vacances\n\nEvent id: 777940\, Reg
+ ister id: 77794047
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221111T070000Z
+DTEND:20221111T193000Z
+LOCATION:
+UID:93b638ef-fadf-4f1e-9642-7a7602965653
+DTSTAMP:20220718T072037Z
+SUMMARY:Vacances
+DESCRIPTION:Event category: Vacances\n\nEvent id: 777944\, Reg
+ ister id: 77794412
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20230818T060000Z
+DTEND:20230818T183000Z
+LOCATION:
+UID:18e7bc49-fd27-4a41-b9bc-3f5122e1a2da
+DTSTAMP:20220718T072037Z
+SUMMARY:Vacances
+DESCRIPTION:Event category: Vacances\n\nEvent id: 777944\, Reg
+ ister id: 77794452
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221117T070000Z
+DTEND:20221117T193000Z
+LOCATION:A29/ Amphithéâtre A\; A29/ Amphithéâtre B\; A2
+ 9/ Amphithéâtre C\; A29/ Amphithéâtre D\; A29/
+  Amphithéâtre E\; A29/ Amphithéâtre F\; A29/ A
+ mphithéâtre G\; A29/ Salle 001\; A29/ Salle 101\
+ ; A29/ Salle 102\; A29/ Salle 103\; A29/ Salle 104
+ \; A29/ Salle 105\; A29/ Sall...
+UID:64609df7-c649-4f8f-9da7-a724ec32ec58
+DTSTAMP:20220718T072048Z
+SUMMARY:Journée entreprise\; 4TAH501S\; 4TAL902S M2 Algor
+ ithmes et Modèles\; 4TCI902S CISD\; 4TGL904S M2 G
+ énie Logiciel\; 4TIN702S\; 4TIS904S M2 Informatiq
+ ue pour l'Image et le Son\; 4TIV903S\; 4TRI904S RC
+ I\; 4TSD901S ASPIC\; 4TVL904S M2 Vérification log
+ icielle\; 4TYE701...
+DESCRIPTION:Event category: Journée entreprise\; Group: 4TAH5
+ 01S\; 4TAL902S M2 Algorithmes et Modèles\; 4TCI90
+ 2S CISD\; 4TGL904S M2 Génie Logiciel\; 4TIN702S\;
+  4TIS904S M2 Informatique pour l'Image et le Son\;
+  4TIV903S\; 4TRI904S RCI\; 4TSD901S ASPIC\; 4TVL90
+ 4S M2 Vérification logicielle\; 4TYE701S\; 4TYE90
+ 1S\; 5CYG500S Info de Gestion\; Staff: MANSART Cla
+ ude\; Room: A29/ Amphithéâtre A\; A29/ Amphithé
+ âtre B\; A29/ Amphithéâtre C\; A29/ Amphithéâ
+ tre D\; A29/ Amphithéâtre E\; A29/ Amphithéâtr
+ e F\; A29/ Amphithéâtre G\; A29/ Salle 001\; A29
+ / Salle 101\; A29/ Salle 102\; A29/ Salle 103\; A2
+ 9/ Salle 104\; A29/ Salle 105\; A29/ Salle 106\; A
+ 29/ Salle 107\; Notes: Journée banalisée pour :\
+ n   - la licence pro adsillh\n   - la  L3 miage\n 
+   - le master miage \n   - les parcours du M2 Info
+ \n\nEvent id: 792514\, Register id: 79251413
+SEQUENCE:5
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20220901T060000Z
+DTEND:20220901T100000Z
+LOCATION:A29/ Amphithéâtre E
+UID:e10d4cd9-998e-4c05-9b23-af75bf7b4f78
+DTSTAMP:20220718T072059Z
+SUMMARY:Réunion de rentrée\; 4TYE701S\; 4TYE901S\; 10h-1
+ 1h : Réunion de rentrée des M1 MIAGE\n11h-12h : 
+ Réunion de rentrée des M2 MIAGE \n\n\; A29/ Amph
+ ithéâtre E
+DESCRIPTION:Event category: Réunion de rentrée\; Group: 4TYE
+ 701S\; 4TYE901S\; Room: A29/ Amphithéâtre E\; No
+ tes: 10h-11h : Réunion de rentrée des M1 MIAGE\n
+ 11h-12h : Réunion de rentrée des M2 MIAGE\n\nEve
+ nt id: 808911\, Register id: 80891102
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20220905T123000Z
+DTEND:20220905T163000Z
+LOCATION:A29/ Amphithéâtre F
+UID:7afe396d-c762-4e5a-8da9-51eb95101e50
+DTSTAMP:20220718T072100Z
+SUMMARY:Cours\; 4TYE912U Extraction  connaissance et appli
+ cation  bases données\; 4TYE901S\; CATAPOULE KICH
+ ENASSAMY Agastya\; A29/ Amphithéâtre F
+DESCRIPTION:Event category: Cours\; Module: 4TYE912U Extractio
+ n  connaissance et application  bases données\; G
+ roup: 4TYE901S\; Staff: CATAPOULE KICHENASSAMY Aga
+ stya\; Room: A29/ Amphithéâtre F\n\nEvent id: 80
+ 9847\, Register id: 80984703
+SEQUENCE:1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20220914T120000Z
+DTEND:20220914T160000Z
+LOCATION:A29/ Amphithéâtre C
+UID:0bc954fb-2051-48a1-b1ee-b1a55ab94333
+DTSTAMP:20220718T072100Z
+SUMMARY:Cours\; 4TYE912U Extraction  connaissance et appli
+ cation  bases données\; 4TYE901S\; CATAPOULE KICH
+ ENASSAMY Agastya\; A29/ Amphithéâtre C
+DESCRIPTION:Event category: Cours\; Module: 4TYE912U Extractio
+ n  connaissance et application  bases données\; G
+ roup: 4TYE901S\; Staff: CATAPOULE KICHENASSAMY Aga
+ stya\; Room: A29/ Amphithéâtre C\n\nEvent id: 80
+ 9852\, Register id: 80985204
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20220908T120000Z
+DTEND:20220908T160000Z
+LOCATION:A29/ Amphithéâtre D
+UID:c500f16d-7dd1-4d29-93c8-09631e807c26
+DTSTAMP:20220718T072100Z
+SUMMARY:Cours\; 4TYE912U Extraction  connaissance et appli
+ cation  bases données\; 4TYE901S\; CATAPOULE KICH
+ ENASSAMY Agastya\; A29/ Amphithéâtre D
+DESCRIPTION:Event category: Cours\; Module: 4TYE912U Extractio
+ n  connaissance et application  bases données\; G
+ roup: 4TYE901S\; Staff: CATAPOULE KICHENASSAMY Aga
+ stya\; Room: A29/ Amphithéâtre D\n\nEvent id: 80
+ 9853\, Register id: 80985303
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20220922T120000Z
+DTEND:20220922T160000Z
+LOCATION:A29/ Amphithéâtre C
+UID:d2215ba4-f2b5-412e-905e-a8b959396ec8
+DTSTAMP:20220718T072100Z
+SUMMARY:Cours\; 4TYE912U Extraction  connaissance et appli
+ cation  bases données\; 4TYE901S\; CATAPOULE KICH
+ ENASSAMY Agastya\; A29/ Amphithéâtre C
+DESCRIPTION:Event category: Cours\; Module: 4TYE912U Extractio
+ n  connaissance et application  bases données\; G
+ roup: 4TYE901S\; Staff: CATAPOULE KICHENASSAMY Aga
+ stya\; Room: A29/ Amphithéâtre C\n\nEvent id: 80
+ 9853\, Register id: 80985305
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221018T120000Z
+DTEND:20221018T140000Z
+LOCATION:CREMI - Bât. A28 Salle 008
+UID:2c939753-8295-4133-ac36-18506a09b63a
+DTSTAMP:20220718T072100Z
+SUMMARY:TD Machine\; 4TYE912U Extraction  connaissance et 
+ application  bases données\; 4TYE901S - GROUPE TD
+  2\; CATAPOULE KICHENASSAMY Agastya\; Toujours dan
+ s la même salle (machines configurées lors du 1e
+ r TD)\; CREMI - Bât. A28 Salle 008
+DESCRIPTION:Event category: TD Machine\; Module: 4TYE912U Extr
+ action  connaissance et application  bases donnée
+ s\; Group: 4TYE901S - GROUPE TD 2\; Staff: CATAPOU
+ LE KICHENASSAMY Agastya\; Room: CREMI - Bât. A28 
+ Salle 008\; Notes: Toujours dans la même salle (m
+ achines configurées lors du 1er TD)\n\nEvent id: 
+ 809900\, Register id: 80990009
+SEQUENCE:4
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221108T130000Z
+DTEND:20221108T150000Z
+LOCATION:CREMI - Bât. A28 Salle 008
+UID:5c20e065-9b97-40df-ac03-05c63aa1758a
+DTSTAMP:20220718T072100Z
+SUMMARY:TD Machine\; 4TYE912U Extraction  connaissance et 
+ application  bases données\; 4TYE901S - GROUPE TD
+  2\; CATAPOULE KICHENASSAMY Agastya\; Toujours dan
+ s la même salle (machines configurées lors du 1e
+ r TD)\; CREMI - Bât. A28 Salle 008
+DESCRIPTION:Event category: TD Machine\; Module: 4TYE912U Extr
+ action  connaissance et application  bases donnée
+ s\; Group: 4TYE901S - GROUPE TD 2\; Staff: CATAPOU
+ LE KICHENASSAMY Agastya\; Room: CREMI - Bât. A28 
+ Salle 008\; Notes: Toujours dans la même salle (m
+ achines configurées lors du 1er TD)\n\nEvent id: 
+ 809900\, Register id: 80990012
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20220907T120000Z
+DTEND:20220907T140000Z
+LOCATION:CREMI - Bât. A28 Salle 008
+UID:a0d0336e-412a-40dc-a8f3-a5fcb9d22cb1
+DTSTAMP:20220718T072100Z
+SUMMARY:TD Machine\; 4TYE912U Extraction  connaissance et 
+ application  bases données\; 4TYE901S - GROUPE TD
+  2\; CATAPOULE KICHENASSAMY Agastya\; Toujours dan
+ s la même salle (machines configurées lors du 1e
+ r TD)\; CREMI - Bât. A28 Salle 008
+DESCRIPTION:Event category: TD Machine\; Module: 4TYE912U Extr
+ action  connaissance et application  bases donnée
+ s\; Group: 4TYE901S - GROUPE TD 2\; Staff: CATAPOU
+ LE KICHENASSAMY Agastya\; Room: CREMI - Bât. A28 
+ Salle 008\; Notes: Toujours dans la même salle (m
+ achines configurées lors du 1er TD)\n\nEvent id: 
+ 809905\, Register id: 80990503
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221130T150000Z
+DTEND:20221130T170000Z
+LOCATION:CREMI - Bât. A28 Salle 008
+UID:ef7940bd-6460-42a4-8bf7-d53519a0b4bd
+DTSTAMP:20220718T072100Z
+SUMMARY:TD Machine\; 4TYE912U Extraction  connaissance et 
+ application  bases données\; 4TYE901S - GROUPE TD
+  2\; CATAPOULE KICHENASSAMY Agastya\; Toujours dan
+ s la même salle (machines configurées lors du 1e
+ r TD)\; CREMI - Bât. A28 Salle 008
+DESCRIPTION:Event category: TD Machine\; Module: 4TYE912U Extr
+ action  connaissance et application  bases donnée
+ s\; Group: 4TYE901S - GROUPE TD 2\; Staff: CATAPOU
+ LE KICHENASSAMY Agastya\; Room: CREMI - Bât. A28 
+ Salle 008\; Notes: Toujours dans la même salle (m
+ achines configurées lors du 1er TD)\n\nEvent id: 
+ 809915\, Register id: 80991515
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221124T130000Z
+DTEND:20221124T150000Z
+LOCATION:CREMI - Bât. A28 Salle 008
+UID:ac0f0e7f-519f-4c77-bd48-761a3a3c1f52
+DTSTAMP:20220718T072100Z
+SUMMARY:TD Machine\; 4TYE912U Extraction  connaissance et 
+ application  bases données\; 4TYE901S - GROUPE TD
+  2\; CATAPOULE KICHENASSAMY Agastya\; Toujours dan
+ s la même salle (machines configurées lors du 1e
+ r TD)\; CREMI - Bât. A28 Salle 008
+DESCRIPTION:Event category: TD Machine\; Module: 4TYE912U Extr
+ action  connaissance et application  bases donnée
+ s\; Group: 4TYE901S - GROUPE TD 2\; Staff: CATAPOU
+ LE KICHENASSAMY Agastya\; Room: CREMI - Bât. A28 
+ Salle 008\; Notes: Toujours dans la même salle (m
+ achines configurées lors du 1er TD)\n\nEvent id: 
+ 809923\, Register id: 80992314
+SEQUENCE:3
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221006T140000Z
+DTEND:20221006T160000Z
+LOCATION:CREMI - Bât. A28 Salle 008
+UID:2626d20a-7008-4070-8fad-0e578d21838b
+DTSTAMP:20220718T072100Z
+SUMMARY:TD Machine\; 4TYE912U Extraction  connaissance et 
+ application  bases données\; 4TYE901S - GROUPE TD
+  2\; CATAPOULE KICHENASSAMY Agastya\; Toujours dan
+ s la même salle (machines configurées lors du 1e
+ r TD)\; CREMI - Bât. A28 Salle 008
+DESCRIPTION:Event category: TD Machine\; Module: 4TYE912U Extr
+ action  connaissance et application  bases donnée
+ s\; Group: 4TYE901S - GROUPE TD 2\; Staff: CATAPOU
+ LE KICHENASSAMY Agastya\; Room: CREMI - Bât. A28 
+ Salle 008\; Notes: Toujours dans la même salle (m
+ achines configurées lors du 1er TD)\n\nEvent id: 
+ 809930\, Register id: 80993007
+SEQUENCE:1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221013T140000Z
+DTEND:20221013T160000Z
+LOCATION:CREMI - Bât. A28 Salle 008
+UID:6a53357d-e9fb-40fd-ad70-620d7e03327e
+DTSTAMP:20220718T072100Z
+SUMMARY:TD Machine\; 4TYE912U Extraction  connaissance et 
+ application  bases données\; 4TYE901S - GROUPE TD
+  2\; CATAPOULE KICHENASSAMY Agastya\; Toujours dan
+ s la même salle (machines configurées lors du 1e
+ r TD)\; CREMI - Bât. A28 Salle 008
+DESCRIPTION:Event category: TD Machine\; Module: 4TYE912U Extr
+ action  connaissance et application  bases donnée
+ s\; Group: 4TYE901S - GROUPE TD 2\; Staff: CATAPOU
+ LE KICHENASSAMY Agastya\; Room: CREMI - Bât. A28 
+ Salle 008\; Notes: Toujours dans la même salle (m
+ achines configurées lors du 1er TD)\n\nEvent id: 
+ 809930\, Register id: 80993008
+SEQUENCE:1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221020T140000Z
+DTEND:20221020T160000Z
+LOCATION:CREMI - Bât. A28 Salle 008
+UID:3e0d7f79-949d-46ad-a433-6b4b21f2aed7
+DTSTAMP:20220718T072100Z
+SUMMARY:TD Machine\; 4TYE912U Extraction  connaissance et 
+ application  bases données\; 4TYE901S - GROUPE TD
+  2\; CATAPOULE KICHENASSAMY Agastya\; Toujours dan
+ s la même salle (machines configurées lors du 1e
+ r TD)\; CREMI - Bât. A28 Salle 008
+DESCRIPTION:Event category: TD Machine\; Module: 4TYE912U Extr
+ action  connaissance et application  bases donnée
+ s\; Group: 4TYE901S - GROUPE TD 2\; Staff: CATAPOU
+ LE KICHENASSAMY Agastya\; Room: CREMI - Bât. A28 
+ Salle 008\; Notes: Toujours dans la même salle (m
+ achines configurées lors du 1er TD)\n\nEvent id: 
+ 809930\, Register id: 80993009
+SEQUENCE:3
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221128T080000Z
+DTEND:20221128T100000Z
+LOCATION:A29/ Amphithéâtre E
+UID:4e0134ea-94fa-4401-a3e0-8a3c40be6fac
+DTSTAMP:20220718T072100Z
+SUMMARY:Cours\; 4TYE901U Programmation d'applications mobi
+ les\; 4TYE901S\; DESBARATS Pascal\; A29\; A29/ Amp
+ hithéâtre E
+DESCRIPTION:Event category: Cours\; Module: 4TYE901U Programma
+ tion d'applications mobiles\; Group: 4TYE901S\; St
+ aff: DESBARATS Pascal\; Room: A29/ Amphithéâtre 
+ E\; Notes: A29\n\nEvent id: 809943\, Register id: 
+ 80994315
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221003T083000Z
+DTEND:20221003T103000Z
+LOCATION:A29/ Amphithéâtre E
+UID:d7359a2a-d529-48e0-a36e-163783588486
+DTSTAMP:20220718T072100Z
+SUMMARY:Cours\; 4TYE913U Données et intelligence artifici
+ elle\; 4TYE901S\; ZEMMARI Akka\; A29\; A29/ Amphit
+ héâtre E
+DESCRIPTION:Event category: Cours\; Module: 4TYE913U Données 
+ et intelligence artificielle\; Group: 4TYE901S\; S
+ taff: ZEMMARI Akka\; Room: A29/ Amphithéâtre E\;
+  Notes: A29\n\nEvent id: 809944\, Register id: 809
+ 94407
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221018T073000Z
+DTEND:20221018T103000Z
+LOCATION:A29/ Amphithéâtre E
+UID:97fbc019-9068-49be-9c9c-2d130d36e7f6
+DTSTAMP:20220718T072100Z
+SUMMARY:Cours\; 4TYE913U Données et intelligence artifici
+ elle\; 4TYE901S\; ZEMMARI Akka\; A29\; A29/ Amphit
+ héâtre E
+DESCRIPTION:Event category: Cours\; Module: 4TYE913U Données 
+ et intelligence artificielle\; Group: 4TYE901S\; S
+ taff: ZEMMARI Akka\; Room: A29/ Amphithéâtre E\;
+  Notes: A29\n\nEvent id: 809954\, Register id: 809
+ 95409
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221110T095000Z
+DTEND:20221110T115000Z
+LOCATION:A29/ Salle 105
+UID:58b54033-c677-4900-994f-2917937dfd73
+DTSTAMP:20220718T072100Z
+SUMMARY:Cours\; 4TYE901U Programmation d'applications mobi
+ les\; 4TYE901S\; DESBARATS Pascal\; A29\; A29/ Sal
+ le 105
+DESCRIPTION:Event category: Cours\; Module: 4TYE901U Programma
+ tion d'applications mobiles\; Group: 4TYE901S\; St
+ aff: DESBARATS Pascal\; Room: A29/ Salle 105\; Not
+ es: A29\n\nEvent id: 809955\, Register id: 8099551
+ 2
+SEQUENCE:4
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20220914T073000Z
+DTEND:20220914T103000Z
+LOCATION:A29/ Amphithéâtre F
+UID:c963e4eb-e1d4-4f29-8063-3a64a1f77c3f
+DTSTAMP:20220718T072100Z
+SUMMARY:Cours\; 4TYE913U Données et intelligence artifici
+ elle\; 4TYE901S\; ZEMMARI Akka\; A29\; A29/ Amphit
+ héâtre F
+DESCRIPTION:Event category: Cours\; Module: 4TYE913U Données 
+ et intelligence artificielle\; Group: 4TYE901S\; S
+ taff: ZEMMARI Akka\; Room: A29/ Amphithéâtre F\;
+  Notes: A29\n\nEvent id: 809968\, Register id: 809
+ 96804
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221019T073000Z
+DTEND:20221019T090000Z
+LOCATION:A29/ Amphithéâtre E
+UID:c16cd430-d0e4-4e6f-bf77-e2c62c7f473a
+DTSTAMP:20220718T072100Z
+SUMMARY:Cours\; 4TYE901U Programmation d'applications mobi
+ les\; 4TYE901S\; DESBARATS Pascal\; A29\; A29/ Amp
+ hithéâtre E
+DESCRIPTION:Event category: Cours\; Module: 4TYE901U Programma
+ tion d'applications mobiles\; Group: 4TYE901S\; St
+ aff: DESBARATS Pascal\; Room: A29/ Amphithéâtre 
+ E\; Notes: A29\n\nEvent id: 809969\, Register id: 
+ 80996909
+SEQUENCE:1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221026T073000Z
+DTEND:20221026T100000Z
+LOCATION:A29/ Amphithéâtre E
+UID:be0acfd1-41b0-4318-b008-8e15c339fba8
+DTSTAMP:20220718T072100Z
+SUMMARY:Cours\; 4TYE901U Programmation d'applications mobi
+ les\; 4TYE901S\; DESBARATS Pascal\; A29\; A29/ Amp
+ hithéâtre E
+DESCRIPTION:Event category: Cours\; Module: 4TYE901U Programma
+ tion d'applications mobiles\; Group: 4TYE901S\; St
+ aff: DESBARATS Pascal\; Room: A29/ Amphithéâtre 
+ E\; Notes: A29\n\nEvent id: 809970\, Register id: 
+ 80997010
+SEQUENCE:1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20220902T120000Z
+DTEND:20220902T160000Z
+LOCATION:A29/ Amphithéâtre C
+UID:ca3da8de-b641-4257-bc0d-db0cc7360481
+DTSTAMP:20220718T072100Z
+SUMMARY:Cours\; 4TYE913U Données et intelligence artifici
+ elle\; 4TYE901S\; ZEMMARI Akka\; A29\; A29/ Amphit
+ héâtre C
+DESCRIPTION:Event category: Cours\; Module: 4TYE913U Données 
+ et intelligence artificielle\; Group: 4TYE901S\; S
+ taff: ZEMMARI Akka\; Room: A29/ Amphithéâtre C\;
+  Notes: A29\n\nEvent id: 809980\, Register id: 809
+ 98002
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221129T090000Z
+DTEND:20221129T110000Z
+LOCATION:CREMI - Bât. A28 Salle 205
+UID:55205906-705a-46af-a0f6-435928291ea4
+DTSTAMP:20220718T072100Z
+SUMMARY:TD Machine\; 4TYE901U Programmation d'applications
+  mobiles\; 4TYE901S - GROUPE TD 2\; REKASS Youness
+ \; CREMI - Bât. A28 Salle 205
+DESCRIPTION:Event category: TD Machine\; Module: 4TYE901U Prog
+ rammation d'applications mobiles\; Group: 4TYE901S
+  - GROUPE TD 2\; Staff: REKASS Youness\; Room: CRE
+ MI - Bât. A28 Salle 205\n\nEvent id: 810110\, Reg
+ ister id: 81011015
+SEQUENCE:1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221125T123000Z
+DTEND:20221125T143000Z
+LOCATION:CREMI - Bât. A28 Salle 204
+UID:f9d41099-9a8a-4b3a-b168-beb18cef0c0a
+DTSTAMP:20220718T072100Z
+SUMMARY:TD Machine\; 4TYE901U Programmation d'applications
+  mobiles\; 4TYE901S - GROUPE TD 2\; REKASS Youness
+ \; CREMI - Bât. A28 Salle 204
+DESCRIPTION:Event category: TD Machine\; Module: 4TYE901U Prog
+ rammation d'applications mobiles\; Group: 4TYE901S
+  - GROUPE TD 2\; Staff: REKASS Youness\; Room: CRE
+ MI - Bât. A28 Salle 204\n\nEvent id: 810113\, Reg
+ ister id: 81011314
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221123T123000Z
+DTEND:20221123T143000Z
+LOCATION:CREMI - Bât. A28 Salle 205
+UID:5bd78b34-9462-4821-88a6-ff17348cb3da
+DTSTAMP:20220718T072100Z
+SUMMARY:TD Machine\; 4TYE913U Données et intelligence art
+ ificielle\; 4TYE901S - GROUPE TD 2\; ZEMMARI Akka\
+ ; CREMI - Bât. A28 Salle 205
+DESCRIPTION:Event category: TD Machine\; Module: 4TYE913U Donn
+ ées et intelligence artificielle\; Group: 4TYE901
+ S - GROUPE TD 2\; Staff: ZEMMARI Akka\; Room: CREM
+ I - Bât. A28 Salle 205\n\nEvent id: 810119\, Regi
+ ster id: 81011914
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221019T140000Z
+DTEND:20221019T160000Z
+LOCATION:CREMI - Bât. A28 Salle 204
+UID:c589ee40-3de1-49e8-a149-6b7cf1354ef5
+DTSTAMP:20220718T072100Z
+SUMMARY:TD Machine\; 4TYE901U Programmation d'applications
+  mobiles\; 4TYE901S - GROUPE TD 2\; REKASS Youness
+ \; CREMI - Bât. A28 Salle 204
+DESCRIPTION:Event category: TD Machine\; Module: 4TYE901U Prog
+ rammation d'applications mobiles\; Group: 4TYE901S
+  - GROUPE TD 2\; Staff: REKASS Youness\; Room: CRE
+ MI - Bât. A28 Salle 204\n\nEvent id: 810121\, Reg
+ ister id: 81012109
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221026T140000Z
+DTEND:20221026T160000Z
+LOCATION:CREMI - Bât. A28 Salle 205
+UID:bd7055b6-88ed-41da-b95d-8b7e653de634
+DTSTAMP:20220718T072100Z
+SUMMARY:TD Machine\; 4TYE901U Programmation d'applications
+  mobiles\; 4TYE901S - GROUPE TD 2\; REKASS Youness
+ \; CREMI - Bât. A28 Salle 205
+DESCRIPTION:Event category: TD Machine\; Module: 4TYE901U Prog
+ rammation d'applications mobiles\; Group: 4TYE901S
+  - GROUPE TD 2\; Staff: REKASS Youness\; Room: CRE
+ MI - Bât. A28 Salle 205\n\nEvent id: 810121\, Reg
+ ister id: 81012110
+SEQUENCE:1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221109T150000Z
+DTEND:20221109T170000Z
+LOCATION:CREMI - Bât. A28 Salle 205
+UID:48196bf7-06a2-4d44-8311-700cf8b779fb
+DTSTAMP:20220718T072100Z
+SUMMARY:TD Machine\; 4TYE901U Programmation d'applications
+  mobiles\; 4TYE901S - GROUPE TD 2\; REKASS Youness
+ \; CREMI - Bât. A28 Salle 205
+DESCRIPTION:Event category: TD Machine\; Module: 4TYE901U Prog
+ rammation d'applications mobiles\; Group: 4TYE901S
+  - GROUPE TD 2\; Staff: REKASS Youness\; Room: CRE
+ MI - Bât. A28 Salle 205\n\nEvent id: 810121\, Reg
+ ister id: 81012112
+SEQUENCE:1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20220916T113000Z
+DTEND:20220916T133000Z
+LOCATION:CREMI - Bât. A28 Salle 205
+UID:12e8487b-ddc7-47f1-8255-d64b085a880d
+DTSTAMP:20220718T072100Z
+SUMMARY:TD Machine\; 4TYE913U Données et intelligence art
+ ificielle\; 4TYE901S - GROUPE TD 2\; ZEMMARI Akka\
+ ; CREMI - Bât. A28 Salle 205
+DESCRIPTION:Event category: TD Machine\; Module: 4TYE913U Donn
+ ées et intelligence artificielle\; Group: 4TYE901
+ S - GROUPE TD 2\; Staff: ZEMMARI Akka\; Room: CREM
+ I - Bât. A28 Salle 205\n\nEvent id: 810132\, Regi
+ ster id: 81013204
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20220930T113000Z
+DTEND:20220930T133000Z
+LOCATION:CREMI - Bât. A28 Salle 205
+UID:c683176a-e5bf-421f-9d75-ce4a9b7b3956
+DTSTAMP:20220718T072100Z
+SUMMARY:TD Machine\; 4TYE913U Données et intelligence art
+ ificielle\; 4TYE901S - GROUPE TD 2\; ZEMMARI Akka\
+ ; CREMI - Bât. A28 Salle 205
+DESCRIPTION:Event category: TD Machine\; Module: 4TYE913U Donn
+ ées et intelligence artificielle\; Group: 4TYE901
+ S - GROUPE TD 2\; Staff: ZEMMARI Akka\; Room: CREM
+ I - Bât. A28 Salle 205\n\nEvent id: 810132\, Regi
+ ster id: 81013206
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221014T113000Z
+DTEND:20221014T133000Z
+LOCATION:CREMI - Bât. A28 Salle 205
+UID:c1f712c1-bc89-4316-9582-e8e940162cee
+DTSTAMP:20220718T072100Z
+SUMMARY:TD Machine\; 4TYE913U Données et intelligence art
+ ificielle\; 4TYE901S - GROUPE TD 2\; ZEMMARI Akka\
+ ; CREMI - Bât. A28 Salle 205
+DESCRIPTION:Event category: TD Machine\; Module: 4TYE913U Donn
+ ées et intelligence artificielle\; Group: 4TYE901
+ S - GROUPE TD 2\; Staff: ZEMMARI Akka\; Room: CREM
+ I - Bât. A28 Salle 205\n\nEvent id: 810132\, Regi
+ ster id: 81013208
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221028T113000Z
+DTEND:20221028T133000Z
+LOCATION:CREMI - Bât. A28 Salle 205
+UID:316440fd-baf4-48f1-9e15-7ffde9182e68
+DTSTAMP:20220718T072100Z
+SUMMARY:TD Machine\; 4TYE913U Données et intelligence art
+ ificielle\; 4TYE901S - GROUPE TD 2\; ZEMMARI Akka\
+ ; CREMI - Bât. A28 Salle 205
+DESCRIPTION:Event category: TD Machine\; Module: 4TYE913U Donn
+ ées et intelligence artificielle\; Group: 4TYE901
+ S - GROUPE TD 2\; Staff: ZEMMARI Akka\; Room: CREM
+ I - Bât. A28 Salle 205\n\nEvent id: 810132\, Regi
+ ster id: 81013210
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221202T123000Z
+DTEND:20221202T143000Z
+LOCATION:CREMI - Bât. A28 Salle 205
+UID:8698a15f-1cef-413b-91be-93df17d61765
+DTSTAMP:20220718T072100Z
+SUMMARY:TD Machine\; 4TYE913U Données et intelligence art
+ ificielle\; 4TYE901S - GROUPE TD 2\; ZEMMARI Akka\
+ ; CREMI - Bât. A28 Salle 205
+DESCRIPTION:Event category: TD Machine\; Module: 4TYE913U Donn
+ ées et intelligence artificielle\; Group: 4TYE901
+ S - GROUPE TD 2\; Staff: ZEMMARI Akka\; Room: CREM
+ I - Bât. A28 Salle 205\n\nEvent id: 810132\, Regi
+ ster id: 81013215
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221118T150000Z
+DTEND:20221118T170000Z
+LOCATION:CREMI - Bât. A28 Salle 204
+UID:a1a8d23f-9f06-4eb1-81bf-540384cd829d
+DTSTAMP:20220718T072100Z
+SUMMARY:TD Machine\; 4TYE913U Données et intelligence art
+ ificielle\; 4TYE901S - GROUPE TD 2\; ZEMMARI Akka\
+ ; CREMI - Bât. A28 Salle 204
+DESCRIPTION:Event category: TD Machine\; Module: 4TYE913U Donn
+ ées et intelligence artificielle\; Group: 4TYE901
+ S - GROUPE TD 2\; Staff: ZEMMARI Akka\; Room: CREM
+ I - Bât. A28 Salle 204\n\nEvent id: 810151\, Regi
+ ster id: 81015113
+SEQUENCE:1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20220921T120000Z
+DTEND:20220921T150000Z
+LOCATION:
+UID:572f76ad-bee0-40d2-8846-82c36e4519d1
+DTSTAMP:20220718T072100Z
+SUMMARY:Cours\; 4TYE915U Analyse et audit des systèmes d'
+ information\; 4TYE901S\; FAVRE BERTIN Christine\; 
+ En distanciel
+DESCRIPTION:Event category: Cours\; Module: 4TYE915U Analyse e
+ t audit des systèmes d'information\; Group: 4TYE9
+ 01S\; Staff: FAVRE BERTIN Christine\; Notes: En di
+ stanciel\n\nEvent id: 810159\, Register id: 810159
+ 05
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221004T110000Z
+DTEND:20221004T130000Z
+LOCATION:A29/ Salle 106
+UID:43079e25-25ac-47bc-b0ea-21d62d21a3c0
+DTSTAMP:20220718T072100Z
+SUMMARY:TD\; 4TYE915U Analyse et audit des systèmes d'inf
+ ormation\; 4TYE901S - GROUPE TD 2\; FAVRE BERTIN C
+ hristine\; A29/ Salle 106
+DESCRIPTION:Event category: TD\; Module: 4TYE915U Analyse et a
+ udit des systèmes d'information\; Group: 4TYE901S
+  - GROUPE TD 2\; Staff: FAVRE BERTIN Christine\; R
+ oom: A29/ Salle 106\n\nEvent id: 810610\, Register
+  id: 81061007
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221005T113000Z
+DTEND:20221005T133000Z
+LOCATION:A29/ Salle 106
+UID:69f91d00-9c33-417c-bd7c-0362185cd8c0
+DTSTAMP:20220718T072100Z
+SUMMARY:TD\; 4TYE915U Analyse et audit des systèmes d'inf
+ ormation\; 4TYE901S - GROUPE TD 2\; FAVRE BERTIN C
+ hristine\; A29/ Salle 106
+DESCRIPTION:Event category: TD\; Module: 4TYE915U Analyse et a
+ udit des systèmes d'information\; Group: 4TYE901S
+  - GROUPE TD 2\; Staff: FAVRE BERTIN Christine\; R
+ oom: A29/ Salle 106\n\nEvent id: 810612\, Register
+  id: 81061207
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221012T130000Z
+DTEND:20221012T150000Z
+LOCATION:A29/ Salle 106
+UID:86c54a1c-d6d8-442f-92d5-2bda2bbe6967
+DTSTAMP:20220718T072100Z
+SUMMARY:TD\; 4TYE915U Analyse et audit des systèmes d'inf
+ ormation\; 4TYE901S - GROUPE TD 2\; FAVRE BERTIN C
+ hristine\; A29/ Salle 106
+DESCRIPTION:Event category: TD\; Module: 4TYE915U Analyse et a
+ udit des systèmes d'information\; Group: 4TYE901S
+  - GROUPE TD 2\; Staff: FAVRE BERTIN Christine\; R
+ oom: A29/ Salle 106\n\nEvent id: 810613\, Register
+  id: 81061308
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20220929T110000Z
+DTEND:20220929T130000Z
+LOCATION:
+UID:fd55cd3d-fe78-4fa5-8baa-f1266bfa0def
+DTSTAMP:20220718T072100Z
+SUMMARY:TD\; 4TYE915U Analyse et audit des systèmes d'inf
+ ormation\; 4TYE901S - GROUPE TD 2\; FAVRE BERTIN C
+ hristine\; En distanciel
+DESCRIPTION:Event category: TD\; Module: 4TYE915U Analyse et a
+ udit des systèmes d'information\; Group: 4TYE901S
+  - GROUPE TD 2\; Staff: FAVRE BERTIN Christine\; N
+ otes: En distanciel\n\nEvent id: 810615\, Register
+  id: 81061506
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20220915T133000Z
+DTEND:20220915T153000Z
+LOCATION:
+UID:cf143d3d-9f42-43bf-9927-a36b97ab9374
+DTSTAMP:20220718T072100Z
+SUMMARY:TD\; 4TYE915U Analyse et audit des systèmes d'inf
+ ormation\; 4TYE901S - GROUPE TD 2\; FAVRE BERTIN C
+ hristine\; En distanciel
+DESCRIPTION:Event category: TD\; Module: 4TYE915U Analyse et a
+ udit des systèmes d'information\; Group: 4TYE901S
+  - GROUPE TD 2\; Staff: FAVRE BERTIN Christine\; N
+ otes: En distanciel\n\nEvent id: 810616\, Register
+  id: 81061604
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20220902T070000Z
+DTEND:20220902T100000Z
+LOCATION:A29/ Amphithéâtre C
+UID:15a0d5ab-7dd6-4cd3-b6b6-aed4b947517d
+DTSTAMP:20220718T072100Z
+SUMMARY:Cours\; 4TYE914U E-marketing et commerce électron
+ ique\; 4TYE901S\; MAUREL Dominique\; A29/ Amphith�
+ �âtre C
+DESCRIPTION:Event category: Cours\; Module: 4TYE914U E-marketi
+ ng et commerce électronique\; Group: 4TYE901S\; S
+ taff: MAUREL Dominique\; Room: A29/ Amphithéâtre
+  C\n\nEvent id: 810634\, Register id: 81063402
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20220909T070000Z
+DTEND:20220909T100000Z
+LOCATION:A29/ Amphithéâtre D
+UID:c618849a-41ec-4301-813c-5c7198900015
+DTSTAMP:20220718T072100Z
+SUMMARY:Cours\; 4TYE914U E-marketing et commerce électron
+ ique\; 4TYE901S\; MAUREL Dominique\; A29/ Amphith�
+ �âtre D
+DESCRIPTION:Event category: Cours\; Module: 4TYE914U E-marketi
+ ng et commerce électronique\; Group: 4TYE901S\; S
+ taff: MAUREL Dominique\; Room: A29/ Amphithéâtre
+  D\n\nEvent id: 810634\, Register id: 81063403
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20220916T070000Z
+DTEND:20220916T100000Z
+LOCATION:A29/ Amphithéâtre C
+UID:17ac08a7-5fd9-4e03-ad1f-edfa24291b39
+DTSTAMP:20220718T072100Z
+SUMMARY:Cours\; 4TYE914U E-marketing et commerce électron
+ ique\; 4TYE901S\; MAUREL Dominique\; A29/ Amphith�
+ �âtre C
+DESCRIPTION:Event category: Cours\; Module: 4TYE914U E-marketi
+ ng et commerce électronique\; Group: 4TYE901S\; S
+ taff: MAUREL Dominique\; Room: A29/ Amphithéâtre
+  C\n\nEvent id: 810634\, Register id: 81063404
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20220923T070000Z
+DTEND:20220923T100000Z
+LOCATION:A29/ Amphithéâtre C
+UID:351e05e4-ff88-4546-b729-a9d9d28ce40d
+DTSTAMP:20220718T072100Z
+SUMMARY:Cours\; 4TYE914U E-marketing et commerce électron
+ ique\; 4TYE901S\; MAUREL Dominique\; A29/ Amphith�
+ �âtre C
+DESCRIPTION:Event category: Cours\; Module: 4TYE914U E-marketi
+ ng et commerce électronique\; Group: 4TYE901S\; S
+ taff: MAUREL Dominique\; Room: A29/ Amphithéâtre
+  C\n\nEvent id: 810634\, Register id: 81063405
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20220930T080000Z
+DTEND:20220930T100000Z
+LOCATION:A29/ Salle 107
+UID:b0c488db-184a-49f0-8078-84d8d91830ab
+DTSTAMP:20220718T072100Z
+SUMMARY:TD\; 4TYE914U E-marketing et commerce électroniqu
+ e\; 4TYE901S - GROUPE TD 2\; MAUREL Dominique\; A2
+ 9/ Salle 107
+DESCRIPTION:Event category: TD\; Module: 4TYE914U E-marketing 
+ et commerce électronique\; Group: 4TYE901S - GROU
+ PE TD 2\; Staff: MAUREL Dominique\; Room: A29/ Sal
+ le 107\n\nEvent id: 810638\, Register id: 81063806
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221014T080000Z
+DTEND:20221014T100000Z
+LOCATION:A29/ Salle 107
+UID:da5eeab1-7ef8-4ded-a858-c66b8461dde8
+DTSTAMP:20220718T072100Z
+SUMMARY:TD\; 4TYE914U E-marketing et commerce électroniqu
+ e\; 4TYE901S - GROUPE TD 2\; MAUREL Dominique\; A2
+ 9/ Salle 107
+DESCRIPTION:Event category: TD\; Module: 4TYE914U E-marketing 
+ et commerce électronique\; Group: 4TYE901S - GROU
+ PE TD 2\; Staff: MAUREL Dominique\; Room: A29/ Sal
+ le 107\n\nEvent id: 810638\, Register id: 81063808
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221028T080000Z
+DTEND:20221028T100000Z
+LOCATION:A29/ Salle 107
+UID:c1b560a8-8e90-49a0-8c4e-9cfc0af751a8
+DTSTAMP:20220718T072100Z
+SUMMARY:TD\; 4TYE914U E-marketing et commerce électroniqu
+ e\; 4TYE901S - GROUPE TD 2\; MAUREL Dominique\; A2
+ 9/ Salle 107
+DESCRIPTION:Event category: TD\; Module: 4TYE914U E-marketing 
+ et commerce électronique\; Group: 4TYE901S - GROU
+ PE TD 2\; Staff: MAUREL Dominique\; Room: A29/ Sal
+ le 107\n\nEvent id: 810638\, Register id: 81063810
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221121T070000Z
+DTEND:20221121T110000Z
+LOCATION:A29/ Amphithéâtre B
+UID:2d90ddc1-dbaf-4755-939c-95746e2d3f63
+DTSTAMP:20220718T072100Z
+SUMMARY:Cours\; 4TYE916U Droit des contrats informatiques\
+ ; 4TYE901S\; LEPINE Eric\; A29\; A29/ Amphithéât
+ re B
+DESCRIPTION:Event category: Cours\; Module: 4TYE916U Droit des
+  contrats informatiques\; Group: 4TYE901S\; Staff:
+  LEPINE Eric\; Room: A29/ Amphithéâtre B\; Notes
+ : A29\n\nEvent id: 810640\, Register id: 81064014
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221114T130000Z
+DTEND:20221114T170000Z
+LOCATION:A29/ Amphithéâtre B
+UID:69b34a2d-1ecb-4a66-9184-27fb4058a21c
+DTSTAMP:20220718T072100Z
+SUMMARY:Cours\; 4TYE916U Droit des contrats informatiques\
+ ; 4TYE901S\; LEPINE Eric\; A29\; A29/ Amphithéât
+ re B
+DESCRIPTION:Event category: Cours\; Module: 4TYE916U Droit des
+  contrats informatiques\; Group: 4TYE901S\; Staff:
+  LEPINE Eric\; Room: A29/ Amphithéâtre B\; Notes
+ : A29\n\nEvent id: 810647\, Register id: 81064713
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221202T070000Z
+DTEND:20221202T110000Z
+LOCATION:A29/ Amphithéâtre E
+UID:fc12f0cc-bf41-4075-a8a6-35bc3abb11be
+DTSTAMP:20220718T072100Z
+SUMMARY:Cours\; 4TYE916U Droit des contrats informatiques\
+ ; 4TYE901S\; LEPINE Eric\; A29\; A29/ Amphithéât
+ re E
+DESCRIPTION:Event category: Cours\; Module: 4TYE916U Droit des
+  contrats informatiques\; Group: 4TYE901S\; Staff:
+  LEPINE Eric\; Room: A29/ Amphithéâtre E\; Notes
+ : A29\n\nEvent id: 810662\, Register id: 81066215
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20220901T110000Z
+DTEND:20220901T140000Z
+LOCATION:A29/ Salle 101\; A29/ Salle 102\; A29/ Salle 103\;
+  A29/ Salle 104
+UID:ff797103-41f0-4c3e-817f-7a34cd74b859
+DTSTAMP:20220718T072100Z
+SUMMARY:Conférence\; 4TYE918U Cycle de conférence\; 4TYE
+ 701S\; 4TYE901S\; BAILLETTE Pamela\; Cycle de Conf
+ érences Entreprises Master 1 et Master 2\nquatre 
+ salles au A29\; A29/ Salle 101\; A29/ Salle 102\; 
+ A29/ Salle 103\; A29/ Salle 104
+DESCRIPTION:Event category: Conférence\; Module: 4TYE918U Cyc
+ le de conférence\; Group: 4TYE701S\; 4TYE901S\; S
+ taff: BAILLETTE Pamela\; Room: A29/ Salle 101\; A2
+ 9/ Salle 102\; A29/ Salle 103\; A29/ Salle 104\; N
+ otes: Cycle de Conférences Entreprises Master 1 e
+ t Master 2\nquatre salles au A29\n\nEvent id: 8106
+ 98\, Register id: 81069802
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20220906T073000Z
+DTEND:20220906T103000Z
+LOCATION:A29/ Amphithéâtre A
+UID:2b789ff6-ed77-41e9-89de-6923637dc816
+DTSTAMP:20220718T072100Z
+SUMMARY:Cours\; 4TYE915U Analyse et audit des systèmes d'
+ information\; 4TYE901S\; BASTIEN Philippe\; A29/ A
+ mphithéâtre A
+DESCRIPTION:Event category: Cours\; Module: 4TYE915U Analyse e
+ t audit des systèmes d'information\; Group: 4TYE9
+ 01S\; Staff: BASTIEN Philippe\; Room: A29/ Amphith
+ éâtre A\n\nEvent id: 811032\, Register id: 81103
+ 203
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20220913T073000Z
+DTEND:20220913T103000Z
+LOCATION:A29/ Amphithéâtre E
+UID:08825e37-dc3d-41cd-8ed7-3f87da7cab4a
+DTSTAMP:20220718T072100Z
+SUMMARY:Cours\; 4TYE915U Analyse et audit des systèmes d'
+ information\; 4TYE901S\; BASTIEN Philippe\; A29/ A
+ mphithéâtre E
+DESCRIPTION:Event category: Cours\; Module: 4TYE915U Analyse e
+ t audit des systèmes d'information\; Group: 4TYE9
+ 01S\; Staff: BASTIEN Philippe\; Room: A29/ Amphith
+ éâtre E\n\nEvent id: 811032\, Register id: 81103
+ 204
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221011T073000Z
+DTEND:20221011T103000Z
+LOCATION:A29/ Amphithéâtre E
+UID:e54c2b72-499f-40bd-93ad-bc6a93c05943
+DTSTAMP:20220718T072100Z
+SUMMARY:Cours\; 4TYE915U Analyse et audit des systèmes d'
+ information\; 4TYE901S\; BASTIEN Philippe\; A29/ A
+ mphithéâtre E
+DESCRIPTION:Event category: Cours\; Module: 4TYE915U Analyse e
+ t audit des systèmes d'information\; Group: 4TYE9
+ 01S\; Staff: BASTIEN Philippe\; Room: A29/ Amphith
+ éâtre E\n\nEvent id: 811032\, Register id: 81103
+ 208
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221109T083000Z
+DTEND:20221109T113000Z
+LOCATION:A29/ Amphithéâtre E
+UID:d11e7be5-1e89-455c-9214-563e849022db
+DTSTAMP:20220718T072100Z
+SUMMARY:Cours\; 4TYE915U Analyse et audit des systèmes d'
+ information\; 4TYE901S\; BASTIEN Philippe\; A29/ A
+ mphithéâtre E
+DESCRIPTION:Event category: Cours\; Module: 4TYE915U Analyse e
+ t audit des systèmes d'information\; Group: 4TYE9
+ 01S\; Staff: BASTIEN Philippe\; Room: A29/ Amphith
+ éâtre E\n\nEvent id: 811033\, Register id: 81103
+ 312
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221017T080000Z
+DTEND:20221017T100000Z
+LOCATION:A29/ Salle 106
+UID:a1985b79-7a8b-4f46-9c0d-4aa24c48d87b
+DTSTAMP:20220718T072100Z
+SUMMARY:TD\; 4TYE915U Analyse et audit des systèmes d'inf
+ ormation\; 4TYE901S - GROUPE TD 2\; BASTIEN Philip
+ pe\; A29/ Salle 106
+DESCRIPTION:Event category: TD\; Module: 4TYE915U Analyse et a
+ udit des systèmes d'information\; Group: 4TYE901S
+  - GROUPE TD 2\; Staff: BASTIEN Philippe\; Room: A
+ 29/ Salle 106\n\nEvent id: 811054\, Register id: 8
+ 1105409
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221004T080000Z
+DTEND:20221004T100000Z
+LOCATION:A29/ Salle 106
+UID:d3164d28-cae5-460f-90f6-f35829efb90c
+DTSTAMP:20220718T072100Z
+SUMMARY:TD\; 4TYE915U Analyse et audit des systèmes d'inf
+ ormation\; 4TYE901S - GROUPE TD 2\; BASTIEN Philip
+ pe\; A29/ Salle 106
+DESCRIPTION:Event category: TD\; Module: 4TYE915U Analyse et a
+ udit des systèmes d'information\; Group: 4TYE901S
+  - GROUPE TD 2\; Staff: BASTIEN Philippe\; Room: A
+ 29/ Salle 106\n\nEvent id: 811055\, Register id: 8
+ 1105507
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20220908T080000Z
+DTEND:20220908T100000Z
+LOCATION:A29/ Salle 106
+UID:6d335869-1455-425b-85bb-7cb20ce5c93e
+DTSTAMP:20220718T072100Z
+SUMMARY:TD\; 4TYE915U Analyse et audit des systèmes d'inf
+ ormation\; 4TYE901S - GROUPE TD 2\; BASTIEN Philip
+ pe\; A29/ Salle 106
+DESCRIPTION:Event category: TD\; Module: 4TYE915U Analyse et a
+ udit des systèmes d'information\; Group: 4TYE901S
+  - GROUPE TD 2\; Staff: BASTIEN Philippe\; Room: A
+ 29/ Salle 106\n\nEvent id: 811056\, Register id: 8
+ 1105603
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221205T123000Z
+DTEND:20221205T163000Z
+LOCATION:A21/ Salle 307\; A21/ Salle 309
+UID:479d21ab-257a-4fe1-a2fe-ac2407e39f3a
+DTSTAMP:20220718T072100Z
+SUMMARY:Examens\; 4TYE906U Anglais\; 4TYE901S\; ROBSON Pas
+ cale\; Examen TOEIC\; A21/ Salle 307\; A21/ Salle 
+ 309
+DESCRIPTION:Event category: Examens\; Module: 4TYE906U Anglais
+ \; Group: 4TYE901S\; Staff: ROBSON Pascale\; Room:
+  A21/ Salle 307\; A21/ Salle 309\; Notes: Examen T
+ OEIC\n\nEvent id: 811082\, Register id: 81108216
+SEQUENCE:4
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20220907T073000Z
+DTEND:20220907T103000Z
+LOCATION:A29/ Amphithéâtre F
+UID:7cb59df4-76cd-48da-9b07-95831d34e656
+DTSTAMP:20220718T072100Z
+SUMMARY:Cours\; 4TYE912U Extraction  connaissance et appli
+ cation  bases données\; 4TYE901S\; MAABOUT Sofian
+ \; A29/ Amphithéâtre F
+DESCRIPTION:Event category: Cours\; Module: 4TYE912U Extractio
+ n  connaissance et application  bases données\; G
+ roup: 4TYE901S\; Staff: MAABOUT Sofian\; Room: A29
+ / Amphithéâtre F\n\nEvent id: 811191\, Register 
+ id: 81119103
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221005T073000Z
+DTEND:20221005T103000Z
+LOCATION:A29/ Amphithéâtre F
+UID:a92297cb-60ba-45a3-9cd0-c095b8dba300
+DTSTAMP:20220718T072100Z
+SUMMARY:Cours\; 4TYE912U Extraction  connaissance et appli
+ cation  bases données\; 4TYE901S\; MAABOUT Sofian
+ \; A29/ Amphithéâtre F
+DESCRIPTION:Event category: Cours\; Module: 4TYE912U Extractio
+ n  connaissance et application  bases données\; G
+ roup: 4TYE901S\; Staff: MAABOUT Sofian\; Room: A29
+ / Amphithéâtre F\n\nEvent id: 811191\, Register 
+ id: 81119107
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20220921T073000Z
+DTEND:20220921T110000Z
+LOCATION:A29/ Amphithéâtre F
+UID:c18a46c3-1746-458a-93bd-af83bf771669
+DTSTAMP:20220718T072100Z
+SUMMARY:Cours\; 4TYE912U Extraction  connaissance et appli
+ cation  bases données\; 4TYE901S\; MAABOUT Sofian
+ \; A29/ Amphithéâtre F
+DESCRIPTION:Event category: Cours\; Module: 4TYE912U Extractio
+ n  connaissance et application  bases données\; G
+ roup: 4TYE901S\; Staff: MAABOUT Sofian\; Room: A29
+ / Amphithéâtre F\n\nEvent id: 811192\, Register 
+ id: 81119205
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20220928T113000Z
+DTEND:20220928T150000Z
+LOCATION:A29/ Amphithéâtre C
+UID:cabd6d38-b5c5-481c-8755-0059d3510927
+DTSTAMP:20220718T072100Z
+SUMMARY:Cours\; 4TYE912U Extraction  connaissance et appli
+ cation  bases données\; 4TYE901S\; MAABOUT Sofian
+ \; A29/ Amphithéâtre C
+DESCRIPTION:Event category: Cours\; Module: 4TYE912U Extractio
+ n  connaissance et application  bases données\; G
+ roup: 4TYE901S\; Staff: MAABOUT Sofian\; Room: A29
+ / Amphithéâtre C\n\nEvent id: 811202\, Register 
+ id: 81120206
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20220915T073000Z
+DTEND:20220915T103000Z
+LOCATION:A29/ Amphithéâtre D
+UID:50102dab-450e-446e-b89d-441085a5f4cc
+DTSTAMP:20220718T072100Z
+SUMMARY:Cours\; 4TYE912U Extraction  connaissance et appli
+ cation  bases données\; 4TYE901S\; MAABOUT Sofian
+ \; A29/ Amphithéâtre D
+DESCRIPTION:Event category: Cours\; Module: 4TYE912U Extractio
+ n  connaissance et application  bases données\; G
+ roup: 4TYE901S\; Staff: MAABOUT Sofian\; Room: A29
+ / Amphithéâtre D\n\nEvent id: 811212\, Register 
+ id: 81121204
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20220923T113000Z
+DTEND:20220923T133000Z
+LOCATION:CREMI - Bât. A28 Salle 205
+UID:f771b3cb-2fce-4a76-8c5e-680d56263926
+DTSTAMP:20220718T072100Z
+SUMMARY:TD Machine\; 4TYE912U Extraction  connaissance et 
+ application  bases données\; 4TYE901S - GROUPE TD
+  2\; MAABOUT Sofian\; CREMI - Bât. A28 Salle 205
+DESCRIPTION:Event category: TD Machine\; Module: 4TYE912U Extr
+ action  connaissance et application  bases donnée
+ s\; Group: 4TYE901S - GROUPE TD 2\; Staff: MAABOUT
+  Sofian\; Room: CREMI - Bât. A28 Salle 205\n\nEve
+ nt id: 811240\, Register id: 81124005
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221007T113000Z
+DTEND:20221007T133000Z
+LOCATION:CREMI - Bât. A28 Salle 205
+UID:1c161b7d-4051-47b3-ae01-b249394dd0c4
+DTSTAMP:20220718T072100Z
+SUMMARY:TD Machine\; 4TYE912U Extraction  connaissance et 
+ application  bases données\; 4TYE901S - GROUPE TD
+  2\; MAABOUT Sofian\; CREMI - Bât. A28 Salle 205
+DESCRIPTION:Event category: TD Machine\; Module: 4TYE912U Extr
+ action  connaissance et application  bases donnée
+ s\; Group: 4TYE901S - GROUPE TD 2\; Staff: MAABOUT
+  Sofian\; Room: CREMI - Bât. A28 Salle 205\n\nEve
+ nt id: 811240\, Register id: 81124007
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221021T113000Z
+DTEND:20221021T133000Z
+LOCATION:CREMI - Bât. A28 Salle 205
+UID:fa45f086-0496-4d71-add6-fe91af54bd89
+DTSTAMP:20220718T072100Z
+SUMMARY:TD Machine\; 4TYE912U Extraction  connaissance et 
+ application  bases données\; 4TYE901S - GROUPE TD
+  2\; MAABOUT Sofian\; CREMI - Bât. A28 Salle 205
+DESCRIPTION:Event category: TD Machine\; Module: 4TYE912U Extr
+ action  connaissance et application  bases donnée
+ s\; Group: 4TYE901S - GROUPE TD 2\; Staff: MAABOUT
+  Sofian\; Room: CREMI - Bât. A28 Salle 205\n\nEve
+ nt id: 811240\, Register id: 81124009
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20220928T073000Z
+DTEND:20220928T103000Z
+LOCATION:
+UID:c3c4f558-f73b-47fb-bd86-55649dcea826
+DTSTAMP:20220718T072100Z
+SUMMARY:Cours\; 4TYE915U Analyse et audit des systèmes d'
+ information\; 4TYE901S\; FAVRE BERTIN Christine\; 
+ En distanciel
+DESCRIPTION:Event category: Cours\; Module: 4TYE915U Analyse e
+ t audit des systèmes d'information\; Group: 4TYE9
+ 01S\; Staff: FAVRE BERTIN Christine\; Notes: En di
+ stanciel\n\nEvent id: 812076\, Register id: 812076
+ 06
+SEQUENCE:2
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221130T070000Z
+DTEND:20221130T110000Z
+LOCATION:A29/ Amphithéâtre E
+UID:9b8c42cb-e0b4-4718-91fc-22dceab137a8
+DTSTAMP:20220718T072104Z
+SUMMARY:Cours\; 4TYE916U Droit des contrats informatiques\
+ ; 4TYE901S\; LEPINE Eric\; A29\; A29/ Amphithéât
+ re E
+DESCRIPTION:Event category: Cours\; Module: 4TYE916U Droit des
+  contrats informatiques\; Group: 4TYE901S\; Staff:
+  LEPINE Eric\; Room: A29/ Amphithéâtre E\; Notes
+ : A29\n\nEvent id: 817423\, Register id: 81742315
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20220920T060000Z
+DTEND:20220920T183000Z
+LOCATION:
+UID:bbd942cd-3fc5-4020-aed9-a45ae2f3fbb2
+DTSTAMP:20220718T072108Z
+SUMMARY:Autre\; 4TAH501S\; 4TAL902S M2 Algorithmes et Mod�
+ �les\; 4TCI902S CISD\; 4TGL904S M2 Génie Logiciel
+ \; 4TIN702S\; 4TIS904S M2 Informatique pour l'Imag
+ e et le Son\; 4TIV903S\; 4TRI904S RCI\; 4TSD901S A
+ SPIC\; 4TVL904S M2 Vérification logicielle\; 4TYE
+ 701S\; 4TYE901S\;...
+DESCRIPTION:Event category: Autre\; Group: 4TAH501S\; 4TAL902S
+  M2 Algorithmes et Modèles\; 4TCI902S CISD\; 4TGL
+ 904S M2 Génie Logiciel\; 4TIN702S\; 4TIS904S M2 I
+ nformatique pour l'Image et le Son\; 4TIV903S\; 4T
+ RI904S RCI\; 4TSD901S ASPIC\; 4TVL904S M2 Vérific
+ ation logicielle\; 4TYE701S\; 4TYE901S\; Notes: F�
+ �te la rentrée - Organisé par le Bureau Vie Etud
+ iante\n\nEvent id: 822753\, Register id: 82275305
+SEQUENCE:1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221011T143000Z
+DTEND:20221011T160000Z
+LOCATION:A29/ Amphithéâtre C\; A29/ Amphithéâtre D
+UID:40cdee5a-e1cb-4d87-9bbe-95967e689703
+DTSTAMP:20220823T092100Z
+SUMMARY:Réunion d'informations\; 4TYE002U Stage en entrep
+ rise FI\; 4TYE005U Stage en entreprise APP\; 4TYE8
+ 04U Stage Formation Initiale\; 4TYE810U Stage Appr
+ entissage\; 4TYE701S\; 4TYE901S\; HAMET Joanne\; N
+ ICOLAS Henri\; PRESENCE OBLIGATOIRE \n- Pour les a
+ pprentis : A...
+DESCRIPTION:Event category: Réunion d'informations\; Module: 
+ 4TYE002U Stage en entreprise FI\; 4TYE005U Stage e
+ n entreprise APP\; 4TYE804U Stage Formation Initia
+ le\; 4TYE810U Stage Apprentissage\; Group: 4TYE701
+ S\; 4TYE901S\; Staff: HAMET Joanne\; NICOLAS Henri
+ \; Room: A29/ Amphithéâtre C\; A29/ Amphithéât
+ re D\; Notes: PRESENCE OBLIGATOIRE \n- Pour les ap
+ prentis : Amphi C\n- Pour les non apprentis : Amph
+ i D\n\nEvent id: 855586\, Register id: 85558608
+SEQUENCE:4
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20220906T113000Z
+DTEND:20220906T143000Z
+LOCATION:
+UID:60c57a35-c965-4a43-a539-5a80e2d93cc8
+DTSTAMP:20220905T120350Z
+SUMMARY:Cours\; 4TYE915U Analyse et audit des systèmes d'
+ information\; 4TYE901S\; FAVRE BERTIN Christine\; 
+ En distanciel
+DESCRIPTION:Event category: Cours\; Module: 4TYE915U Analyse e
+ t audit des systèmes d'information\; Group: 4TYE9
+ 01S\; Staff: FAVRE BERTIN Christine\; Notes: En di
+ stanciel\n\nEvent id: 863646\, Register id: 863646
+ 03
+SEQUENCE:1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20220913T113000Z
+DTEND:20220913T143000Z
+LOCATION:
+UID:b663b8f6-bc36-486b-b27f-55425a2c6e13
+DTSTAMP:20220905T120350Z
+SUMMARY:Cours\; 4TYE915U Analyse et audit des systèmes d'
+ information\; 4TYE901S\; FAVRE BERTIN Christine\; 
+ En distanciel
+DESCRIPTION:Event category: Cours\; Module: 4TYE915U Analyse e
+ t audit des systèmes d'information\; Group: 4TYE9
+ 01S\; Staff: FAVRE BERTIN Christine\; Notes: En di
+ stanciel\n\nEvent id: 863646\, Register id: 863646
+ 04
+SEQUENCE:1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221025T113000Z
+DTEND:20221025T143000Z
+LOCATION:
+UID:ac71e421-4127-4036-b32e-5e06ae823983
+DTSTAMP:20220916T083631Z
+SUMMARY:Cours\; 4TYE915U Analyse et audit des systèmes d'
+ information\; 4TYE901S\; FAVRE BERTIN Christine
+DESCRIPTION:Event category: Cours\; Module: 4TYE915U Analyse e
+ t audit des systèmes d'information\; Group: 4TYE9
+ 01S\; Staff: FAVRE BERTIN Christine\n\nEvent id: 8
+ 73871\, Register id: 87387110
+SEQUENCE:1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20220916T133000Z
+DTEND:20220916T153000Z
+LOCATION:CREMI - Bât. A28 Salle 205
+UID:2e1443c5-22e8-42f9-9b0d-1b397cdc1b71
+DTSTAMP:20220916T091831Z
+SUMMARY:TD Machine\; 4TYE912U Extraction  connaissance et 
+ application  bases données\; 4TYE901S - GROUPE TD
+  2\; MAABOUT Sofian\; CREMI - Bât. A28 Salle 205
+DESCRIPTION:Event category: TD Machine\; Module: 4TYE912U Extr
+ action  connaissance et application  bases donnée
+ s\; Group: 4TYE901S - GROUPE TD 2\; Staff: MAABOUT
+  Sofian\; Room: CREMI - Bât. A28 Salle 205\n\nEve
+ nt id: 873887\, Register id: 87388704
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221014T133000Z
+DTEND:20221014T153000Z
+LOCATION:CREMI - Bât. A28 Salle 205
+UID:5aa07185-6bec-4d38-9980-6ea5cd7f7b77
+DTSTAMP:20220916T091831Z
+SUMMARY:TD Machine\; 4TYE912U Extraction  connaissance et 
+ application  bases données\; 4TYE901S - GROUPE TD
+  2\; MAABOUT Sofian\; CREMI - Bât. A28 Salle 205
+DESCRIPTION:Event category: TD Machine\; Module: 4TYE912U Extr
+ action  connaissance et application  bases donnée
+ s\; Group: 4TYE901S - GROUPE TD 2\; Staff: MAABOUT
+  Sofian\; Room: CREMI - Bât. A28 Salle 205\n\nEve
+ nt id: 873887\, Register id: 87388708
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221028T133000Z
+DTEND:20221028T153000Z
+LOCATION:CREMI - Bât. A28 Salle 205
+UID:00bb36fd-7c89-4582-8383-8373509290b5
+DTSTAMP:20220916T091831Z
+SUMMARY:TD Machine\; 4TYE912U Extraction  connaissance et 
+ application  bases données\; 4TYE901S - GROUPE TD
+  2\; MAABOUT Sofian\; CREMI - Bât. A28 Salle 205
+DESCRIPTION:Event category: TD Machine\; Module: 4TYE912U Extr
+ action  connaissance et application  bases donnée
+ s\; Group: 4TYE901S - GROUPE TD 2\; Staff: MAABOUT
+  Sofian\; Room: CREMI - Bât. A28 Salle 205\n\nEve
+ nt id: 873887\, Register id: 87388710
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221007T060000Z
+DTEND:20221007T080000Z
+LOCATION:A29/ Salle 106
+UID:1b44899d-43e4-45ab-98f3-f103f6e12c43
+DTSTAMP:20220916T093932Z
+SUMMARY:TD\; 4TYE914U E-marketing et commerce électroniqu
+ e\; 4TYE901S - GROUPE TD 2\; MAUREL Dominique\; A2
+ 9/ Salle 106
+DESCRIPTION:Event category: TD\; Module: 4TYE914U E-marketing 
+ et commerce électronique\; Group: 4TYE901S - GROU
+ PE TD 2\; Staff: MAUREL Dominique\; Room: A29/ Sal
+ le 106\n\nEvent id: 873891\, Register id: 87389107
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20220920T113000Z
+DTEND:20220920T131500Z
+LOCATION:A21/ Salle 151
+UID:52b9be88-e12b-431f-9865-ddfeca8d16f5
+DTSTAMP:20220919T092518Z
+SUMMARY:Examens\; 4TYE906U Anglais\; 4TYE901S\; ROBSON Pas
+ cale\; TEST ECRIT\; A21/ Salle 151
+DESCRIPTION:Event category: Examens\; Module: 4TYE906U Anglais
+ \; Group: 4TYE901S\; Staff: ROBSON Pascale\; Room:
+  A21/ Salle 151\; Notes: TEST ECRIT\n\nEvent id: 8
+ 74527\, Register id: 87452705
+SEQUENCE:1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221115T123000Z
+DTEND:20221115T153000Z
+LOCATION:A9/ Amphithéâtre 2
+UID:15a3c970-373d-4fbf-97ac-028a5efe7ecf
+DTSTAMP:20220920T093435Z
+SUMMARY:Cours\; 4TYE915U Analyse et audit des systèmes d'
+ information\; 4TYE901S\; FAVRE BERTIN Christine\; 
+ A9/ Amphithéâtre 2
+DESCRIPTION:Event category: Cours\; Module: 4TYE915U Analyse e
+ t audit des systèmes d'information\; Group: 4TYE9
+ 01S\; Staff: FAVRE BERTIN Christine\; Room: A9/ Am
+ phithéâtre 2\n\nEvent id: 873870\, Register id: 
+ 87387013
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20220927T080000Z
+DTEND:20220927T100000Z
+LOCATION:A29/ Salle 106
+UID:4e5bc0db-e546-40af-8fc5-054d11e8a84e
+DTSTAMP:20220920T114036Z
+SUMMARY:TD\; 4TYE914U E-marketing et commerce électroniqu
+ e\; 4TYE901S - GROUPE TD 2\; MAUREL Dominique\; A2
+ 9/ Salle 106
+DESCRIPTION:Event category: TD\; Module: 4TYE914U E-marketing 
+ et commerce électronique\; Group: 4TYE901S - GROU
+ PE TD 2\; Staff: MAUREL Dominique\; Room: A29/ Sal
+ le 106\n\nEvent id: 873892\, Register id: 87389206
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221020T060000Z
+DTEND:20221020T100000Z
+LOCATION:A33/ Grand Amphithéâtre de Mathématiques
+UID:b435480f-bbba-4cb1-a9a5-770b8649ed3b
+DTSTAMP:20221011T135330Z
+SUMMARY:Cours\; 4TYE916U Droit des contrats informatiques\
+ ; 4TYE901S\; LEPINE Eric\; A33/ Grand Amphithéât
+ re de Mathématiques
+DESCRIPTION:Event category: Cours\; Module: 4TYE916U Droit des
+  contrats informatiques\; Group: 4TYE901S\; Staff:
+  LEPINE Eric\; Room: A33/ Grand Amphithéâtre de 
+ Mathématiques\n\nEvent id: 817422\, Register id: 
+ 81742209
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221025T133000Z
+DTEND:20221025T153000Z
+LOCATION:A13/Salle 4
+UID:ec0b5587-2531-46fa-b81c-707202b93735
+DTSTAMP:20221017T123316Z
+SUMMARY:TD\; 4TYE915U Analyse et audit des systèmes d'inf
+ ormation\; 4TYE901S - GROUPE TD 2\; FAVRE BERTIN C
+ hristine\; A13/Salle 4
+DESCRIPTION:Event category: TD\; Module: 4TYE915U Analyse et a
+ udit des systèmes d'information\; Group: 4TYE901S
+  - GROUPE TD 2\; Staff: FAVRE BERTIN Christine\; R
+ oom: A13/Salle 4\n\nEvent id: 898084\, Register id
+ : 89808410
+SEQUENCE:1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221107T083000Z
+DTEND:20221107T113000Z
+LOCATION:A29/ Amphithéâtre B
+UID:737b2e6e-f171-4e22-9cf5-1f90b1190f65
+DTSTAMP:20221107T093115Z
+SUMMARY:Cours\; 4TYE913U Données et intelligence artifici
+ elle\; 4TYE901S\; ZEMMARI Akka\; A REPORTER\; A29/
+  Amphithéâtre B
+DESCRIPTION:Event category: Cours\; Module: 4TYE913U Données 
+ et intelligence artificielle\; Group: 4TYE901S\; S
+ taff: ZEMMARI Akka\; Room: A29/ Amphithéâtre B\;
+  Notes: A REPORTER\n\nEvent id: 908627\, Register 
+ id: 90862712
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20220919T073000Z
+DTEND:20220919T103000Z
+LOCATION:A29/ Amphithéâtre B
+UID:028e1f92-8e42-45b0-8509-988914787280
+DTSTAMP:20221107T093115Z
+SUMMARY:Cours\; 4TYE913U Données et intelligence artifici
+ elle\; 4TYE901S\; ZEMMARI Akka\; A29\; A29/ Amphit
+ héâtre B
+DESCRIPTION:Event category: Cours\; Module: 4TYE913U Données 
+ et intelligence artificielle\; Group: 4TYE901S\; S
+ taff: ZEMMARI Akka\; Room: A29/ Amphithéâtre B\;
+  Notes: A29\n\nEvent id: 908628\, Register id: 908
+ 62805
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20220926T073000Z
+DTEND:20220926T103000Z
+LOCATION:A29/ Amphithéâtre C
+UID:317e3a3a-a7ee-4bbb-bc0d-375154458fc5
+DTSTAMP:20221107T093115Z
+SUMMARY:Cours\; 4TYE913U Données et intelligence artifici
+ elle\; 4TYE901S\; ZEMMARI Akka\; A29\; A29/ Amphit
+ héâtre C
+DESCRIPTION:Event category: Cours\; Module: 4TYE913U Données 
+ et intelligence artificielle\; Group: 4TYE901S\; S
+ taff: ZEMMARI Akka\; Room: A29/ Amphithéâtre C\;
+  Notes: A29\n\nEvent id: 908628\, Register id: 908
+ 62806
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221024T073000Z
+DTEND:20221024T103000Z
+LOCATION:A29/ Amphithéâtre B
+UID:05881445-5756-4729-9aff-d0975a2e8bb5
+DTSTAMP:20221107T093115Z
+SUMMARY:Cours\; 4TYE913U Données et intelligence artifici
+ elle\; 4TYE901S\; ZEMMARI Akka\; A29\; A29/ Amphit
+ héâtre B
+DESCRIPTION:Event category: Cours\; Module: 4TYE913U Données 
+ et intelligence artificielle\; Group: 4TYE901S\; S
+ taff: ZEMMARI Akka\; Room: A29/ Amphithéâtre B\;
+  Notes: A29\n\nEvent id: 908628\, Register id: 908
+ 62810
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221116T123000Z
+DTEND:20221116T143000Z
+LOCATION:A29/ Amphithéâtre G
+UID:04eefbe3-db6c-4b43-a130-0f6c55de4fb9
+DTSTAMP:20221107T113713Z
+SUMMARY:Cours\; 4TYE901U Programmation d'applications mobi
+ les\; 4TYE901S\; DESBARATS Pascal\; A29/ Amphithé
+ âtre G
+DESCRIPTION:Event category: Cours\; Module: 4TYE901U Programma
+ tion d'applications mobiles\; Group: 4TYE901S\; St
+ aff: DESBARATS Pascal\; Room: A29/ Amphithéâtre 
+ G\n\nEvent id: 809958\, Register id: 80995813
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221206T123000Z
+DTEND:20221206T143000Z
+LOCATION:CREMI - Bât. A28 Salle 207
+UID:f2a3da2b-86de-4189-9662-6173cacf5350
+DTSTAMP:20221108T085929Z
+SUMMARY:TD Machine\; 4TYE912U Extraction  connaissance et 
+ application  bases données\; 4TYE901S - GROUPE TD
+  2\; MAABOUT Sofian\; CREMI - Bât. A28 Salle 207
+DESCRIPTION:Event category: TD Machine\; Module: 4TYE912U Extr
+ action  connaissance et application  bases donnée
+ s\; Group: 4TYE901S - GROUPE TD 2\; Staff: MAABOUT
+  Sofian\; Room: CREMI - Bât. A28 Salle 207\n\nEve
+ nt id: 873886\, Register id: 87388616
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20220909T133000Z
+DTEND:20220909T153000Z
+LOCATION:CREMI - Bât. A28 Salle 205
+UID:6f71be8e-e3de-4e9a-8a42-7c014d8ef17f
+DTSTAMP:20221108T085931Z
+SUMMARY:TD Machine\; 4TYE913U Données et intelligence art
+ ificielle\; 4TYE901S - GROUPE TD 2\; ZEMMARI Akka\
+ ; CREMI - Bât. A28 Salle 205
+DESCRIPTION:Event category: TD Machine\; Module: 4TYE913U Donn
+ ées et intelligence artificielle\; Group: 4TYE901
+ S - GROUPE TD 2\; Staff: ZEMMARI Akka\; Room: CREM
+ I - Bât. A28 Salle 205\n\nEvent id: 909402\, Regi
+ ster id: 90940203
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20220923T133000Z
+DTEND:20220923T153000Z
+LOCATION:CREMI - Bât. A28 Salle 205
+UID:ff0633f9-8158-4ed0-8706-a17091318c05
+DTSTAMP:20221108T085931Z
+SUMMARY:TD Machine\; 4TYE913U Données et intelligence art
+ ificielle\; 4TYE901S - GROUPE TD 2\; ZEMMARI Akka\
+ ; CREMI - Bât. A28 Salle 205
+DESCRIPTION:Event category: TD Machine\; Module: 4TYE913U Donn
+ ées et intelligence artificielle\; Group: 4TYE901
+ S - GROUPE TD 2\; Staff: ZEMMARI Akka\; Room: CREM
+ I - Bât. A28 Salle 205\n\nEvent id: 909402\, Regi
+ ster id: 90940205
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221007T133000Z
+DTEND:20221007T153000Z
+LOCATION:CREMI - Bât. A28 Salle 205
+UID:cf68e404-5085-4767-9919-f19739e3dfdc
+DTSTAMP:20221108T085931Z
+SUMMARY:TD Machine\; 4TYE913U Données et intelligence art
+ ificielle\; 4TYE901S - GROUPE TD 2\; ZEMMARI Akka\
+ ; CREMI - Bât. A28 Salle 205
+DESCRIPTION:Event category: TD Machine\; Module: 4TYE913U Donn
+ ées et intelligence artificielle\; Group: 4TYE901
+ S - GROUPE TD 2\; Staff: ZEMMARI Akka\; Room: CREM
+ I - Bât. A28 Salle 205\n\nEvent id: 909402\, Regi
+ ster id: 90940207
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221021T133000Z
+DTEND:20221021T153000Z
+LOCATION:CREMI - Bât. A28 Salle 205
+UID:4ef3e57d-6673-4c76-825b-10cb3998529d
+DTSTAMP:20221108T085931Z
+SUMMARY:TD Machine\; 4TYE913U Données et intelligence art
+ ificielle\; 4TYE901S - GROUPE TD 2\; ZEMMARI Akka\
+ ; CREMI - Bât. A28 Salle 205
+DESCRIPTION:Event category: TD Machine\; Module: 4TYE913U Donn
+ ées et intelligence artificielle\; Group: 4TYE901
+ S - GROUPE TD 2\; Staff: ZEMMARI Akka\; Room: CREM
+ I - Bât. A28 Salle 205\n\nEvent id: 909402\, Regi
+ ster id: 90940209
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221202T143000Z
+DTEND:20221202T163000Z
+LOCATION:CREMI - Bât. A28 Salle 205
+UID:5d7666b8-008b-4b73-bde9-fefde584a9a8
+DTSTAMP:20221108T085931Z
+SUMMARY:Contrôle Continu\; 4TYE912U Extraction  connaissa
+ nce et application  bases données\; 4TYE901S - GR
+ OUPE TD 2\; MAABOUT Sofian\; CREMI - Bât. A28 Sal
+ le 205
+DESCRIPTION:Event category: Contrôle Continu\; Module: 4TYE91
+ 2U Extraction  connaissance et application  bases 
+ données\; Group: 4TYE901S - GROUPE TD 2\; Staff: 
+ MAABOUT Sofian\; Room: CREMI - Bât. A28 Salle 205
+ \n\nEvent id: 909410\, Register id: 90941015
+SEQUENCE:1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221123T090000Z
+DTEND:20221123T110000Z
+LOCATION:A29/ Amphithéâtre F
+UID:be13ad21-5a16-4cd8-b6ab-18ba72ba3c02
+DTSTAMP:20221121T145647Z
+SUMMARY:Cours\; 4TYE913U Données et intelligence artifici
+ elle\; 4TYE901S\; ZEMMARI Akka\; A29/ Amphithéât
+ re F
+DESCRIPTION:Event category: Cours\; Module: 4TYE913U Données 
+ et intelligence artificielle\; Group: 4TYE901S\; S
+ taff: ZEMMARI Akka\; Room: A29/ Amphithéâtre F\n
+ \nEvent id: 934830\, Register id: 93483014
+SEQUENCE:1
+END:VEVENT
+END:VCALENDAR

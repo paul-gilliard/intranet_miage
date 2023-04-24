@@ -1,16 +1,14 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
 import { AuthService } from 'src/app/services/auth.service';
-import { User } from 'src/app/models/user.model';
-import { Router } from '@angular/router';
+import { Modal } from 'bootstrap';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit, OnDestroy {
+export class LoginComponent {
 
   email: string = "";
 
@@ -19,24 +17,10 @@ export class LoginComponent implements OnInit, OnDestroy {
     motdePasse: ["", [, ]]
   });
 
-  constructor(private formBuilder: FormBuilder, private http: HttpClient, private authService: AuthService, private router: Router) {
-    
-  }
-
-  ngOnInit(): void {
-    
-  }
-
-  ngOnDestroy(): void {
-      
-  }
-
-  close() {
-    this.loginForm.reset();
-  }
+  constructor(private formBuilder: FormBuilder,
+              private authService: AuthService) {}
 
   login() {
-    
     this.email = this.loginForm.get('email')?.value!;
     if (this.email != null){
   
@@ -56,19 +40,19 @@ export class LoginComponent implements OnInit, OnDestroy {
         localStorage.setItem('currentUserStatut', currentUserStatut);
 
         console.log('Authentification réussie');
-        
-        
-    // Rediriger vers la page d'accueil ou la page souhaitée après la connexion réussie.
-     this.router.navigate(['homeConnected']); // Changez 'home-connect' avec le nom de votre route
-    // this.authService.isLoggedIn = true;
       },
       (error) => {
         console.error('Erreur d\'authentification', error); 
         // Afficher un message d'erreur à l'utilisateur
       }
     )};
+    
+    this.loginForm.reset();
+  }
 
-    this.close();
-    }
-
+  openCreateUserModal ()  {
+    let element = document.getElementById("createUserModal") as HTMLElement;
+    let myModal = new Modal (element);
+    myModal.show();
+  }
 }
