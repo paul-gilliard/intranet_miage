@@ -5,7 +5,7 @@ import { DepotDocumentsRoutingModule } from './depot-documents-routing.module';
 import { DriveDocumentComponent } from './drive-document/drive-document.component';
 import { ListeCoursComponent } from './liste-cours/liste-cours.component';
 import { ModalImportComponent } from './modal-import/modal-import.component';
-import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbAccordionItem, NgbAccordionModule, NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
@@ -18,7 +18,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     DepotDocumentsRoutingModule,
-    NgbAccordionModule, 
+    NgbAccordionModule,
+    NgbAccordionItem,
+    NgbCollapseModule,
     FormsModule,
     ReactiveFormsModule
   ],

@@ -56,7 +56,7 @@ io.on('connection', (socket: Socket) => {
 
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
   console.error(err.stack);
-  res.status(500).send('Something broke!');
+  res.status(500).send(err);
 });
 
 server.listen(port, () => console.log(`Server listening on port ${port}`));
