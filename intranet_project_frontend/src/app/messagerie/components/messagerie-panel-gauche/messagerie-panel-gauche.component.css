@@ -1,15 +1,15 @@
 .row{
-    height: 100vh;
+    height: 80%;
 }
 
 .outils{
     background-color: #F5F5F5;
-    height: 100%;
+    height: 70%;
 }
 
 .liste-personne{
     background-color: #FFFFFF;
-    height: 100%;
+    height: 70%;
 }
 ul {
     list-style-type: none;

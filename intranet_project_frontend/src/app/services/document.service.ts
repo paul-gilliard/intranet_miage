@@ -25,17 +25,15 @@ export class DocumentService {
         return this.http.get<DriveDocument>('http://localhost:3000/api/driveDocument/getDocumentsByPromo/' + promo);
     }
 
-    insertDocument(formData: FormData){
+    insertDocument(formData: FormData) {
         return this.http.post<DriveDocument>('http://localhost:3000/api/driveDocument/insertDocument', formData);
-    }
+      }
 
     //structure cours
 
     /**
      * driveDocumentRouter.get('/getdriveDocumentsStructure', getdriveDocumentsStructure);
      */
-
-
 
 
 }

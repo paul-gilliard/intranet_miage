@@ -1,15 +1,16 @@
-import { Component, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { DriveDocument } from 'src/app/models/driveDocument.model';
 import { DocumentService } from 'src/app/services/document.service';
 import { Modal } from 'bootstrap';
+import { CursusStructureService } from 'src/app/services/cursus-structure.service';
 
 @Component({
   selector: 'app-document',
   templateUrl: './drive-document.component.html',
   styleUrls: ['./drive-document.component.css']
 })
-export class DriveDocumentComponent implements OnChanges{
+export class DriveDocumentComponent implements OnInit, OnChanges{
 
   documents!: DriveDocument[];
   document!: DriveDocument;
@@ -18,8 +19,9 @@ export class DriveDocumentComponent implements OnChanges{
   semestre!: String;
   cours!: String;
   link!: String;
+  cursusStructure!: JSON;
 
-  listeCours = [
+  /*listeCours = [
     {
       title: 'License 3', 
         semestres:[
@@ -65,16 +67,23 @@ export class DriveDocumentComponent implements OnChanges{
           }
         ]
     }
-  ];
+  ];*/
 
-  constructor(private service: DocumentService){ }
+  constructor(private documentService: DocumentService, private cursusStructureService: CursusStructureService){ }
+
+  ngOnInit(): void {
+    this.cursusStructureService.getCursusStructure().subscribe(data => {
+      this.cursusStructure = data;
+    });
+    
+  }
   
   ngOnChanges(): void {
     this.link = this.getLink();
   }
 
   getAllDocuments(){
-    this.sub = this.service.getAllDocuments().subscribe({
+    this.sub = this.documentService.getAllDocuments().subscribe({
       next: document => {
         this.documents?.push(document);
       }

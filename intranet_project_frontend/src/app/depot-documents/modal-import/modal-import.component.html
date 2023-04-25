@@ -3,7 +3,7 @@
       <h5 class="modal-title text-center w-100" id="exampleModalLabel">Importer un fichier</h5>
       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="close()"></button>
     </div>
-    <form class="row" [formGroup]="importDocumentForm" (submit)="importDocument()">
+    <form enctype="multipart/form-data" class="row" [formGroup]="importDocumentForm" (submit)="importDocument()">
         <div class="modal-body row">
             <div class="col-md-4">
                 <div class="form-floating">
@@ -35,13 +35,13 @@
 
             <div class="col-md-12">
                 <div class="form-floating">
-                  <input type="text" id="name" class="form-control" placeholder=" " formControlName="name" [ngClass]="importDocumentForm.get('name')!.errors ? 'is-invalid' : ''"/>
+                  <input type="text" id="name" class="form-control" formControlName="name" [ngClass]="importDocumentForm.get('name')!.errors ? 'is-invalid' : ''"/>
                   <label for="name">Nom du fichier</label>
                 </div>
             </div>
             <div class="col-md-12">
                 <div class="form-floating">
-                  <input type="file" id="file" class="form-control" formControlName="file" [ngClass]="importDocumentForm.get('file')!.errors ? 'is-invalid' : ''" (change)="onFileSelected"/>
+                    <input type="file" class="form-control" name="file" formControlName="file" (change)="onFileSelected($event)">
                 </div>
             </div>
         </div> 

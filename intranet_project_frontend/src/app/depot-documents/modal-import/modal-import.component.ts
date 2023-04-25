@@ -36,22 +36,18 @@ export class ModalImportComponent implements OnInit{
     this.isSemestreChoose = false;
   }
 
-  onFileSelected(event: Event) {
-    const fileInput = event.target as HTMLInputElement;
-    if (fileInput.files) {
-      this.selectedFile = fileInput.files[0];
-    }
-  }
-
   importDocument() {
+
     const formData = new FormData();
-    formData.append('file', this.selectedFile, this.selectedFile.name);
-    formData.append('nom_fichier', this.importDocumentForm.get('name')?.value!);
-    formData.append('etiquettePromo', this.importDocumentForm.get('promo')?.value!);
-    formData.append('etiquetteCours', this.importDocumentForm.get('cours')?.value!);
+    formData.append('file', this.selectedFile);
+    formData.append('name', this.importDocumentForm.get('name')?.value!);
+    formData.append('promo', this.importDocumentForm.get('promo')?.value!);
     formData.append('semestre', this.importDocumentForm.get('semestre')?.value!);
+    formData.append('cours', this.importDocumentForm.get('cours')?.value!);
+    //TODO : mailOwner undefined en BDD
     formData.append('mailOwner', this.importDocumentForm.get('email')?.value!);
-    
+
+
     this.service.insertDocument(formData).subscribe(
       (response) => {
         if (response) {
@@ -59,9 +55,9 @@ export class ModalImportComponent implements OnInit{
         }
       },
       (error) => {
-        console.error('Erreur d\'importation', error); 
+        console.error("Erreur d'importation", error); 
       });
-      this.close();
+      this.close(); 
   }
 
   onPromoSelected(selectedValue: any) {
@@ -76,6 +72,10 @@ export class ModalImportComponent implements OnInit{
     this.listeNomCours = this.selectedSemestre.cours;
   }
 
+  onFileSelected(event: any) {
+    this.selectedFile = event.target.files[0];
+  }
+  
   close() {
     this.isPromoChoose = false;
     this.isSemestreChoose = false;

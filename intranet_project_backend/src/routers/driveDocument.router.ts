@@ -4,10 +4,11 @@ import multer, { Multer } from 'multer';
 import { insertDocument, getAllDocuments, getDocumentsByPromo, getDocumentsBySemestre, getDocumentsByCours} from '../controllers/driveDocument.controller';
 
 const driveDocumentRouter = Router();
-const storage = multer.memoryStorage();
-const upload = multer({ storage: storage });
+// Configuration de multer pour stocker les fichiers en mémoire
 
-driveDocumentRouter.post('/insertDocument', upload.single('driveDocument'), insertDocument);
+const upload = multer({ dest: 'uploads/' }); // Définir le dossier de destination pour les fichiers téléchargés
+
+driveDocumentRouter.post('/insertDocument', upload.single('file'), insertDocument);
 
 driveDocumentRouter.get('/getAllDocuments', getAllDocuments);
 
