@@ -1,7 +1,7 @@
 <div class="row">
     <!-- Panel de gauche -->
     <div class="col-md-2 panel-gauche">
-        <app-liste-cours [listeCours]="listeCours" (promo)="getPromo($event)" (semestre)="getSemestre($event)" (cours)="getCours($event)"></app-liste-cours>
+        <app-liste-cours [listeCours]="cursusStructure" (promo)="getPromo($event)" (semestre)="getSemestre($event)" (cours)="getCours($event)"></app-liste-cours>
     </div>
 
     <!-- Panel de droite -->
@@ -29,6 +29,6 @@
 
 <div class="modal fade" id="importDocumentModal">
     <div class="modal-dialog">
-        <app-modal-import [listeCours]="listeCours"></app-modal-import>
+        <app-modal-import [listeCours]="cursusStructure"></app-modal-import>
     </div>
 </div>
