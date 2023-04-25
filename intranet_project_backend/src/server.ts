@@ -7,6 +7,8 @@ import userRouter from './routers/users.router';
 import loginRouter from './routers/login.router';
 import messagerieRouter from './routers/messagerie.router';
 import calendarRouter from './routers/calendar.router';
+import driveDocumentRouter from './routers/driveDocument.router';
+import cursusStructureRouter from './routers/cursus-structure.router';
 
 interface SocketData {
   emeteur: string;
@@ -35,7 +37,9 @@ connectToDatabase();
 app.use('/api/user', userRouter);
 app.use('/api/messagerie', messagerieRouter);
 app.use('/login', loginRouter);
-app.use('/api/calendar', calendarRouter)
+app.use('/api/calendar', calendarRouter);
+app.use('/api/driveDocument', driveDocumentRouter);
+app.use('/api/cursusStructure', cursusStructureRouter);
 
 io.on('connection', (socket: Socket) => {
   console.log('Client connected');
@@ -52,7 +56,7 @@ io.on('connection', (socket: Socket) => {
 
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
   console.error(err.stack);
-  res.status(500).send('Something broke!');
+  res.status(500).send(err);
 });
 
 server.listen(port, () => console.log(`Server listening on port ${port}`));

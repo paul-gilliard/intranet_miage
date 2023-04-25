@@ -1,0 +1,48 @@
+.panel-gauche {
+    background-color: #F5F5F5;
+    padding: 1%;
+    height: 83vh;
+}
+
+.panel-droit {
+    height: 83vh;
+}
+
+.badge {
+    margin : 2%;
+}
+
+.badge-promo {
+    background-color: #9f4ced;
+}
+
+.badge-semestre {
+    background-color: #4c67ed;
+}
+
+.badge-cours {
+    background-color: #4CB3ED;
+}
+
+.document {
+    background-color: #F5F5F5;
+    padding: 1%;
+    margin: 1%;
+}
+
+.link {
+    margin-left: 2%;
+}
+
+.import {
+    position: absolute;
+    left: 85%;
+}
+
+.panel-haut {
+    margin-top: 2%;
+}
+
+button {
+    background-color: #4CB3ED;
+}

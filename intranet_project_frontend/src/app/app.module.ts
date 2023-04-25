@@ -13,6 +13,7 @@ import { SondagesModule } from './sondages/sondages.module';
 import { FullCalendarModule } from '@fullcalendar/angular';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { NgImageSliderModule } from 'ng-image-slider';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { NgImageSliderModule } from 'ng-image-slider';
     SondagesModule,
     FullCalendarModule,
     HttpClientModule,
-    NgImageSliderModule
+    NgImageSliderModule,
+    NgbModule
   ],
   exports:[NgImageSliderModule],
   providers: [

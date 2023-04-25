@@ -1,0 +1,21 @@
+import { Request } from 'express';
+import { Router } from 'express';
+import multer, { Multer } from 'multer';
+import { insertDocument, getAllDocuments, getDocumentsByPromo, getDocumentsBySemestre, getDocumentsByCours} from '../controllers/driveDocument.controller';
+
+const driveDocumentRouter = Router();
+// Configuration de multer pour stocker les fichiers en mémoire
+
+const upload = multer({ dest: 'uploads/' }); // Définir le dossier de destination pour les fichiers téléchargés
+
+driveDocumentRouter.post('/insertDocument', upload.single('file'), insertDocument);
+
+driveDocumentRouter.get('/getAllDocuments', getAllDocuments);
+
+driveDocumentRouter.get('/getDocumentsByPromo/:promo', getDocumentsByPromo);
+
+driveDocumentRouter.get('/getDocumentsBySemestre/:semestre', getDocumentsBySemestre);
+
+driveDocumentRouter.get('/getDocumentsByCours/:cours', getDocumentsByCours);
+
+export default driveDocumentRouter;

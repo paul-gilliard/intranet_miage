@@ -1,0 +1,34 @@
+<div class="row">
+    <!-- Panel de gauche -->
+    <div class="col-md-2 panel-gauche">
+        <app-liste-cours [listeCours]="cursusStructure" (promo)="getPromo($event)" (semestre)="getSemestre($event)" (cours)="getCours($event)"></app-liste-cours>
+    </div>
+
+    <!-- Panel de droite -->
+    <div class="col-md panel-droit">
+        <div class="row panel-haut">
+            <div class="col-md-5 link"><h4>{{link}} COUCOU</h4></div>
+            <div class="col-md-6 import">
+                <button type="button" class="btn btn-default btn-lg" (click)="openImportDocumentModal()">
+                    <i class="bi bi-file-earmark-plus-fill"></i> 
+                    Importer 
+                </button>
+            </div>
+        </div>        
+        <div class="row">
+            <div class="col-md-2 document" *ngFor="let document of documents">
+                <span class="badge badge-promo">{{document.etiquettePromo}}</span>
+                <span class="badge badge-semestre">{{document.semestre}}</span>
+                <span class="badge badge-cours">{{document.etiquetteCours}}</span>
+                <br/> <h4>{{document.nom_fichier}}</h4>
+                <!-- <br/> Date création : {{document.dateCreation}} -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="importDocumentModal">
+    <div class="modal-dialog">
+        <app-modal-import [listeCours]="cursusStructure"></app-modal-import>
+    </div>
+</div>
