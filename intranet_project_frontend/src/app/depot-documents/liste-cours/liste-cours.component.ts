@@ -1,4 +1,5 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output, ViewChild } from '@angular/core';
+import { NgbAccordion } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-liste-cours',
@@ -7,61 +8,18 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class ListeCoursComponent {
 
+  @Input() listeCours: any;
+
   @Output() promo = new EventEmitter<String>();
   @Output() semestre = new EventEmitter<String>();
   @Output() cours = new EventEmitter<String>();
 
-  listeCours = [
-    {
-      title: 'License 3', 
-        semestres:[
-          {
-            title: 'Semestre 5',
-            cours: [
-              'Cours 1', 
-              'Cours 2'
-            ]
-          },
-          {
-            title: 'Semestre 6'
-          }
-        ]
-    },
-    {
-      title: 'Master 1', 
-        semestres:[
-          {
-            title: 'Semestre 7',
-            cours: [
-              'Cours 1', 
-              'Cours 2'
-            ]
-          },
-          {
-            title: 'Semestre 8'
-          }
-        ]
-    },
-    {
-      title: 'Master 2', 
-        semestres:[
-          {
-            title: 'Semestre 9',
-            cours: [
-              'Cours 1', 
-              'Cours 2'
-            ]
-          },
-          {
-            title: 'Semestre 10'
-          }
-        ]
-    }
-  ];
+  @ViewChild(NgbAccordion)
+  accordion!: NgbAccordion;
 
   onClickPromo(promo: String) {
-    console.log("COUCOU");
     this.promo.emit(promo);
+    this.accordion.expandAll();
   }
 
   onClickSemestre(semestre: String) {
@@ -69,7 +27,7 @@ export class ListeCoursComponent {
   }
 
   onClickCours(cours: String) {
-    console.log("COUCOU");    
+    console.log("COUCOU");
     this.cours.emit(cours);
   }
 }

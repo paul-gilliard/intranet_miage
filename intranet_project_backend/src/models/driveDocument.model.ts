@@ -1,19 +1,43 @@
 import mongoose, { Schema, Document } from 'mongoose';
 
-export interface DriveDocument extends Document {
+export interface DriveDocument {
   etiquetteCours: string;
   etiquettePromo: string;
   semestre: string;
-  mail: string;
-  document: Buffer;
+  mailOwner: string;
+  driveDocument: Buffer;
+  nom_fichier: string;
 }
 
-const DocumentSchema: Schema = new Schema({
-  etiquetteCours: { type: String, required: true },
-  etiquettePromo: { type: String, required: true },
-  semestre: { type: String, required: true },
-  mail: { type: String, required: true },
-  document: { type: Buffer, required: true },
-});
+const DocumentSchema = new Schema<DriveDocument>(
+  {
+    etiquetteCours: { 
+      type: String, 
+      required: true 
+    },
+    etiquettePromo: { 
+      type: String, 
+      required: true 
+    },
+    semestre: { 
+      type: String, 
+      required: true 
+    },
+    mailOwner: { 
+      type: String, 
+      required: true 
+    },
+    driveDocument: { 
+      type: Buffer, 
+      required: true 
+    },
+    nom_fichier: { 
+      type: String, 
+      required: true 
+    },
+    },  
+    {
+      timestamps: true,
+    });
 
 export default mongoose.model<DriveDocument>('DriveDocument', DocumentSchema);
