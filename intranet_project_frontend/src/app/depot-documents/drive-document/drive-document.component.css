@@ -1,11 +1,13 @@
 .panel-gauche {
     background-color: #F5F5F5;
-    padding: 1%;
-    height: 83vh;
+    padding-left: 1%;
+    padding-top: 1%;
+    padding-bottom: 15%;
+    max-height: 84vh;
 }
 
 .panel-droit {
-    height: 83vh;
+    height: 84vh;
 }
 
 .badge {
@@ -22,6 +24,10 @@
 
 .badge-cours {
     background-color: #4CB3ED;
+}
+
+.documents {
+    margin-top: 1%;
 }
 
 .document {

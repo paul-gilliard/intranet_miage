@@ -10,6 +10,7 @@ export class ListeCoursComponent {
 
   @Input() listeCours: any;
 
+  @Output() link = new EventEmitter<String>();
   @Output() promo = new EventEmitter<String>();
   @Output() semestre = new EventEmitter<String>();
   @Output() cours = new EventEmitter<String>();
@@ -17,17 +18,18 @@ export class ListeCoursComponent {
   @ViewChild(NgbAccordion)
   accordion!: NgbAccordion;
 
-  onClickPromo(promo: String) {
+  onClick(cours: String, semestre: String, promo: String) {
+    if(cours == ''){
+      if(semestre == ''){
+        this.link.emit(promo);
+      }else{
+        this.link.emit(promo+' > '+semestre);
+      }
+    }else{
+      this.link.emit(promo+' > '+semestre+' > '+cours);
+    }
     this.promo.emit(promo);
-    this.accordion.expandAll();
-  }
-
-  onClickSemestre(semestre: String) {
     this.semestre.emit(semestre);
-  }
-
-  onClickCours(cours: String) {
-    console.log("COUCOU");
     this.cours.emit(cours);
   }
 }

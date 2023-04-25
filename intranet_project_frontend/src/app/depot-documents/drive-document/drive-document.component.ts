@@ -1,4 +1,4 @@
-import { Component, OnChanges, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { DriveDocument } from 'src/app/models/driveDocument.model';
 import { DocumentService } from 'src/app/services/document.service';
@@ -10,15 +10,15 @@ import { CursusStructureService } from 'src/app/services/cursus-structure.servic
   templateUrl: './drive-document.component.html',
   styleUrls: ['./drive-document.component.css']
 })
-export class DriveDocumentComponent implements OnInit, OnChanges{
+export class DriveDocumentComponent implements OnInit{
 
   documents!: DriveDocument[];
   documentInsert!: DriveDocument;
   sub!: Subscription;
+  link!: String;
   promo!: String;
   semestre!: String;
   cours!: String;
-  link!: String;
   cursusStructure!: JSON;
 
   constructor(private documentService: DocumentService, private cursusStructureService: CursusStructureService){ }
@@ -29,13 +29,30 @@ export class DriveDocumentComponent implements OnInit, OnChanges{
     });
     this.getAllDocuments();    
   }
-  
-  ngOnChanges(): void {
-    this.link = this.getLink();
-  }
 
   async getAllDocuments(){
     let listeDoc = await this.documentService.getAllDocuments().toPromise();
+    if(listeDoc){
+      this.documents = listeDoc;
+    }   
+  }
+
+  async getDocumentsByPromo(promo: String){
+    let listeDoc = await this.documentService.getDocumentsByPromo(promo).toPromise();
+    if(listeDoc){
+      this.documents = listeDoc;
+    }   
+  }
+
+  async getDocumentsBySemestre(semestre: String){
+    let listeDoc = await this.documentService.getDocumentsBySemestre(semestre).toPromise();
+    if(listeDoc){
+      this.documents = listeDoc;
+    }   
+  }
+
+  async getDocumentsByCours(cours: String){
+    let listeDoc = await this.documentService.getDocumentsByCours(cours).toPromise();
     if(listeDoc){
       this.documents = listeDoc;
     }   
@@ -47,31 +64,6 @@ export class DriveDocumentComponent implements OnInit, OnChanges{
     this.documentInsert.semestre = semestre;
     this.documentInsert.mailOwner = mail;
     this.documentInsert.driveDocument = file;
-  }
-
-  getPromo(promo: String){
-    this.promo = promo;
-  } 
-  
-  getSemestre(semestre: String){
-    this.semestre = semestre;
-  }
-  
-  getCours(cours: String){
-    this.cours = cours;
-  }
-
-  getLink(): String{
-    if(this.promo != undefined){
-      if(this.semestre != undefined){
-        if(this.cours != undefined){
-          return this.promo+ " > "+ this.semestre+ " > "+ this.cours;
-        }
-        return this.promo+ " > "+ this.semestre;
-      }
-      return this.promo;
-    }
-    return '';
   }
 
   openImportDocumentModal(){
