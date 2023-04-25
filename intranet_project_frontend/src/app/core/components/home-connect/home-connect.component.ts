@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { CalendarService } from 'src/app/services/calendar.service';
 import { DocumentService } from 'src/app/services/document.service';
 import { MessagerieService } from 'src/app/services/messagerie.service';
 
@@ -22,6 +23,7 @@ export class HomeConnectComponent {
   nbSondages!: number;
   nbDocuments!: number;
   nbCours!: number;
+  promo!: String;
 
   @Input() images: carrouselImage[] =  [
     {
@@ -47,9 +49,11 @@ export class HomeConnectComponent {
   ];
 
   constructor(private messagerieService: MessagerieService,
-    private documentsService: DocumentService) {}
+    private documentsService: DocumentService, private calendarService : CalendarService) {}
 
   ngOnInit(): void{
+    this.promo=localStorage.getItem("currentUserPromo")!;
+
     this.messagerieService.getNumberOfMessages().subscribe((data:any) => {
       this.nbMessages = data?.numberOfMessages;
     })
@@ -58,7 +62,12 @@ export class HomeConnectComponent {
     this.documentsService.getNumberOfDocuments().subscribe((data:any)=> {
       this.nbDocuments = data?.numberOfDocuments;
     })
-    this.nbCours = 0;
+    
+    this.calendarService.getNumberOfEventToday(this.promo).subscribe((data:any)=> {
+      this.nbCours = data;
+    })
+
+    
 
     this.images =  [
       {
