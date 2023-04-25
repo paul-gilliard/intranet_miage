@@ -48,10 +48,8 @@
         width: fit-content;
         padding: 5px;
         margin-left: 1%;
-        
-       
-  
 }
+
 .message-moi{
     background-color: #85A4F5;
     border-radius: 15px 15px 0px 15px;
@@ -62,6 +60,28 @@
     float: right;
    position: relative;
    margin-right: 1%;
+}
+.message-moi-p {
+    background-color: #85A4F5 !important;
+    border-radius: 15px 15px 0px 15px !important;
+    word-wrap: break-word !important;
+    max-width: 48% !important;
+    ;
+    width: fit-content !important;
+    padding: 5px !important;
+    float: right !important;
+    position: relative !important;
+    margin-right: 1% !important;
+} 
+.message-autre-p {
+    background-color: #41D3F3 !important;
+    border-radius: 15px 15px 15px 0px !important;
+    word-wrap: break-word !important;
+    max-width: 48% !important;
+    ;
+    width: fit-content !important;
+    padding: 5px !important;
+    margin-left: 1% !important;
 }
 .moi{
     float: right;
@@ -116,6 +136,7 @@ input {
    max-height: 75vh;
    position: relative;;
    overflow-x: hidden;
+   /*background-image:  url('../../../../assets/images/A22_.jpg')*/ ;
   
 
 }

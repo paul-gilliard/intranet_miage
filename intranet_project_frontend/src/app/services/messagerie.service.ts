@@ -25,7 +25,9 @@ export class MessagerieService {
       };;
    public  _messagePrive: MessagePrive = {
     emeteur:'',
-    text: ''
+     text: '',
+     recepteur: ''
+    
     };
     //par défaut on initialise user à currentUser
     public clickedUser: User = {

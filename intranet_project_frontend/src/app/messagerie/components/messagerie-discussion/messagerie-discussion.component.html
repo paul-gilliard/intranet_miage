@@ -1,4 +1,4 @@
-
+<!--Affichage 
 <div class="panel panel-default" *ngIf="!isPrivateMessage" >
     <div class="panel-heading"><h3 class="panel-title"><i class="bi bi-people-fill"></i>  {{nomConversation}}</h3></div>
         <div class="panel-body">
@@ -33,7 +33,7 @@
         
     </div>
 </div>
-<!--Affichage message privé-->
+message privé-->
 
 
 <div class="panel panel-default" *ngIf="isPrivateMessage">
@@ -46,27 +46,19 @@
             <div class="bodyMessages" (scroll)="onScroll()">
                 <div class="row">
                     <div *ngFor="let message of messageriePrive.messagesPrive">
-
-                        <span
-                            [ngClass]="{'moi': isCurrentUserPrivate(message.emeteur), 'autre': !isCurrentUserPrivate(message.emeteur)}">{{getDisplayEmitterPrivate(message.emeteur)}}</span><br>
                         <div
-                            [ngClass]="{'message-moi': isCurrentUser(message.emeteur), 'message-autre': !isCurrentUser(message.emeteur)}">
-
+                            [currentUserMessage]="message.emeteur">
                             <span>{{message.text}}</span>
                         </div>
                     </div>
+
                 </div>
 
             </div>
             <div class="scroll-arrow">
                 <i class="bi bi-arrow-down-circle"></i>
             </div>
-
-
         </div>
-
-
-
         <input type="text" style="width: 80%; ; border-radius: 20px;" id="messageInput" [(ngModel)]="messageString"
             (keydown.enter)="sendMessagePrivate(messageriePrive.recepteur,messageString)" (input)="onInput()" />
         <button type="button" class="btn btn-default btn-sm" (click)="sendMessagePrivate(messageriePrive.recepteur,messageString)">

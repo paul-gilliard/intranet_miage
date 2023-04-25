@@ -22,10 +22,11 @@ export class MessagerieComponent implements OnInit {
     emeteur: '',
     recepteur: '',
   };;
-   messagePrive: MessagePrive = {
+   /*messagePrive: MessagePrive = {
     emeteur:'',
     text: ''
   };
+  */
   privateMessagerie!: Messagerie;
   isMessagerieprivate: boolean = false;
 

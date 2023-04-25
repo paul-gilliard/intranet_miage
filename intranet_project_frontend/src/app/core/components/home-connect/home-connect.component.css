@@ -14,7 +14,9 @@
 .lastelement{
   margin-right: 0px !important;
 }
-
+.container{
+  margin-bottom: 5%;
+}
 
 .element-fonctionnalite{
   margin-top: 2%;

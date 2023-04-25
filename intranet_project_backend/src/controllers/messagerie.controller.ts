@@ -63,6 +63,8 @@ export const sendPrivateMessage = async (req: Request, res: Response) => {
     const message: MessagePrive = {
       emeteur: emeteur,
       text: text,
+      recepteur: recepteur
+      
     };
     messagerie.messages.push(message);
 

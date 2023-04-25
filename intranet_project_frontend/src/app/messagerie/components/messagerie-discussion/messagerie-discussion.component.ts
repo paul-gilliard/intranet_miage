@@ -6,6 +6,7 @@ import { io, Socket } from 'socket.io-client';
 import { MessageriePanelGaucheComponent } from '../messagerie-panel-gauche/messagerie-panel-gauche.component';
 import { MessagerieComponent } from '../messagerie/messagerie.component';
 import { MessagePrive, MessageriePrivee } from 'src/app/models/messagePrivee.model';
+import { CurrentUserMessageDirective } from './CurrentUserMessageDirective';
 
 
 @Component({
@@ -43,11 +44,17 @@ export class MessagerieDiscussionComponent implements OnInit {
   };;
    messagePrive: MessagePrive = {
     emeteur:'',
-    text: ''
+     text: '',
+     recepteur: '',
+     
+    
   };
   @Input() isPrivateMessage: boolean = false;
   url: string = 'http://localhost:3000';
-  clickedUserName : string= localStorage.getItem('currentUserName')!;
+  clickedUserName: string = localStorage.getItem('currentUserName')!;
+
+
+
 
   constructor(private service: MessagerieService) {
     this.socket = io(this.url, {transports: ['websocket', 'polling', 'flashsocket']});
@@ -90,15 +97,19 @@ export class MessagerieDiscussionComponent implements OnInit {
     //addMessageToList(message);
     console.log(' if *******Privé nouveau message********');
       this.messageriePrive.messagesPrive.push({
-      emeteur: message.emeteur,
-      text: message.text
+        emeteur: message.emeteur,
+        text: message.text,
+        recepteur: message.recepteur,
+      
+      
     });
    /* this.messageriePrive.messagesPrive.push({
       emeteur: message.emeteur,
       text: message.text
     });
     */
-  } else if (localStorage.getItem('currentRoom')?.includes(message.recepteur)){
+  } else if (localStorage.getItem('currentRoom')?.includes(message.recepteur)) {
+    //Montrez un PoP'Up
     console.log(' vous avez reçu un message de ', message.emetteur);
 
     console.log(localStorage.getItem('currentRoom'));
@@ -119,7 +130,9 @@ export class MessagerieDiscussionComponent implements OnInit {
        
 });
   }
-
+  getAlignement(message: MessagePrive) {
+ 
+}
 sendMessage(messageString: String, sender: string) {
   const currentUserName = localStorage.getItem('currentUserName')!;
   this.message.text = messageString;
@@ -137,8 +150,9 @@ sendMessage(messageString: String, sender: string) {
 
   sendMessagePrivate(recepteur: string, messageString: String) {
     const currentUserName = localStorage.getItem('currentUserName')!;
-    this.message.text = messageString;
-    this.message.emeteur = currentUserName;
+    this.messagePrive.text =  <string>messageString;
+    this.messagePrive.emeteur = currentUserName;
+    this.messagePrive.recepteur = recepteur;
 
     
     //this.socket.emit('new-private-message', { text: this.message.text, emeteur: currentUserName });
@@ -156,11 +170,13 @@ sendMessage(messageString: String, sender: string) {
   }
   
   isCurrentUser(emetteur: String): boolean {
-  return emetteur === localStorage.getItem('currentUserName');
+  return emetteur === localStorage.getItem('currentUser');
   }
-  isCurrentUserPrivate(emetteur: String):boolean {
-  return emetteur === localStorage.getItem('currentUserEmail');
-  }
+  isCurrentUserPrivate(emetteur: String): boolean {
+   return this.currentUserEmail === emetteur;
+}
+  
+  
   getDisplayEmitter(emitter: String): String {
     let displayEmitter = emitter;
     if (emitter === localStorage.getItem('currentUserName')) {
@@ -169,12 +185,13 @@ sendMessage(messageString: String, sender: string) {
     return displayEmitter;
   }
 
-  getDisplayEmitterPrivate(emitter: String): String {
+ /* getDisplayEmitterPrivate(emitter: String): String {
     let senderName = this.clickedUserName;
     if (emitter === localStorage.getItem('currentUserEmail'))
       senderName = 'moi';
    return senderName
   }
+  */
   onInput() {
   const input = document.getElementById('messageInput') as HTMLInputElement;
   input.style.height = 'auto'; /* réinitialiser la hauteur à "auto" pour obtenir la hauteur naturelle */

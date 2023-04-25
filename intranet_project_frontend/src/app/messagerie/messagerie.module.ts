@@ -7,12 +7,15 @@ import { MessageriePanelGaucheComponent } from './components/messagerie-panel-ga
 import { MessagerieDiscussionComponent } from './components/messagerie-discussion/messagerie-discussion.component';
 import { MessagerieInfoComponent } from './components/messagerie-info/messagerie-info.component';
 import { FormsModule } from '@angular/forms';
+import { CurrentUserMessageDirective } from './components/messagerie-discussion/CurrentUserMessageDirective';
 
 @NgModule({
   declarations: [
     MessagerieComponent, 
     MessageriePanelGaucheComponent, 
-    MessagerieDiscussionComponent, MessagerieInfoComponent
+    MessagerieDiscussionComponent,
+    MessagerieInfoComponent,
+    CurrentUserMessageDirective
   ],
   imports: [
     CommonModule,
@@ -22,7 +25,8 @@ import { FormsModule } from '@angular/forms';
   exports: [
     MessagerieComponent, 
     MessageriePanelGaucheComponent, 
-    MessagerieDiscussionComponent
+    MessagerieDiscussionComponent,
+    CurrentUserMessageDirective
   ]
 })
 export class MessagerieModule { }
