@@ -1,3 +1,27 @@
 button-footer1{
     background-color: #4CB3ED;
 }
+
+footer {
+    background-color: #b1dcf6; 
+    margin-bottom: 0px; 
+    height: 8%; 
+    padding: 10px;
+}
+
+.buttonSite {
+    background-color:  #4CB3ED; 
+    border-radius: 20px ; 
+    width: 125px; 
+    margin-top: 5px; 
+    border-color: #4CB3ED;
+    box-shadow: 2px 2px 0px 0px grey;
+}
+
+.buttonContact {
+    background-color:  #4CB3ED; 
+    border-radius: 20px; 
+    width: 125px; 
+    border-color: #4CB3ED; 
+    box-shadow: 2px 2px 0px 0px grey;
+}

@@ -1,4 +1,4 @@
-import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Component, OnChanges, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { DriveDocument } from 'src/app/models/driveDocument.model';
 import { DocumentService } from 'src/app/services/document.service';
@@ -13,7 +13,7 @@ import { CursusStructureService } from 'src/app/services/cursus-structure.servic
 export class DriveDocumentComponent implements OnInit, OnChanges{
 
   documents!: DriveDocument[];
-  document!: DriveDocument;
+  documentInsert!: DriveDocument;
   sub!: Subscription;
   promo!: String;
   semestre!: String;
@@ -21,61 +21,13 @@ export class DriveDocumentComponent implements OnInit, OnChanges{
   link!: String;
   cursusStructure!: JSON;
 
-  /*listeCours = [
-    {
-      title: 'License 3', 
-        semestres:[
-          {
-            title: 'Semestre 5',
-            cours: [
-              'Cours 1', 
-              'Cours 2'
-            ]
-          },
-          {
-            title: 'Semestre 6'
-          }
-        ]
-    },
-    {
-      title: 'Master 1', 
-        semestres:[
-          {
-            title: 'Semestre 7',
-            cours: [
-              'Cours 1', 
-              'Cours 2'
-            ]
-          },
-          {
-            title: 'Semestre 8'
-          }
-        ]
-    },
-    {
-      title: 'Master 2', 
-        semestres:[
-          {
-            title: 'Semestre 9',
-            cours: [
-              'Cours 1', 
-              'Cours 2'
-            ]
-          },
-          {
-            title: 'Semestre 10'
-          }
-        ]
-    }
-  ];*/
-
   constructor(private documentService: DocumentService, private cursusStructureService: CursusStructureService){ }
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.cursusStructureService.getCursusStructure().subscribe(data => {
       this.cursusStructure = data;
     });
-    
+    this.getAllDocuments();    
   }
   
   ngOnChanges(): void {
@@ -85,17 +37,17 @@ export class DriveDocumentComponent implements OnInit, OnChanges{
   getAllDocuments(){
     this.sub = this.documentService.getAllDocuments().subscribe({
       next: document => {
-        this.documents?.push(document);
+        this.documents?.push(document);        
       }
     });
   }
 
   insertDocument(file : File, etiquetteCours: String, etiquettePromo: String, semestre: String, mail: String){
-    this.document.etiquetteCours = etiquetteCours;
-    this.document.etiquettePromo = etiquettePromo;
-    this.document.semestre = semestre;
-    this.document.mailOwner = mail;
-    this.document.driveDocument = file;
+    this.documentInsert.etiquetteCours = etiquetteCours;
+    this.documentInsert.etiquettePromo = etiquettePromo;
+    this.documentInsert.semestre = semestre;
+    this.documentInsert.mailOwner = mail;
+    this.documentInsert.driveDocument = file;
   }
 
   getPromo(promo: String){

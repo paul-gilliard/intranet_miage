@@ -13,12 +13,8 @@ export class HighlightDirective {
       if (event instanceof NavigationEnd) {
         const currentUrl = event.urlAfterRedirects;
         const linkUrl = this.el.nativeElement.firstChild.href;
-        console.log("Current "+currentUrl);
-        console.log("Link "+linkUrl);
-
 
         if ( linkUrl.includes(currentUrl)) {
-          console.log("parfait égale");
           this.el.nativeElement.classList.add('active');
           this.el.nativeElement.firstChild.style.backgroundColor = 'white';
           this.el.nativeElement.firstChild.style.borderRadius = '20px 20px 20px 20px';
@@ -30,7 +26,6 @@ export class HighlightDirective {
           this.el.nativeElement.firstChild.style.borderRadius = '';
           this.el.nativeElement.firstChild.style.borderBottom='';
           this.el.nativeElement.firstChild.style.height = '';
-          
         }
       }
     });
