@@ -1,0 +1,19 @@
+.row{
+    height: 100vh;
+}
+
+.outils{
+    background-color: #F5F5F5;
+    height: 100%;
+}
+
+.liste-personne{
+    background-color: #FFFFFF;
+    height: 100%;
+}
+ul {
+    list-style-type: none;
+}
+.userList{
+    margin-top: 15%;
+}

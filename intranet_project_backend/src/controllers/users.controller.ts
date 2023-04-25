@@ -1,11 +1,11 @@
 import { Request, Response } from 'express';
-import User from '../models/users.model';
+import User from '../models/users.model'; //import du modèle User
 
 export const createUser = async (req: Request, res: Response) => {
   try {
     const user = new User(req.body);
-    await user.save();
-    res.status(201).send(user);
+    const savedUser = await user.save();
+    res.status(201).send({ user: savedUser });
   } catch (error) {
     res.status(400).send(error);
   }
@@ -57,3 +57,27 @@ export const deleteUserById = async (req: Request, res: Response) => {
     res.status(500).send(error);
   }
 };
+
+export const getAllUsers = async (req: Request, res: Response) => {
+  try {
+    const users: typeof User[] = await User.find(); // récupère tous les utilisateurs
+    res.status(200).send(users); // renvoie les utilisateurs au client
+  } catch (error) {
+    res.status(500).send(error); // renvoie une erreur 500 en cas d'erreur serveur
+  }
+};
+
+export const findUserByEmail = async function findUserByEmail(req: Request, res: Response) {
+  
+  const email = req.params.email;
+
+  try {
+    const user = await User.findOne({ email: email });
+    if (!user) {
+      return res.status(404).json({ message: 'Utilisateur introuvable' });
+    }
+    res.json(user);
+  } catch (error) {
+    res.status(500).json({ message: 'Une erreur est survenue' });
+  }
+}

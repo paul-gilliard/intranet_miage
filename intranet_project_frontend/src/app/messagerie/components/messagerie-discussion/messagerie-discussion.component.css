@@ -1,0 +1,150 @@
+.panel{
+    height: 75vh;
+    /*overflow: auto; */
+    background-color: #F5F5F5;
+    border-radius: 20px 20px 20px 20px;
+   
+}
+
+.panel-heading{
+    height: 7%;
+    border-radius: 20px 20px 20px 20px;
+    text-align: center;
+    border-color: #F5F5F5;
+    box-shadow: 1px black;
+   
+    
+}
+
+.panel-title{
+    border-radius: 0.375rem;
+    background-color: #FFFFFF;
+    height: 100%;
+    
+}
+
+.panel-body{
+    border-radius: 0.375rem;
+    background-color: #F5F5F5;
+    height: 83vh;
+    border-radius: 20px 20px 20px 20px;
+        
+}
+
+.message{
+    
+    max-width: 100%;
+    margin-left: 2%;
+    border-radius: 15px 15px 0px 15px;
+    word-wrap: break-word;
+    
+}
+.message-autre{
+    background-color: #41D3F3;
+        border-radius: 15px 15px 15px 0px;
+        word-wrap: break-word;
+        max-width: 48%;
+        ;
+        width: fit-content;
+        padding: 5px;
+        margin-left: 1%;
+        
+       
+  
+}
+.message-moi{
+    background-color: #85A4F5;
+    border-radius: 15px 15px 0px 15px;
+    word-wrap: break-word;
+    max-width: 48%;;
+    width: fit-content;
+    padding: 5px;
+    float: right;
+   position: relative;
+   margin-right: 1%;
+}
+.moi{
+    float: right;
+        position: relative;
+        margin-right: 1.2%;
+        margin-bottom: 0;
+        
+        
+ 
+
+}
+.autre{
+    text-align: center;
+      
+
+}
+#zoneSaisie{
+    width: 100%;
+    height: auto;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    background-color: white;
+
+}
+#messageInput {
+   
+    /* hauteur initiale de l'input */
+    
+    
+    margin-left: 4%;
+        margin-bottom: 5%;
+        height: 50px;
+
+    /* transition en douceur lors du redimensionnement */
+}
+#messageInput:focus {
+    height: auto;
+    /* hauteur automatique */
+    overflow-y: auto;
+}
+input {
+    min-height: 20px;
+    max-height: 120px;
+    overflow-y: auto;
+    max-width: 90%;
+    caret-color: #41D3F3;
+    
+}
+.bodyMessages{
+   overflow:auto; 
+   max-height: 75vh;
+   position: relative;;
+   overflow-x: hidden;
+  
+
+}
+::-webkit-scrollbar {
+    background-color: #f5f5f5;
+    width: 5px;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background-color: #4CB3ED;
+    border-radius: 10px;
+    width: 5px;
+    
+}
+.scroll-arrow{
+    position: relative;
+    animation: moveUpDown 2s ease-in-out infinite;
+    margin-left: 40%;
+}
+@keyframes moveUpDown {
+    0% {
+        top: -50px;
+    }
+
+    50% {
+        top: 0px;
+    }
+
+    100% {
+        top: 0;
+    }
+}

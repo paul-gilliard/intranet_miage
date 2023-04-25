@@ -1,28 +1,62 @@
 import express, { Application, Request, Response, NextFunction } from 'express';
-import cors from 'cors';
+import http from 'http';
+import { Socket } from "socket.io";
 import { connectToDatabase } from './services/database.service';
-import userRouter from './routes/users.router';
+import bodyParser from 'body-parser';
+import userRouter from './routers/users.router';
+import loginRouter from './routers/login.router';
+import messagerieRouter from './routers/messagerie.router';
+import calendarRouter from './routers/calendar.router';
+import driveDocumentRouter from './routers/driveDocument.router';
+import cursusStructureRouter from './routers/cursus-structure.router';
 
-//const app: Application = express();
-const port = 3000;
-var cors = require('cors');
+interface SocketData {
+  emeteur: string;
+  text: string;
+}
 
-var app = express();
-app.use(cors());
-// Middleware
-app.use(cors());
-app.use(express.json());
-
-connectToDatabase()
-// Routes
-app.use('/api', userRouter);
-//app.use('/users', userRouter);
-
-// Error handling middleware
-app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
-  console.error(err.stack);
-  res.status(500).send('Something broke!');
+const app: Application = express();
+const port: number = 3000;
+const server: http.Server = http.createServer(app);
+const io = require('socket.io')(server, {
+  cors: {
+    origin: '*',
+    methods: ['GET', 'POST'],
+  },
 });
 
-// Start server
-app.listen(port, () => console.log(`Server listening on port ${port}`));
+const cors = require('cors');
+
+app.use(cors());
+app.use(express.json());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+connectToDatabase();
+
+app.use('/api/user', userRouter);
+app.use('/api/messagerie', messagerieRouter);
+app.use('/login', loginRouter);
+app.use('/api/calendar', calendarRouter);
+app.use('/api/driveDocument', driveDocumentRouter);
+app.use('/api/cursusStructure', cursusStructureRouter);
+
+io.on('connection', (socket: Socket) => {
+  console.log('Client connected');
+
+  socket.on('new-message', (message: SocketData) => {
+    console.log('New message received', message);
+    io.emit('new-message', message);
+  });
+
+  socket.on('disconnect', () => {
+    console.log('Client disconnected');
+  });
+});
+
+app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
+  console.error(err.stack);
+  res.status(500).send(err);
+});
+
+server.listen(port, () => console.log(`Server listening on port ${port}`));
