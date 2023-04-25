@@ -15,7 +15,8 @@ export class MessagerieService {
     private apiUrl = 'http://localhost:3000/api';
      private  url: string='http://localhost:3000';
     private baseUrl = 'http://localhost:3000/api/messagerie';
-    currentUserEmail = localStorage.getItem('currentUserEmail')!;
+  currentUserEmail = localStorage.getItem('currentUserEmail')!;
+  
     //la variable qui permet de mettre à jour la messagerie courante
    
     private   _messageriePrive: MessageriePrivee={
@@ -26,9 +27,14 @@ export class MessagerieService {
    public  _messagePrive: MessagePrive = {
     emeteur:'',
      text: '',
-     recepteur: ''
+     recepteur: '',
+     id: ''
     
-    };
+  };
+  public _isMessageriePrivate: boolean = false;
+  
+  private _isMessageriePrivateSubject = new Subject<boolean>();
+
     //par défaut on initialise user à currentUser
     public clickedUser: User = {
         name: localStorage.getItem('currentUserName')!,
@@ -39,9 +45,18 @@ export class MessagerieService {
     };
     socket!: Socket;
     constructor(private http: HttpClient) {
-    this.socket = io(this.url, {transports: ['websocket', 'polling', 'flashsocket']});
+      this.socket = io(this.url, { transports: ['websocket', 'polling', 'flashsocket'] });
+     
   }
-    public _isMessageriePrivate: boolean = false;
+   public setIsMessageriePrivate(value: boolean): void {
+  this._isMessageriePrivate = value;
+  this._isMessageriePrivateSubject.next(value);
+}
+
+  public getIsMessageriePrivateObservable(): Observable<boolean> {
+  return this._isMessageriePrivateSubject.asObservable();
+}
+
 
     getAllMessages() {
         return this.http.get<Messagerie>('http://localhost:3000/api/messagerie/getAllMessages');
@@ -92,26 +107,7 @@ setSelectedMessageriePrive(value: MessageriePrivee): void {
         
     }
     
-    /*sendPrivateMessage(emeteur: string, recepteur: string, text: String): Observable<any> {
-  const body = {
-    emeteur: emeteur,
-    recepteur: recepteur,
-    text: text
-  };
-  return this.http.post('http://localhost:3000/api/messagerie/sendPrivateMessage', body).pipe(
-    map((response: any) => {
-      const newObject = {
-        messages: response.messsages,
-          emeteur: response.emeteur,
-        recepteur: response.recepteur
-        // etc.
-      };
-      return newObject;
-    })
-  );
-}
-*/
-
+   
     //
     getPrivateMessagesBetweenUsers(emeteur: string, recepteur: string): Observable<MessagePrive[]> {
     const url = `${this.baseUrl}/getPrivateMessagesBetweenUsers/${emeteur}/${recepteur}`;
@@ -158,7 +154,8 @@ setSelectedMessageriePrive(value: MessageriePrivee): void {
             return {
               emeteur: mp.emeteur,
               recepteur: mp.recepteur,
-              text: msg.text
+              text: msg.text,
+              id: msg.id
             };
           });
         } else {
@@ -191,27 +188,7 @@ setSelectedMessageriePrive(value: MessageriePrivee): void {
 
     
     
-    /*
-    /private-messages/:emeteur/:recepteur
-    getPrivateMessages(emeteur: string, recepteur: string): Observable<MessagePrive[]> {
-const params = { emeteur, recepteur };
-    return this.http.get<MessagePrive[]>('http://localhost:3000/api/messagerie/privateMessages/', { params });
-  }
-  */
   
 
 
 }
-/*
-const getPrivateMessagesBetweenUsers = async (emeteur: string, recepteur: string) => {
-  try {
-    const response = await axios.get(`/api/messagerie/getPrivateMessagesBetweenUsers/${emeteur}/${recepteur}`);
-    return response.data;
-  } catch (err) {
-    console.error(err);
-    return [];
-  }
-};
-
-export default getPrivateMessagesBetweenUsers;
-*/

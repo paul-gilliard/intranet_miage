@@ -2,6 +2,7 @@ export interface MessagePrive {
   emeteur: string;
   text: string;
   recepteur: string;
+  id: string;
   
 }
 

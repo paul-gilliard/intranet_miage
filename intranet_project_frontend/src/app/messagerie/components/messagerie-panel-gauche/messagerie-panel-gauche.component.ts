@@ -37,6 +37,7 @@ conversation: any;
     emeteur:'',
      text: '',
      recepteur: '',
+     id: ''
     
   };
   @Input() isPrivateMessage: boolean = false;
@@ -62,24 +63,7 @@ conversation: any;
       console.log("dans panel :",data);
       // Traitez ici les données reçues du socket
     });
-    //le socket pour recevoir les messages Privés
-    //////////////////////////////////////
-   // this.socket.on("new-private-message", (data: any) => {
-    //console.log("PRIVé: Reçu un message privé: ", data);
-  // Vérifie si le message est destiné à la conversation actuellement affichée
-  /*  if (
-    (data.emeteur === this.currentUserEmail && data.recepteur === this.messagerieDiscussion.messagerie.emailContact) ||
-    (data.emeteur === this.messagerieDiscussion.messagerie.emailContact && data.recepteur === this.currentUserEmail)
-    ) {
-      console.log("PRIVé: Reçu un message privé: ", data);
-    // Ajoute le message à la conversation actuelle
-    this.messagerieDiscussion.messagerie.messages.push({
-      emeteur: data.emeteur,
-      text: data.text
-    }
-    );
-  } */
-//});
+  
 
     
   }
@@ -100,97 +84,24 @@ conversation: any;
         console.log('Les messages avec ' + user.email + ':', this.messageriePrive.messagesPrive);
   }
 );
-    //console.log("la messagerie PRIVEE :", JSON.stringify(this.messageriePrive));
-    //si c'est une discussion privée ou public
-    //alors on met à jour le flag du service
-    //if (user) {
+   
     this.messagerieService._isMessageriePrivate = true;
-    //joindre un room
-    //this.socket.emit('join', this.currentUserEmail  + '-'+user.email);{user: username, room: roomId}
-    this.messagerieService.joinRoom({ room: this.currentUserEmail + '-' + user.email });
-    //stocker le room courant
-    localStorage.setItem('currentRoom', this.currentUserEmail  + '-'+user.email );
-    
-    
-  }
-  /*
-  onUserClick2Socket(user: User) {
-    this.socket.emit("private-message-request", {
-    emeteur: this.currentUserEmail,
-    recepteur: user.email
-    });
-    this.socket.on("private-message", (data: any) => {
- 
-  // Vérifie si le message est destiné à la conversation actuellement affichée
-  if (
-    (data.emeteur === this.currentUserEmail && data.recepteur === this.messagerieDiscussion.messagerie.emailContact) ||
-    (data.emeteur === this.messagerieDiscussion.messagerie.emailContact && data.recepteur === this.currentUserEmail)
-  ) {
-    // Ajoute le message à la conversation actuelle
-    this.messagerieDiscussion.messagerie.messages.push({
-      emeteur: data.emeteur,
-      text: data.text
-    });
-     console.log(" PANEL GAUCHE: Reçu un message privé:", data);
-  }
-});
-
+    this.messagerieService.clickedUser.name = user.name;
+    this.messagerieService.clickedUser.email = user.email;
 
    
+    this.messagerieService.joinRoom({ room: this.currentUserEmail + '-' + user.email });
+    //stocker le room courant
+    localStorage.setItem('currentRoom', this.currentUserEmail + '-' + user.email);
+     this.messagerieService.setIsMessageriePrivate(true);
+    
+    
   }
-  */
-/*
-  getMessagesAvecContact(emailContact: string) {
-  this.service.getAllMessagesPrivate(localStorage.getItem('currentUserName')!).subscribe(
-    (messagesPrive: any[]) => {
-     // console.log(JSON.stringify(messagesPrive));
-      this.messageriePrive.messagesPrive = messagesPrive.flatMap((mp: any) => {
-        if (mp.emeteur === emailContact || mp.recepteur === emailContact) {
-          return mp.messages.map((msg: any) => {
-            return {
-              emeteur: mp.emeteur,
-              recepteur: mp.recepteur,
-              text: msg.text
-            };
-          });
-        } else {
-          return [];
-        }
-      });
-      console.log('les messages avec ' + emailContact + ':', this.messageriePrive.messagesPrive);
-    },
-    error => {
-      console.log('Une erreur est survenue lors de la récupération des messages privés', error);
-    }
-  );
-}
-*/
-  /*getMessagesAvecContact(emailContact: string) {
-  this.service.getAllMessagesPrivate(localStorage.getItem('currentUserName')!).subscribe(
-    (messagesPrive: any[]) => {
-      this.messageriePrive.messagesPrive = messagesPrive.flatMap((mp: any) => {
-        if (mp.emeteur === emailContact || mp.recepteur === emailContact) {
-          return mp.messages.map((msg: any) => {
-            return {
-              emeteur: mp.emeteur,
-              recepteur: mp.recepteur,
-              text: msg.text
-            };
-          });
-        } else {
-          return [];
-        }
-      });
-      this.messageriePrive.emeteur = ''; // mettez la valeur d'emetteur appropriée ici
-      this.messageriePrive.recepteur = emailContact;
-      console.log('les messages avec ' + emailContact + ':', this.messageriePrive.messagesPrive);
-    },
-    error => {
-      console.log('Une erreur est survenue lors de la récupération des messages privés', error);
-    }
-  );
-}
-*/
+  onMiageClick() {
+    this.messagerieService.setIsMessageriePrivate(false);
+    
+  }
+ 
   get messageriePrivee(): any {
     return this.messagerieService.messageriePrive;
   }

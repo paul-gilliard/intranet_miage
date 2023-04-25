@@ -134,11 +134,18 @@ input {
 .bodyMessages{
    overflow:auto; 
    max-height: 75vh;
+   min-height: 50%;
    position: relative;;
    overflow-x: hidden;
-   /*background-image:  url('../../../../assets/images/A22_.jpg')*/ ;
+   background-image:  url('../../../../assets/images/imgBackgroundBodyMessage.jpeg') ;
   
 
+}
+.formSend{
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+   
 }
 ::-webkit-scrollbar {
     background-color: #f5f5f5;

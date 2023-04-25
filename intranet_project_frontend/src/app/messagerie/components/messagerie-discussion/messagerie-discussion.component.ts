@@ -7,6 +7,7 @@ import { MessageriePanelGaucheComponent } from '../messagerie-panel-gauche/messa
 import { MessagerieComponent } from '../messagerie/messagerie.component';
 import { MessagePrive, MessageriePrivee } from 'src/app/models/messagePrivee.model';
 import { CurrentUserMessageDirective } from './CurrentUserMessageDirective';
+import { MessageFormatDirective } from './messageFormat.directive';
 
 
 @Component({
@@ -46,9 +47,12 @@ export class MessagerieDiscussionComponent implements OnInit {
     emeteur:'',
      text: '',
      recepteur: '',
+     id: ''
      
     
   };
+ 
+
   @Input() isPrivateMessage: boolean = false;
   url: string = 'http://localhost:3000';
   clickedUserName: string = localStorage.getItem('currentUserName')!;
@@ -61,13 +65,25 @@ export class MessagerieDiscussionComponent implements OnInit {
    }
 
   async ngOnInit() {
-    
+    // A chaque qu'on click sur un user ce composant met à jour la variable messageriePrivee
+    //Il est avertit par le service
    this.service.messageriePrive$.subscribe(messageriePrivee => {
       this.messageriePrive = messageriePrivee;
-     this.isPrivateMessage = true;
-     this.clickedUserName=this.service.clickedUser.name;
+     
+     this.clickedUserName = this.service.clickedUser.name;
+     //j'affecte des ID pour régler le probléme des affichages
+     for (let i = 0; i < this.messageriePrive.messagesPrive.length; i++) {
+    this.messageriePrive.messagesPrive[i].id = this.uuidv4();
+     }
     
-}); 
+     
+    
+   }); 
+    this.service.getIsMessageriePrivateObservable().subscribe(isPrivate => {
+      this.isPrivateMessage = isPrivate;
+  // Faites quelque chose avec la nouvelle valeur de _isMessageriePrivate
+});
+
     //this.socket = io(this.url);
     this.socket.on('connect', () => {
       console.log('Connected to server');
@@ -77,15 +93,7 @@ export class MessagerieDiscussionComponent implements OnInit {
       this.messagerie.messages.push(message);
       //this.messagerie.messages.push()
     });
-   /*  this.service.getMessagePrivate().subscribe(data => {
-       console.log("*************Get message privé observable:", data);
-       this.messageriePrive.messagesPrive.push({
-      emeteur: data.emeteur,
-      text: data.text
-    });
-    
-      // Traitez ici les données reçues du socket
-    });*/
+  
      this.socket.on('new-private-message', (message: any) => {
        console.log("PRIVé: Reçu un message privé: ", message);
        const room = `${message.recepteur}-${message.emeteur}`;
@@ -100,28 +108,19 @@ export class MessagerieDiscussionComponent implements OnInit {
         emeteur: message.emeteur,
         text: message.text,
         recepteur: message.recepteur,
+        id: this.uuidv4()
+        
       
       
-    });
-   /* this.messageriePrive.messagesPrive.push({
-      emeteur: message.emeteur,
-      text: message.text
-    });
-    */
+      });
+ 
   } else if (localStorage.getItem('currentRoom')?.includes(message.recepteur)) {
     //Montrez un PoP'Up
     console.log(' vous avez reçu un message de ', message.emetteur);
 
     console.log(localStorage.getItem('currentRoom'));
     console.log(room);
-  /*  this.messageriePrive.messagesPrive.push({
-      emeteur: message.emeteur,
-      
-      text: message.text
-    });
-    */
-    // Si le message n'appartient pas à la salle actuelle, afficher une notification
-    //showNotification(message);
+  
        }
   else {
     console.log('Un message privé a été reçu par un User');
@@ -155,8 +154,7 @@ sendMessage(messageString: String, sender: string) {
     this.messagePrive.recepteur = recepteur;
 
     
-    //this.socket.emit('new-private-message', { text: this.message.text, emeteur: currentUserName });
-   // this.socket.emit('new-private-message', { emeteur: this.currentUserEmail, recepteur: recepteur , text:messageString });
+   
     console.log('Envoie du message privé depuis MESSAGERIE DISCUSSION');
     this.sub = this.service.sendPrivateMessage(this.currentUserEmail,recepteur, messageString).subscribe({
       next: messagerie => {
@@ -184,14 +182,13 @@ sendMessage(messageString: String, sender: string) {
     }
     return displayEmitter;
   }
-
- /* getDisplayEmitterPrivate(emitter: String): String {
-    let senderName = this.clickedUserName;
-    if (emitter === localStorage.getItem('currentUserEmail'))
-      senderName = 'moi';
-   return senderName
-  }
-  */
+uuidv4(): string {
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+    const r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+    return v.toString(16);
+  });
+}
+ 
   onInput() {
   const input = document.getElementById('messageInput') as HTMLInputElement;
   input.style.height = 'auto'; /* réinitialiser la hauteur à "auto" pour obtenir la hauteur naturelle */
@@ -211,34 +208,7 @@ sendMessage(messageString: String, sender: string) {
     arrow.style.display = 'none';
   }
   }
-  /*
-getMessagesAvecContact(emailContact: string) {
-  this.service.getAllMessagesPrivate(localStorage.getItem('currentUserName')!).subscribe(
-    (messagesPrive: any[]) => {
-      console.log(JSON.stringify(messagesPrive));
-      this.messageriePrive.messagesPrive = messagesPrive.flatMap((mp: any) => {
-        if (mp.emeteur === emailContact || mp.recepteur === emailContact) {
-          return mp.messages.map((msg: any) => {
-            return {
-              emeteur: mp.emeteur,
-              recepteur: mp.recepteur,
-              text: msg.text
-            };
-          });
-        } else {
-          return [];
-        }
-      });
-      console.log('les messages avec ' + emailContact + ':', this.messageriePrive.messagesPrive);
-    },
-    error => {
-      console.log('Une erreur est survenue lors de la récupération des messages privés', error);
-    }
-  );
-}
-*/
-  //appeler la getPrivateMessage() du service
-  //puis afficher tous les message privés
+
   
  
 }
