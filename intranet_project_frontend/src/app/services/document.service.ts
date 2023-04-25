@@ -10,7 +10,7 @@ export class DocumentService {
     constructor(private http: HttpClient) { }
 
     getAllDocuments(){
-        return this.http.get<DriveDocument>('http://localhost:3000/api/driveDocument/getAllDocuments');
+        return this.http.get<DriveDocument[]>('http://localhost:3000/api/driveDocument/getAllDocuments');
     }
 
     getDocumentsBySemestre(semestre: String){

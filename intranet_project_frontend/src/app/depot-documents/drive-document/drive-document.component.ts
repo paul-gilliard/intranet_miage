@@ -34,12 +34,11 @@ export class DriveDocumentComponent implements OnInit, OnChanges{
     this.link = this.getLink();
   }
 
-  getAllDocuments(){
-    this.sub = this.documentService.getAllDocuments().subscribe({
-      next: document => {
-        this.documents?.push(document);        
-      }
-    });
+  async getAllDocuments(){
+    let listeDoc = await this.documentService.getAllDocuments().toPromise();
+    if(listeDoc){
+      this.documents = listeDoc;
+    }   
   }
 
   insertDocument(file : File, etiquetteCours: String, etiquettePromo: String, semestre: String, mail: String){
