@@ -1,7 +1,7 @@
 import { Request } from 'express';
 import { Router } from 'express';
 import multer, { Multer } from 'multer';
-import { insertDocument, getAllDocuments, getDocumentsByPromo, getDocumentsBySemestre, getDocumentsByCours} from '../controllers/driveDocument.controller';
+import { insertDocument, getAllDocuments, getDocumentsByPromo, getDocumentsBySemestre, getDocumentsByCours, getNumberOfDocuments} from '../controllers/driveDocument.controller';
 
 const driveDocumentRouter = Router();
 const storage = multer.memoryStorage();
@@ -16,5 +16,9 @@ driveDocumentRouter.get('/getDocumentsByPromo/:promo', getDocumentsByPromo);
 driveDocumentRouter.get('/getDocumentsBySemestre/:semestre', getDocumentsBySemestre);
 
 driveDocumentRouter.get('/getDocumentsByCours/:cours', getDocumentsByCours);
+
+driveDocumentRouter.get('/getNumberOfDocuments', getNumberOfDocuments);
+
+
 
 export default driveDocumentRouter;

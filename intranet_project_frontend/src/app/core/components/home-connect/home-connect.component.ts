@@ -1,4 +1,6 @@
 import { Component, Input } from '@angular/core';
+import { DocumentService } from 'src/app/services/document.service';
+import { MessagerieService } from 'src/app/services/messagerie.service';
 
 interface carrouselImage{
   imageSrc: string;
@@ -15,6 +17,12 @@ export class HomeConnectComponent {
   
   listOfFunctionnality = ["Message", "offres", ""];
   selectedIndex = 0;
+  nbMessages!: number;
+  nbOffres!: number;
+  nbSondages!: number;
+  nbDocuments!: number;
+  nbCours!: number;
+
   @Input() images: carrouselImage[] =  [
     {
       imageSrc:
@@ -38,7 +46,20 @@ export class HomeConnectComponent {
     },
   ];
 
+  constructor(private messagerieService: MessagerieService,
+    private documentsService: DocumentService) {}
+
   ngOnInit(): void{
+    this.messagerieService.getNumberOfMessages().subscribe((data:any) => {
+      this.nbMessages = data?.numberOfMessages;
+    })
+    this.nbOffres = 0;
+    this.nbSondages = 0;
+    this.documentsService.getNumberOfDocuments().subscribe((data:any)=> {
+      this.nbDocuments = data?.numberOfDocuments;
+    })
+    this.nbCours = 0;
+
     this.images =  [
       {
         imageSrc:

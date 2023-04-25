@@ -13,6 +13,10 @@ export class DocumentService {
         return this.http.get<DriveDocument>('http://localhost:3000/api/driveDocument/getAllDocuments');
     }
 
+    getNumberOfDocuments(){
+        return this.http.get<JSON>('http://localhost:3000/api/driveDocument/getNumberOfDocuments');
+    }
+
     getDocumentsBySemestre(semestre: String){
         return this.http.get<DriveDocument>('http://localhost:3000/api/driveDocument/getDocumentsBySemestre/' + semestre);
     }

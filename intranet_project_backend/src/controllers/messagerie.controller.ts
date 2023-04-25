@@ -92,3 +92,20 @@ export const getAllPrivateMessages = async (req: Request, res: Response) => {
     res.status(500).send('Server Error');
   }
 }
+
+export const getNumberOfMessages = async (req: Request, res: Response) => {
+  try {
+    const messagerie = await Messagerie.findById("642d50b33d99a32d414182a2");
+    if (!messagerie) {
+      return res.status(404).json({ message: 'Messagerie not found' });
+    }
+
+    const numberOfMessages = messagerie.messages.length;
+
+    res.status(200).json({ numberOfMessages });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: 'Server Error' });
+  }
+};
+
