@@ -47,6 +47,7 @@
 
 .panel-haut {
     margin-top: 2%;
+    min-height: 8vh;
 }
 
 button {
