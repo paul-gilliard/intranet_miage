@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { DriveDocument } from 'src/app/models/driveDocument.model';
 import { DocumentService } from 'src/app/services/document.service';
@@ -10,7 +10,7 @@ import { CursusStructureService } from 'src/app/services/cursus-structure.servic
   templateUrl: './drive-document.component.html',
   styleUrls: ['./drive-document.component.css']
 })
-export class DriveDocumentComponent implements OnInit{
+export class DriveDocumentComponent implements OnInit, OnChanges{
 
   documents!: DriveDocument[];
   documentInsert!: DriveDocument;
@@ -28,6 +28,26 @@ export class DriveDocumentComponent implements OnInit{
       this.cursusStructure = data;
     });
     this.getAllDocuments();    
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    for(let link in changes){
+      this.getDocuments(link);
+    }    
+  }
+
+  getDocuments(link: String){
+    if(this.link !== null){
+      if(this.cours !== null){
+        this.getDocumentsByCours(this.cours);
+      } else if(this.semestre !== null){
+        this.getDocumentsBySemestre(this.semestre);
+      } else {
+        this.getDocumentsByPromo(this.promo);
+      }
+    } else {
+      this.getAllDocuments();
+    }
   }
 
   async getAllDocuments(){
