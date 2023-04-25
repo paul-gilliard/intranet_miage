@@ -10,7 +10,7 @@ export class DocumentService {
     constructor(private http: HttpClient) { }
 
     getAllDocuments(){
-        return this.http.get<DriveDocument>('http://localhost:3000/api/driveDocument/getAllDocuments');
+        return this.http.get<DriveDocument[]>('http://localhost:3000/api/driveDocument/getAllDocuments');
     }
 
     getNumberOfDocuments(){
@@ -18,15 +18,15 @@ export class DocumentService {
     }
 
     getDocumentsBySemestre(semestre: String){
-        return this.http.get<DriveDocument>('http://localhost:3000/api/driveDocument/getDocumentsBySemestre/' + semestre);
+        return this.http.get<DriveDocument[]>('http://localhost:3000/api/driveDocument/getDocumentsBySemestre/' + semestre);
     }
 
     getDocumentsByCours(cours: String){
-        return this.http.get<DriveDocument>('http://localhost:3000/api/driveDocument/getDocumentsByCours/' + cours);
+        return this.http.get<DriveDocument[]>('http://localhost:3000/api/driveDocument/getDocumentsByCours/' + cours);
     }
 
     getDocumentsByPromo(promo: String){
-        return this.http.get<DriveDocument>('http://localhost:3000/api/driveDocument/getDocumentsByPromo/' + promo);
+        return this.http.get<DriveDocument[]>('http://localhost:3000/api/driveDocument/getDocumentsByPromo/' + promo);
     }
 
     insertDocument(formData: FormData) {

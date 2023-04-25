@@ -1,21 +1,20 @@
 <div class="row">
     <!-- Panel de gauche -->
     <div class="col-md-2 panel-gauche">
-        <app-liste-cours [listeCours]="cursusStructure" (promo)="getPromo($event)" (semestre)="getSemestre($event)" (cours)="getCours($event)"></app-liste-cours>
+        <app-liste-cours [listeCours]="cursusStructure" (link)="link = $event" (promo)="promo = $event" (semestre)="semestre = $event" (cours)="cours = $event"></app-liste-cours>
     </div>
 
     <!-- Panel de droite -->
     <div class="col-md panel-droit">
         <div class="row panel-haut">
-            <div class="col-md-5 link"><h4>{{link}} COUCOU</h4></div>
+            <div class="col-md-5 link"><h5>{{link}}</h5></div>
             <div class="col-md-6 import">
                 <button type="button" class="btn btn-default btn-lg" (click)="openImportDocumentModal()">
-                    <i class="bi bi-file-earmark-plus-fill"></i> 
-                    Importer 
+                    <i class="bi bi-file-earmark-plus-fill"></i> Importer 
                 </button>
             </div>
         </div>        
-        <div class="row">
+        <div class="row documents">
             <div class="col-md-2 document" *ngFor="let document of documents">
                 <span class="badge badge-promo">{{document.etiquettePromo}}</span>
                 <span class="badge badge-semestre">{{document.semestre}}</span>

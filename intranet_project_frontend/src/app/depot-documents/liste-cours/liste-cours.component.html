@@ -1,26 +1,17 @@
-<div ngbAccordion>
-    <div ngbAccordionItem *ngFor="let promo of listeCours" (click)="onClickPromo(promo.title)">
-      <h2 ngbAccordionHeader>
-        <button ngbAccordionButton>{{promo.title}}</button>
-      </h2>
-      <ng-template ngbPanelContent>
-        <ngb-accordion>
-          <ngb-panel *ngFor="let semestre of promo.semestres" (click)="onClickSemestre(semestre.title)">
-            <ng-template ngbPanelHeader>
-              <button>{{ semestre.title }}</button>
-            </ng-template>
-            <ng-template ngbPanelContent>
-              <ngb-accordion>
-                <ngb-panel *ngFor="let cours of semestre.cours" (click)="onClickCours(cours)">
-                  <ng-template ngbPanelHeader>
-                    <button>{{ cours }}</button>
-                  </ng-template>
-                </ngb-panel>
-              </ngb-accordion>
-            </ng-template>
-          </ngb-panel>
-        </ngb-accordion>
-      </ng-template>
-    </div>
-  </div>
-  
+<div class="container">
+  <ul class="nav">
+    <li class="nav-item" *ngFor="let promo of listeCours">
+      <button class="btn btn-link" (click)="onClick('', '', promo.title)">{{promo.title}}</button>
+      <ul>
+        <li class="nav-item" *ngFor="let semestre of promo.semestres">
+          <button class="btn btn-link" (click)="onClick('', semestre.title, promo.title)">{{semestre.title}}</button>
+          <ul>
+            <li class="nav-item" *ngFor="let cours of semestre.cours">
+              <button class="btn btn-link" (click)="onClick(cours, semestre.title, promo.title)">{{cours}}</button>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
