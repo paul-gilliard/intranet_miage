@@ -6,10 +6,51 @@
    -->
   
 
-  <div 
-  class ="calendrier " #calendar>
-  
+  <!-- Utilisation de [(ngModel)] pour lier la valeur sélectionnée à une propriété dans le composant -->
+
+<br><br>
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        
+        <select [(ngModel)]="selectedValue" (change)="onSelectChange()" class="btn btn-primary">
+          <option value="" disabled selected>Filtrer</option>
+          <option value="M2_miage_TD1.ics">Groupe TD1</option>
+          <option value="M2_miage_TD2.ics">Groupe TD2</option>
+          <option value="M2_calendar_events.ics">Général</option>
+        </select>
+    
+      <!--<div class="col-6">
+        <div class="btn-group" role="group" aria-label="Basic example">
+          <button type="button" class="btn btn-primary" (click)="onDayButtonClick()">Jour</button>
+          <button type="button" class="btn btn-primary" (click)="onWeekButtonClick()">Semaine</button>
+          <button type="button" class="btn btn-primary" (click)="onMonthButtonClick()">Mois</button>
+      </div>  
+        </div>-->
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="calendrier" #calendar></div>
+      </div>
+    </div>
   </div>
+
+  
+
+
+  <!-- <select [(ngModel)]="selectedValue" (change)="onSelectChange()" class="btn btn-primary" >
+    <option value="" disabled selected>Filtrer</option>
+    <option value="M2_miage_TD1.ics">Groupe TD1</option>
+    <option value="M2_miage_TD2.ics">Groupe TD2</option>
+    <option value="M2_calendar_events.ics">Général</option>
+  </select> -->
+
+
+<!-- 
+  <div  class ="calendrier " #calendar>  </div> -->
   
   <div >
     <button class ='mail'>

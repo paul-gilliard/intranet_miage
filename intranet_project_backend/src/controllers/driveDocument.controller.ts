@@ -1,20 +1,22 @@
 import { NextFunction, Request, Response } from 'express';
 import DriveDocument from '../models/driveDocument.model';
+import * as fs from 'fs';
+
 
 export const insertDocument = async (req: Request, res: Response, next: NextFunction) => {
   try {
-    console.log(req.file);
     if(!req.file){
       return res.status(400).send('No file uploaded');
     }
 
     const newDoc = new DriveDocument({
-      etiquetteCours: req.body.etiquetteCours,
-      etiquettePromo: req.body.etiquettePromo,
+      etiquetteCours: req.body.cours,
+      etiquettePromo: req.body.promo,
       semestre: req.body.semestre,
-      mailOwner: req.body.mailOwner,
-      driveDocument: req.file.buffer,
-      nom_fichier: req.body.nom_fichier
+      // mailOwner: req.body.mailOwner,
+      mailOwner : req.body.mailOwner,
+      driveDocument: fs.readFileSync(req.file.path),
+      nom_fichier: req.body.name
     });
 
     const savedDoc = await newDoc.save();

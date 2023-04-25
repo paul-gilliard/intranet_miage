@@ -1,4 +1,4 @@
-import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Component, OnChanges, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { DriveDocument } from 'src/app/models/driveDocument.model';
 import { DocumentService } from 'src/app/services/document.service';
@@ -13,7 +13,7 @@ import { CursusStructureService } from 'src/app/services/cursus-structure.servic
 export class DriveDocumentComponent implements OnInit, OnChanges{
 
   documents!: DriveDocument[];
-  document!: DriveDocument;
+  documentInsert!: DriveDocument;
   sub!: Subscription;
   promo!: String;
   semestre!: String;
@@ -23,11 +23,11 @@ export class DriveDocumentComponent implements OnInit, OnChanges{
 
   constructor(private documentService: DocumentService, private cursusStructureService: CursusStructureService){ }
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.cursusStructureService.getCursusStructure().subscribe(data => {
       this.cursusStructure = data;
     });
-    
+    this.getAllDocuments();    
   }
   
   ngOnChanges(): void {
@@ -37,17 +37,17 @@ export class DriveDocumentComponent implements OnInit, OnChanges{
   getAllDocuments(){
     this.sub = this.documentService.getAllDocuments().subscribe({
       next: document => {
-        this.documents?.push(document);
+        this.documents?.push(document);        
       }
     });
   }
 
   insertDocument(file : File, etiquetteCours: String, etiquettePromo: String, semestre: String, mail: String){
-    this.document.etiquetteCours = etiquetteCours;
-    this.document.etiquettePromo = etiquettePromo;
-    this.document.semestre = semestre;
-    this.document.mailOwner = mail;
-    this.document.driveDocument = file;
+    this.documentInsert.etiquetteCours = etiquetteCours;
+    this.documentInsert.etiquettePromo = etiquettePromo;
+    this.documentInsert.semestre = semestre;
+    this.documentInsert.mailOwner = mail;
+    this.documentInsert.driveDocument = file;
   }
 
   getPromo(promo: String){
