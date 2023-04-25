@@ -129,9 +129,7 @@ export class MessagerieDiscussionComponent implements OnInit {
        
 });
   }
-  getAlignement(message: MessagePrive) {
  
-}
 sendMessage(messageString: String, sender: string) {
   const currentUserName = localStorage.getItem('currentUserName')!;
   this.message.text = messageString;
