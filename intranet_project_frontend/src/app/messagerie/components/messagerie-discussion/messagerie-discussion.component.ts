@@ -68,6 +68,10 @@ export class MessagerieDiscussionComponent implements OnInit {
   async ngOnInit() {
     // A chaque qu'on click sur un user ce composant met à jour la variable messageriePrivee
     //Il est averti par le service
+      if (Notification.permission !== 'granted') {
+      Notification.requestPermission();
+    }
+
    this.service.messageriePrive$.subscribe(messageriePrivee => {
     this.messageriePrive = messageriePrivee;
      
@@ -106,13 +110,14 @@ export class MessagerieDiscussionComponent implements OnInit {
         emeteur: message.emeteur,
         text: message.text,
         recepteur: message.recepteur,
-       
-        
-      
       
       });
  
   } else if (localStorage.getItem('currentRoom')?.includes(message.recepteur)) {
+      const notification = new Notification('Nouveau message reçu', {
+          body: `Vous avez reçu un message de ${message.emetteur}`,
+          icon: 'path/to/icon.png'
+        });
     //Montrez un PoP'Up
     console.log(' vous avez reçu un message de ', message.emetteur);
 

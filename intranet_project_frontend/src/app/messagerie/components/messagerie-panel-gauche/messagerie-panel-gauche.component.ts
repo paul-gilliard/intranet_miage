@@ -53,7 +53,7 @@ conversation: any;
   this.userService.getAllUsers().subscribe(
   (response: User[]) => {
     console.log('Requête réussie', response);
-      this.usersList = response.filter(user => !user.name.includes('test'));
+      this.usersList = response.filter(user => !/test/i.test(user.name));
       
   },
   (error) => {

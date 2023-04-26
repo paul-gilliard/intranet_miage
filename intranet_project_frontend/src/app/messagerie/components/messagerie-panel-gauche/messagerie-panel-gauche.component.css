@@ -41,13 +41,14 @@ ul {
     word-wrap: break-word;
     width: 90%;
     box-shadow:
-        1px 1px 1px 1px wheat;
-    background-color: #4CB3ED;
+        1px 1px 1px 1px black;
+    background-color: #41D3F3;;
        
         border-color: #4CB3ED;
         font-size: 16px;
-        height: 7%;
+        height: 8%;
         padding-top: 5px;
+
         
 }
 ::-webkit-scrollbar {
