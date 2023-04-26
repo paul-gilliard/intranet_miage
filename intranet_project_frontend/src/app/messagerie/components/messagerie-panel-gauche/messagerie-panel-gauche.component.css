@@ -12,17 +12,20 @@
     background-color: #FFFFFF;
     height: 60%;
     overflow: auto;
+    
 }
 ul {
     list-style-type: none;
 }
 .userList{
     margin-top: 15%;
+   
+    
 }
 .listUser{
     border: 1px solid white;
         border-radius: 2px;
-        margin-right: 2%;
+        word-wrap: break-word;
         width: 90%;
         box-shadow:
             1px 1px 1px 1px wheat;

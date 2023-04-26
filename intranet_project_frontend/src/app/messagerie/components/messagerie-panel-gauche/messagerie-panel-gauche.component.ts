@@ -49,16 +49,16 @@ conversation: any;
 
   ngOnInit() {
     
-   this.userService.getAllUsers().subscribe(
-      (response: User[]) => {
-        console.log('requête réussi', response);
-        //faire appel à la fonction qui donne tous les utlisteurs avec qui on a échangé!!!!!!!!
-        this.usersList = response;
-      },
-      (error) => {
-        console.error('Erreur de requête', error);
-      }
-    ); 
+  this.userService.getAllUsers().subscribe(
+  (response: User[]) => {
+    console.log('Requête réussie', response);
+    this.usersList = response.filter(user => !user.name.includes('test'));
+  },
+  (error) => {
+    console.error('Erreur de requête', error);
+  }
+);
+
     this.messagerieService.getMessagePrivate().subscribe(data => {
       console.log("dans panel :",data);
       // Traitez ici les données reçues du socket

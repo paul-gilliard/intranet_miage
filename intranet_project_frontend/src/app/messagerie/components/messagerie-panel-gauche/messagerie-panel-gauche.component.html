@@ -28,7 +28,7 @@
                 </ul>
                 <ul class="listePersonne"*ngFor="let user of usersList" (click)="onUserClick(user)" >
                     <li *ngIf="user!=null "  class="listUser">
-                        <i class="bi bi-person"></i><span style="cursor: pointer; pointer-events: auto;">{{user.name}}</span>
+                        <i class="bi bi-person"></i><span style="cursor: pointer; pointer-events: auto;">{{user.name.split(' ')[0]}}</span>
                     </li>
                 
                 </ul>
