@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, Output, EventEmitter, ViewChild } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { DocumentService } from 'src/app/services/document.service';
 
@@ -10,6 +10,7 @@ import { DocumentService } from 'src/app/services/document.service';
 export class ModalImportComponent implements OnInit{
 
   @Input() listeCours: any;
+  @Output() isImport = new EventEmitter<Boolean>();
   isPromoChoose!: Boolean;
   isSemestreChoose!: Boolean;
   selectedPromo: any;
@@ -34,6 +35,7 @@ export class ModalImportComponent implements OnInit{
   ngOnInit(): void {
     this.isPromoChoose = false;
     this.isSemestreChoose = false;
+    this.isImport.emit(false);
   }
 
   importDocument() {
@@ -80,5 +82,6 @@ export class ModalImportComponent implements OnInit{
     this.isPromoChoose = false;
     this.isSemestreChoose = false;
     this.importDocumentForm.reset();
+    this.isImport.emit(true);
   }
 }

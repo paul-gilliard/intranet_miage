@@ -2,7 +2,7 @@ import { NextFunction, Request, Response } from 'express';
 import DriveDocument from '../models/driveDocument.model';
 import * as fs from 'fs';
 import * as path from 'path';
-
+import { ObjectId } from 'mongodb';
 
 export const insertDocument = async (req: Request, res: Response, next: NextFunction) => {
   try {
@@ -81,9 +81,6 @@ export const getDocumentsBySemestre = async (req: Request, res: Response, next: 
 
 export const getDocumentsByCours = async (req: Request, res: Response, next: NextFunction) => {
   const cours = req.params.cours;
-  console.log(cours);
-  
-  
   try {
     const driveDocument = await DriveDocument.find({ etiquetteCours: cours });
     if (!driveDocument) {
@@ -112,5 +109,21 @@ export const getDocumentById = async (req: Request, res: Response, next: NextFun
   }
 }
 
+export const deleteDocument = async (req: Request, res: Response) => {
+  console.log("coucou");
+  
+  const id = req.params.id;
+  try {
+    const _id = new ObjectId(id);
+    const result = await DriveDocument.deleteOne(_id);
 
+    if (result.deletedCount === 1) {
+      res.status(200).json({ message: `Le document a été supprimé.` });
+    } else {
+      res.status(404).json({ message: `Le document n'a pas été trouvé.` });
+    }
+  } catch (error) {
+    res.status(500).json({ message: 'Une erreur est survenue' });
+  }
+}
 

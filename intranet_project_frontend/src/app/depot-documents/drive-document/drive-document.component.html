@@ -15,11 +15,13 @@
             </div>
         </div>        
         <div class="row documents">
-            <div class="col-md-2 document clickable-card" *ngFor="let document of documents" (click)="downloadDocument(document)">
+            <div class="col-md-2 document" *ngFor="let document of documents">
                 <span class="badge badge-promo .w-auto">{{document.etiquettePromo}}</span>
                 <span class="badge badge-semestre">{{document.semestre}}</span>
                 <span class="badge badge-cours">{{document.etiquetteCours}}</span>
-                <br/> <h4>{{document.nom_fichier}}</h4>
+                <br/> <h5>{{document.nom_fichier}}</h5>
+                <button type="button" class="btn btn-link" (click)="downloadDocument(document)"><i class="bi bi-download"></i></button>
+                <button type="button" class="btn btn-link" (click)="deleteDocument(document)"><i class="bi bi-trash-fill"></i></button>
             </div>
         </div>
     </div>
@@ -27,6 +29,6 @@
 
 <div class="modal fade" id="importDocumentModal">
     <div class="modal-dialog">
-        <app-modal-import [listeCours]="cursusStructure"></app-modal-import>
+        <app-modal-import [listeCours]="cursusStructure" (isImport)="onImport($event)"></app-modal-import>
     </div>
 </div>

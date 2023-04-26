@@ -1,7 +1,6 @@
-import { Request } from 'express';
 import { Router } from 'express';
 import multer, { Multer } from 'multer';
-import { insertDocument, getAllDocuments, getDocumentsByPromo, getDocumentsBySemestre, getDocumentsByCours, getNumberOfDocuments, getDocumentById} from '../controllers/driveDocument.controller';
+import { insertDocument, getAllDocuments, getDocumentsByPromo, getDocumentsBySemestre, getDocumentsByCours, getNumberOfDocuments, getDocumentById, deleteDocument} from '../controllers/driveDocument.controller';
 import { authenticateToken } from '../services/auth.service';
 
 const driveDocumentRouter = Router();
@@ -23,6 +22,6 @@ driveDocumentRouter.get('/getNumberOfDocuments', authenticateToken, getNumberOfD
 
 driveDocumentRouter.get('/getDocumentById/:id', authenticateToken, getDocumentById);
 
-
+driveDocumentRouter.get('/deleteDocument/:id', authenticateToken, deleteDocument);
 
 export default driveDocumentRouter;

@@ -31,11 +31,18 @@ export class DocumentService {
 
     insertDocument(formData: FormData) {
         return this.http.post<DriveDocument>('http://localhost:3000/api/driveDocument/insertDocument', formData);
-      }
+    }
 
     getDocumentById(id: string){
         return this.http.get('http://localhost:3000/api/driveDocument/getDocumentById/' + id, { responseType: 'blob' });
     }
 
+    deleteDocument(id: string){       
+        console.log(id);
+        console.log("------------------------------------------- JE PASSE PAR LA !!!! --------------------");
+        
+        return this.http.get('http://localhost:3000/api/driveDocument/deleteDocument/'+ id);
+        
+    }
 
 }

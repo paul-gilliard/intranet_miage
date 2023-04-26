@@ -121,4 +121,21 @@ export class DriveDocumentComponent implements OnInit{
       );
     }
   }
+
+  deleteDocument(doc: any){
+    if (confirm(`Voulez-vous supprimer "${doc.nom_fichier}" ?`)) {
+      console.log(doc);
+      
+      this.documentService.deleteDocument(doc._id);
+    }
+    this.getDocuments(this.link);
+  }
+
+  onImport(isImport: Boolean) {
+    if(isImport){
+      let link = this.link;
+      this.ngOnInit();
+      this.link = link;
+    }
+  }
 }
