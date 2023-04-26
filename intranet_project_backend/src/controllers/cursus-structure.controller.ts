@@ -3,7 +3,7 @@ import { Request, Response } from 'express';
 export const getCursusStructure = async (req: Request, res: Response) => {
       return res.status(200).json([
         {
-          title: 'License 3', 
+          title: 'Licence 3', 
             semestres:[
               {
                 title: 'Semestre 5',

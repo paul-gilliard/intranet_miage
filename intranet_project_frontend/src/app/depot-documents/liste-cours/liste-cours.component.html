@@ -1,13 +1,17 @@
 <div class="container">
+  <div class="button-container">
+    <button class="btn btn-link big" (click)="onClick('', '', '')">Tous les documents</button>
+  </div>
+  
   <ul class="nav">
     <li class="nav-item" *ngFor="let promo of listeCours">
-      <button class="btn btn-link" (click)="onClick('', '', promo.title)">{{promo.title}}</button>
-      <ul>
+      <button class="btn btn-link big" (click)="onClickPromo('', '', promo.title)">{{promo.title}}</button>
+      <ul [hidden]="!isShow">
         <li class="nav-item" *ngFor="let semestre of promo.semestres">
-          <button class="btn btn-link" (click)="onClick('', semestre.title, promo.title)">{{semestre.title}}</button>
-          <ul>
+          <button class="btn btn-link medium" (click)="onClickSemestre('', semestre.title, promo.title)">{{semestre.title}}</button>
+          <ul [hidden]="!isShowCours">
             <li class="nav-item" *ngFor="let cours of semestre.cours">
-              <button class="btn btn-link" (click)="onClick(cours, semestre.title, promo.title)">{{cours}}</button>
+              <button class="btn btn-link small" (click)="onClick(cours, semestre.title, promo.title)">{{cours}}</button>
             </li>
           </ul>
         </li>

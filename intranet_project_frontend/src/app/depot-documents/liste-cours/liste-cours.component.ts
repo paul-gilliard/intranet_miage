@@ -10,26 +10,43 @@ export class ListeCoursComponent {
 
   @Input() listeCours: any;
 
-  @Output() link = new EventEmitter<String>();
-  @Output() promo = new EventEmitter<String>();
-  @Output() semestre = new EventEmitter<String>();
-  @Output() cours = new EventEmitter<String>();
+  promo! : String;
+  semestre! : String;
+  cours! : String;
+  isShow : Boolean = false;
+  isShowCours : Boolean = false;
 
   @ViewChild(NgbAccordion)
   accordion!: NgbAccordion;
 
+  @Output() linkChange = new EventEmitter<String>();
+  link!: String;
+
+  onLinkChange(value: String) {
+    this.link = value;
+    this.linkChange.emit(this.link);
+  }
+
   onClick(cours: String, semestre: String, promo: String) {
     if(cours == ''){
       if(semestre == ''){
-        this.link.emit(promo);
+        this.onLinkChange(promo);
       }else{
-        this.link.emit(promo+' > '+semestre);
+        this.onLinkChange(promo+' > '+semestre);
       }
     }else{
-      this.link.emit(promo+' > '+semestre+' > '+cours);
+      this.onLinkChange(promo+' > '+semestre+' > '+cours);
     }
-    this.promo.emit(promo);
-    this.semestre.emit(semestre);
-    this.cours.emit(cours);
+  }
+
+  onClickPromo(cours: String, semestre: String, promo: String) {
+    this.onClick(cours, semestre, promo);
+    this.isShow = !this.isShow;
+    this.isShowCours = false;
+  }
+
+  onClickSemestre(cours: String, semestre: String, promo: String) {
+    this.onClick(cours, semestre, promo);
+    this.isShowCours = !this.isShowCours;
   }
 }

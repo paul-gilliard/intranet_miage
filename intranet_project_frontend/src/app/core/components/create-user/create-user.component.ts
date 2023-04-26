@@ -12,7 +12,7 @@ export class CreateUserComponent {
 
   createUserForm = this.formBuilder.group({
     name: [, [Validators.required, ]],
-    password: ["00000000", []],
+    password: [, [Validators.required, ]],
     email: [, [Validators.required, ]],
     promo: [, [Validators.required, ]],
     statut: [, [Validators.required, ]]
@@ -31,7 +31,7 @@ export class CreateUserComponent {
     let userToCreate: User = {
       name: this.createUserForm.get('name')?.value!,
       email: this.createUserForm.get('email')?.value!,
-     password: this.createUserForm.get('password')?.value!,
+      password: this.createUserForm.get('password')?.value!,
       promo: this.createUserForm.get('promo')?.value!,
       statut: this.createUserForm.get('statut')?.value!
     };

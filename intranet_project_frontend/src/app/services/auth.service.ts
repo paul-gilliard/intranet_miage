@@ -12,8 +12,8 @@ export class AuthService {
 
   }
 
-  authenticateUser(email: string) {
-    return this.http.post('http://localhost:3000/login', { email });
+  authenticateUser(email: string, password: string) {
+    return this.http.post('http://localhost:3000/login', { email, password });
   }
   
   isAuthenticated(): boolean {

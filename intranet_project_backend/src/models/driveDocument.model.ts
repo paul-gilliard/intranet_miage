@@ -7,6 +7,7 @@ export interface DriveDocument {
   mailOwner: string;
   driveDocument: Buffer;
   nom_fichier: string;
+  type_fichier: string;
 }
 
 const DocumentSchema = new Schema<DriveDocument>(
@@ -32,6 +33,10 @@ const DocumentSchema = new Schema<DriveDocument>(
       required: true 
     },
     nom_fichier: { 
+      type: String, 
+      required: true 
+    },
+    type_fichier: { 
       type: String, 
       required: true 
     },

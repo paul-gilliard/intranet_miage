@@ -31,13 +31,14 @@ export class DocumentService {
 
     insertDocument(formData: FormData) {
         return this.http.post<DriveDocument>('http://localhost:3000/api/driveDocument/insertDocument', formData);
-      }
+    }
 
-    //structure cours
+    getDocumentById(id: string){
+        return this.http.get('http://localhost:3000/api/driveDocument/getDocumentById/' + id, { responseType: 'blob' });
+    }
 
-    /**
-     * driveDocumentRouter.get('/getdriveDocumentsStructure', getdriveDocumentsStructure);
-     */
-
+    deleteDocument(id: string){        
+        return this.http.get('http://localhost:3000/api/driveDocument/deleteDocument/'+ id);
+    }
 
 }

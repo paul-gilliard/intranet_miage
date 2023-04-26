@@ -2,12 +2,30 @@
     background-color: #F5F5F5;
     padding-left: 1%;
     padding-top: 1%;
-    padding-bottom: 15%;
-    max-height: 84vh;
+    padding-bottom: 20%;
+    max-height: 85vh;
 }
 
 .panel-droit {
-    height: 84vh;
+    display: block;
+    overflow-y: auto;
+    max-height: 85vh;
+}
+
+.panel-haut {
+    margin-top: 2%;
+    min-height: 8vh;
+}
+
+.link {
+    position: absolute;
+    margin-left: 2%;
+    background-color: white;
+}
+
+.import {
+    position: absolute;
+    left: 85%;
 }
 
 .badge {
@@ -34,22 +52,14 @@
     background-color: #F5F5F5;
     padding: 1%;
     margin: 1%;
+    border-radius: 15%;
 }
 
-.link {
-    margin-left: 2%;
-}
-
-.import {
-    position: absolute;
-    left: 85%;
-}
-
-.panel-haut {
-    margin-top: 2%;
-    min-height: 8vh;
-}
-
-button {
+.btn-default {
     background-color: #4CB3ED;
+    margin: 1%;
+}
+
+.btn-link:hover {
+    background-color: #9bc8e2;
 }

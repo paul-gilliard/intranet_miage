@@ -2,5 +2,45 @@
     display: block;
     height: 84vh;
     overflow-y: auto;
-    padding-bottom: 20%;
+}
+
+button:hover {
+    background-color: #9bc8e2;
+}
+
+button:focus {
+    background-color: #4CB3ED;
+    color : black;
+}
+
+.btn-link {
+    text-decoration: none;
+    text-align: left;
+}
+
+.button-container {
+    position: fixed;
+    background-color: #F5F5F5;
+}
+
+.nav {
+    margin-top: 40px;
+    padding-bottom: 15%;
+}
+
+ul, li {
+    list-style-type: none;
+    text-align: left;
+}
+
+.big {
+    font-size: large;
+}
+
+.medium {
+    font-size: medium;
+}
+
+.small {
+    font-size: small;
 }
