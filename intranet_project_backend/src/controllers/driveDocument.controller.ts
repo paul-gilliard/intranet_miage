@@ -1,6 +1,7 @@
 import { NextFunction, Request, Response } from 'express';
 import DriveDocument from '../models/driveDocument.model';
 import * as fs from 'fs';
+import * as path from 'path';
 
 
 export const insertDocument = async (req: Request, res: Response, next: NextFunction) => {
@@ -16,7 +17,8 @@ export const insertDocument = async (req: Request, res: Response, next: NextFunc
       // mailOwner: req.body.mailOwner,
       mailOwner : req.body.mailOwner,
       driveDocument: fs.readFileSync(req.file.path),
-      nom_fichier: req.body.name
+      nom_fichier: req.body.name,
+      type_fichier: req.file.originalname ? path.extname(req.file.originalname) : ''
     });
 
     const savedDoc = await newDoc.save();
@@ -92,6 +94,22 @@ export const getDocumentsByCours = async (req: Request, res: Response, next: Nex
     res.status(500).json({ message: 'Une erreur est survenue' });
   }
 
+}
+
+export const getDocumentById = async (req: Request, res: Response, next: NextFunction) => {
+  const id = req.params.id;
+  try {
+    const document = await DriveDocument.findById(id);
+    if (!document) {
+      return res.status(404).json({ message: 'DriveDocument introuvable' });
+    }
+    
+    res.setHeader('Content-Type', 'application/octet-stream');
+    res.setHeader('Content-Disposition', `attachment; filename=${document.nom_fichier}`);
+    res.send(document.driveDocument);
+  } catch (error) {
+    res.status(500).json({ message: 'Une erreur est survenue' });
+  }
 }
 
 
