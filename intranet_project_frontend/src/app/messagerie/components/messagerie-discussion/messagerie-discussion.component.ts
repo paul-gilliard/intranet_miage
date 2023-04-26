@@ -66,18 +66,16 @@ export class MessagerieDiscussionComponent implements OnInit {
 
   async ngOnInit() {
     // A chaque qu'on click sur un user ce composant met à jour la variable messageriePrivee
-    //Il est avertit par le service
+    //Il est averti par le service
    this.service.messageriePrive$.subscribe(messageriePrivee => {
-      this.messageriePrive = messageriePrivee;
+    this.messageriePrive = messageriePrivee;
      
-     this.clickedUserName = this.service.clickedUser.name;
+    this.clickedUserName = this.service.clickedUser.name;
      //j'affecte des ID pour régler le probléme des affichages
      for (let i = 0; i < this.messageriePrive.messagesPrive.length; i++) {
     this.messageriePrive.messagesPrive[i].id = this.uuidv4();
      }
-    
-     
-    
+
    }); 
     this.service.getIsMessageriePrivateObservable().subscribe(isPrivate => {
       this.isPrivateMessage = isPrivate;

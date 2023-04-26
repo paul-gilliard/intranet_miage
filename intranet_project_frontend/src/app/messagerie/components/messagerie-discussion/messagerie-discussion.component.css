@@ -137,7 +137,7 @@ input {
    min-height: 50%;
    position: relative;;
    overflow-x: hidden;
-   background-image:  url('../../../../assets/images/imgBackgroundBodyMessage.jpeg') ;
+  /* background-image:  url('../../../../assets/images/imgBackgroundBodyMessage.jpeg') ;*/
   
 
 }
