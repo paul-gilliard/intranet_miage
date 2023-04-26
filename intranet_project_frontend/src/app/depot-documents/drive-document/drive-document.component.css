@@ -1,11 +1,13 @@
 .panel-gauche {
     background-color: #F5F5F5;
-    padding: 1%;
-    height: 100vh;
+    padding-left: 1%;
+    padding-top: 1%;
+    padding-bottom: 15%;
+    max-height: 84vh;
 }
 
 .panel-droit {
-    height: 100vh;
+    height: 84vh;
 }
 
 .badge {
@@ -24,13 +26,30 @@
     background-color: #4CB3ED;
 }
 
+.documents {
+    margin-top: 1%;
+}
+
 .document {
     background-color: #F5F5F5;
     padding: 1%;
     margin: 1%;
 }
 
+.link {
+    margin-left: 2%;
+}
+
+.import {
+    position: absolute;
+    left: 85%;
+}
+
+.panel-haut {
+    margin-top: 2%;
+    min-height: 8vh;
+}
+
 button {
     background-color: #4CB3ED;
-    margin-top: 1%;
 }

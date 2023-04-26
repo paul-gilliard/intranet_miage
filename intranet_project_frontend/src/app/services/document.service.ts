@@ -10,22 +10,34 @@ export class DocumentService {
     constructor(private http: HttpClient) { }
 
     getAllDocuments(){
-        return this.http.get<DriveDocument>('http://localhost:3000/api/document/getAllDocuments');
+        return this.http.get<DriveDocument[]>('http://localhost:3000/api/driveDocument/getAllDocuments');
+    }
+
+    getNumberOfDocuments(){
+        return this.http.get<JSON>('http://localhost:3000/api/driveDocument/getNumberOfDocuments');
     }
 
     getDocumentsBySemestre(semestre: String){
-        return this.http.get<DriveDocument>('http://localhost:3000/api/document/getDocumentsBySemestre/' + semestre);
+        return this.http.get<DriveDocument[]>('http://localhost:3000/api/driveDocument/getDocumentsBySemestre/' + semestre);
     }
 
     getDocumentsByCours(cours: String){
-        return this.http.get<DriveDocument>('http://localhost:3000/api/document/getDocumentsByCours/' + cours);
+        return this.http.get<DriveDocument[]>('http://localhost:3000/api/driveDocument/getDocumentsByCours/' + cours);
     }
 
     getDocumentsByPromo(promo: String){
-        return this.http.get<DriveDocument>('http://localhost:3000/api/document/getDocumentsByPromo/' + promo);
+        return this.http.get<DriveDocument[]>('http://localhost:3000/api/driveDocument/getDocumentsByPromo/' + promo);
     }
 
-    insertDocument(document: DriveDocument){
-        return this.http.post<DriveDocument>('http://localhost:3000/api/document/insertDocument', document);
-    }
+    insertDocument(formData: FormData) {
+        return this.http.post<DriveDocument>('http://localhost:3000/api/driveDocument/insertDocument', formData);
+      }
+
+    //structure cours
+
+    /**
+     * driveDocumentRouter.get('/getdriveDocumentsStructure', getdriveDocumentsStructure);
+     */
+
+
 }

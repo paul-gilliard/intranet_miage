@@ -14,4 +14,8 @@ export class CalendarService {
     return this.http.get<IIcsCalendar>('http://localhost:3000/api/calendar/getAllEventsFrom/'+ name);
 }
 
+getNumberOfEventToday(promo : String){
+  return this.http.get<number>('http://localhost:3000/api/calendar/getCountEventTodayByPromo/' + promo);
+}
+
 }

@@ -17,7 +17,6 @@ export class HighlightDirective {
         console.log("Link " + linkUrl);
         if (currentUrl!='/') {
         if ( linkUrl.includes(currentUrl)) {
-          console.log("parfait égale");
           this.el.nativeElement.classList.add('active');
           this.el.nativeElement.firstChild.style.backgroundColor = 'white';
           this.el.nativeElement.firstChild.style.borderRadius = '20px 20px 20px 20px';

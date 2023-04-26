@@ -1,4 +1,5 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output, ViewChild } from '@angular/core';
+import { NgbAccordion } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-liste-cours',
@@ -7,69 +8,28 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class ListeCoursComponent {
 
+  @Input() listeCours: any;
+
+  @Output() link = new EventEmitter<String>();
   @Output() promo = new EventEmitter<String>();
   @Output() semestre = new EventEmitter<String>();
   @Output() cours = new EventEmitter<String>();
 
-  listeCours = [
-    {
-      title: 'License 3', 
-        semestres:[
-          {
-            title: 'Semestre 5',
-            cours: [
-              'Cours 1', 
-              'Cours 2'
-            ]
-          },
-          {
-            title: 'Semestre 6'
-          }
-        ]
-    },
-    {
-      title: 'Master 1', 
-        semestres:[
-          {
-            title: 'Semestre 7',
-            cours: [
-              'Cours 1', 
-              'Cours 2'
-            ]
-          },
-          {
-            title: 'Semestre 8'
-          }
-        ]
-    },
-    {
-      title: 'Master 2', 
-        semestres:[
-          {
-            title: 'Semestre 9',
-            cours: [
-              'Cours 1', 
-              'Cours 2'
-            ]
-          },
-          {
-            title: 'Semestre 10'
-          }
-        ]
+  @ViewChild(NgbAccordion)
+  accordion!: NgbAccordion;
+
+  onClick(cours: String, semestre: String, promo: String) {
+    if(cours == ''){
+      if(semestre == ''){
+        this.link.emit(promo);
+      }else{
+        this.link.emit(promo+' > '+semestre);
+      }
+    }else{
+      this.link.emit(promo+' > '+semestre+' > '+cours);
     }
-  ];
-
-  onClickPromo(promo: String) {
-    console.log("COUCOU");
     this.promo.emit(promo);
-  }
-
-  onClickSemestre(semestre: String) {
     this.semestre.emit(semestre);
-  }
-
-  onClickCours(cours: String) {
-    console.log("COUCOU");    
     this.cours.emit(cours);
   }
 }

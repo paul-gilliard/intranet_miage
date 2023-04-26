@@ -3,7 +3,8 @@ import { saveIcsFileToMongoDB } from '../services/read-and-load-ics.service';
 
 import {
     readAndLoadIcs,
-    getEventsFrom
+    getEventsFrom,
+    countEventsForCurrentDay
   } from '../controllers/calendar.controller';
   
 
@@ -15,6 +16,9 @@ calendarRouter.post('/readAndLoad', readAndLoadIcs);
 
 // getAll events en BDD
 calendarRouter.get('/getAllEventsFrom/:name', getEventsFrom);
+
+// getAll events en BDD
+calendarRouter.get('/getCountEventTodayByPromo/:promo', countEventsForCurrentDay);
 
 
 
