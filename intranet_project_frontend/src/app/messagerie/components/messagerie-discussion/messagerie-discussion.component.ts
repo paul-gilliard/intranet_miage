@@ -71,13 +71,13 @@ export class MessagerieDiscussionComponent implements OnInit {
     this.messageriePrive = messageriePrivee;
      
     this.clickedUserName = this.service.clickedUser.name;
-     //j'affecte des ID pour régler le probléme des affichages
+   
   
 
    }); 
     this.service.getIsMessageriePrivateObservable().subscribe(isPrivate => {
       this.isPrivateMessage = isPrivate;
-  // Faites quelque chose avec la nouvelle valeur de _isMessageriePrivate
+  
 });
 
     //this.socket = io(this.url);
@@ -162,7 +162,7 @@ sendMessage(messageString: String, sender: string) {
   }
   
   isCurrentUser(emetteur: String): boolean {
-  return emetteur === localStorage.getItem('currentUser');
+  return emetteur === localStorage.getItem('currentUserName');
   }
   isCurrentUserPrivate(emetteur: String): boolean {
    return this.currentUserEmail === emetteur;
