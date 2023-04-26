@@ -55,10 +55,11 @@
     border-radius: 15%;
 }
 
-button {
+.btn-default {
     background-color: #4CB3ED;
+    margin: 1%;
 }
 
-.clickable-card:hover {
-    cursor: pointer;
-  }
+.btn-link:hover {
+    background-color: #9bc8e2;
+}

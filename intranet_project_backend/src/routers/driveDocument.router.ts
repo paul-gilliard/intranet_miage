@@ -1,7 +1,6 @@
-import { Request } from 'express';
 import { Router } from 'express';
-import multer, { Multer } from 'multer';
-import { insertDocument, getAllDocuments, getDocumentsByPromo, getDocumentsBySemestre, getDocumentsByCours, getNumberOfDocuments, getDocumentById} from '../controllers/driveDocument.controller';
+import multer from 'multer';
+import { insertDocument, getAllDocuments, getDocumentsByPromo, getDocumentsBySemestre, getDocumentsByCours, getNumberOfDocuments, getDocumentById, deleteDocument} from '../controllers/driveDocument.controller';
 
 const driveDocumentRouter = Router();
 // Configuration de multer pour stocker les fichiers en mémoire
@@ -22,6 +21,6 @@ driveDocumentRouter.get('/getNumberOfDocuments', getNumberOfDocuments);
 
 driveDocumentRouter.get('/getDocumentById/:id', getDocumentById);
 
-
+driveDocumentRouter.get('/deleteDocument/:id', deleteDocument);
 
 export default driveDocumentRouter;
