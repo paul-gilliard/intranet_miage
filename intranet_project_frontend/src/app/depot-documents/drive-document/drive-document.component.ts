@@ -97,4 +97,28 @@ export class DriveDocumentComponent implements OnInit{
     let myModal = new Modal (element);
     myModal.show();
   }
+
+  downloadDocument(doc: any) {
+    if (confirm(`Voulez-vous télécharger "${doc.nom_fichier}" ?`)) {
+      // Effectue une requête HTTP GET pour télécharger le document  
+      this.documentService.getDocumentById(doc._id).subscribe(
+        (blob) => {    
+          // Crée un objet URL pour le blob et ouvre une nouvelle fenêtre pour télécharger le fichier
+          const url = window.URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          document.body.appendChild(a);
+          a.href = url;
+          let filename = doc.nom_fichier + doc.type_fichier;
+          console.log(doc.type_fichier, filename);
+          
+          a.download = filename;
+          a.click();
+          document.body.removeChild(a);
+        },
+        (error) => {
+          console.log(error);
+        }
+      );
+    }
+  }
 }

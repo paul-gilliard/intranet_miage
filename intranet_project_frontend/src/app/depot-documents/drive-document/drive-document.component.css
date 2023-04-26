@@ -53,3 +53,7 @@
 button {
     background-color: #4CB3ED;
 }
+
+.clickable-card:hover {
+    cursor: pointer;
+  }
