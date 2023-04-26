@@ -19,7 +19,8 @@ import { HighlightDirective } from './header/highlight.directive';
   ],
   exports:[
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    HighlightDirective
   ]
 })
 export class SharedModule { }

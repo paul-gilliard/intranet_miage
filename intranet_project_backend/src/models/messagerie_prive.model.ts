@@ -3,6 +3,7 @@ import { Schema, model, Document } from 'mongoose';
 export interface MessagePrive {
   emeteur: string;
   text: string;
+  recepteur: string;
 }
 
 export interface Messagerie {

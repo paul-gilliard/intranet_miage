@@ -1,0 +1,13 @@
+.calendrier {
+    max-height: 600px;
+  overflow-y: auto;
+  }
+
+.mail {
+    background-color:  #4CB3ED; 
+    border-radius: 20px; 
+    width: 125px; 
+    border-color: #4CB3ED; 
+    margin-left: 50%;
+    margin-top: 15px;
+}

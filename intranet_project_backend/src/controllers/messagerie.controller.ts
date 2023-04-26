@@ -1,6 +1,7 @@
 import { Request, Response } from 'express';
 import Messagerie, { Message } from '../models/messagerie.model';
 import MessageriePrive, { MessagePrive } from '../models/messagerie_prive.model';
+import { Socket } from "socket.io";
 
 export const getAllMessages = async (req: Request, res: Response) => {
     try {
@@ -43,7 +44,6 @@ export const sendMessage = async (req: Request, res: Response) => {
 
 export const sendPrivateMessage = async (req: Request, res: Response) => {
   const { emeteur, recepteur, text } = req.body;
-
   try {
     let messagerie = await MessageriePrive.findOne({
       $or: [
@@ -63,10 +63,19 @@ export const sendPrivateMessage = async (req: Request, res: Response) => {
     const message: MessagePrive = {
       emeteur: emeteur,
       text: text,
+      recepteur: recepteur
+      
     };
     messagerie.messages.push(message);
 
     await messagerie.save();
+    console.log('***************MEssage privé stocker en base*******************')
+    /*
+    io.to(emeteur).to(recepteur).emit('private-message', {
+      emeteur: emeteur,
+      recepteur: recepteur,
+      text: text,
+    });*/
 
     res.status(200).json(messagerie);
   } catch (err) {
@@ -87,8 +96,49 @@ export const getAllPrivateMessages = async (req: Request, res: Response) => {
       $or: [{ emeteur: email }, { recepteur: email }]
     });
     res.json(messages);
+    console.log('le message privé est = '+messages);
   } catch (err) {
     console.error(err);
     res.status(500).send('Server Error');
   }
+  
 }
+export const getPrivateMessages = async (req: Request, res: Response) => {
+  const { emeteur, recepteur } = req.query;
+
+  try {
+    const messagerie = await MessageriePrive.findOne({
+      $or: [
+        { emeteur: emeteur, recepteur: recepteur },
+        { emeteur: recepteur, recepteur: emeteur },
+      ],
+    });
+
+    if (messagerie) {
+      res.status(200).json(messagerie.messages);
+    } else {
+      res.status(404).json({ message: 'Conversation not found' });
+    }
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+};
+export const getPrivateMessagesBetweenUsers = async (req: Request, res: Response) => {
+  const { user1, user2 } = req.query;
+
+  try {
+    const messages = await MessageriePrive.find({
+      $or: [
+        { emeteur: user1, recepteur: user2 },
+        { emeteur: user2, recepteur: user1 },
+      ]
+    });
+    res.status(200).json(messages);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+};
+
+

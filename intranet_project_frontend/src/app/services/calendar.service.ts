@@ -1,0 +1,17 @@
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { IIcsCalendar } from '../models/icsCalendar.model';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class CalendarService {
+
+  constructor(private http: HttpClient) { }
+
+   //Email de l'émetteur
+   getEventsFrom(name: String){
+    return this.http.get<IIcsCalendar>('http://localhost:3000/api/calendar/getAllEventsFrom/'+ name);
+}
+
+}

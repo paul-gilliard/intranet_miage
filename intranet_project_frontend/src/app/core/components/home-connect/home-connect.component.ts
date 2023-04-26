@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { Swiper} from 'swiper';
 
 interface carrouselImage{
   imageSrc: string;
@@ -13,10 +12,9 @@ interface carrouselImage{
 })
 
 export class HomeConnectComponent {
-
-
   
-  listOfFunctionnality = ["Message", "offres", ""]
+  listOfFunctionnality = ["Message", "offres", ""];
+  selectedIndex = 0;
   @Input() images: carrouselImage[] =  [
     {
       imageSrc:
@@ -39,7 +37,7 @@ export class HomeConnectComponent {
       imageAlt: 'person2',
     },
   ];
-  selectedIndex = 0;
+
   ngOnInit(): void{
     this.images =  [
       {
@@ -63,8 +61,5 @@ export class HomeConnectComponent {
         imageAlt: 'person2',
       },
     ];
-   
   }
-  
-
 }

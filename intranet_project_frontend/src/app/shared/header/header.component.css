@@ -1,8 +1,8 @@
 header {
     /* padding: 30px 10%; */
     background-color: #4CB3ED;
-    height:25px;
-    padding-bottom: 3%;
+   /*max-height: 5%;*/
+    /*padding-bottom: 3%;*/
     
   }
   
@@ -19,11 +19,20 @@ header {
   .navbar-nav .nav-link {
     
     font-weight: 500;
-    font-size: 16px;
+    font-size: 14px;
     color: black;
     text-decoration: none;
-    padding: 0 20px;
+   /* padding: 0 20px;*/
     transition: all 0.3s ease 0s;
+    left: 0;
+  }
+  .navbar-nav{
+    width: 100%;
+    left: 0;
+  }
+  #navbarNav{
+    width: 100%;
+
   }
 
   
@@ -33,6 +42,7 @@ header {
   
   .navbar-nav .nav-item {
     transition: all 0.3s ease 0s;
+    width: 20%;
   }
   
   .navbar-nav .nav-item:hover {

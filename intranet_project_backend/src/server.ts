@@ -7,6 +7,7 @@ import userRouter from './routers/users.router';
 import loginRouter from './routers/login.router';
 import messagerieRouter from './routers/messagerie.router';
 import calendarRouter from './routers/calendar.router';
+import driveDocumentRouter from './routers/driveDocument.router';
 
 interface SocketData {
   emeteur: string;
@@ -35,8 +36,15 @@ connectToDatabase();
 app.use('/api/user', userRouter);
 app.use('/api/messagerie', messagerieRouter);
 app.use('/login', loginRouter);
-app.use('/api/calendar', calendarRouter)
+app.use('/api/calendar', calendarRouter);
+app.use('/api/driveDocument', driveDocumentRouter);
+interface PrivateMessage {
+  emeteur: string;
+  recepteur: string;
+  text: string;
+}
 
+//message public
 io.on('connection', (socket: Socket) => {
   console.log('Client connected');
 
@@ -44,7 +52,26 @@ io.on('connection', (socket: Socket) => {
     console.log('New message received', message);
     io.emit('new-message', message);
   });
+  socket.on('join', (data) => {
+    socket.join(data.room);
+    socket.broadcast.to(data.room).emit('user joined');
+    console.log("*****************le room ", data.room, " est ajouté en Broadcast");
+    });
+  socket.on('new-private-message', (message: PrivateMessage) => {
+    console.log('SERVER SOCKET: New private message received', message);
+    // envoyer le message seulement à l'émetteur et au destinataire
 
+    const room = `${message.emeteur}-${message.recepteur}`;
+    socket.join(room); // Ajouter les deux utilisateurs à la salle
+    socket.broadcast.to(room).emit('new-private-message',message);
+    //io.in(room).emit('new-private-message', message);
+    io.emit('new-private-message', message, room);
+    
+    //socket.to(message.emeteur).emit('new-private-message', message);
+    //socket.to(message.recepteur).emit('new-private-message', message);
+  });
+
+  
   socket.on('disconnect', () => {
     console.log('Client disconnected');
   });

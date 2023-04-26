@@ -1,12 +1,11 @@
-<app-header></app-header>
-<!--if <router-outlet></router-outlet> connect-->
+<div *ngIf="!authService.isAuthenticated()">
+  <app-home-login></app-home-login>
+</div>
 
+<div *ngIf="authService.isAuthenticated()">
+  <app-header></app-header>
+  <router-outlet></router-outlet>
+</div>
 
-
-<app-home-connect></app-home-connect>
-
-<!--else-->
-<!--<app-body-of-home></app-body-of-home> --> 
-
-<!--endif-->
 <app-footer></app-footer>
+
