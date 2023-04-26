@@ -1,5 +1,6 @@
 .row{
     height: 80%;
+   
 }
 
 .outils{
@@ -10,6 +11,7 @@
 .liste-personne{
     background-color: #FFFFFF;
     height: 60%;
+    overflow: auto;
 }
 ul {
     list-style-type: none;
@@ -26,4 +28,15 @@ ul {
             1px 1px 1px 1px wheat;
         border-radius: 10px;
         padding-left: 5px;
+}
+::-webkit-scrollbar {
+    background-color: #f5f5f5;
+    width: 5px;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background-color: #4CB3ED;
+    border-radius: 10px;
+    width: 5px;
 }
