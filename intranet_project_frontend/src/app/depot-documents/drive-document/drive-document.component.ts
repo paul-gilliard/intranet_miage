@@ -1,4 +1,4 @@
-import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { DriveDocument } from 'src/app/models/driveDocument.model';
 import { DocumentService } from 'src/app/services/document.service';
@@ -10,7 +10,7 @@ import { CursusStructureService } from 'src/app/services/cursus-structure.servic
   templateUrl: './drive-document.component.html',
   styleUrls: ['./drive-document.component.css']
 })
-export class DriveDocumentComponent implements OnInit, OnChanges{
+export class DriveDocumentComponent implements OnInit{
 
   documents!: DriveDocument[];
   documentInsert!: DriveDocument;
@@ -21,26 +21,32 @@ export class DriveDocumentComponent implements OnInit, OnChanges{
   cours!: String;
   cursusStructure!: JSON;
 
-  constructor(private documentService: DocumentService, private cursusStructureService: CursusStructureService){ }
+  constructor(private documentService: DocumentService, 
+              private cursusStructureService: CursusStructureService){ }
 
   ngOnInit() {
     this.cursusStructureService.getCursusStructure().subscribe(data => {
       this.cursusStructure = data;
     });
-    this.getAllDocuments();    
+    
+    this.getDocuments(this.link);
   }
 
-  ngOnChanges(changes: SimpleChanges): void {
-    for(let link in changes){
-      this.getDocuments(link);
-    }    
+  onLinkChange(link: String) {
+    this.link = link;
+    this.getDocuments(this.link);
   }
 
-  getDocuments(link: String){
-    if(this.link !== null){
-      if(this.cours !== null){
-        this.getDocumentsByCours(this.cours);
-      } else if(this.semestre !== null){
+  async getDocuments(link: String){   
+    if(link !== undefined && link !== ''){
+      let str = link.split(' > ');
+      this.promo = str[0];
+      this.semestre = str[1];
+      this.cours = str[2];
+
+      if(this.cours !== undefined && this.cours !== ''){
+        await this.getDocumentsByCours(this.cours);
+      } else if(this.semestre !== undefined && this.semestre !== ''){
         this.getDocumentsBySemestre(this.semestre);
       } else {
         this.getDocumentsByPromo(this.promo);
@@ -53,29 +59,29 @@ export class DriveDocumentComponent implements OnInit, OnChanges{
   async getAllDocuments(){
     let listeDoc = await this.documentService.getAllDocuments().toPromise();
     if(listeDoc){
-      this.documents = listeDoc;
-    }   
+      this.documents = listeDoc;      
+    }    
   }
 
   async getDocumentsByPromo(promo: String){
     let listeDoc = await this.documentService.getDocumentsByPromo(promo).toPromise();
     if(listeDoc){
       this.documents = listeDoc;
-    }   
+    }
   }
 
   async getDocumentsBySemestre(semestre: String){
     let listeDoc = await this.documentService.getDocumentsBySemestre(semestre).toPromise();
     if(listeDoc){
       this.documents = listeDoc;
-    }   
+    }
   }
 
   async getDocumentsByCours(cours: String){
     let listeDoc = await this.documentService.getDocumentsByCours(cours).toPromise();
     if(listeDoc){
       this.documents = listeDoc;
-    }   
+    }
   }
 
   insertDocument(file : File, etiquetteCours: String, etiquettePromo: String, semestre: String, mail: String){

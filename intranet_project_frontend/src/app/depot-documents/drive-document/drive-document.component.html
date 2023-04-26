@@ -1,7 +1,7 @@
 <div class="row">
     <!-- Panel de gauche -->
     <div class="col-md-2 panel-gauche">
-        <app-liste-cours [listeCours]="cursusStructure" (link)="link = $event" (promo)="promo = $event" (semestre)="semestre = $event" (cours)="cours = $event"></app-liste-cours>
+        <app-liste-cours [listeCours]="cursusStructure" (linkChange)="onLinkChange($event)"></app-liste-cours>
     </div>
 
     <!-- Panel de droite -->
