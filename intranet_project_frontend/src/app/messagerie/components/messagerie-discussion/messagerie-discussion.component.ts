@@ -7,7 +7,7 @@ import { MessageriePanelGaucheComponent } from '../messagerie-panel-gauche/messa
 import { MessagerieComponent } from '../messagerie/messagerie.component';
 import { MessagePrive, MessageriePrivee } from 'src/app/models/messagePrivee.model';
 import { CurrentUserMessageDirective } from './CurrentUserMessageDirective';
-import { MessageFormatDirective } from './messageFormat.directive';
+
 
 
 @Component({
@@ -47,7 +47,7 @@ export class MessagerieDiscussionComponent implements OnInit {
     emeteur:'',
      text: '',
      recepteur: '',
-     id: ''
+
      
     
   };
@@ -72,9 +72,7 @@ export class MessagerieDiscussionComponent implements OnInit {
      
     this.clickedUserName = this.service.clickedUser.name;
      //j'affecte des ID pour régler le probléme des affichages
-     for (let i = 0; i < this.messageriePrive.messagesPrive.length; i++) {
-    this.messageriePrive.messagesPrive[i].id = this.uuidv4();
-     }
+  
 
    }); 
     this.service.getIsMessageriePrivateObservable().subscribe(isPrivate => {
@@ -106,7 +104,7 @@ export class MessagerieDiscussionComponent implements OnInit {
         emeteur: message.emeteur,
         text: message.text,
         recepteur: message.recepteur,
-        id: this.uuidv4()
+       
         
       
       
@@ -178,12 +176,7 @@ sendMessage(messageString: String, sender: string) {
     }
     return displayEmitter;
   }
-uuidv4(): string {
-  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
-    const r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
-    return v.toString(16);
-  });
-}
+
  
   onInput() {
   const input = document.getElementById('messageInput') as HTMLInputElement;

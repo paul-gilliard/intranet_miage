@@ -21,16 +21,18 @@
             <!--Lister tout les utilisateurs d'abord-->
             <div class="userList"> 
 
-            
+                <ul (click)="onMiageClick()">
+                    <li  class="listUser"> <i class="bi bi-people-fill"></i>
+                    MIAGE</li>
+                   
+                </ul>
                 <ul class="listePersonne"*ngFor="let user of usersList" (click)="onUserClick(user)" >
                     <li *ngIf="user!=null "  class="listUser">
-                        <span style="cursor: pointer; pointer-events: auto;">{{user.name}}</span>
+                        <i class="bi bi-person"></i><span style="cursor: pointer; pointer-events: auto;">{{user.name}}</span>
                     </li>
                 
                 </ul>
-                <ul (click)="onMiageClick()">
-                    <li class="listUser">MIAGE</li>
-                </ul>
+               
 
             
             </div>

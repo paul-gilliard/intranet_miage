@@ -37,7 +37,7 @@ conversation: any;
     emeteur:'',
      text: '',
      recepteur: '',
-     id: ''
+   
     
   };
   @Input() isPrivateMessage: boolean = false;

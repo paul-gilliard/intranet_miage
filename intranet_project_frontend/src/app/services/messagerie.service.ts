@@ -28,7 +28,7 @@ export class MessagerieService {
     emeteur:'',
      text: '',
      recepteur: '',
-     id: ''
+    
     
   };
   private messageriePriveSubject: BehaviorSubject<MessageriePrivee> = new BehaviorSubject<MessageriePrivee>(this._messageriePrive);

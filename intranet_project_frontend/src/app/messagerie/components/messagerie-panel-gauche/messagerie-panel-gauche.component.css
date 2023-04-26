@@ -28,6 +28,8 @@ ul {
             1px 1px 1px 1px wheat;
         border-radius: 10px;
         padding-left: 5px;
+        background-color: rgb(76, 179, 237, 0.5)
+        
 }
 ::-webkit-scrollbar {
     background-color: #f5f5f5;
