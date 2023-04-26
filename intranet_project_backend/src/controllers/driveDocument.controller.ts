@@ -109,9 +109,7 @@ export const getDocumentById = async (req: Request, res: Response, next: NextFun
   }
 }
 
-export const deleteDocument = async (req: Request, res: Response) => {
-  console.log("coucou");
-  
+export const deleteDocument = async (req: Request, res: Response) => {  
   const id = req.params.id;
   try {
     const _id = new ObjectId(id);

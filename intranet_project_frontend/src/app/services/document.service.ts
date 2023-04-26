@@ -37,12 +37,8 @@ export class DocumentService {
         return this.http.get('http://localhost:3000/api/driveDocument/getDocumentById/' + id, { responseType: 'blob' });
     }
 
-    deleteDocument(id: string){       
-        console.log(id);
-        console.log("------------------------------------------- JE PASSE PAR LA !!!! --------------------");
-        
+    deleteDocument(id: string){        
         return this.http.get('http://localhost:3000/api/driveDocument/deleteDocument/'+ id);
-        
     }
 
 }

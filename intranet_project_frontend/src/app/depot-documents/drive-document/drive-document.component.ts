@@ -109,7 +109,6 @@ export class DriveDocumentComponent implements OnInit{
           document.body.appendChild(a);
           a.href = url;
           let filename = doc.nom_fichier + doc.type_fichier;
-          console.log(doc.type_fichier, filename);
           
           a.download = filename;
           a.click();
@@ -123,12 +122,16 @@ export class DriveDocumentComponent implements OnInit{
   }
 
   deleteDocument(doc: any){
-    if (confirm(`Voulez-vous supprimer "${doc.nom_fichier}" ?`)) {
-      console.log(doc);
-      
-      this.documentService.deleteDocument(doc._id);
+    if (confirm(`Voulez-vous supprimer "${doc.nom_fichier}" ?`)) {      
+      this.documentService.deleteDocument(doc._id).subscribe(
+        response => {
+          this.getDocuments(this.link);
+        },
+        error => {
+          console.error(error);
+        }
+      );
     }
-    this.getDocuments(this.link);
   }
 
   onImport(isImport: Boolean) {
