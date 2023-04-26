@@ -31,6 +31,8 @@ export class MessagerieService {
      id: ''
     
   };
+  private messageriePriveSubject: BehaviorSubject<MessageriePrivee> = new BehaviorSubject<MessageriePrivee>(this._messageriePrive);
+
   public _isMessageriePrivate: boolean = false;
   
   private _isMessageriePrivateSubject = new Subject<boolean>();
@@ -75,7 +77,6 @@ export class MessagerieService {
         return this.http.get<MessagePrive[]>('http://localhost:3000/api/messagerie/getAllPrivateMessages/' + email);
     }
     //
-private messageriePriveSubject: BehaviorSubject<MessageriePrivee> = new BehaviorSubject<MessageriePrivee>(this._messageriePrive);
 
 get messageriePrive$(): Observable<MessageriePrivee> {
   return this.messageriePriveSubject.asObservable();
@@ -144,20 +145,21 @@ setSelectedMessageriePrive(value: MessageriePrivee): void {
     this.socket.emit('join', room);
   }
  
-    getMessagesAvecContact(emailContact: string): Observable<MessageriePrivee> {
+   getMessagesAvecContact(emailContact: string): Observable<MessageriePrivee> {
+  const currentUserEmail = localStorage.getItem('currentUserEmail')!;
   const messageriePrivee: MessageriePrivee = {
     messagesPrive: [] as MessagePrive[],
     emeteur: '',
     recepteur: emailContact,
   };
-  return this.getAllMessagesPrivate(localStorage.getItem('currentUserEmail')!).pipe(
+  return this.getAllMessagesPrivate(currentUserEmail).pipe(
     map((messagesPrive: any[]) => {
       messageriePrivee.messagesPrive = messagesPrive.flatMap((mp: any) => {
-        if (mp.emeteur === emailContact || mp.recepteur === emailContact) {
+        if ((mp.emeteur === currentUserEmail && mp.recepteur === emailContact) || (mp.emeteur === emailContact && mp.recepteur === currentUserEmail)) {
           return mp.messages.map((msg: any) => {
             return {
-              emeteur: mp.emeteur,
-              recepteur: mp.recepteur,
+              emeteur: msg.emeteur,
+              recepteur: msg.recepteur,
               text: msg.text,
               id: msg.id
             };
@@ -166,7 +168,7 @@ setSelectedMessageriePrive(value: MessageriePrivee): void {
           return [];
         }
       });
-      messageriePrivee.emeteur = localStorage.getItem('currentUserEmail')!;
+      messageriePrivee.emeteur = currentUserEmail;
       return messageriePrivee;
     }),
     catchError((error: any) => {
@@ -174,7 +176,7 @@ setSelectedMessageriePrive(value: MessageriePrivee): void {
       return of(messageriePrivee);
     })
   );
-    }
+}
 
  
     

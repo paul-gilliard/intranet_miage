@@ -133,8 +133,8 @@ input {
 }
 .bodyMessages{
    overflow:auto; 
-   max-height: 75vh;
-   min-height: 50%;
+   max-height: 75vh; 
+   /*min-height: 50%; */
    position: relative;;
    overflow-x: hidden;
   /* background-image:  url('../../../../assets/images/imgBackgroundBodyMessage.jpeg') ;*/
