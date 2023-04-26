@@ -38,7 +38,7 @@ export class DriveDocumentComponent implements OnInit{
   }
 
   async getDocuments(link: String){   
-    if(link !== undefined){
+    if(link !== undefined && link !== ''){
       let str = link.split(' > ');
       this.promo = str[0];
       this.semestre = str[1];

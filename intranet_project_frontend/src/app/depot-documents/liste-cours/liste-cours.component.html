@@ -1,5 +1,8 @@
 <div class="container">
   <ul class="nav">
+    <li class="nav-item"> 
+      <button class="btn btn-link" (click)="onClick('', '', '')">Tous les documents</button>
+    </li>
     <li class="nav-item" *ngFor="let promo of listeCours">
       <button class="btn btn-link" (click)="onClick('', '', promo.title)">{{promo.title}}</button>
       <ul>
