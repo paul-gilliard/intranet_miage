@@ -56,6 +56,7 @@ export class MessagerieDiscussionComponent implements OnInit {
   @Input() isPrivateMessage: boolean = false;
   url: string = 'http://localhost:3000';
   clickedUserName: string = localStorage.getItem('currentUserName')!;
+  clickedUserEmail: string = localStorage.getItem('currentUserEmail')!;
 
 
 
@@ -70,7 +71,8 @@ export class MessagerieDiscussionComponent implements OnInit {
    this.service.messageriePrive$.subscribe(messageriePrivee => {
     this.messageriePrive = messageriePrivee;
      
-    this.clickedUserName = this.service.clickedUser.name;
+     this.clickedUserName = this.service.clickedUser.name;
+     this.clickedUserEmail = this.service.clickedUser.email;
    
   
 

@@ -26,7 +26,8 @@ messagerieRouter.get('/getPrivateMessagesBetweenUsers/emeteur/recepteur', getPri
 
 
 // envoie message privé
-messagerieRouter.post('/sendPrivateMessage/:email', authenticateToken, sendPrivateMessage);
+//messagerieRouter.post('/sendPrivateMessage/:email', authenticateToken, sendPrivateMessage);
+messagerieRouter.post('/sendPrivateMessage/', authenticateToken, sendPrivateMessage);
 
 // getAll des utilisateurs en BDD
 messagerieRouter.get('/getAllPrivateMessages/:email', authenticateToken, getAllPrivateMessages);

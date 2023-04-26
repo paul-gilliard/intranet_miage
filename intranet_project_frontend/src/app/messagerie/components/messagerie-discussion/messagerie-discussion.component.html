@@ -70,9 +70,9 @@
 
                 <div class="formSend" >
                     <input type="text" style="width: 80%; ; border-radius: 20px;" id="messageInput" [(ngModel)]="messageString"
-                        (keydown.enter)="sendMessagePrivate(messageriePrive.recepteur,messageString)" (input)="onInput()" />
+                        (keydown.enter)="sendMessagePrivate(clickedUserEmail,messageString)" (input)="onInput()" />
                     <button type="button" class="btn btn-default btn-sm"
-                        (click)="sendMessagePrivate(messageriePrive.recepteur,messageString)">
+                        (click)="sendMessagePrivate(clickedUserEmail,messageString)">
                         <span class="bi bi-send-fill"></span>
                     </button>
                     </div>

@@ -6,6 +6,7 @@ import { MessagerieService } from 'src/app/services/messagerie.service';
 import { MessagePrive, MessageriePrivee } from 'src/app/models/messagePrivee.model';
 import { MessagerieDiscussionComponent } from '../messagerie-discussion/messagerie-discussion.component';
 import { Socket, io } from 'socket.io-client';
+import { HighlightDirective } from './highlightClickedUser.directive';
 @Component({
   selector: 'app-messagerie-panel-gauche',
   templateUrl: './messagerie-panel-gauche.component.html',
@@ -52,7 +53,8 @@ conversation: any;
   this.userService.getAllUsers().subscribe(
   (response: User[]) => {
     console.log('Requête réussie', response);
-    this.usersList = response.filter(user => !user.name.includes('test'));
+      this.usersList = response.filter(user => !user.name.includes('test'));
+      
   },
   (error) => {
     console.error('Erreur de requête', error);

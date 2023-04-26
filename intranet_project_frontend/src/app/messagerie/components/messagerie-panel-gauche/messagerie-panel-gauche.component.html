@@ -21,12 +21,12 @@
             <!--Lister tout les utilisateurs d'abord-->
             <div class="userList"> 
 
-                <ul (click)="onMiageClick()">
+                <ul (click)="onMiageClick()" appHighlight>
                     <li  class="listUser"> <i class="bi bi-people-fill"></i>
                     MIAGE</li>
                    
                 </ul>
-                <ul class="listePersonne"*ngFor="let user of usersList" (click)="onUserClick(user)" >
+                <ul class="listePersonne"*ngFor="let user of usersList" appHighlight (click)="onUserClick(user)" >
                     <li *ngIf="user!=null "  class="listUser">
                         <i class="bi bi-person"></i><span style="cursor: pointer; pointer-events: auto;">{{user.name.split(' ')[0]}}</span>
                     </li>

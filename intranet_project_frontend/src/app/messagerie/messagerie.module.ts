@@ -8,6 +8,7 @@ import { MessagerieDiscussionComponent } from './components/messagerie-discussio
 import { MessagerieInfoComponent } from './components/messagerie-info/messagerie-info.component';
 import { FormsModule } from '@angular/forms';
 import { CurrentUserMessageDirective } from './components/messagerie-discussion/CurrentUserMessageDirective';
+import { HighlightDirective } from './components/messagerie-panel-gauche/highlightClickedUser.directive';
 
 
 @NgModule({
@@ -17,12 +18,14 @@ import { CurrentUserMessageDirective } from './components/messagerie-discussion/
     MessagerieDiscussionComponent,
     MessagerieInfoComponent,
     CurrentUserMessageDirective,
+    HighlightDirective
    
   ],
   imports: [
     CommonModule,
     MessagerieRoutingModule, 
     FormsModule,
+  
     
   ],
   exports: [
@@ -30,6 +33,7 @@ import { CurrentUserMessageDirective } from './components/messagerie-discussion/
     MessageriePanelGaucheComponent, 
     MessagerieDiscussionComponent,
     CurrentUserMessageDirective,
+    HighlightDirective
   
   ]
 })
