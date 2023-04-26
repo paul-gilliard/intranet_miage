@@ -32,7 +32,8 @@
 }
 
 .message{
-    
+    min-height: 75%;
+    max-height: 75%;
     max-width: 100%;
     margin-left: 2%;
     border-radius: 15px 15px 0px 15px;
@@ -119,7 +120,7 @@
     /* transition en douceur lors du redimensionnement */
 }
 #messageInput:focus {
-    height: auto;
+    /* height: auto; */
     /* hauteur automatique */
     overflow-y: auto;
 }
@@ -127,13 +128,14 @@ input {
     min-height: 20px;
     max-height: 120px;
     overflow-y: auto;
-    max-width: 90%;
+    max-width: 100%;
     caret-color: #41D3F3;
     
 }
 .bodyMessages{
    overflow:auto; 
-   max-height: 75vh; 
+   max-height: 70vh;
+   min-height: 70vh;
    /*min-height: 50%; */
    position: relative;;
    overflow-x: hidden;
@@ -142,9 +144,10 @@ input {
 
 }
 .formSend{
-    position: absolute;
+    top: 0px;
+    position: static;
     bottom: 0;
-    width: 50%;
+    width: 100%;
    
 }
 ::-webkit-scrollbar {

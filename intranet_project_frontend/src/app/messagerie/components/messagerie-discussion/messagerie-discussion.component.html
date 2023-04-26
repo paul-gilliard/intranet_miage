@@ -22,9 +22,9 @@
                 </div>
 
             </div>
-            <div class="scroll-arrow">
+            <!-- <div class="scroll-arrow">
                 <i class="bi bi-arrow-down-circle"></i>
-            </div>
+            </div> -->
 
 
         </div>
@@ -64,18 +64,21 @@
                     </div>
     
                 </div>
-                <div class="scroll-arrow">
+                <!-- <div class="scroll-arrow">
                     <i class="bi bi-arrow-down-circle"></i>
-                </div>
+                </div> -->
+
+                <div class="formSend" >
+                    <input type="text" style="width: 80%; ; border-radius: 20px;" id="messageInput" [(ngModel)]="messageString"
+                        (keydown.enter)="sendMessagePrivate(messageriePrive.recepteur,messageString)" (input)="onInput()" />
+                    <button type="button" class="btn btn-default btn-sm"
+                        (click)="sendMessagePrivate(messageriePrive.recepteur,messageString)">
+                        <span class="bi bi-send-fill"></span>
+                    </button>
+                    </div>
+
             </div>
-            <div class="formSend" >
-            <input type="text" style="width: 80%; ; border-radius: 20px;" id="messageInput" [(ngModel)]="messageString"
-                (keydown.enter)="sendMessagePrivate(messageriePrive.recepteur,messageString)" (input)="onInput()" />
-            <button type="button" class="btn btn-default btn-sm"
-                (click)="sendMessagePrivate(messageriePrive.recepteur,messageString)">
-                <span class="bi bi-send-fill"></span>
-            </button>
-            </div>
+            
     
         </div>
     </div>
