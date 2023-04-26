@@ -1,9 +1,12 @@
 import { Request, Response } from 'express';
+import bcrypt from 'bcrypt';
 import User from '../models/users.model'; //import du modèle User
 
 export const createUser = async (req: Request, res: Response) => {
   try {
-    const user = new User(req.body);
+    let user = new User(req.body);
+    const hashedPassword = await bcrypt.hash(req.body.password, 10);
+    user.password = hashedPassword;
     const savedUser = await user.save();
     res.status(201).send({ user: savedUser });
   } catch (error) {

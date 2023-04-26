@@ -7,25 +7,26 @@ import {
     getAllPrivateMessages,
     getNumberOfMessages
   } from '../controllers/messagerie.controller';
+import { authenticateToken } from '../services/auth.service';
 
 const messagerieRouter = Router();
 
 
 // getAll des utilisateurs en BDD
-messagerieRouter.get('/getAllMessages', getAllMessages);
+messagerieRouter.get('/getAllMessages', authenticateToken, getAllMessages);
 
 
 // envoie message à tout le monde
-messagerieRouter.post('/sendMessage', sendMessage);
+messagerieRouter.post('/sendMessage', authenticateToken, sendMessage);
 
 // envoie message privé
-messagerieRouter.post('/sendPrivateMessage/:email', sendPrivateMessage);
+messagerieRouter.post('/sendPrivateMessage/:email', authenticateToken, sendPrivateMessage);
 
 // getAll des utilisateurs en BDD
-messagerieRouter.get('/getAllPrivateMessages/:email', getAllPrivateMessages);
+messagerieRouter.get('/getAllPrivateMessages/:email', authenticateToken, getAllPrivateMessages);
 
 //nombre de messages stockés
-messagerieRouter.get('/getNumberOfMessages', getNumberOfMessages);
+messagerieRouter.get('/getNumberOfMessages', authenticateToken, getNumberOfMessages);
 
 
 export default messagerieRouter;

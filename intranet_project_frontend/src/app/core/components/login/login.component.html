@@ -2,7 +2,7 @@
   <form class="row g-3" [formGroup]="loginForm">
     <div class="position-relative col-3">
       <input type="text" id="emailENT" placeholder="email ENT" class="form-control" formControlName="email" [ngClass]="loginForm.get('email')!.errors ? 'is-invalid' : 'is-valid'"/>
-      <input type="password" id="motdePasse"placeholder="mot de passe" class="form-control" formControlName="motdePasse" [ngClass]="loginForm.get('motdePasse')!.errors ? 'is-invalid' : 'is-valid'"/>
+      <input type="password" id="password" placeholder="mot de passe" class="form-control" formControlName="password" [ngClass]="loginForm.get('password')!.errors ? 'is-invalid' : 'is-valid'"/>
     </div>
     <div class="formFooter d-flex justify-content-between align-items-end">
       <button type="submit" class="btn btn-dark" id= "btnSeconnecter" [disabled]="!loginForm.valid" (click)="login()">Se connecter</button>

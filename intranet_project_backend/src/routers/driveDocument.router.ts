@@ -2,25 +2,26 @@ import { Request } from 'express';
 import { Router } from 'express';
 import multer, { Multer } from 'multer';
 import { insertDocument, getAllDocuments, getDocumentsByPromo, getDocumentsBySemestre, getDocumentsByCours, getNumberOfDocuments, getDocumentById} from '../controllers/driveDocument.controller';
+import { authenticateToken } from '../services/auth.service';
 
 const driveDocumentRouter = Router();
 // Configuration de multer pour stocker les fichiers en mémoire
 
 const upload = multer({ dest: 'uploads/' }); // Définir le dossier de destination pour les fichiers téléchargés
 
-driveDocumentRouter.post('/insertDocument', upload.single('file'), insertDocument);
+driveDocumentRouter.post('/insertDocument', authenticateToken, upload.single('file'), insertDocument);
 
-driveDocumentRouter.get('/getAllDocuments', getAllDocuments);
+driveDocumentRouter.get('/getAllDocuments', authenticateToken, getAllDocuments);
 
-driveDocumentRouter.get('/getDocumentsByPromo/:promo', getDocumentsByPromo);
+driveDocumentRouter.get('/getDocumentsByPromo/:promo', authenticateToken, getDocumentsByPromo);
 
-driveDocumentRouter.get('/getDocumentsBySemestre/:semestre', getDocumentsBySemestre);
+driveDocumentRouter.get('/getDocumentsBySemestre/:semestre', authenticateToken, getDocumentsBySemestre);
 
-driveDocumentRouter.get('/getDocumentsByCours/:cours', getDocumentsByCours);
+driveDocumentRouter.get('/getDocumentsByCours/:cours', authenticateToken, getDocumentsByCours);
 
-driveDocumentRouter.get('/getNumberOfDocuments', getNumberOfDocuments);
+driveDocumentRouter.get('/getNumberOfDocuments', authenticateToken, getNumberOfDocuments);
 
-driveDocumentRouter.get('/getDocumentById/:id', getDocumentById);
+driveDocumentRouter.get('/getDocumentById/:id', authenticateToken, getDocumentById);
 
 
 

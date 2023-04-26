@@ -10,21 +10,20 @@ import { Modal } from 'bootstrap';
 })
 export class LoginComponent {
 
-  email: string = "";
-
   loginForm = this.formBuilder.group({
     email: [, [Validators.required, ]],
-    motdePasse: ["", [, ]]
+    password: [, [Validators.required, ]]
   });
 
   constructor(private formBuilder: FormBuilder,
               private authService: AuthService) {}
 
   login() {
-    this.email = this.loginForm.get('email')?.value!;
-    if (this.email != null){
+    let email:string = this.loginForm.get('email')?.value!;
+    let password:string = this.loginForm.get('password')?.value!;
+    if (email != null && password != null){
   
-    this.authService.authenticateUser(this.email).subscribe(
+    this.authService.authenticateUser(email, password).subscribe(
       (response:any) => {
 
         const token:string = response?.accessToken;
