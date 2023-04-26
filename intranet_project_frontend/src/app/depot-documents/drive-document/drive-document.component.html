@@ -1,7 +1,7 @@
 <div class="row">
     <!-- Panel de gauche -->
     <div class="col-md-2 panel-gauche">
-        <app-liste-cours [listeCours]="cursusStructure" (link)="link = $event" (promo)="promo = $event" (semestre)="semestre = $event" (cours)="cours = $event"></app-liste-cours>
+        <app-liste-cours [listeCours]="cursusStructure" (linkChange)="onLinkChange($event)"></app-liste-cours>
     </div>
 
     <!-- Panel de droite -->
@@ -20,7 +20,6 @@
                 <span class="badge badge-semestre">{{document.semestre}}</span>
                 <span class="badge badge-cours">{{document.etiquetteCours}}</span>
                 <br/> <h4>{{document.nom_fichier}}</h4>
-                <!-- <br/> Date création : {{document.dateCreation}} -->
             </div>
         </div>
     </div>
