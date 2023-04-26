@@ -14,6 +14,10 @@ export class MessagerieService {
         return this.http.get<Messagerie>('http://localhost:3000/api/messagerie/getAllMessages');
     }
 
+    getNumberOfMessages(){
+        return this.http.get<JSON>('http://localhost:3000/api/messagerie/getNumberOfMessages');
+    }
+
     sendMessage(message: Message){
         return this.http.post<Messagerie>('http://localhost:3000/api/messagerie/sendMessage', message);
     }

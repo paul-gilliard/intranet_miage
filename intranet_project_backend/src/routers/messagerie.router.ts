@@ -4,7 +4,8 @@ import {
     getAllMessages,
     sendMessage,
     sendPrivateMessage,
-    getAllPrivateMessages
+    getAllPrivateMessages,
+    getNumberOfMessages
   } from '../controllers/messagerie.controller';
 
 const messagerieRouter = Router();
@@ -22,6 +23,9 @@ messagerieRouter.post('/sendPrivateMessage/:email', sendPrivateMessage);
 
 // getAll des utilisateurs en BDD
 messagerieRouter.get('/getAllPrivateMessages/:email', getAllPrivateMessages);
+
+//nombre de messages stockés
+messagerieRouter.get('/getNumberOfMessages', getNumberOfMessages);
 
 
 export default messagerieRouter;
