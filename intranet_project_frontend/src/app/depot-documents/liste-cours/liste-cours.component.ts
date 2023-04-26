@@ -13,6 +13,8 @@ export class ListeCoursComponent {
   promo! : String;
   semestre! : String;
   cours! : String;
+  isShow : Boolean = false;
+  isShowCours : Boolean = false;
 
   @ViewChild(NgbAccordion)
   accordion!: NgbAccordion;
@@ -35,5 +37,16 @@ export class ListeCoursComponent {
     }else{
       this.onLinkChange(promo+' > '+semestre+' > '+cours);
     }
+  }
+
+  onClickPromo(cours: String, semestre: String, promo: String) {
+    this.onClick(cours, semestre, promo);
+    this.isShow = !this.isShow;
+    this.isShowCours = false;
+  }
+
+  onClickSemestre(cours: String, semestre: String, promo: String) {
+    this.onClick(cours, semestre, promo);
+    this.isShowCours = !this.isShowCours;
   }
 }

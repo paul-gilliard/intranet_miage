@@ -2,5 +2,31 @@
     display: block;
     height: 84vh;
     overflow-y: auto;
-    padding-bottom: 20%;
+}
+
+.button-container {
+    position: fixed;
+    background-color: #F5F5F5;
+}
+
+.nav {
+    margin-top: 40px;
+    padding-bottom: 15%;
+}
+
+ul, li {
+    list-style-type: none;
+    text-align: left;
+}
+
+.big {
+    font-size: large;
+}
+
+.medium {
+    font-size: medium;
+}
+
+.small {
+    font-size: small;
 }
