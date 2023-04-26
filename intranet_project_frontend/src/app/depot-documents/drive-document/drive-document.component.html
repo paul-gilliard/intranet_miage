@@ -6,7 +6,7 @@
 
     <!-- Panel de droite -->
     <div class="col-md panel-droit">
-        <div class="row panel-haut">
+        <div class="panel-haut">
             <div class="col-md-5 link"><h5>{{link}}</h5></div>
             <div class="col-md-6 import">
                 <button type="button" class="btn btn-default btn-lg" (click)="openImportDocumentModal()">
@@ -16,7 +16,7 @@
         </div>        
         <div class="row documents">
             <div class="col-md-2 document clickable-card" *ngFor="let document of documents" (click)="downloadDocument(document)">
-                <span class="badge badge-promo">{{document.etiquettePromo}}</span>
+                <span class="badge badge-promo .w-auto">{{document.etiquettePromo}}</span>
                 <span class="badge badge-semestre">{{document.semestre}}</span>
                 <span class="badge badge-cours">{{document.etiquetteCours}}</span>
                 <br/> <h4>{{document.nom_fichier}}</h4>

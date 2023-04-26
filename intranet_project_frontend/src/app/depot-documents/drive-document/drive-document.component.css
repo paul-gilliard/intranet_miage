@@ -7,7 +7,25 @@
 }
 
 .panel-droit {
-    height: 84vh;
+    display: block;
+    overflow-y: auto;
+    max-height: 85vh;
+}
+
+.panel-haut {
+    margin-top: 2%;
+    min-height: 8vh;
+}
+
+.link {
+    position: absolute;
+    margin-left: 2%;
+    background-color: white;
+}
+
+.import {
+    position: absolute;
+    left: 85%;
 }
 
 .badge {
@@ -34,20 +52,7 @@
     background-color: #F5F5F5;
     padding: 1%;
     margin: 1%;
-}
-
-.link {
-    margin-left: 2%;
-}
-
-.import {
-    position: absolute;
-    left: 85%;
-}
-
-.panel-haut {
-    margin-top: 2%;
-    min-height: 8vh;
+    border-radius: 15%;
 }
 
 button {

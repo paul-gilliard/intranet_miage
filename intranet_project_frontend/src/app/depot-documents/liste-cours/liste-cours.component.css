@@ -4,6 +4,20 @@
     overflow-y: auto;
 }
 
+button:hover {
+    background-color: #9bc8e2;
+}
+
+button:focus {
+    background-color: #4CB3ED;
+    color : black;
+}
+
+.btn-link {
+    text-decoration: none;
+    text-align: left;
+}
+
 .button-container {
     position: fixed;
     background-color: #F5F5F5;
