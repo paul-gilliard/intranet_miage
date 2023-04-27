@@ -30,6 +30,7 @@
 
 .badge {
     margin : 2%;
+    word-wrap: break-word;
 }
 
 .badge-promo {
@@ -63,6 +64,7 @@
        /* padding: 5px; */
         /*width: 18%; */
         border-color: #4CB3ED;
+        word-wrap: break-word;
 
 }
 
