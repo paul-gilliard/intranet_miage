@@ -15,25 +15,25 @@ const messagerieRouter = Router();
 
 
 // getAll des utilisateurs en BDD
-messagerieRouter.get('/getAllMessages', authenticateToken, getAllMessages);
+messagerieRouter.get('/getAllMessages',  getAllMessages);
 
 
 // envoie message à tout le monde
-messagerieRouter.post('/sendMessage', authenticateToken, sendMessage);
+messagerieRouter.post('/sendMessage',  sendMessage);
 
 messagerieRouter.get('/privateMessages/:emeteur/:recepteur', getPrivateMessages);
 messagerieRouter.get('/getPrivateMessagesBetweenUsers/emeteur/recepteur', getPrivateMessagesBetweenUsers);
 
 
 // envoie message privé
-//messagerieRouter.post('/sendPrivateMessage/:email', authenticateToken, sendPrivateMessage);
-messagerieRouter.post('/sendPrivateMessage/', authenticateToken, sendPrivateMessage);
+//messagerieRouter.post('/sendPrivateMessage/:email',  sendPrivateMessage);
+messagerieRouter.post('/sendPrivateMessage/',  sendPrivateMessage);
 
 // getAll des utilisateurs en BDD
-messagerieRouter.get('/getAllPrivateMessages/:email', authenticateToken, getAllPrivateMessages);
+messagerieRouter.get('/getAllPrivateMessages/:email',  getAllPrivateMessages);
 
 //nombre de messages stockés
-messagerieRouter.get('/getNumberOfMessages', authenticateToken, getNumberOfMessages);
+messagerieRouter.get('/getNumberOfMessages',  getNumberOfMessages);
 
 
 
