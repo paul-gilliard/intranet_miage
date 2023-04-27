@@ -24,8 +24,7 @@ import { HighlightDirective } from './components/messagerie-panel-gauche/highlig
   imports: [
     CommonModule,
     MessagerieRoutingModule, 
-    FormsModule,
-  
+    FormsModule
     
   ],
   exports: [

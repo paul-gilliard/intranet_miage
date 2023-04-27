@@ -107,7 +107,7 @@ setSelectedMessageriePrive(value: MessageriePrivee): void {
         this._messageriePrive.messagesPrive.push(this._messagePrive);
         this.setSelectedMessageriePrive(this._messageriePrive);*/
         
-        this.socket.emit('new-private-message', { emeteur: this.currentUserEmail, recepteur: recepteur, text });
+        this.socket.emit('new-private-message', { emeteur: this.currentUserEmail, recepteur: recepteur, text }); 
         return this.http.post('http://localhost:3000/api/messagerie/sendPrivateMessage', body);
         
     }
