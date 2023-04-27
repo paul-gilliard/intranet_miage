@@ -14,6 +14,9 @@ import { FullCalendarModule } from '@fullcalendar/angular';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { NgImageSliderModule } from 'ng-image-slider';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+
 
 @NgModule({
   declarations: [
@@ -31,7 +34,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     FullCalendarModule,
     HttpClientModule,
     NgImageSliderModule,
-    NgbModule
+    NgbModule,
+    MatDialogModule,
+    MatSnackBarModule
   ],
   exports:[NgImageSliderModule],
   providers: [

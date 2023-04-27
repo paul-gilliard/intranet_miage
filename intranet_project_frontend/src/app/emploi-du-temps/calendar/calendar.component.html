@@ -3,8 +3,13 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <select [(ngModel)]="selectedValue" (change)="onSelectChange()" class="btn btn-primary">
-        <option value="" disabled selected>Filtrer</option>
+      <select [(ngModel)]="selectedValue" (change)="onSelectChange()"  style="background-color: #4CB3ED;
+    margin-left: 0%;
+    border-radius: 20px 20px 20px 20px ;
+    border-color: #4CB3ED;
+    height: 40px;
+    width: 140px;"class="btn btn-primary">
+        <option value="" disabled selected >Filtrer</option>
         <option value="M2_miage_TD1.ics">Groupe TD1</option>
         <option value="M2_miage_TD2.ics">Groupe TD2</option>
         <option value="M2_calendar_events.ics">Général</option>

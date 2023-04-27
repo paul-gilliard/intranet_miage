@@ -7,6 +7,7 @@ import { MessageriePanelGaucheComponent } from '../messagerie-panel-gauche/messa
 import { MessagerieComponent } from '../messagerie/messagerie.component';
 import { MessagePrive, MessageriePrivee } from 'src/app/models/messagePrivee.model';
 import { CurrentUserMessageDirective } from './CurrentUserMessageDirective';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 
 
@@ -64,7 +65,7 @@ export class MessagerieDiscussionComponent implements OnInit {
   constructor(private service: MessagerieService) {
     this.socket = io(this.url, {transports: ['websocket', 'polling', 'flashsocket']});
    }
-
+  private _snackBar!: MatSnackBar;
   async ngOnInit() {
     // A chaque qu'on click sur un user ce composant met à jour la variable messageriePrivee
     //Il est averti par le service
@@ -123,6 +124,7 @@ export class MessagerieDiscussionComponent implements OnInit {
 
     console.log(localStorage.getItem('currentRoom'));
     console.log(room);
+    this.showNotification(); 
   
        }
   else {
@@ -192,19 +194,23 @@ sendMessage(messageString: String, sender: string) {
   }
   onScroll() {
   const element = document.querySelector('.bodyMessages') as HTMLElement;
-  const arrow = document.querySelector('.scroll-arrow') as HTMLElement;
+  /*const arrow = document.querySelector('.scroll-arrow') as HTMLElement; */
   
   const scrollTop = element.scrollTop;
   const offsetHeight = element.offsetHeight;
   const scrollHeight = element.scrollHeight;
   
   if (scrollTop + offsetHeight < scrollHeight) {
-    arrow.style.display = 'inline-block';
+   /* arrow.style.display = 'inline-block';*/
   } else {
-    arrow.style.display = 'none';
+    /*arrow.style.display = 'none'; */
   }
   }
-
+ showNotification() {
+    this._snackBar.open('Vous avez reçu un nouveau message !', 'Fermer', {
+      duration: 50000, // Durée d'affichage de la notification en ms
+    });
+  }
   
  
 }
