@@ -67,7 +67,7 @@ io.on('connection', (socket: Socket) => {
 
     const room = `${message.emeteur}-${message.recepteur}`;
     socket.join(room); // Ajouter les deux utilisateurs à la salle
-    socket.broadcast.to(room).emit('new-private-message',message);
+    /*socket.broadcast.to(room).emit('new-private-message',message); */
     //io.in(room).emit('new-private-message', message);
     io.emit('new-private-message', message, room);
     

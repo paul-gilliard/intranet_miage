@@ -107,12 +107,13 @@ export class MessagerieDiscussionComponent implements OnInit {
     // Ajouter le message à la liste des messages si c'est la discussion en cours
     //addMessageToList(message);
     console.log(' if *******Privé nouveau message********');
-      this.messageriePrive.messagesPrive.push({
+     this.messageriePrive.messagesPrive.push({
         emeteur: message.emeteur,
         text: message.text,
         recepteur: message.recepteur,
       
       });
+      
  
   } else if (localStorage.getItem('currentRoom')?.includes(message.recepteur)) {
       const notification = new Notification('Nouveau message reçu', {
