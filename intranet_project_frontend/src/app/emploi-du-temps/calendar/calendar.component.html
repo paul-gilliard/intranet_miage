@@ -1,14 +1,8 @@
 <br><br>
-
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <select [(ngModel)]="selectedValue" (change)="onSelectChange()"  style="background-color: #4CB3ED;
-    margin-left: 0%;
-    border-radius: 20px 20px 20px 20px ;
-    border-color: #4CB3ED;
-    height: 40px;
-    width: 140px;"class="btn btn-primary">
+      <select [(ngModel)]="selectedValue" (change)="onSelectChange()" class="btn btn-primary select">
         <option value="" disabled selected >Filtrer</option>
         <option value="M2_miage_TD1.ics">Groupe TD1</option>
         <option value="M2_miage_TD2.ics">Groupe TD2</option>
@@ -25,6 +19,6 @@
 
 <div>
   <button class ='mail'>
-    <a href="mailto: uf-info.sp-miage@u-bordeaux.fr" style="color: black ; text-decoration: none; " >Contacter le secrétariat </a>
+    <a href="mailto: uf-info.sp-miage@u-bordeaux.fr" class="mailButton">Contacter le secrétariat </a>
   </button>
 </div>

@@ -1,6 +1,6 @@
 input, select {
- border-radius: 50px;
- margin-bottom: 2%;
+    border-radius: 50px;
+    margin-bottom: 2%;
 }
 
 #btnValider {
@@ -12,5 +12,5 @@ input, select {
 } 
 
 .modal-content{
-border-radius: 20px;
+    border-radius: 20px;
 }

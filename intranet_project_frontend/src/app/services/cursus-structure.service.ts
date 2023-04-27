@@ -11,5 +11,4 @@ export class CursusStructureService {
     getCursusStructure(){       
         return this.http.get<JSON>('http://localhost:3000/api/cursusStructure/getCursusStructure');
     }
-
 }

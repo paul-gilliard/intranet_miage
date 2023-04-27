@@ -41,8 +41,7 @@ export class LoginComponent {
         console.log('Authentification réussie');
       },
       (error) => {
-        console.error('Erreur d\'authentification', error); 
-        // Afficher un message d'erreur à l'utilisateur
+        console.error('Erreur d\'authentification', error);
       }
     )};
     

@@ -19,9 +19,7 @@ export class CreateUserComponent {
   });
 
   constructor(private formBuilder: FormBuilder,
-              private userService: UserService) {
-    
-  }
+              private userService: UserService) { }
 
   close() {
     this.createUserForm.reset();
@@ -48,5 +46,4 @@ export class CreateUserComponent {
     );
     this.close();
   }
-
 }

@@ -1,9 +1,8 @@
 export interface DriveDocument {
-    etiquetteCours: String;
-    etiquettePromo: String;
-    semestre: String;
-    mailOwner: String;
+    etiquetteCours: string;
+    etiquettePromo: string;
+    semestre: string;
+    mailOwner: string;
     driveDocument: File;
-    nom_fichier: String;
-    //dateCreation: Date;  
+    nom_fichier: string;
 }

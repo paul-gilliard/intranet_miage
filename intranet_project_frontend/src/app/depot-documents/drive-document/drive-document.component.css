@@ -50,22 +50,14 @@
 }
 
 .document {
-   /* background-color: #F5F5F5; */
     padding: 1%;
     margin: 1%;
     border-radius: 15%;
-    background-color: rgba(76, 179, 237, 0.15);
+    background-color:rgba(76, 179, 237, 0.15);
     box-shadow: 1px 1px 0px 0px grey;
-  
-       /* display: inline-block; */
-        height: 150px;
-        border-radius: 20px 20px;
-        /*position: relative; */
-       /* padding: 5px; */
-        /*width: 18%; */
-        border-color: #4CB3ED;
-        word-wrap: break-word;
-
+    height: 150px;
+    border-color:#4CB3ED;
+    word-wrap: break-word;
 }
 
 .btn-default {

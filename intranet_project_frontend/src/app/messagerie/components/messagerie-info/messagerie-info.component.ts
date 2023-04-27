@@ -6,6 +6,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./messagerie-info.component.css']
 })
 export class MessagerieInfoComponent {
-@Input() isPrivateMessage: boolean = false;
-  @Input() nomConversation: String ='';
+  @Input() nomConversation: string ='';
 }

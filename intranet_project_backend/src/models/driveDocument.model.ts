@@ -1,4 +1,4 @@
-import mongoose, { Schema, Document } from 'mongoose';
+import mongoose, { Schema } from 'mongoose';
 
 export interface DriveDocument {
   etiquetteCours: string;
@@ -40,9 +40,9 @@ const DocumentSchema = new Schema<DriveDocument>(
       type: String, 
       required: true 
     },
-    },  
-    {
-      timestamps: true,
-    });
+  },  
+  {
+    timestamps: true,
+  });
 
 export default mongoose.model<DriveDocument>('DriveDocument', DocumentSchema);

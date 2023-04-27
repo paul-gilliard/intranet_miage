@@ -4,43 +4,43 @@
     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="close()"></button>
   </div>
   <form class="row g-3" [formGroup]="createUserForm">
-  <div class="modal-body">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="form-floating">
-          <input type="text" id="name" class="form-control" placeholder=" " formControlName="name" [ngClass]="createUserForm.get('name')!.errors ? 'is-invalid' : ''"/>
-          <label for="name">Nom</label>
+    <div class="modal-body">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-floating">
+            <input type="text" id="name" class="form-control" placeholder=" " formControlName="name" [ngClass]="createUserForm.get('name')!.errors ? 'is-invalid' : ''"/>
+            <label for="name">Nom</label>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <div class="form-floating">
-          <input type="text" id="email" class="form-control" placeholder=" " formControlName="email" [ngClass]="createUserForm.get('email')!.errors ? 'is-invalid' : ''"/>
-          <label for="email">Email universitaire</label>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-floating">
+            <input type="text" id="email" class="form-control" placeholder=" " formControlName="email" [ngClass]="createUserForm.get('email')!.errors ? 'is-invalid' : ''"/>
+            <label for="email">Email universitaire</label>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <div class="form-floating">
-          <input type="password" id="password" class="form-control" placeholder=" " formControlName="password" [ngClass]="createUserForm.get('password')!.errors ? 'is-invalid' : ''"/>
-          <label for="password">Mot de passe</label>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-floating">
+            <input type="password" id="password" class="form-control" placeholder=" " formControlName="password" [ngClass]="createUserForm.get('password')!.errors ? 'is-invalid' : ''"/>
+            <label for="password">Mot de passe</label>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-md-6">
-        <div class="form-floating">
-          <select id="promo" class="form-select" formControlName="promo" [ngClass]="createUserForm.get('promo')!.errors ? 'is-invalid' : ''">
-            <option value="" disabled selected>Choisissez une option</option>
-            <option value="L3">L3</option>
-            <option value="M1">M1</option>
-            <option value="M2">M2</option>
-          </select>
-          <label for="promo">Promo</label>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-floating">
+            <select id="promo" class="form-select" formControlName="promo" [ngClass]="createUserForm.get('promo')!.errors ? 'is-invalid' : ''">
+              <option value="" disabled selected>Choisissez une option</option>
+              <option value="L3">L3</option>
+              <option value="M1">M1</option>
+              <option value="M2">M2</option>
+            </select>
+            <label for="promo">Promo</label>
+          </div>
         </div>
-      </div>
         <div class="col-md-6">
           <div class="form-floating">
             <select id="statut" class="form-select" formControlName="statut" [ngClass]="createUserForm.get('statut')!.errors ? 'is-invalid' : ''">
@@ -52,12 +52,10 @@
           </div>
         </div>
       </div>
-
-      </div>
-      <div class="modal-footer d-flex justify-content-center">
-        <button type="submit" id="btnValider" class="btn btn-dark w-100" data-bs-dismiss="modal" [disabled]="!createUserForm.valid" (click)="createUser()">Valider</button>
-      </div>
-    </form>
-  
+    </div>
+    
+    <div class="modal-footer d-flex justify-content-center">
+      <button type="submit" id="btnValider" class="btn btn-dark w-100" data-bs-dismiss="modal" [disabled]="!createUserForm.valid" (click)="createUser()">Valider</button>
+    </div>
+  </form>
 </div>
- 

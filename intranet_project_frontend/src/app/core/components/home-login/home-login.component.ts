@@ -5,6 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './home-login.component.html',
   styleUrls: ['./home-login.component.css']
 })
-export class HomeLoginComponent {
-
-}
+export class HomeLoginComponent { }

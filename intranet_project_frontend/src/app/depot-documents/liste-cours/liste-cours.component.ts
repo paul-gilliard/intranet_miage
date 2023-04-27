@@ -10,24 +10,24 @@ export class ListeCoursComponent {
 
   @Input() listeCours: any;
 
-  promo! : String;
-  semestre! : String;
-  cours! : String;
-  isShow : Boolean = false;
-  isShowCours : Boolean = false;
+  promo! : string;
+  semestre! : string;
+  cours! : string;
+  isShow : boolean = false;
+  isShowCours : boolean = false;
 
   @ViewChild(NgbAccordion)
   accordion!: NgbAccordion;
 
-  @Output() linkChange = new EventEmitter<String>();
-  link!: String;
+  @Output() linkChange = new EventEmitter<string>();
+  link!: string;
 
-  onLinkChange(value: String) {
+  onLinkChange(value: string) {
     this.link = value;
     this.linkChange.emit(this.link);
   }
 
-  onClick(cours: String, semestre: String, promo: String) {
+  onClick(cours: string, semestre: string, promo: string) {
     if(cours == ''){
       if(semestre == ''){
         this.onLinkChange(promo);
@@ -39,13 +39,13 @@ export class ListeCoursComponent {
     }
   }
 
-  onClickPromo(cours: String, semestre: String, promo: String) {
+  onClickPromo(cours: string, semestre: string, promo: string) {
     this.onClick(cours, semestre, promo);
     this.isShow = !this.isShow;
     this.isShowCours = false;
   }
 
-  onClickSemestre(cours: String, semestre: String, promo: String) {
+  onClickSemestre(cours: string, semestre: string, promo: string) {
     this.onClick(cours, semestre, promo);
     this.isShowCours = !this.isShowCours;
   }

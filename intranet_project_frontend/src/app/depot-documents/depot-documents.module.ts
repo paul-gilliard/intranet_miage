@@ -8,7 +8,6 @@ import { ModalImportComponent } from './modal-import/modal-import.component';
 import { NgbAccordionItem, NgbAccordionModule, NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-
 @NgModule({
   declarations: [
     DriveDocumentComponent,
@@ -27,4 +26,5 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   exports: [DriveDocumentComponent]
 
 })
+
 export class DepotDocumentsModule { }

@@ -16,28 +16,24 @@ export class HighlightDirective {
         console.log("Current "+currentUrl);
         console.log("Link " + linkUrl);
         if (currentUrl!='/') {
-        if ( linkUrl.includes(currentUrl)) {
-          this.el.nativeElement.classList.add('active');
-          this.el.nativeElement.firstChild.style.backgroundColor = 'white';
-          this.el.nativeElement.firstChild.style.borderRadius = '20px 20px 20px 20px';
-          this.el.nativeElement.firstChild.style.borderBottom='2px solid black';
-          this.el.nativeElement.firstChild.style.height = '50px;';
-        } else {
-          this.el.nativeElement.classList.remove('active');
-          this.el.nativeElement.firstChild.style.backgroundColor = '';
-          this.el.nativeElement.firstChild.style.borderRadius = '';
-          this.el.nativeElement.firstChild.style.borderBottom='';
-          this.el.nativeElement.firstChild.style.height = '';
-          
+          if ( linkUrl.includes(currentUrl)) {
+            this.el.nativeElement.classList.add('active');
+            this.el.nativeElement.firstChild.style.backgroundColor = 'white';
+            this.el.nativeElement.firstChild.style.borderRadius = '20px 20px 20px 20px';
+            this.el.nativeElement.firstChild.style.borderBottom='2px solid black';
+            this.el.nativeElement.firstChild.style.height = '50px;';
+          } else {
+            this.el.nativeElement.classList.remove('active');
+            this.el.nativeElement.firstChild.style.backgroundColor = '';
+            this.el.nativeElement.firstChild.style.borderRadius = '';
+            this.el.nativeElement.firstChild.style.borderBottom='';
+            this.el.nativeElement.firstChild.style.height = '';
           }
         }
-        if (currentUrl == '') {
-          
-        }
       }
-      
     });
   }
+  
   ngOnDestroy() {
     this.el.nativeElement.classList.remove('active');
     this.el.nativeElement.firstChild.style.backgroundColor = '';

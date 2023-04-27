@@ -14,7 +14,6 @@ export const insertDocument = async (req: Request, res: Response, next: NextFunc
       etiquetteCours: req.body.cours,
       etiquettePromo: req.body.promo,
       semestre: req.body.semestre,
-      // mailOwner: req.body.mailOwner,
       mailOwner : req.body.mailOwner,
       driveDocument: fs.readFileSync(req.file.path),
       nom_fichier: req.body.name,
@@ -30,10 +29,10 @@ export const insertDocument = async (req: Request, res: Response, next: NextFunc
 
 export const getAllDocuments = async (req: Request, res: Response, next: NextFunction) => {
   try {
-    const docs: typeof DriveDocument[] = await DriveDocument.find(); // récupère tous les DriveDocument
-    res.status(200).send(docs); // renvoie les DriveDocument au client
+    const docs: typeof DriveDocument[] = await DriveDocument.find();
+    res.status(200).send(docs);
   } catch (error) {
-    res.status(500).send(error); // renvoie une erreur 500 en cas d'erreur serveur
+    res.status(500).send(error);
   }
 }
 
@@ -43,9 +42,7 @@ export const getNumberOfDocuments = async (req: Request, res: Response) => {
     if (!docs) {
       return res.status(404).json({ message: 'Documents not found' });
     }
-
     const numberOfDocuments = docs.length;
-
     res.status(200).json({ numberOfDocuments });
   } catch (err) {
     console.error(err);
@@ -90,7 +87,6 @@ export const getDocumentsByCours = async (req: Request, res: Response, next: Nex
   } catch (error) {
     res.status(500).json({ message: 'Une erreur est survenue' });
   }
-
 }
 
 export const getDocumentById = async (req: Request, res: Response, next: NextFunction) => {
@@ -100,7 +96,6 @@ export const getDocumentById = async (req: Request, res: Response, next: NextFun
     if (!document) {
       return res.status(404).json({ message: 'DriveDocument introuvable' });
     }
-    
     res.setHeader('Content-Type', 'application/octet-stream');
     res.setHeader('Content-Disposition', `attachment; filename=${document.nom_fichier}`);
     res.send(document.driveDocument);
@@ -114,7 +109,6 @@ export const deleteDocument = async (req: Request, res: Response) => {
   try {
     const _id = new ObjectId(id);
     const result = await DriveDocument.deleteOne(_id);
-
     if (result.deletedCount === 1) {
       res.status(200).json({ message: `Le document a été supprimé.` });
     } else {
@@ -124,4 +118,3 @@ export const deleteDocument = async (req: Request, res: Response) => {
     res.status(500).json({ message: 'Une erreur est survenue' });
   }
 }
-

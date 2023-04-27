@@ -15,10 +15,10 @@ export class DriveDocumentComponent implements OnInit{
   documents!: DriveDocument[];
   documentInsert!: DriveDocument;
   sub!: Subscription;
-  link!: String;
-  promo!: String;
-  semestre!: String;
-  cours!: String;
+  link!: string;
+  promo!: string;
+  semestre!: string;
+  cours!: string;
   cursusStructure!: JSON;
 
   constructor(private documentService: DocumentService, 
@@ -32,12 +32,12 @@ export class DriveDocumentComponent implements OnInit{
     this.getDocuments(this.link);
   }
 
-  onLinkChange(link: String) {
+  onLinkChange(link: string) {
     this.link = link;
     this.getDocuments(this.link);
   }
 
-  async getDocuments(link: String){   
+  async getDocuments(link: string){   
     if(link !== undefined && link !== ''){
       let str = link.split(' > ');
       this.promo = str[0];
@@ -63,28 +63,28 @@ export class DriveDocumentComponent implements OnInit{
     }    
   }
 
-  async getDocumentsByPromo(promo: String){
+  async getDocumentsByPromo(promo: string){
     let listeDoc = await this.documentService.getDocumentsByPromo(promo).toPromise();
     if(listeDoc){
       this.documents = listeDoc;
     }
   }
 
-  async getDocumentsBySemestre(semestre: String){
+  async getDocumentsBySemestre(semestre: string){
     let listeDoc = await this.documentService.getDocumentsBySemestre(semestre).toPromise();
     if(listeDoc){
       this.documents = listeDoc;
     }
   }
 
-  async getDocumentsByCours(cours: String){
+  async getDocumentsByCours(cours: string){
     let listeDoc = await this.documentService.getDocumentsByCours(cours).toPromise();
     if(listeDoc){
       this.documents = listeDoc;
     }
   }
 
-  insertDocument(file : File, etiquetteCours: String, etiquettePromo: String, semestre: String, mail: String){
+  insertDocument(file : File, etiquetteCours: string, etiquettePromo: string, semestre: string, mail: string){
     this.documentInsert.etiquetteCours = etiquetteCours;
     this.documentInsert.etiquettePromo = etiquettePromo;
     this.documentInsert.semestre = semestre;
@@ -124,7 +124,7 @@ export class DriveDocumentComponent implements OnInit{
   deleteDocument(doc: any){
     if (confirm(`Voulez-vous supprimer "${doc.nom_fichier}" ?`)) {      
       this.documentService.deleteDocument(doc._id).subscribe(
-        response => {
+        () => {
           this.getDocuments(this.link);
         },
         error => {
@@ -134,7 +134,7 @@ export class DriveDocumentComponent implements OnInit{
     }
   }
 
-  onImport(isImport: Boolean) {
+  onImport(isImport: boolean) {
     if(isImport){
       let link = this.link;
       this.ngOnInit();

@@ -11,7 +11,6 @@ import { LoginComponent } from './components/login/login.component';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from '@angular/common/http';
 
-
 @NgModule({
   declarations: [
     HomeLoginComponent,
@@ -26,10 +25,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    SharedModule,
-    
-
-    
+    SharedModule
   ],
   exports: [
     HomeLoginComponent,
@@ -38,4 +34,5 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
   ]
 })
+
 export class CoreModule { }

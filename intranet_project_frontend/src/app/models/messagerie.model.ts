@@ -1,9 +1,9 @@
 export interface Messagerie {
-    nomConversation: String;
+    nomConversation: string;
     messages: Message[];
 }
 
 export interface Message {
-    emeteur: String;
-    text: String;
+    emeteur: string;
+    text: string;
 }

@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import bcrypt from 'bcrypt';
-import User from '../models/users.model'; //import du modèle User
+import User from '../models/users.model';
 
 export const createUser = async (req: Request, res: Response) => {
   try {
@@ -63,10 +63,10 @@ export const deleteUserById = async (req: Request, res: Response) => {
 
 export const getAllUsers = async (req: Request, res: Response) => {
   try {
-    const users: typeof User[] = await User.find(); // récupère tous les utilisateurs
-    res.status(200).send(users); // renvoie les utilisateurs au client
+    const users: typeof User[] = await User.find();
+    res.status(200).send(users);
   } catch (error) {
-    res.status(500).send(error); // renvoie une erreur 500 en cas d'erreur serveur
+    res.status(500).send(error);
   }
 };
 

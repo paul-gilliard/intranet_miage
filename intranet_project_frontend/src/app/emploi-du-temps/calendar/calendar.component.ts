@@ -1,13 +1,11 @@
-import { Calendar } from '@fullcalendar/core';
+import { Calendar, EventInput } from '@fullcalendar/core';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import interactionPlugin from '@fullcalendar/interaction';
-import { EventInput } from '@fullcalendar/core';
 import { CalendarService } from 'src/app/services/calendar.service';
 import { Subscription } from 'rxjs';
 import { IIcsCalendar } from 'src/app/models/icsCalendar.model';
-
 
 @Component({
   selector: 'app-calendar',
@@ -15,23 +13,12 @@ import { IIcsCalendar } from 'src/app/models/icsCalendar.model';
   styleUrls: ['./calendar.component.css']
 })
 
-
-
 export class CalendarComponent implements OnInit {
   @ViewChild('calendar',{ static: true }) calendarComponent!: ElementRef;
   calendarApi!: Calendar;
   sub!: Subscription;
-  calendarEvents: IIcsCalendar = {
-    name: '',
-    content: []
-  };
-
-  selectedValue: string = ''; // Propriété pour stocker la valeur sélectionnée
-
-  onSelectChange() {
-    // Appel à la fonction du backend en utilisant la valeur sélectionnée
-    this.getEventsFromByName(this.selectedValue);
-  }
+  calendarEvents!: IIcsCalendar;
+  selectedValue: string = '';
 
   constructor(private service: CalendarService) { }
 
@@ -51,10 +38,8 @@ export class CalendarComponent implements OnInit {
         center: '',
         end: 'today'
       }
-
     });
     this.calendarApi.render();
-    // this.getEventsFrom('M2_calendar_events.ics');
     this.getEventsFrom();
   }
 
@@ -80,8 +65,7 @@ export class CalendarComponent implements OnInit {
     });
   }
 
-  getEventsFromByName(name: String) {
-
+  getEventsFromByName(name: string) {
     this.sub = this.service.getEventsFrom(name).subscribe({
       next: calendar => {
         // mise à jour de notre modèle ICalendar pour stocker les événements sous forme de tableau
@@ -118,10 +102,11 @@ export class CalendarComponent implements OnInit {
     this.calendarApi.changeView('dayGridMonth');
   }
 
-
   handleDateClick(arg: any) {
     console.log('date click! ' + arg.dateStr);
   }
+  
+  onSelectChange() {
+    this.getEventsFromByName(this.selectedValue);
+  }
 }
-
-

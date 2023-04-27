@@ -4,4 +4,3 @@ export interface IIcsCalendar {
   name: string;
   content: EventInput[]; // stocker les événements sous forme de tableau
 }
-

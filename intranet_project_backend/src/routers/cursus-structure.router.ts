@@ -7,8 +7,6 @@ import { authenticateToken } from '../services/auth.service';
 
 const cursusStructureRouter = Router();
 
-
-// getAll des utilisateurs en BDD
 cursusStructureRouter.get('/getCursusStructure', authenticateToken, getCursusStructure);
 
 export default cursusStructureRouter;

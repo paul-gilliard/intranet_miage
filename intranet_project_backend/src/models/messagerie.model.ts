@@ -1,4 +1,4 @@
-import { Schema, model, Document } from 'mongoose';
+import { Schema, model } from 'mongoose';
 
 export interface Message {
   emeteur: string;
@@ -6,7 +6,7 @@ export interface Message {
 }
 
 export interface Messagerie {
-  nomConversation: String;
+  nomConversation: string;
   messages: Message[];
 }
 

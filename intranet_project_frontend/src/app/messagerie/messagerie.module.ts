@@ -10,7 +10,6 @@ import { FormsModule } from '@angular/forms';
 import { CurrentUserMessageDirective } from './components/messagerie-discussion/CurrentUserMessageDirective';
 import { HighlightDirective } from './components/messagerie-panel-gauche/highlightClickedUser.directive';
 
-
 @NgModule({
   declarations: [
     MessagerieComponent, 
@@ -19,13 +18,11 @@ import { HighlightDirective } from './components/messagerie-panel-gauche/highlig
     MessagerieInfoComponent,
     CurrentUserMessageDirective,
     HighlightDirective
-   
   ],
   imports: [
     CommonModule,
     MessagerieRoutingModule, 
     FormsModule
-    
   ],
   exports: [
     MessagerieComponent, 
@@ -33,7 +30,7 @@ import { HighlightDirective } from './components/messagerie-panel-gauche/highlig
     MessagerieDiscussionComponent,
     CurrentUserMessageDirective,
     HighlightDirective
-  
   ]
 })
+
 export class MessagerieModule { }

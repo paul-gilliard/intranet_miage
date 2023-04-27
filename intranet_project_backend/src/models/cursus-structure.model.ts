@@ -11,14 +11,14 @@ export interface Semestre {
 }
 
 export interface Annee {
-    nom: string;
-    semestres: Semestre[];
-  }
+  nom: string;
+  semestres: Semestre[];
+}
 
-  export interface CursusStructure {
-    title: string;
-    annees: Annee[];
-  }
+export interface CursusStructure {
+  title: string;
+  annees: Annee[];
+}
 
 const coursSchema = new Schema<Cours>(
   {
@@ -87,27 +87,27 @@ const anneeSchema = new Schema<Annee>(
 );
 
 const cursusStructureSchema = new Schema<CursusStructure>(
-    {
-      title:{
-        type: String,
-        required: true,
-        trim: true
-      },
-  
-      annees: {
-        type: [anneeSchema],
-        required: true,
-        validate: {
-          validator: function (annees: Annee[]) {
-            return annees.length > 0;
-          },
-          message: 'There must be at least one annee in the cursus.',
+  {
+    title:{
+      type: String,
+      required: true,
+      trim: true
+    },
+
+    annees: {
+      type: [anneeSchema],
+      required: true,
+      validate: {
+        validator: function (annees: Annee[]) {
+          return annees.length > 0;
         },
+        message: 'There must be at least one annee in the cursus.',
       },
     },
-    {
-      timestamps: true,
-    }
-  );
+  },
+  {
+    timestamps: true,
+  }
+);
 
 export default model<CursusStructure>('CursusStructureSchema', cursusStructureSchema);

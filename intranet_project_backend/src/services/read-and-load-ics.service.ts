@@ -1,7 +1,6 @@
 import * as fs from 'fs';
 import * as ical from 'node-ical';
-import mongoose from 'mongoose';
-import IcsCalendar, { IIcsCalendar } from '../models/ics_calendar.model';
+import IcsCalendar from '../models/ics_calendar.model';
 import path from 'path';
 
 export async function saveIcsFileToMongoDB(filepath: string): Promise<void> {
@@ -26,4 +25,3 @@ export async function saveIcsFileToMongoDB(filepath: string): Promise<void> {
     throw err;
   }
 }
-

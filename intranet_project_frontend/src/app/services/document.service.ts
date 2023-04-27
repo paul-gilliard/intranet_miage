@@ -17,15 +17,15 @@ export class DocumentService {
         return this.http.get<JSON>('http://localhost:3000/api/driveDocument/getNumberOfDocuments');
     }
 
-    getDocumentsBySemestre(semestre: String){
+    getDocumentsBySemestre(semestre: string){
         return this.http.get<DriveDocument[]>('http://localhost:3000/api/driveDocument/getDocumentsBySemestre/' + semestre);
     }
 
-    getDocumentsByCours(cours: String){
+    getDocumentsByCours(cours: string){
         return this.http.get<DriveDocument[]>('http://localhost:3000/api/driveDocument/getDocumentsByCours/' + cours);
     }
 
-    getDocumentsByPromo(promo: String){
+    getDocumentsByPromo(promo: string){
         return this.http.get<DriveDocument[]>('http://localhost:3000/api/driveDocument/getDocumentsByPromo/' + promo);
     }
 
@@ -40,5 +40,4 @@ export class DocumentService {
     deleteDocument(id: string){        
         return this.http.get('http://localhost:3000/api/driveDocument/deleteDocument/'+ id);
     }
-
 }

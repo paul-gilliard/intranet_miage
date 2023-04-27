@@ -10,9 +10,9 @@ import { DocumentService } from 'src/app/services/document.service';
 export class ModalImportComponent implements OnInit{
 
   @Input() listeCours: any;
-  @Output() isImport = new EventEmitter<Boolean>();
-  isPromoChoose!: Boolean;
-  isSemestreChoose!: Boolean;
+  @Output() isImport = new EventEmitter<boolean>();
+  isPromoChoose!: boolean;
+  isSemestreChoose!: boolean;
   selectedPromo: any;
   selectedSemestre: any;
   listeSemestres: any;
@@ -39,7 +39,6 @@ export class ModalImportComponent implements OnInit{
   }
 
   importDocument() {
-
     const formData = new FormData();
     formData.append('file', this.selectedFile);
     formData.append('name', this.importDocumentForm.get('name')?.value!);
@@ -49,7 +48,6 @@ export class ModalImportComponent implements OnInit{
     //TODO : mailOwner undefined en BDD
     formData.append('mailOwner', this.importDocumentForm.get('email')?.value!);
 
-
     this.service.insertDocument(formData).subscribe(
       (response) => {
         if (response) {
@@ -58,8 +56,9 @@ export class ModalImportComponent implements OnInit{
       },
       (error) => {
         console.error("Erreur d'importation", error); 
-      });
-      this.close(); 
+      }
+    );
+    this.close(); 
   }
 
   onPromoSelected(selectedValue: any) {

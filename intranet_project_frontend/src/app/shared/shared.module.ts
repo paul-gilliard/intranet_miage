@@ -6,7 +6,6 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HighlightDirective } from './header/highlight.directive';
 
-
 @NgModule({
   declarations: [
     HeaderComponent,
@@ -23,4 +22,5 @@ import { HighlightDirective } from './header/highlight.directive';
     HighlightDirective
   ]
 })
+
 export class SharedModule { }
