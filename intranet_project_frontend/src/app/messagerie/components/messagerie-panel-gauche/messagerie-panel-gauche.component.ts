@@ -50,16 +50,16 @@ conversation: any;
 
   ngOnInit() {
     
-  this.userService.getAllUsers().subscribe(
-  (response: User[]) => {
-    console.log('Requête réussie', response);
-      this.usersList = response.filter(user => !/test/i.test(user.name));
-      
-  },
-  (error) => {
-    console.error('Erreur de requête', error);
-  }
-);
+    this.userService.getAllUsers().subscribe(
+      (response: User[]) => {
+        console.log('Requête réussie', response);
+        const currentUsername = localStorage.getItem('currentUserName');
+        this.usersList = response.filter(user => !/test/i.test(user.name) && user.name !== currentUsername);
+      },
+      (error) => {
+        console.error('Erreur de requête', error);
+      }
+    );
 
     this.messagerieService.getMessagePrivate().subscribe(data => {
       console.log("dans panel :",data);
