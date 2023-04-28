@@ -1,7 +1,6 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
-import { UsereService } from 'src/app/services/user.service';
+import { UserService } from 'src/app/services/user.service';
 import { User } from 'src/app/models/user.model';
 
 @Component({
@@ -9,27 +8,18 @@ import { User } from 'src/app/models/user.model';
   templateUrl: './create-user.component.html',
   styleUrls: ['./create-user.component.css']
 })
-export class CreateUserComponent implements OnInit, OnDestroy {
+export class CreateUserComponent {
 
   createUserForm = this.formBuilder.group({
     name: [, [Validators.required, ]],
-    password: ["00000000", []],
+    password: [, [Validators.required, ]],
     email: [, [Validators.required, ]],
     promo: [, [Validators.required, ]],
     statut: [, [Validators.required, ]]
   });
 
-  constructor(private formBuilder: FormBuilder, private http: HttpClient, private userService: UsereService) {
-    
-  }
-
-  ngOnInit(): void {
-    
-  }
-
-  ngOnDestroy(): void {
-      
-  }
+  constructor(private formBuilder: FormBuilder,
+              private userService: UserService) { }
 
   close() {
     this.createUserForm.reset();
@@ -39,22 +29,21 @@ export class CreateUserComponent implements OnInit, OnDestroy {
     let userToCreate: User = {
       name: this.createUserForm.get('name')?.value!,
       email: this.createUserForm.get('email')?.value!,
-     password: this.createUserForm.get('password')?.value!,
+      password: this.createUserForm.get('password')?.value!,
       promo: this.createUserForm.get('promo')?.value!,
       statut: this.createUserForm.get('statut')?.value!
     };
     this.userService.createUser(userToCreate).subscribe(
       (response) => {
-        console.log('creation reussie', response);
-        
+        if (response) {
+          confirm('Utilisateur créé ! Vous pouvez maintenant vous connecter en utilisant l\'adresse mail renseignée !')
+        }
       },
       (error) => {
         console.error('Erreur de creation', error);
         
       }
     );
-
     this.close();
   }
-
 }

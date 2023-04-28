@@ -1,0 +1,70 @@
+.panel-gauche {
+    background-color: #F5F5F5;
+    padding-left: 1%;
+    padding-top: 1%;
+    padding-bottom: 20%;
+    max-height: 85vh;
+}
+
+.panel-droit {
+    display: block;
+    overflow-y: auto;
+    max-height: 85vh;
+}
+
+.panel-haut {
+    margin-top: 2%;
+    min-height: 8vh;
+}
+
+.link {
+    position: absolute;
+    margin-left: 2%;
+    background-color: white;
+}
+
+.import {
+    position: absolute;
+    left: 85%;
+}
+
+.badge {
+    margin : 2%;
+    word-wrap: break-word;
+}
+
+.badge-promo {
+    background-color: #9f4ced;
+}
+
+.badge-semestre {
+    background-color: #4c67ed;
+}
+
+.badge-cours {
+    background-color: #4CB3ED;
+}
+
+.documents {
+    margin-top: 1%;
+}
+
+.document {
+    padding: 1%;
+    margin: 1%;
+    border-radius: 15%;
+    background-color:rgba(76, 179, 237, 0.15);
+    box-shadow: 1px 1px 0px 0px grey;
+    height: 150px;
+    border-color:#4CB3ED;
+    word-wrap: break-word;
+}
+
+.btn-default {
+    background-color: #4CB3ED;
+    margin: 1%;
+}
+
+.btn-link:hover {
+    background-color: #9bc8e2;
+}

@@ -1,2 +1,4 @@
 intranet_project_backend/dist
 intranet_project_backend/uploads
+intranet_project_backend/dist/services/database.service.js
+intranet_project_backend/dist/services/database.service.js.map

@@ -1,6 +1,5 @@
 import jwt from 'jsonwebtoken';
 import { Request, Response, NextFunction } from 'express';
-import usersModel from '../models/users.model';
 
 const JWT_SECRET = 'secret'; // à remplacer par votre clé secrète JWT
 
@@ -21,7 +20,6 @@ export function authenticateToken(req: Request, res: Response, next: NextFunctio
 
   jwt.verify(token, JWT_SECRET, (err: any, user: any) => {
     if (err) return res.sendStatus(403);
-    //req.user = user;
     next();
   });
 }

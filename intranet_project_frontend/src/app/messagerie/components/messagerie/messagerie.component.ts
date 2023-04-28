@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MessagerieService } from 'src/app/services/messagerie.service';
 import { Message, Messagerie } from 'src/app/models/messagerie.model';
 import { Subscription } from 'rxjs';
+import { MessageriePrivee } from 'src/app/models/messagePrivee.model';
 
 @Component({
   selector: 'app-messagerie',
@@ -12,11 +13,10 @@ export class MessagerieComponent implements OnInit {
 
   messageries!: Messagerie[];
   sub!: Subscription;
-  messagerie: Messagerie = {
-    nomConversation: '',
-    messages: []
-  };
-  privateMessagerie! : Messagerie;
+  messagerie!: Messagerie;
+  messageriePrive!: MessageriePrivee;
+  privateMessagerie!: Messagerie;
+  isMessagerieprivate: boolean = false;
 
   constructor(private service: MessagerieService) { }
 
@@ -35,21 +35,14 @@ export class MessagerieComponent implements OnInit {
     });
   }
 
+  getAllPrivateMessages() {
+    this.service.getMessagesAvecContact(this.service.clickedUser.email).subscribe((messageriePrive: MessageriePrivee) => {
+      this.messageriePrive = messageriePrive;
+    });
+    this.isMessagerieprivate = (this.service.clickedUser.email != this.service.currentUserEmail);
+  }
+  
   sendMessage(message: Message){
     this.service.sendMessage(message);
-  }
-
-  getAllPrivateMessages(){
-    let email = 'coucou@gmail.com';
-    this.sub = this.service.getAllMessagesPrivate(email).subscribe({
-      next: messagerie => {
-        this.privateMessagerie = messagerie;
-        this.messageries.push(messagerie);
-      }
-    });
-  }
-
-  sendPrivateMessage(email: String, message: Message){
-    this.service.sendMessagePrivate(email, message);
   }
 }

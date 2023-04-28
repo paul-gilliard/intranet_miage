@@ -1,27 +1,24 @@
-<div class="row">
+<div class="row" >
     <div class="col">
-        <div class="nav flex-column nav-pills outils" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <div class="nav flex-column nav-pills outils" id="v-pills-tab" role="tablist" aria-orientation="vertical" style="border-radius: 20px; height: 79vh;">
             <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#" role="tab" aria-controls="v-pills-home" aria-selected="true">
-                <span class="badge">14</span>
-                <i class="bi bi-chat-left-dots-fill"></i>
-                Discussions
-            </a>
-            <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#" role="tab" aria-controls="v-pills-profile" aria-selected="false"> 
-                <i class="bi bi-archive-fill"></i>
-                Archivés
-            </a>
-            <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#" role="tab" aria-controls="v-pills-messages" aria-selected="false">
-                <i class="bi bi-exclamation-octagon-fill"></i>
-                Spam
+                <i class="bi bi-chat-left-dots-fill"></i> Discussions
             </a>
         </div>
     </div>
     <div class="col">
-        <div class="nav flex-column nav-pills liste-personne" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-            <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#" role="tab" aria-controls="v-pills-home" aria-selected="true">
-                <i class="bi bi-person-circle"></i>
-                Nom de la première personne
-            </a>
+        <div class="nav flex-column nav-pills liste-personne" id="v-pills-tab" role="tablist" aria-orientation="vertical" style="border-radius: 20px; height: 79vh;">
+            <!--Lister tout les utilisateurs d'abord-->
+            <div class="userList"> 
+                <ul (click)="onMiageClick()" appHighlight>
+                    <li class="listUser"><i class="bi bi-people-fill"></i> MIAGE</li>
+                </ul>
+                <ul class="listePersonne"*ngFor="let user of usersList" appHighlight (click)="onUserClick(user)" >
+                    <li *ngIf="user!=null" class="listUser">
+                        <i class="bi bi-person"></i><span style="cursor: pointer; pointer-events: auto;">{{user.name.split(' ')[0]}}</span>
+                    </li>
+                </ul>
+            </div>
         </div>    
     </div>
 </div>

@@ -11,13 +11,11 @@ import { authenticateToken } from '../services/auth.service';
 
 const userRouter = Router();
 
+// Créer un nouvel utilisateur
+userRouter.post('/createUser', createUser);
 
 // getAll des utilisateurs en BDD
 userRouter.get('/users', authenticateToken, getAllUsers);
-
-
-// Créer un nouvel utilisateur
-userRouter.post('/createUser', authenticateToken, createUser);
 
 // Lire un utilisateur par son ID
 userRouter.get('/:id', authenticateToken, getUserById);

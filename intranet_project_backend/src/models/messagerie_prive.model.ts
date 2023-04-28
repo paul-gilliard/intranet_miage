@@ -1,8 +1,9 @@
-import { Schema, model, Document } from 'mongoose';
+import { Schema, model } from 'mongoose';
 
 export interface MessagePrive {
   emeteur: string;
   text: string;
+  recepteur: string;
 }
 
 export interface Messagerie {

@@ -1,0 +1,27 @@
+.calendrier {
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.mail {
+  background-color:  #4CB3ED; 
+  border-radius: 20px; 
+  width: 125px; 
+  border-color: #4CB3ED; 
+  margin-left: 50%;
+  margin-top: 15px;
+}
+
+.select{
+  background-color: #4CB3ED;
+  margin-left: 0%;
+  border-radius: 20px 20px 20px 20px ;
+  border-color: #4CB3ED;
+  height: 40px;
+  width: 140px;
+}
+
+.mailButton {
+  color: black ; 
+  text-decoration: none;
+}

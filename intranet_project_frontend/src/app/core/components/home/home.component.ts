@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { Modal } from "bootstrap";
-
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-home',
@@ -8,17 +7,10 @@ import { Modal } from "bootstrap";
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+  authenticated: boolean = false;
+  authService: AuthService;
 
-  createUser() {
-    let element = document.getElementById("createUserModal") as HTMLElement;
-    let myModal = new Modal(element);
-    myModal.show();
+  constructor(authService: AuthService) {
+    this.authService = authService;
   }
-
-  login() {
-    let element = document.getElementById("loginModal") as HTMLElement;
-    let myModal = new Modal(element);
-    myModal.show();
-  }
-
 }

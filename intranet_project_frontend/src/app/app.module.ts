@@ -10,15 +10,18 @@ import { EmploiDuTempsModule } from './emploi-du-temps/emploi-du-temps.module';
 import { MessagerieModule } from './messagerie/messagerie.module';
 import { SharedModule } from './shared/shared.module';
 import { SondagesModule } from './sondages/sondages.module';
+import { FullCalendarModule } from '@fullcalendar/angular';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
-
+import { NgImageSliderModule } from 'ng-image-slider';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
     HomeComponent
   ],
   imports: [
-    
     BrowserModule,
     AppRoutingModule,
     CoreModule,
@@ -27,9 +30,14 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
     EmploiDuTempsModule,
     DepotDocumentsModule,
     SondagesModule,
+    FullCalendarModule,
     HttpClientModule,
-    
+    NgImageSliderModule,
+    NgbModule,
+    MatDialogModule,
+    MatSnackBarModule
   ],
+  exports:[NgImageSliderModule],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
